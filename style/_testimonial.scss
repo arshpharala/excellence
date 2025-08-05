@@ -1,0 +1,143 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.testimonial-section {
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 4rem 1rem;
+
+  @include responsive(lg) {
+    width: 83.46vw;
+    padding: 5rem 0;
+  }
+
+  .testimonial-header {
+    @include grid-center;
+
+    .testimonial-left {
+      text-align: left;
+      margin-bottom: 1.5rem;
+
+      .subheading {
+        font-size: 9pt;
+        color: $color-text-base;
+      }
+
+      .main-heading {
+        font-size: 1.875rem;
+        @include text-medium;
+        line-height: 1.25;
+
+        @include responsive(md) {
+          font-size: 2.25rem;
+        }
+
+        @include responsive(lg) {
+          font-size: 24pt;
+        }
+      }
+    }
+  }
+
+  .testimonial-container {
+    position: relative;
+
+    .testimonial-swiper {
+      position: relative;
+      padding: 2rem 0 4rem;
+      overflow: hidden;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: auto;
+      border-radius: $border-radius;
+      text-align: left;
+      transition: $transition;
+      padding: 1.5rem;
+
+      &:hover {
+        background: $bg-gray-light;
+        box-shadow: $shadow-md;
+      }
+    }
+
+    .testimonial-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+      border-radius: $border-radius;
+      transition: $transition;
+      cursor: pointer;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: $color-text-base;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-footer {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testimonial-divider {
+      max-width: 250px;
+      height: 1px;
+      background-color: $color-text-subtle;
+      margin-top: 0.5rem ;
+      border: none;
+    }
+
+    .testimonial-title {
+      font-size: 1.125rem;
+      color: $color-primary;
+      @include text-bold;
+    }
+
+    .testimonial-subtitle {
+      font-size: 0.875rem;
+      color: $color-text-muted;
+      margin-top: 0.25rem;
+    }
+
+    .swiper-nav {
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem;
+      z-index: 10;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .swiper-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      background: #f9fafb;
+      border: 2px solid #d1d5db;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #e5e7eb;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

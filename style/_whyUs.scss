@@ -1,0 +1,78 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+
+//why choose us section
+.why-choose-us {
+  background: $bg-success-gradient;
+  padding: 8rem 1.5rem;
+
+  @include responsive(md) {
+    padding-inline: 3rem;
+  }
+
+  @include responsive(lg) {
+    padding-inline: 6rem;
+  }
+
+  .why-us-container {
+    width: 90vw;
+    margin: 0 auto;
+
+    @include responsive(lg){
+      width: 83.46vw;
+    }
+  }
+
+  .heading h2 {
+    font-size: 1.875rem;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+   @include text-bold;
+    color: #fff;
+
+    @include responsive(lg) {
+      font-size: 2.25rem;
+    }
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    
+    margin-top: 3rem;
+
+    @include responsive(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .feature-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: $shadow-light;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fff;
+      box-shadow: $shadow-md;
+      transform: translateY(-4px);
+    }
+
+    .feature-title {
+      color: $color-secondary;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 1.125rem;
+    }
+
+    .feature-desc {
+      color: $color-text-base;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+}

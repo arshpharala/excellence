@@ -1,0 +1,143 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.hero {
+  position: relative;
+  padding-top: 5rem;
+  min-height: 65vh;
+  background: url("../assets/Layer.png") center/cover no-repeat;
+  @include grid-center;
+
+  @include responsive(lg) {
+    background-position: right;
+    min-height: 100vh;
+  }
+
+  .hero-container {
+    width: 90vw;
+
+    @include responsive(lg) {
+      width: 83.46vw;
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-direction: column-reverse;
+
+      @include responsive(lg) {
+        @include grid-center;
+        grid-template-columns: 2fr 1fr;
+      }
+
+      .hero-text {
+        padding-block: $spacing-lg;
+        text-align: start;
+
+        h1 {
+          text-transform: uppercase;
+          color: $gray-900;
+          font-size: 1.5rem;
+          font-weight: 600;
+          line-height: 1.25;
+          margin-bottom: $spacing-sm;
+          margin-top: $spacing-md;
+
+          @include responsive(md) {
+            font-size: 2.25rem;
+          }
+
+          @include responsive(lg) {
+            font-size: 3rem;
+          }
+          @include responsive(xl) {
+            font-size: 3.75rem;
+          }
+        }
+
+        p {
+          font-size: 0.8rem;
+          @include text-medium;
+          color: $gray-700;
+          max-width: 25rem;
+          text-align: left;
+          padding: 0;
+          margin-inline: 0;
+
+          @include responsive(md) {
+            font-size: 1rem;
+          }
+        }
+
+        .button-wrapper {
+          margin-top: $spacing-md;
+
+          @include responsive(lg) {
+            margin-top: $spacing-2xl;
+          }
+        }
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+        @include responsive(lg) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .social-box {
+    position: absolute;
+
+    bottom: $spacing-lg;
+    right: $spacing-sm;
+    display: none;
+
+    @include responsive(lg) {
+      display: inline-flex;
+    }
+
+    @include responsive(md) {
+      bottom: $spacing-2xl;
+      right: $spacing-2xl;
+    }
+
+    gap: $spacing-sm;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: $spacing-sm $spacing-md;
+    border-radius: 1.5rem;
+    font-size: 1.25rem;
+
+    .icon {
+      transition: color 0.3s ease;
+      color: black;
+      cursor: pointer;
+      &.whatsapp:hover {
+        color: $color-success;
+        scale: 1.1;
+        transition: $transition;
+      }
+
+      &.facebook:hover {
+        color: #3b82f6;
+        scale: 1.1;
+        transition: $transition;
+      }
+
+      &.twitter:hover {
+        color: #0ea5e9;
+        scale: 1.1;
+        transition: $transition;
+      }
+
+      &.instagram:hover {
+        color: #ec4899;
+        scale: 1.1;
+        transition: $transition;
+      }
+    }
+  }
+}

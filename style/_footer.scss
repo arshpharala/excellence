@@ -1,0 +1,109 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.footer {
+  background-color: #000;
+  padding: 2.5rem 0;
+  color: white;
+
+  .footer-container {
+    width: 90vw;
+    margin: 2rem auto 0;
+    position: relative;
+    padding: 1rem;
+
+    @include responsive(lg) {
+      width: 83.46vw;
+    }
+
+    .footer-top {
+      display: grid;
+
+      @include responsive(lg) {
+        @include flex-center;
+        justify-content: space-between;
+      }
+
+      gap: 2rem;
+
+      .footer-logo span {
+        font-size: 1.125rem; // text-lg
+        font-weight: 600;
+        text-transform: capitalize;
+        color: white;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.5rem; // text-xl
+
+        a {
+          color: white;
+          transition: color 0.3s ease;
+
+          &.whatsapp:hover {
+            color: #22c55e;
+          }
+
+          &.facebook:hover {
+            color: #3b82f6;
+          }
+
+          &.twitter:hover {
+            color: #0ea5e9;
+          }
+
+          &.instagram:hover {
+            color: #ec4899;
+          }
+        }
+      }
+
+      .footer-links {
+        display: grid;
+        gap: 0.5rem;
+        text-align: start;
+
+        @media (width >=768px) {
+          grid-template-columns: repeat(2, auto);
+        }
+
+        li {
+          list-style: none;
+
+          a {
+            color: white;
+            font-size: 1rem;
+            text-transform: capitalize;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+              text-decoration: underline;
+              transform: scale(1.05);
+              color: orange;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-copy {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #9ca3af; // gray-500
+      margin-top: 2rem;
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}

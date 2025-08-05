@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Company</title>
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- swiper  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- aos animate  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" class="logo-link">
+          <span class="logo-text">your company logo</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="/">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#service">services</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+
+        <div class="nav-controls">
+          <a href="#" class="consult-btn">Get a Free Consultation</a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+      role="dialog"
+      aria-label="Mobile navigation"
+    >
+      <button class="close-btn" id="closeMenu" aria-label="Close menu">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <hr />
+
+      <div class="social-icons">
+        <a href="#" class="icon whatsapp" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="icon facebook" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="icon twitter" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="icon instagram" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-container">
+        <div class="hero-grid">
+          <!-- left -->
+          <div data-aos="fade-up" class="hero-text">
+            <h1>driving growth with innovative marketing strategies</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <!-- Button -->
+            <div data-aos="fade-up" class="button-wrapper">
+              <a href="#" class="btn-link">
+                <span class="btn-text">Start your project today!</span>
+                <i class="fas fa-arrow-up btn-icon"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Right -->
+          <div class="hero-image">
+            <!-- optional illustration/image -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Icon Box -->
+      <div class="social-box">
+        <a href="#" class="icon whatsapp" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="icon facebook" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="icon twitter" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="icon instagram" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- //services section -->
+    <section id="service" class="vas-section">
+      <p data-aos="fade-up" class="vas-heading">
+        We exist to redefine marketing by combining creativity, strategy, and
+        technology to build brands that stand out and succeed.
+      </p>
+
+      <div class="vas-grid">
+        <!-- LEFT: Key Values -->
+        <div
+          data-aos="fade-up"
+          class="vas-left"
+          style="background-image: url('./assets/Layer2.png')"
+        >
+          <h3 class="vas-subheading">Key Values</h3>
+          <div class="vas-values">
+            <div class="vas-value-item">
+              <span class="vas-icon">
+                <img src="./assets/serviceIcon/icon1.png" alt="Data-Driven" />
+              </span>
+              <p class="vas-value-title">Data-Driven</p>
+            </div>
+            <div class="vas-value-item">
+              <span class="vas-icon">
+                <img
+                  src="./assets/serviceIcon/icon2.png"
+                  alt="Creative Excellence"
+                />
+              </span>
+              <p class="vas-value-title">Creative Excellence</p>
+            </div>
+            <div class="vas-value-item">
+              <span class="vas-icon">
+                <img
+                  src="./assets/serviceIcon/icon3.png"
+                  alt="Innovative Solutions"
+                />
+              </span>
+              <p class="vas-value-title">Client-Centric</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Services -->
+        <div data-aos="fade-up" class="vas-right">
+          <ul class="vas-service-list" id="serviceList">
+            <!-- Injected by JS -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- portfolio section -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="portfolio-container">
+        <!-- Header -->
+        <div class="portfolio-header">
+          <div class="intro-text" data-aos="fade-up">
+            <p class="subtitle">See our Portfolio Reels</p>
+            <h2 class="title">
+              Stunning <br />
+              Works
+            </h2>
+          </div>
+
+          <div class="description" data-aos="fade-up">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+              ipsum suspendisse ultrices gravida.
+            </p>
+
+            <div class="read-more-group">
+              <a href="#" class="read-more-btn">Read More</a>
+              <i class="fa fa-arrow-up icon-wrapper" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up">
+            <div class="image-wrapper">
+              <img
+                src="assets/portfolio/portfolio1.png"
+                alt="BenX Brand Guidelines"
+                class="project-image"
+              />
+            </div>
+            <div class="project-details">
+              <h3 class="project-title">BenX</h3>
+              <div class="project-footer">
+                <hr class="divider" />
+                <button class="arrow-btn" aria-label="View project details">
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+              <p class="project-subtitle">Brand Guidelines</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up">
+            <div class="image-wrapper">
+              <img
+                src="assets/portfolio/portfolio2.png"
+                alt="BenX Brand Guidelines"
+                class="project-image"
+              />
+            </div>
+            <div class="project-details">
+              <h3 class="project-title">BenX</h3>
+              <div class="project-footer">
+                <hr class="divider" />
+                <button class="arrow-btn" aria-label="View project details">
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+              <p class="project-subtitle">Brand Guidelines</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up">
+            <div class="image-wrapper">
+              <img
+                src="assets/portfolio/portfolio3.png"
+                alt="BenX Brand Guidelines"
+                class="project-image"
+              />
+            </div>
+            <div class="project-details">
+              <h3 class="project-title">BenX</h3>
+              <div class="project-footer">
+                <hr class="divider" />
+                <button class="arrow-btn" aria-label="View project details">
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+              <p class="project-subtitle">Brand Guidelines</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonial section -->
+    <section id="testimonial" class="testimonial-section">
+      <div class="testimonial-header">
+        <div class="testimonial-left">
+          <p data-aos="fade-up" class="subheading">See from our clients</p>
+          <h2 data-aos="fade-up" class="main-heading">
+            What Our <br />
+            Clients Says
+          </h2>
+        </div>
+      </div>
+      <div class="testimonial-container">
+        <div class="swiper testimonial-swiper">
+          <div class="swiper-wrapper" id="testimonialSwiperWrapper">
+            <!-- Slides injected via JS -->
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="swiper-nav">
+          <button id="PrevBtn" class="swiper-btn">
+            <i class="fa fa-arrow-left"></i>
+          </button>
+          <button id="NextBtn" class="swiper-btn">
+            <i class="fa fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- milestone section -->
+    <section class="timeline-section">
+      <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+          <div class="header-content" data-aos="fade-up">
+            <h3>The path we've come through</h3>
+            <h2>Agency Milestones Timeline</h2>
+          </div>
+
+          <!-- Step Indicator -->
+          <div class="step-indicator" id="stepIndicator">
+            <!-- Steps will be generated by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Milestones Container -->
+        <div class="milestones-container collapsed" id="milestonesContainer">
+          <div id="milestonesList">
+            <!-- Milestones will be generated by JavaScript -->
+          </div>
+
+          <!-- Bottom Fade Effect -->
+          <div class="bottom-fade"></div>
+        </div>
+
+        <!-- Toggle Button -->
+        <div class="toggle-container">
+          <button
+            class="toggle-button"
+            id="toggleButton"
+            aria-label="Toggle milestone list"
+          >
+            <i class="fa fa-arrow-up toggle-icon" id="toggleIcon"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- team section  -->
+    <section id="team" class="team-section">
+      <h2 class="section-title" data-aos="fade-up">Our Team</h2>
+
+      <div class="swiper team-swiper">
+        <div class="swiper-wrapper" id="teamSwiperWrapper">
+          <!-- Slides will be injected via JS -->
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="swiper-nav">
+          <button id="teamPrevBtn" class="swiper-btn">
+            <i class="fa fa-arrow-left"></i>
+          </button>
+          <button id="teamNextBtn" class="swiper-btn">
+            <i class="fa fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- why us  -->
+    <section id="whychooseus" class="why-choose-us">
+      <div class="why-us-container">
+        <div id="featureGrid" class="feature-grid">
+          <!-- JS will inject heading and cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section  -->
+    <section id="contact" class="contact-container">
+      <h1 data-aos="fade-up" class="contact-title">Let's work together</h1>
+
+      <div class="success-message" id="successMessage">
+        <p>Thank you! Your message has been sent successfully.</p>
+      </div>
+
+      <form data-aos="fade-up" class="contact-form" id="contactForm">
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your Name"
+            required
+            class="form-input"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your Email"
+            required
+            class="form-input"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Enter your Phone number"
+            class="form-input"
+          />
+        </div>
+
+        <div class="form-group">
+          <div class="select-wrapper">
+            <label class="select-label"> Choose Services </label>
+            <div class="select-container">
+              <select name="option" required class="custom-select">
+                <option value="">Creative Design Services</option>
+                <option value="inquiry">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+              </select>
+              <i class="fas fa-chevron-down select-icon"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group col-span-2">
+          <textarea
+            placeholder="Enter your Brief"
+            name="message"
+            rows="5"
+            required
+            class="textarea-input"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="submit-group">
+            <button type="submit" class="submit-btn">Submit</button>
+            <span class="submit-icon">
+              <i class="fas fa-arrow-up"></i>
+            </span>
+          </div>
+        </div>
+      </form>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.500892717052!2d55.25751967598935!3d25.186325332139916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f694c700e12f9%3A0x190ce8d857467f06!2sThe%20Exchange%20Tower!5e0!3m2!1sen!2sae!4v1752832595748!5m2!1sen!2sae"
+          class="map-iframe"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <!-- Logo -->
+          <a href="/" class="footer-logo">
+            <span>your company logo</span>
+          </a>
+
+          <!-- Social Icons -->
+          <div class="social-icons">
+            <a href="#" aria-label="WhatsApp" class="whatsapp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="#" aria-label="Facebook" class="facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Twitter" class="twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" aria-label="Instagram" class="instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+
+          <!-- Nav Links -->
+          <ul class="footer-links">
+            <li><a href="#hero">home</a></li>
+            <li><a href="#about-me">about</a></li>
+            <li><a href="#service">services</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Copyright -->
+        <p class="footer-copy">
+          © <span id="currentYear"></span> <a href="#home">Company</a>. All
+          Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

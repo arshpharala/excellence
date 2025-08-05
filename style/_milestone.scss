@@ -1,0 +1,298 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+/* Timeline Section */
+.timeline-section {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 8rem 0;
+  position: relative;
+  background-color: white;
+  border-radius: 24px;
+
+  @include responsive(lg) {
+    width: 83.46vw;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.header-content h3 {
+  font-size:10pt;
+  @include text-medium;
+  color: $color-text-muted;
+}
+
+.header-content h2 {
+  line-height: 1.2;
+  color: $color-secondary;
+  margin-bottom: 2.5rem;
+
+  font-size: 1.875rem;
+  @include text-semibold;
+
+  line-height: 1.25;
+
+  @include responsive(lg) {
+    font-size: 24pt;
+  }
+
+  @include responsive(md) {
+    font-size: 2.25rem;
+  }
+}
+
+/* Step Indicator */
+.step-indicator {
+  @include flex-center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.step-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background-color: white;
+  position: relative;
+  z-index: 20;
+  transition: all 0.3s ease;
+}
+
+.step-dot.active {
+  background-color: #000;
+}
+
+.step-arrow {
+  width: 16px;
+  height: 16px;
+  color: #000;
+}
+
+.step-line {
+  position: absolute;
+  height: 2px;
+  background-color: $color-secondary;
+  width: 90%;
+  left: 0;
+  z-index: 10;
+}
+
+/* Milestones Container */
+.milestones-container {
+  position: relative;
+  padding-bottom: 3rem;
+  transition: all 0.3s ease;
+}
+
+.milestones-container.collapsed {
+  max-height: 460px;
+  overflow: hidden;
+}
+
+.milestones-container.expanded {
+  max-height: none;
+  overflow: visible;
+}
+
+.milestone-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.75rem;
+  border-radius: 1.5rem;
+  border: 1px solid $bg-gray-lighter;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.milestone-item.active {
+  background: $bg-success-gradient;
+  color: #fff;
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: $shadow-lg;
+}
+
+.milestone-item:hover {
+  transform: translateY(-2px);
+  box-shadow: $shadow-md;
+}
+
+.milestone-item.active:hover {
+  box-shadow: $shadow-lg;
+}
+
+/* Left Section */
+.milestone-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.milestone-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.milestone-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: $transition-slow;
+}
+
+.milestone-item.active .milestone-icon {
+  filter: invert(1) brightness(2);
+}
+
+.milestone-year {
+  font-size: 1.5rem;
+  @include text-bold;
+  color: #000;
+}
+
+.milestone-item.active .milestone-year {
+  color: #fff;
+}
+
+.milestone-item.active .milestone-description {
+  color: #fff;
+}
+
+.milestone-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.milestone-title {
+  font-size: 1rem;
+  @include text-semibold;
+}
+
+.milestone-subtitle {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+/* Right Section */
+.milestone-right {
+  margin-top: 1rem;
+}
+
+.milestone-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $color-secondary;
+}
+
+/* Bottom Fade Effect */
+.bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(
+    to top,
+    white,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.milestones-container.expanded .bottom-fade {
+  opacity: 0;
+}
+
+/* Toggle Button */
+.toggle-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-button {
+  padding: 0.5rem;
+  border: 2px solid $border-default;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button:hover {
+  transform: scale(1.1);
+  background-color: $bg-gray-light;
+  border-color: $color-text-subtle;
+}
+
+.toggle-icon {
+  width: 24px;
+  height: 24px;
+  color: $color-text-muted;
+  transition: $transition-slow;
+}
+
+.toggle-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Responsive Design */
+@include responsive(lg) {
+  .milestone-item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .milestone-right {
+    margin-top: 0;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading State */
+.milestone-item.loading {
+  opacity: 0.3;
+  pointer-events: none;
+}
