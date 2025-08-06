@@ -4,27 +4,25 @@
 .vas-section {
   width: 90vw;
   margin: auto;
-  padding: 5rem 0;
+  padding: 3.5rem 0;
   display: grid;
 
   @include responsive(lg) {
     width: 83.46vw;
-    padding: 8rem 0;
   }
 
   .vas-heading {
     font-size: 1.2rem;
-    line-height: 37.33rem;
 
-    @include text-medium;
+    @include text-semibold;
     text-align: left;
-    line-height: normal;
+    line-height: 1.2;
     margin-bottom: 3rem;
-
-    @include responsive(lg) {
+    @include responsive(md) {
       font-size: 2.25rem;
     }
-    @include responsive(xl) {
+
+    @include responsive(lg) {
       font-size: 3rem;
     }
   }
@@ -32,11 +30,10 @@
   .vas-grid {
     display: grid;
 
-    gap: 5rem;
+    gap: 2rem;
 
     @include responsive(lg) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 8rem;
     }
 
     .vas-left {
@@ -61,8 +58,8 @@
       margin-bottom: 1.5rem;
       color: $color-secondary;
 
-      @include responsive(lg) {
-        font-size: 1.75rem;
+      @include responsive(md) {
+        font-size: 3rem;
       }
     }
 
@@ -91,7 +88,7 @@
         @include text-semibold;
 
         @include responsive(lg) {
-          font-size: 1.14rem;
+          font-size: 1.5rem;
         }
       }
 
@@ -122,7 +119,7 @@
           color: $color-text-subtle;
 
           @include responsive(lg) {
-            font-size: 1.125rem;
+            font-size: 1.2rem;
           }
         }
 
@@ -178,8 +175,8 @@
       }
 
       .vas-service-item.active {
-        padding: 1.5rem;
-        border: 1px solid #6b7280;
+        padding: 2.3rem 1.5rem;
+        border: 1px solid $border-default;
         border-radius: 1rem;
         background-color: #fff;
         box-shadow: $shadow-lg;
@@ -194,8 +191,11 @@
         .vas-service-paragraph {
           color: $color-secondary;
           margin-bottom: 1.4rem;
-          line-height: 1.2rem;
+          line-height: 1.2;
           font-size: 0.9rem;
+          @include responsive(md) {
+            font-size: 1.2rem;
+          }
           @include text-medium;
         }
       }

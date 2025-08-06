@@ -4,12 +4,15 @@
 .hero {
   position: relative;
   padding-top: 5rem;
-  min-height: 65vh;
+
   background: url("../assets/Layer.png") center/cover no-repeat;
   @include grid-center;
+  min-height: 728px;
 
   @include responsive(lg) {
     background-position: right;
+  }
+  @include responsive(2xl) {
     min-height: 100vh;
   }
 
@@ -72,7 +75,7 @@
           margin-top: $spacing-md;
 
           @include responsive(lg) {
-            margin-top: $spacing-2xl;
+            margin-top: $spacing-lg;
           }
         }
       }
@@ -92,7 +95,7 @@
   .social-box {
     position: absolute;
 
-    bottom: $spacing-lg;
+    bottom: $spacing-sm;
     right: $spacing-sm;
     display: none;
 
@@ -107,7 +110,7 @@
 
     gap: $spacing-sm;
     background-color: rgba(255, 255, 255, 0.5);
-    padding: $spacing-sm $spacing-md;
+    padding: $spacing-xs $spacing-sm;
     border-radius: 1.5rem;
     font-size: 1.25rem;
 

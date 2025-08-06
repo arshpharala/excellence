@@ -5,7 +5,7 @@
 .timeline-section {
   width: 90vw;
   margin: 0 auto;
-  padding: 5rem 0;
+  padding: 3.5rem 0;
   position: relative;
   background-color: white;
   border-radius: 24px;
@@ -34,7 +34,7 @@
   font-size: 0.8rem;
 
   @include responsive(md) {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
   @include text-medium;
   color: $color-text-muted;
@@ -46,31 +46,27 @@
   color: $color-secondary;
   margin-bottom: 2.5rem;
 
-  @include text-semibold;
+  @include text-medium;
 
   line-height: 1.25;
 
-  @include responsive(lg) {
-    font-size: 3.8rem;
-  }
-
   font-size: 1.75rem;
   @include responsive(md) {
-    font-size: $spacing-md;
+    font-size: $spacing-lg;
   }
 }
 
 /* Step Indicator */
 .step-indicator {
   @include flex-center;
-  gap: 0.5rem;
+  gap: 1rem;
   margin-bottom: 2rem;
   position: relative;
 }
 
 .step-dot {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   border: 2px solid #000;
   background-color: white;
@@ -93,7 +89,7 @@
   position: absolute;
   height: 2px;
   background-color: $color-secondary;
-  width: 90%;
+  width: 98%;
   left: 0;
   z-index: 10;
 }
@@ -160,8 +156,8 @@
 }
 
 .milestone-icon {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
   transition: $transition-slow;
 }
@@ -172,6 +168,9 @@
 
 .milestone-year {
   font-size: 1.5rem;
+  @include responsive(md) {
+    font-size: 2.5rem;
+  }
   @include text-bold;
   color: #000;
 }
@@ -192,11 +191,17 @@
 
 .milestone-title {
   font-size: 1rem;
+   @include responsive(md) {
+    font-size: 1.2rem;
+  }
   @include text-semibold;
 }
 
 .milestone-subtitle {
   font-size: 1rem;
+   @include responsive(md) {
+    font-size: 1.2rem;
+  }
   font-weight: 200;
 }
 
@@ -207,6 +212,9 @@
 
 .milestone-description {
   font-size: 1rem;
+   @include responsive(md) {
+    font-size: 1.2rem;
+  }
   line-height: 1.6;
   color: $color-secondary;
 }

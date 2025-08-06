@@ -6,7 +6,7 @@
   width: 90vw;
   margin: 0 auto;
   text-align: center;
-  padding: 5rem 0;
+  padding: 3.5rem 0;
 
   @include responsive(lg) {
     width: 83.46vw;
@@ -15,9 +15,9 @@
   .section-title {
     font-size: 1.75rem;
     @include responsive(md) {
-      font-size: $spacing-md;
+      font-size: $spacing-lg;
     }
-    @include text-semibold;
+    @include text-medium;
     margin-bottom: 2.5rem;
   }
 
@@ -92,7 +92,8 @@
 
   .slide-info {
     text-align: left;
-    padding: 1rem;
+    font-size: 1.2rem;
+    padding: 1.5rem 0.5rem;
   }
 
   .slide-info p:first-child {
@@ -100,8 +101,7 @@
   }
 
   .slide-info p:last-child {
-    color: #6b7280;
-    font-size: 0.875rem;
+    color: $color-text-base;
   }
   .swiper-nav {
     display: flex;

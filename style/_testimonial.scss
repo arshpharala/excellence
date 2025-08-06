@@ -6,11 +6,10 @@
   margin: 0 auto;
   text-align: center;
   position: relative;
-  padding: 4rem 0;
+  padding: 3.5rem 0;
 
   @include responsive(lg) {
     width: 83.46vw;
-    padding: 5rem 0;
   }
 
   .testimonial-header {
@@ -23,7 +22,7 @@
       .subheading {
         font-size: 0.8rem;
         @include responsive(md) {
-          font-size: 0.9rem;
+          font-size: 1.3rem;
         }
         @include text-medium;
         color: $color-text-base;
@@ -32,10 +31,10 @@
       .main-heading {
         font-size: 1.75rem;
         @include responsive(md) {
-          font-size: $spacing-md;
+          font-size: $spacing-lg;
         }
-        @include text-semibold;
-        line-height: 1.25;
+        @include text-medium;
+        line-height: 1.2;
       }
     }
   }
@@ -81,7 +80,10 @@
 
     .testimonial-text {
       font-size: 1rem;
-      line-height: 1.7;
+       @include responsive(md) {
+        font-size: 1.3rem;
+      }
+      line-height: 1.2;
       color: $color-text-base;
       margin-bottom: 1.5rem;
     }
@@ -101,12 +103,18 @@
 
     .testimonial-title {
       font-size: 1.125rem;
+       @include responsive(md) {
+        font-size: 1.5rem;
+      }
       color: $color-primary;
       @include text-bold;
     }
 
     .testimonial-subtitle {
       font-size: 0.875rem;
+      @include responsive(md) {
+        font-size: 1.2rem;
+      }
       color: $color-text-muted;
       margin-top: 0.25rem;
     }

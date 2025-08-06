@@ -4,9 +4,8 @@
 //why choose us section
 .why-choose-us {
   background: $bg-success-gradient;
-  padding: 5rem 0;
+  padding: 3.5rem 0;
 
- 
   .why-us-container {
     width: 90vw;
     margin: 0 auto;
@@ -18,7 +17,8 @@
 
   .heading h2 {
     @include text-semibold;
-   font-size: 1.85rem;
+    font-size: 1.85rem;
+    line-height: 1.2;
     @include responsive(md) {
       font-size: 2.2rem;
     }
@@ -29,7 +29,6 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-
 
     @include responsive(md) {
       grid-template-columns: 1fr 1fr;
@@ -52,15 +51,21 @@
 
     .feature-title {
       color: $color-secondary;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+      @include text-semibold;
+      margin-bottom: 0.1rem;
       font-size: 1.125rem;
+      @include responsive(lg) {
+        font-size: 1.225rem;
+      }
     }
 
     .feature-desc {
       color: $color-text-base;
-      font-size: 1rem;
-      line-height: 1.5;
+      font-size: 1.25rem;
+      @include responsive(lg) {
+        font-size: 1.1rem;
+      }
+      line-height: 1.2;
     }
   }
 }

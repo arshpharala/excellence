@@ -19,6 +19,7 @@
     .footer-top {
       display: grid;
       grid-template-columns: 1fr;
+      place-items: start;
 
       @include responsive(md) {
         @include flex-center;
@@ -29,7 +30,7 @@
 
       .footer-logo span {
         font-size: 1.125rem;
-        @include text-bold;
+        @include text-semibold;
         text-transform: capitalize;
         color: white;
       }
@@ -38,7 +39,7 @@
         display: flex;
         justify-content: left;
         gap: 1rem;
-        font-size: 1.5rem;
+        font-size: 2.3rem;
 
         a {
           color: white;
@@ -96,17 +97,16 @@
 
     .footer-copy {
       text-align: center;
-      font-size: 0.875rem;
-      color: #9ca3af; // gray-500
-      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: white; // gray-500
+      @include text-semibold;
+      margin-top: 2.5rem;
 
       a {
         color: inherit;
-        text-decoration: underline;
+        text-decoration: none;
 
-        &:hover {
-          color: white;
-        }
+       
       }
     }
   }
