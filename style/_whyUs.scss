@@ -1,47 +1,35 @@
 @use "mixins" as *;
 @use "variables" as *;
 
-
 //why choose us section
 .why-choose-us {
   background: $bg-success-gradient;
-  padding: 8rem 1.5rem;
+  padding: 5rem 0;
 
-  @include responsive(md) {
-    padding-inline: 3rem;
-  }
-
-  @include responsive(lg) {
-    padding-inline: 6rem;
-  }
-
+ 
   .why-us-container {
     width: 90vw;
     margin: 0 auto;
 
-    @include responsive(lg){
+    @include responsive(lg) {
       width: 83.46vw;
     }
   }
 
   .heading h2 {
-    font-size: 1.875rem;
-    line-height: 1.5;
-    letter-spacing: 0.05em;
-   @include text-bold;
-    color: #fff;
-
-    @include responsive(lg) {
-      font-size: 2.25rem;
+    @include text-semibold;
+   font-size: 1.85rem;
+    @include responsive(md) {
+      font-size: 2.2rem;
     }
+    color: #fff;
   }
 
   .feature-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    
-    margin-top: 3rem;
+
 
     @include responsive(md) {
       grid-template-columns: 1fr 1fr;

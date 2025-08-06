@@ -6,7 +6,7 @@
   margin: 0 auto;
   text-align: center;
   position: relative;
-  padding: 4rem 1rem;
+  padding: 4rem 0;
 
   @include responsive(lg) {
     width: 83.46vw;
@@ -21,22 +21,21 @@
       margin-bottom: 1.5rem;
 
       .subheading {
-        font-size: 9pt;
+        font-size: 0.8rem;
+        @include responsive(md) {
+          font-size: 0.9rem;
+        }
+        @include text-medium;
         color: $color-text-base;
       }
 
       .main-heading {
-        font-size: 1.875rem;
-        @include text-medium;
-        line-height: 1.25;
-
+        font-size: 1.75rem;
         @include responsive(md) {
-          font-size: 2.25rem;
+          font-size: $spacing-md;
         }
-
-        @include responsive(lg) {
-          font-size: 24pt;
-        }
+        @include text-semibold;
+        line-height: 1.25;
       }
     }
   }
@@ -96,7 +95,7 @@
       max-width: 250px;
       height: 1px;
       background-color: $color-text-subtle;
-      margin-top: 0.5rem ;
+      margin-top: 0.5rem;
       border: none;
     }
 

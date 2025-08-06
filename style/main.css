@@ -34,8 +34,8 @@
   gap: 0.25rem;
 }
 .navbar .logo-link .logo-text {
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: bold;
   text-transform: capitalize;
   color: #000;
 }
@@ -206,7 +206,7 @@
   transition: all 0.3s ease;
 }
 .social-icons .icon.twitter:hover {
-  color: #0ea5e9;
+  color: #111827;
   scale: 1.1;
   transition: all 0.3s ease;
 }
@@ -278,7 +278,7 @@
   }
 }
 .hero .hero-container .hero-grid .hero-text p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #364153;
   max-width: 25rem;
@@ -348,7 +348,7 @@
   transition: all 0.3s ease;
 }
 .hero .social-box .icon.twitter:hover {
-  color: #0ea5e9;
+  color: #111827;
   scale: 1.1;
   transition: all 0.3s ease;
 }
@@ -361,9 +361,8 @@
 .vas-section {
   width: 90vw;
   margin: auto;
-  padding: 4rem 0;
+  padding: 5rem 0;
   display: grid;
-  place-items: center;
 }
 @media (min-width: 64rem) {
   .vas-section {
@@ -414,8 +413,8 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 .vas-section .vas-grid .vas-subheading {
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 500;
   margin-bottom: 1.5rem;
   color: #111827;
 }
@@ -446,7 +445,7 @@
 }
 .vas-section .vas-grid .vas-value-item .vas-value-title {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 @media (min-width: 64rem) {
   .vas-section .vas-grid .vas-value-item .vas-value-title {
@@ -492,7 +491,7 @@
   padding: 12px 35px;
   border-radius: 9999px;
   text-transform: capitalize;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.8rem;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -543,18 +542,14 @@
   color: #111827;
   margin-bottom: 1.4rem;
   line-height: 1.2rem;
-  font-size: 0.85rem;
-}
-@media (min-width: 64rem) {
-  .vas-section .vas-grid .vas-right .vas-service-item.active .vas-service-paragraph {
-    font-size: 1rem;
-  }
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .portfolio-section {
   width: 90vw;
   margin: 0 auto;
-  padding: 8rem 0;
+  padding: 5rem 0;
   /* Projects grid */
   /* Individual project card */
 }
@@ -574,16 +569,22 @@
   }
 }
 .portfolio-section .intro-text .subtitle {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 400;
+  letter-spacing: -0.06em;
   color: #6b7280;
 }
-.portfolio-section .intro-text .title {
-  font-size: 1.875rem;
-  font-weight: 400;
-  line-height: 1.25;
+@media (min-width: 48rem) {
+  .portfolio-section .intro-text .subtitle {
+    font-size: 0.9rem;
+  }
 }
-@media (min-width: 64rem) {
+.portfolio-section .intro-text .title {
+  font-weight: 500;
+  line-height: 1.25;
+  font-size: 1.75rem;
+}
+@media (min-width: 48rem) {
   .portfolio-section .intro-text .title {
     font-size: 2rem;
   }
@@ -591,15 +592,16 @@
 .portfolio-section .description {
   display: grid;
   place-self: end;
+  font-weight: 400;
 }
 @media (min-width: 48rem) {
   .portfolio-section .description {
     margin-top: 1.75;
-    max-width: 470px;
+    max-width: 485px;
   }
 }
 .portfolio-section .description p {
-  font-size: 10.05pt;
+  font-size: 0.9rem;
   color: #374151; /* text-color */
   margin-bottom: 16px;
   line-height: 1.5;
@@ -615,7 +617,7 @@
   padding: 12px 35px;
   border-radius: 9999px;
   text-transform: capitalize;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.8rem;
   text-decoration: none;
   transition: all 0.5s ease;
@@ -671,12 +673,17 @@
   border-radius: 16px 16px 0 0;
   overflow: hidden;
   cursor: pointer;
-  max-width: 320px;
+  width: 100%;
   transition: box-shadow 0.5s ease;
   display: flex;
   flex-direction: column;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+@media (min-width: 48rem) {
+  .portfolio-section .project-card {
+    max-width: 320px;
+  }
 }
 .portfolio-section .project-card:hover {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -724,8 +731,8 @@
   margin: -15px 0;
 }
 .portfolio-section .project-subtitle {
-  font-size: 8.67pt;
-  font-weight: 500;
+  font-size: 10.67pt;
+  font-weight: 400;
   color: #9ca3af;
 }
 .portfolio-section .divider {
@@ -754,7 +761,7 @@
 .timeline-section {
   width: 90vw;
   margin: 0 auto;
-  padding: 8rem 0;
+  padding: 5rem 0;
   position: relative;
   background-color: white;
   border-radius: 24px;
@@ -767,7 +774,7 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 /* Header Section */
@@ -781,27 +788,33 @@
 }
 
 .header-content h3 {
-  font-size: 10pt;
+  font-size: 0.8rem;
   font-weight: 400;
   color: #6b7280;
+  letter-spacing: -0.03em;
+}
+@media (min-width: 48rem) {
+  .header-content h3 {
+    font-size: 0.9rem;
+  }
 }
 
 .header-content h2 {
   line-height: 1.2;
   color: #111827;
   margin-bottom: 2.5rem;
-  font-size: 1.875rem;
   font-weight: 500;
   line-height: 1.25;
+  font-size: 1.75rem;
 }
 @media (min-width: 64rem) {
   .header-content h2 {
-    font-size: 24pt;
+    font-size: 3.8rem;
   }
 }
 @media (min-width: 48rem) {
   .header-content h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 
@@ -1042,17 +1055,7 @@
 
 .why-choose-us {
   background: linear-gradient(135deg, rgb(50.6870229008, 180.572519084, 26.927480916), #207211, rgb(19.5419847328, 69.6183206107, 10.3816793893));
-  padding: 8rem 1.5rem;
-}
-@media (min-width: 48rem) {
-  .why-choose-us {
-    padding-inline: 3rem;
-  }
-}
-@media (min-width: 64rem) {
-  .why-choose-us {
-    padding-inline: 6rem;
-  }
+  padding: 5rem 0;
 }
 .why-choose-us .why-us-container {
   width: 90vw;
@@ -1064,22 +1067,19 @@
   }
 }
 .why-choose-us .heading h2 {
-  font-size: 1.875rem;
-  line-height: 1.5;
-  letter-spacing: 0.05em;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 1.85rem;
   color: #fff;
 }
-@media (min-width: 64rem) {
+@media (min-width: 48rem) {
   .why-choose-us .heading h2 {
-    font-size: 2.25rem;
+    font-size: 2.2rem;
   }
 }
 .why-choose-us .feature-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin-top: 3rem;
 }
 @media (min-width: 48rem) {
   .why-choose-us .feature-grid {
@@ -1115,26 +1115,25 @@
   width: 90vw;
   margin: 0 auto;
   text-align: center;
+  padding: 5rem 0;
 }
 @media (min-width: 64rem) {
   .team-section {
     width: 83.46vw;
-    padding: 8rem;
   }
 }
 .team-section .section-title {
-  font-size: 1;
-  font-weight: 600;
+  font-size: 1.75rem;
+  font-weight: 500;
   margin-bottom: 2.5rem;
 }
-@media (min-width: 64rem) {
+@media (min-width: 48rem) {
   .team-section .section-title {
-    font-size: 1.875rem;
+    font-size: 2rem;
   }
 }
 .team-section .team-swiper {
   position: relative;
-  padding: 20px 0 60px;
   overflow: hidden;
   width: 100%;
 }
@@ -1225,7 +1224,7 @@
 
 .contact-container {
   width: 90vw;
-  padding: 8rem 0;
+  padding: 5rem 0;
   margin: 0 auto;
 }
 @media (min-width: 64rem) {
@@ -1235,30 +1234,29 @@
 }
 
 .contact-title {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   text-transform: capitalize;
-  font-weight: bold;
-  color: #000;
+  font-weight: 500;
+  color: #111827;
   margin-bottom: 1.75rem;
 }
-@media (min-width: 80rem) {
+@media (min-width: 48rem) {
   .contact-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
 .contact-form {
   width: 100%;
   margin: 0 auto;
-  margin-top: 1.75rem;
   gap: 1rem;
-  padding: 1.75rem;
+  padding: 1.5rem 0;
 }
 @media (min-width: 64rem) {
   .contact-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 2.5rem;
+    padding: 2.5rem 0;
   }
 }
 @media (max-width: 1023px) {
@@ -1278,7 +1276,7 @@
 .form-input {
   padding: 0.75rem 1rem;
   border: 1px solid #d1d5db;
-  border-radius: 1rem;
+  border-radius: 999px;
   font-size: 1rem;
   background-color: white;
   transition: all 0.3s ease;
@@ -1337,7 +1335,7 @@
   background-color: white;
   border: 1px solid #d1d5db;
   border-right: none;
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 9999px 0 0 9999px;
   font-size: 0.875rem;
   white-space: nowrap;
 }
@@ -1355,7 +1353,7 @@
   padding: 0.75rem 1rem;
   background-color: white;
   border: 1px solid #d1d5db;
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 0 9999px 9999px 0;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1471,7 +1469,7 @@
   margin: 0 auto;
   text-align: center;
   position: relative;
-  padding: 4rem 1rem;
+  padding: 4rem 0;
 }
 @media (min-width: 64rem) {
   .testimonial-section {
@@ -1488,22 +1486,23 @@
   margin-bottom: 1.5rem;
 }
 .testimonial-section .testimonial-header .testimonial-left .subheading {
-  font-size: 9pt;
+  font-size: 0.8rem;
+  font-weight: 400;
   color: #374151;
 }
+@media (min-width: 48rem) {
+  .testimonial-section .testimonial-header .testimonial-left .subheading {
+    font-size: 0.9rem;
+  }
+}
 .testimonial-section .testimonial-header .testimonial-left .main-heading {
-  font-size: 1.875rem;
-  font-weight: 400;
+  font-size: 1.75rem;
+  font-weight: 500;
   line-height: 1.25;
 }
 @media (min-width: 48rem) {
   .testimonial-section .testimonial-header .testimonial-left .main-heading {
-    font-size: 2.25rem;
-  }
-}
-@media (min-width: 64rem) {
-  .testimonial-section .testimonial-header .testimonial-left .main-heading {
-    font-size: 24pt;
+    font-size: 2rem;
   }
 }
 .testimonial-section .testimonial-container {
@@ -1611,9 +1610,10 @@
 }
 .footer .footer-container .footer-top {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
-@media (min-width: 64rem) {
+@media (min-width: 48rem) {
   .footer .footer-container .footer-top {
     display: flex;
     align-items: center;
@@ -1622,18 +1622,19 @@
 }
 .footer .footer-container .footer-top .footer-logo span {
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: capitalize;
   color: white;
 }
 .footer .footer-container .footer-top .social-icons {
   display: flex;
+  justify-content: left;
   gap: 1rem;
   font-size: 1.5rem;
 }
 .footer .footer-container .footer-top .social-icons a {
   color: white;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-in;
 }
 .footer .footer-container .footer-top .social-icons a.whatsapp:hover {
   color: #22c55e;
@@ -1642,7 +1643,9 @@
   color: #3b82f6;
 }
 .footer .footer-container .footer-top .social-icons a.twitter:hover {
-  color: #0ea5e9;
+  color: #111827;
+  background: aliceblue;
+  border-radius: 999px;
 }
 .footer .footer-container .footer-top .social-icons a.instagram:hover {
   color: #ec4899;

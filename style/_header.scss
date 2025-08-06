@@ -35,8 +35,8 @@
     gap: 0.25rem;
 
     .logo-text {
-      font-size: 0.85rem;
-      @include text-semibold;
+      font-size: 1.25rem;
+      @include text-bold;
       text-transform: capitalize;
       color: #000;
 
@@ -221,7 +221,7 @@
     }
 
     &.twitter:hover {
-      color: #0ea5e9;
+      color: $color-secondary;
       scale: 1.1;
       transition: $transition;
     }

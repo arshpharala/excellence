@@ -55,7 +55,7 @@
         }
 
         p {
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           @include text-medium;
           color: $gray-700;
           max-width: 25rem;
@@ -128,7 +128,7 @@
       }
 
       &.twitter:hover {
-        color: #0ea5e9;
+        color: $color-secondary;
         scale: 1.1;
         transition: $transition;
       }

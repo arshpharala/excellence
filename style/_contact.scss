@@ -4,7 +4,7 @@
 // Contact Container
 .contact-container {
   width: 90vw;
-  padding: 8rem 0;
+  padding: 5rem 0;
   margin: 0 auto;
 
   @include responsive(lg) {
@@ -13,29 +13,27 @@
 }
 
 .contact-title {
-  font-size: 1.875rem;
-  text-transform: capitalize;
-  @include text-bold;
-  color: #000;
-  margin-bottom: 1.75rem;
-
-  @include responsive(xl) {
-    font-size: 3rem;
+  font-size: 1.75rem;
+  @include responsive(md) {
+    font-size: $spacing-md;
   }
+  text-transform: capitalize;
+  @include text-semibold;
+  color: $color-secondary;
+  margin-bottom: 1.75rem;
 }
 
 // Contact Form
 .contact-form {
   width: 100%;
   margin: 0 auto;
-  margin-top: 1.75rem;
   gap: 1rem;
-  padding: 1.75rem;
+  padding: 1.5rem 0;
 
   @include responsive(lg) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 2.5rem;
+    padding: 2.5rem 0;
   }
 
   @media (max-width: 1023px) {
@@ -54,7 +52,7 @@
 .form-input {
   padding: 0.75rem 1rem;
   border: 1px solid $border-default;
-  border-radius: $border-radius;
+  border-radius: 999px;
   font-size: 1rem;
   background-color: white;
   transition: $transition;
@@ -114,7 +112,7 @@
   background-color: white;
   border: 1px solid $border-default;
   border-right: none;
-  border-radius: $border-radius 0 0 $border-radius;
+  border-radius: 9999px 0 0 9999px;
   font-size: 0.875rem;
   white-space: nowrap;
 }
@@ -132,7 +130,7 @@
   padding: 0.75rem 1rem;
   background-color: white;
   border: 1px solid $border-default;
-  border-radius: 0 $border-radius $border-radius 0;
+  border-radius: 0 9999px 9999px 0;
   font-size: 1rem;
   cursor: pointer;
   transition: $transition;
@@ -166,7 +164,7 @@
     }
 
     .submit-icon {
-      scale: 1.10;
+      scale: 1.1;
     }
   }
 }
@@ -198,7 +196,7 @@
   transform: rotate(45deg);
   font-size: 1rem;
   border-radius: 9999px;
- padding: 0.80rem;
+  padding: 0.8rem;
   @include grid-center;
 
   border: 1px solid transparent;

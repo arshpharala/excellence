@@ -4,8 +4,8 @@
 .vas-section {
   width: 90vw;
   margin: auto;
-  padding: 4rem 0;
-  @include grid-center;
+  padding: 5rem 0;
+  display: grid;
 
   @include responsive(lg) {
     width: 83.46vw;
@@ -31,6 +31,7 @@
 
   .vas-grid {
     display: grid;
+
     gap: 5rem;
 
     @include responsive(lg) {
@@ -55,8 +56,8 @@
     }
 
     .vas-subheading {
-      font-size: 1.4rem;
-      @include text-bold;
+      font-size: 1.3rem;
+      @include text-semibold;
       margin-bottom: 1.5rem;
       color: $color-secondary;
 
@@ -87,7 +88,7 @@
 
       .vas-value-title {
         font-size: 1rem;
-        @include text-medium;
+        @include text-semibold;
 
         @include responsive(lg) {
           font-size: 1.14rem;
@@ -137,11 +138,11 @@
             padding: 12px 35px;
             border-radius: 9999px;
             text-transform: capitalize;
-            @include text-medium;
+            @include text-semibold;
             font-size: 0.8rem;
             @include responsive(lg) {
               font-size: 1rem;
-            } 
+            }
             text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
@@ -157,7 +158,7 @@
             color: white;
             font-weight: bold;
             font-size: 1.5rem;
-            
+
             border-radius: 9999px;
             width: 45px;
             height: 45px;
@@ -194,12 +195,8 @@
           color: $color-secondary;
           margin-bottom: 1.4rem;
           line-height: 1.2rem;
-          font-size: 0.85rem;
-
-          @include responsive(lg) {
-            font-size: 1rem;
-          }
-          
+          font-size: 0.9rem;
+          @include text-medium;
         }
       }
     }

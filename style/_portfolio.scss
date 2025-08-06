@@ -4,7 +4,7 @@
 .portfolio-section {
   width: 90vw;
   margin: 0 auto;
-  padding: 8rem 0;
+  padding: 5rem 0;
   @include responsive(lg) {
     width: 83.46vw;
   }
@@ -20,31 +20,37 @@
   }
 
   .intro-text .subtitle {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     @include text-medium;
+    letter-spacing: -0.06em;
     color: $color-text-muted;
+
+    @include responsive(md) {
+      font-size: 0.9rem;
+    }
   }
 
   .intro-text .title {
-    font-size: 1.875rem;
-    @include text-medium;
+    @include text-semibold;
 
     line-height: 1.25;
-
-    @include responsive(lg) {
-      font-size: 2rem;
+    font-size: 1.75rem;
+    @include responsive(md) {
+      font-size: $spacing-md;
     }
   }
 
   .description {
     display: grid;
     place-self: end;
+    @include text-medium;
     @include responsive(md) {
       margin-top: 1.75;
-      max-width: 470px;
+      max-width: 485px;
     }
     p {
-      font-size: 10.05pt;
+      font-size: 0.9rem;
+
       color: $color-text-base; /* text-color */
       margin-bottom: 16px;
       line-height: 1.5;
@@ -63,7 +69,7 @@
     padding: 12px 35px;
     border-radius: 9999px;
     text-transform: capitalize;
-    @include text-medium;
+    @include text-semibold;
     font-size: 0.8rem;
     @include responsive(lg) {
       font-size: 1rem;
@@ -121,7 +127,11 @@
     border-radius: 16px 16px 0 0;
     overflow: hidden;
     cursor: pointer;
-    max-width: 320px;
+    width: 100%;
+    @include responsive(md) {
+         max-width: 320px;
+
+    }
     transition: box-shadow 0.5s ease;
     display: flex;
     flex-direction: column;
@@ -179,8 +189,8 @@
   }
 
   .project-subtitle {
-    font-size: 8.67pt;
-    @include text-semibold;
+    font-size: 10.67pt;
+    @include text-medium;
     color: $color-text-subtle;
   }
 

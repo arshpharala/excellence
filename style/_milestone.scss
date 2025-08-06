@@ -5,7 +5,7 @@
 .timeline-section {
   width: 90vw;
   margin: 0 auto;
-  padding: 8rem 0;
+  padding: 5rem 0;
   position: relative;
   background-color: white;
   border-radius: 24px;
@@ -17,7 +17,7 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 /* Header Section */
@@ -31,9 +31,14 @@
 }
 
 .header-content h3 {
-  font-size:10pt;
+  font-size: 0.8rem;
+
+  @include responsive(md) {
+    font-size: 0.9rem;
+  }
   @include text-medium;
   color: $color-text-muted;
+  letter-spacing: -0.03em;
 }
 
 .header-content h2 {
@@ -41,17 +46,17 @@
   color: $color-secondary;
   margin-bottom: 2.5rem;
 
-  font-size: 1.875rem;
   @include text-semibold;
 
   line-height: 1.25;
 
   @include responsive(lg) {
-    font-size: 24pt;
+    font-size: 3.8rem;
   }
 
+  font-size: 1.75rem;
   @include responsive(md) {
-    font-size: 2.25rem;
+    font-size: $spacing-md;
   }
 }
 

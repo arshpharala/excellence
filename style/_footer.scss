@@ -18,8 +18,9 @@
 
     .footer-top {
       display: grid;
+      grid-template-columns: 1fr;
 
-      @include responsive(lg) {
+      @include responsive(md) {
         @include flex-center;
         justify-content: space-between;
       }
@@ -27,20 +28,21 @@
       gap: 2rem;
 
       .footer-logo span {
-        font-size: 1.125rem; // text-lg
-        font-weight: 600;
+        font-size: 1.125rem;
+        @include text-bold;
         text-transform: capitalize;
         color: white;
       }
 
       .social-icons {
         display: flex;
+        justify-content: left;
         gap: 1rem;
-        font-size: 1.5rem; // text-xl
+        font-size: 1.5rem;
 
         a {
           color: white;
-          transition: color 0.3s ease;
+          transition: color 0.3s ease-in;
 
           &.whatsapp:hover {
             color: #22c55e;
@@ -51,7 +53,9 @@
           }
 
           &.twitter:hover {
-            color: #0ea5e9;
+            color: $color-secondary;
+            background: aliceblue;
+            border-radius: 999px;
           }
 
           &.instagram:hover {
