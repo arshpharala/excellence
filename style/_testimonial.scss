@@ -2,16 +2,17 @@
 @use "variables" as *;
 
 .testimonial-section {
-  width: 90vw;
   margin: 0 auto;
   text-align: center;
   position: relative;
   padding: 3.5rem 0;
 
+  width: 90vw;
+
   @include responsive(lg) {
     width: 83.46vw;
+    max-width: 1366px;
   }
-
   .testimonial-header {
     @include grid-center;
 
@@ -78,10 +79,10 @@
       cursor: pointer;
     }
 
-    .testimonial-text {
+    .testimonial-desc {
       font-size: 1rem;
-       @include responsive(md) {
-        font-size: 1.3rem;
+      @include responsive(md) {
+        font-size: 1.5rem;
       }
       line-height: 1.2;
       color: $color-text-base;
@@ -94,7 +95,7 @@
     }
 
     .testimonial-divider {
-      max-width: 250px;
+      max-width: 280px;
       height: 1px;
       background-color: $color-text-subtle;
       margin-top: 0.5rem;
@@ -103,7 +104,7 @@
 
     .testimonial-title {
       font-size: 1.125rem;
-       @include responsive(md) {
+      @include responsive(md) {
         font-size: 1.5rem;
       }
       color: $color-primary;
@@ -122,6 +123,9 @@
     .swiper-nav {
       position: absolute;
       bottom: 1rem;
+      @include responsive(md) {
+        bottom: 7rem;
+      }
       right: 2rem;
       z-index: 10;
       display: flex;
@@ -137,6 +141,7 @@
       border-radius: 50%;
       font-size: 1.25rem;
       background: #f9fafb;
+      color: $color-text-subtle;
       border: 2px solid #d1d5db;
       cursor: pointer;
       transition: all 0.3s ease;

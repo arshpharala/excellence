@@ -2,11 +2,14 @@
 @use "variables" as *;
 
 .portfolio-section {
-  width: 90vw;
   margin: 0 auto;
   padding: 3.5rem 0;
+
+  width: 90vw;
+
   @include responsive(lg) {
     width: 83.46vw;
+    max-width: 1366px;
   }
 
   // Header Section
@@ -27,8 +30,7 @@
 
     @include responsive(md) {
       font-size: 1.2rem;
-    letter-spacing: normal;
-
+      letter-spacing: normal;
     }
   }
 
@@ -52,9 +54,7 @@
     }
     p {
       font-size: 0.9rem;
-       @include responsive(md) {
-      font-size: 1.2rem;
-       }
+     
 
       color: $color-text-base; /* text-color */
       margin-bottom: 16px;
@@ -134,8 +134,7 @@
     cursor: pointer;
     width: 100%;
     @include responsive(md) {
-         max-width: 320px;
-
+      max-width: 320px;
     }
     transition: box-shadow 0.5s ease;
     display: flex;
@@ -194,10 +193,10 @@
   }
 
   .project-subtitle {
-   font-size: 0.875rem;
-      @include responsive(md) {
-        font-size: 1.2rem;
-      }
+    font-size: 0.875rem;
+    @include responsive(md) {
+      font-size: 1.2rem;
+    }
     @include text-medium;
     color: $color-text-subtle;
   }

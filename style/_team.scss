@@ -3,15 +3,16 @@
 
 // team section
 .team-section {
-  width: 90vw;
   margin: 0 auto;
   text-align: center;
   padding: 3.5rem 0;
 
+  width: 90vw;
+
   @include responsive(lg) {
     width: 83.46vw;
+    max-width: 1366px;
   }
-
   .section-title {
     font-size: 1.75rem;
     @include responsive(md) {
@@ -63,31 +64,45 @@
   }
 
   .swiper-slide:hover img {
-    transform: scale(1.25);
+    transform: scale(1.10);
   }
-
   .linkedin-icon {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    background: #d1d5db;
-    padding: 0.75rem;
-    border-radius: 9999px;
-    transition: all 0.3s ease;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #d1d5db;
+    border-radius: 50%;
+    @include grid-center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    .icon-border {
+      border: 2px solid $color-secondary;
+      border-radius: 4px;
+      padding: 0 0.2rem;
+      transition: border-color 0.3s ease;
+
+      i {
+        color: $color-secondary;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+    }
   }
 
+  // 🔥 On .swiper-slide hover — update nested styles
   .swiper-slide:hover .linkedin-icon {
-    background: #fb923c;
+    background-color: #fb923c;
     transform: scale(1.1);
-  }
 
-  .linkedin-icon i {
-    color: #374151;
-    font-size: 1.25rem;
-  }
+    .icon-border {
+      border-color: #ffffff;
 
-  .swiper-slide:hover .linkedin-icon i {
-    color: #ffffff;
+      i {
+        color: #ffffff;
+      }
+    }
   }
 
   .slide-info {
@@ -117,6 +132,7 @@
     border-radius: 9999px;
     background: #f9fafb;
     cursor: pointer;
+    color: $color-text-subtle;
     transition: all 0.3s ease;
     font-size: 1.25rem;
   }

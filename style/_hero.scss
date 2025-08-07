@@ -7,20 +7,21 @@
 
   background: url("../assets/Layer.png") center/cover no-repeat;
   @include grid-center;
-  min-height: 728px;
+min-height: 70vh;
+
+  @include responsive(md) {
+   min-height: 728px;
+  }
 
   @include responsive(lg) {
     background-position: right;
   }
-  @include responsive(2xl) {
-    min-height: 100vh;
-  }
-
   .hero-container {
     width: 90vw;
 
     @include responsive(lg) {
       width: 83.46vw;
+      max-width: 1366px;
     }
 
     .hero-grid {
@@ -40,7 +41,7 @@
           text-transform: uppercase;
           color: $gray-900;
           font-size: 1.5rem;
-          font-weight: 600;
+        @include text-semibold;
           line-height: 1.25;
           margin-bottom: $spacing-sm;
           margin-top: $spacing-md;
@@ -95,7 +96,7 @@
   .social-box {
     position: absolute;
 
-    bottom: $spacing-sm;
+    bottom: $spacing-xs;
     right: $spacing-sm;
     display: none;
 

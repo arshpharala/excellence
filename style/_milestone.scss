@@ -3,15 +3,17 @@
 
 /* Timeline Section */
 .timeline-section {
-  width: 90vw;
   margin: 0 auto;
   padding: 3.5rem 0;
   position: relative;
   background-color: white;
   border-radius: 24px;
 
+  width: 90vw;
+
   @include responsive(lg) {
     width: 83.46vw;
+    max-width: 1366px;
   }
 }
 
@@ -44,7 +46,6 @@
 .header-content h2 {
   line-height: 1.2;
   color: $color-secondary;
-  margin-bottom: 2.5rem;
 
   @include text-medium;
 
@@ -102,7 +103,7 @@
 }
 
 .milestones-container.collapsed {
-  max-height: 460px;
+  max-height: 550px;
   overflow: hidden;
 }
 
@@ -146,13 +147,13 @@
 .milestone-left {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .milestone-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .milestone-icon {
@@ -171,7 +172,7 @@
   @include responsive(md) {
     font-size: 2.5rem;
   }
-  @include text-bold;
+  @include text-semibold;
   color: #000;
 }
 
@@ -186,20 +187,20 @@
 .milestone-titles {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
 }
 
 .milestone-title {
   font-size: 1rem;
-   @include responsive(md) {
+  @include responsive(md) {
     font-size: 1.2rem;
   }
   @include text-semibold;
 }
 
 .milestone-subtitle {
+  margin-top: -0.5rem;
   font-size: 1rem;
-   @include responsive(md) {
+  @include responsive(md) {
     font-size: 1.2rem;
   }
   font-weight: 200;
@@ -207,15 +208,16 @@
 
 /* Right Section */
 .milestone-right {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }
 
 .milestone-description {
   font-size: 1rem;
-   @include responsive(md) {
+  @include responsive(md) {
     font-size: 1.2rem;
   }
-  line-height: 1.6;
+  line-height: 1.2;
+  margin-top: 1rem;
   color: $color-secondary;
 }
 

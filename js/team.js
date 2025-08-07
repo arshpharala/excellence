@@ -18,7 +18,8 @@ export default function initTeam() {
         <div class="image-container">
           <img src="assets/image.png" alt="${member.name}"  />
           <a href="${member.linkedin}" target="_blank" class="linkedin-icon">
-            <i class="fab fa-linkedin-in"></i>
+          <span class="icon-border">  <i class="fab fa-linkedin-in"></i></span>
+          
           </a>
         </div>
         <div class="slide-info" data-aos="fade-right">

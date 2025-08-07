@@ -4,14 +4,15 @@
 //why choose us section
 .why-choose-us {
   background: $bg-success-gradient;
-  padding: 3.5rem 0;
+  padding: 4rem 0;
 
   .why-us-container {
-    width: 90vw;
     margin: 0 auto;
+    width: 90vw;
 
     @include responsive(lg) {
       width: 83.46vw;
+      max-width: 1366px;
     }
   }
 
@@ -20,7 +21,7 @@
     font-size: 1.85rem;
     line-height: 1.2;
     @include responsive(md) {
-      font-size: 2.2rem;
+      font-size: 2.55rem;
     }
     color: #fff;
   }
