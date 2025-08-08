@@ -55,7 +55,7 @@ export default function initMilestone() {
 
     return `
       ${steps}
-    <img src="../assets/chevron.png" class="${arrowClass}" />
+    <img src="./assets/chevron.png" class="${arrowClass}" />
       <div class="step-line"></div>
     `;
   };
