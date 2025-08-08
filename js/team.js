@@ -16,9 +16,11 @@ export default function initTeam() {
       <div class="swiper-slide">
        <div class="team-card">
         <div class="image-container">
-          <img src="assets/image.png" alt="${member.name}"  />
+          <img src="assets/image.png" alt="${member.name} class="team "  />
           <a href="${member.linkedin}" target="_blank" class="linkedin-icon">
-          <span class="icon-border">  <i class="fab fa-linkedin-in"></i></span>
+          <span class="icon-border"> 
+          <img src="./assets/socialIcon/linkedin.png" alt="LinkedIn Icon" class="social-icon" />
+          </i></span>
           
           </a>
         </div>

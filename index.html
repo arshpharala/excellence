@@ -41,7 +41,7 @@
         </a>
 
         <ul class="nav-links">
-          <li><a href="/">home</a></li>
+          <li><a href="#hero">home</a></li>
           <li><a href="#about">about</a></li>
           <li><a href="#service">services</a></li>
           <li><a href="#portfolio">portfolio</a></li>
@@ -51,7 +51,7 @@
         <div class="nav-controls">
           <a href="#" class="consult-btn">Get a Free Consultation</a>
           <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
+            <img src="../assets/bars.png" alt="meanu icon" class="icon-menu" />
           </button>
         </div>
       </div>
@@ -65,7 +65,7 @@
       aria-label="Mobile navigation"
     >
       <button class="close-btn" id="closeMenu" aria-label="Close menu">
-        <i class="fas fa-times" aria-hidden="true"></i>
+        <img src="./assets/close.png" alt="Close Icon" class="close-icon" />
       </button>
 
       <ul>
@@ -78,18 +78,46 @@
 
       <hr />
 
-      <div class="social-icons">
-        <a href="#" class="icon whatsapp" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
+      <div
+        class="social-icons"
+        role="navigation"
+        aria-label="Social media links"
+      >
+        <a
+          href="https://wa.me/your-number"
+          class="icon whatsapp"
+          aria-label="WhatsApp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="../assets/socialIcon/whatsapp.png" alt="WhatsApp icon" />
         </a>
-        <a href="#" class="icon facebook" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i>
+        <a
+          href="https://facebook.com/yourprofile"
+          class="icon facebook"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="../assets/socialIcon/facebook.png" alt="Facebook icon" />
         </a>
-        <a href="#" class="icon twitter" aria-label="Twitter">
-       <i class="fa-brands fa-x-twitter"></i>
+        <a
+          href="https://twitter.com/yourprofile"
+          class="icon twitter"
+          aria-label="Twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="../assets/socialIcon/x.png" alt="Twitter icon" />
         </a>
-        <a href="#" class="icon instagram" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
+        <a
+          href="https://instagram.com/yourprofile"
+          class="icon instagram"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="../assets/socialIcon/instagram.png" alt="Instagram icon" />
         </a>
       </div>
     </div>
@@ -109,7 +137,13 @@
             <div data-aos="fade-up" class="button-wrapper">
               <a href="#" class="btn-link">
                 <span class="btn-text">Start your project today!</span>
-                <i class="fas fa-arrow-up btn-icon"></i>
+                <span class="btn-icon">
+                  <img
+                    src="./assets/arrow45.png"
+                    alt="Arrow Icon"
+                    class="icon-arrow"
+                  />
+                </span>
               </a>
             </div>
           </div>
@@ -121,18 +155,42 @@
       </div>
 
       <!-- Social Icon Box -->
-      <div class="social-box">
-        <a href="#" class="icon whatsapp" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
+      <div class="social-box" role="navigation" aria-label="Social media links">
+        <a
+          href="https://wa.me/your-number"
+          class="icon whatsapp"
+          aria-label="WhatsApp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="../assets/socialIcon/whatsapp.png" alt="WhatsApp icon" />
         </a>
-        <a href="#" class="icon facebook" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i>
+        <a
+          href="https://facebook.com/yourprofile"
+          class="icon facebook"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="../assets/socialIcon/facebook.png" alt="Facebook icon" />
         </a>
-        <a href="#" class="icon twitter" aria-label="Twitter">
-      <i class="fa-brands fa-x-twitter"></i>
+        <a
+          href="https://twitter.com/yourprofile"
+          class="icon twitter"
+          aria-label="Twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="../assets/socialIcon/x.png" alt="Twitter icon" />
         </a>
-        <a href="#" class="icon instagram" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
+        <a
+          href="https://instagram.com/yourprofile"
+          class="icon instagram"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="../assets/socialIcon/instagram.png" alt="Instagram icon" />
         </a>
       </div>
     </section>
@@ -211,7 +269,9 @@
 
             <div class="read-more-group">
               <a href="#" class="read-more-btn">Read More</a>
-              <i class="fa fa-arrow-up icon-wrapper" aria-hidden="true"></i>
+              <span class="icon-wrapper">
+                <img src="./assets/arrow45.png" alt="Arrow Icon" />
+              </span>
             </div>
           </div>
         </div>
@@ -244,10 +304,14 @@
         <!-- Navigation Buttons -->
         <div class="swiper-nav">
           <button id="PrevBtn" class="swiper-btn">
-            <i class="fa fa-arrow-left"></i>
+            <img
+              src="./assets/arrow.png"
+              alt="Previous"
+              class="icon-arrow icon-arrow-left"
+            />
           </button>
           <button id="NextBtn" class="swiper-btn">
-            <i class="fa fa-arrow-right"></i>
+            <img src="./assets/arrow.png" alt="Next" class="icon-arrow" />
           </button>
         </div>
       </div>
@@ -286,7 +350,12 @@
             id="toggleButton"
             aria-label="Toggle milestone list"
           >
-            <i class="fa fa-arrow-down toggle-icon" id="toggleIcon"></i>
+            <img
+              src="./assets/arrow.png"
+              alt="Toggle"
+              class="icon-arrow toggle-icon"
+              id="toggleIcon"
+            />
           </button>
         </div>
       </div>
@@ -304,10 +373,18 @@
         <!-- Navigation Buttons -->
         <div class="swiper-nav">
           <button id="teamPrevBtn" class="swiper-btn">
-            <i class="fa fa-arrow-left"></i>
+            <img
+              src="./assets/arrow.png"
+              alt="Previous Team Slide"
+              class="icon-arrow icon-arrow-left"
+            />
           </button>
           <button id="teamNextBtn" class="swiper-btn">
-            <i class="fa fa-arrow-right"></i>
+            <img
+              src="./assets/arrow.png"
+              alt="Next Team Slide"
+              class="icon-arrow"
+            />
           </button>
         </div>
       </div>
@@ -389,9 +466,10 @@
           <div class="submit-group">
             <button type="submit" class="submit-btn">Submit</button>
             <span class="submit-icon">
-            <img
-              src="./assets/arrow45.png"
-              alt="Submit Icon"
+              <img
+                src="./assets/arrow45.png"
+                alt="Submit Icon"
+                class="icon-arrow"
               />
             </span>
           </div>
@@ -418,19 +496,56 @@
           </a>
 
           <!-- Social Icons -->
-          <div class="social-icons">
-            <a href="#" aria-label="WhatsApp" class="whatsapp"
-              ><i class="fab fa-whatsapp"></i
-            ></a>
-            <a href="#" aria-label="Facebook" class="facebook"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="#" aria-label="Twitter" class="twitter">
-              <i class="fa-brands fa-x-twitter"></i>
+          <div
+            class="social-icons"
+            role="navigation"
+            aria-label="Social media links"
+          >
+            <a
+              href="https://wa.me/your-number"
+              class="icon whatsapp"
+              aria-label="WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="../assets/socialIcon/whatsapp.png"
+                alt="WhatsApp icon"
+              />
             </a>
-            <a href="#" aria-label="Instagram" class="instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
+            <a
+              href="https://facebook.com/yourprofile"
+              class="icon facebook"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="../assets/socialIcon/facebook.png"
+                alt="Facebook icon"
+              />
+            </a>
+            <a
+              href="https://twitter.com/yourprofile"
+              class="icon twitter"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="../assets/socialIcon/x.png" alt="Twitter icon" />
+            </a>
+            <a
+              href="https://instagram.com/yourprofile"
+              class="icon instagram"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="../assets/socialIcon/instagram.png"
+                alt="Instagram icon"
+              />
+            </a>
           </div>
 
           <!-- Nav Links -->

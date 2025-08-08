@@ -9,7 +9,7 @@
 }
 
 body {
- font-family: 'Acumin Pro', sans-serif;
+  font-family: "Acumin Pro", sans-serif;
   background-color: #fff;
   color: #111;
   line-height: 1.6;
@@ -60,9 +60,7 @@ button {
 
   .btn-icon {
     @include flex-center;
-    transform: rotate(45deg);
     font-size: 1rem;
-    color: black;
     background-color: $color-tertiary;
     border-radius: 9999px;
     width: 2.7rem;
@@ -71,6 +69,10 @@ button {
     border: 1px solid transparent;
     transition: $transition;
     cursor: pointer;
+  }
+
+  .btn-icon img {
+    filter: brightness(0) saturate(100%);
   }
 
   &:hover {
@@ -82,7 +84,7 @@ button {
 
     .btn-icon {
       background-color: lighten($color-success, 15%);
-      transform: rotate(45deg) scale(1.1);
+      transform: scale(1.1);
       border-color: $color-success;
     }
   }

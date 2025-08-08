@@ -54,7 +54,6 @@
     }
     p {
       font-size: 0.9rem;
-     
 
       color: $color-text-base; /* text-color */
       margin-bottom: 16px;
@@ -91,15 +90,12 @@
 
   .icon-wrapper {
     background-color: $color-primary; /* orange */
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
+    width: 2.7rem;
+    height: 2.7rem;
+    @include grid-center;
+    font-size: 1rem;
     border-radius: 9999px;
-    width: 45px;
-    height: 45px;
-    line-height: 40px;
     text-align: center;
-    transform: rotate(45deg);
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
@@ -108,6 +104,11 @@
     background-color: white;
     color: $color-primary;
     border: 1px solid $color-primary;
+
+    img {
+      filter: invert(43%) sepia(75%) saturate(3687%) hue-rotate(7deg)
+        brightness(95%) contrast(96%);
+    }
   }
 
   /* Projects grid */
@@ -208,20 +209,19 @@
   }
 
   .arrow-btn {
-    color: white;
     background-color: $color-secondary;
     transition: $transition-slow;
-    cursor: pointer;
-    border-radius: 9999px;
-    width: 50px;
-    height: 45px;
+    width: 2.8rem;
+    height: 2.7rem;
+    @include grid-center;
+    font-size: 1rem;
     text-align: center;
+    border-radius: 9999px;
+    border: 1px solid $color-secondary;
     cursor: pointer;
-  }
-
-  .arrow-btn:hover {
-    background-color: $color-primary;
-    transform: scale(1.1);
-    box-shadow: $shadow-xl;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: $shadow-xl;
+    }
   }
 }

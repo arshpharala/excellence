@@ -7,10 +7,10 @@
 
   background: url("../assets/Layer.png") center/cover no-repeat;
   @include grid-center;
-min-height: 70vh;
+  min-height: 70vh;
 
   @include responsive(md) {
-   min-height: 728px;
+    min-height: 728px;
   }
 
   @include responsive(lg) {
@@ -41,7 +41,7 @@ min-height: 70vh;
           text-transform: uppercase;
           color: $gray-900;
           font-size: 1.5rem;
-        @include text-semibold;
+          @include text-semibold;
           line-height: 1.25;
           margin-bottom: $spacing-sm;
           margin-top: $spacing-md;
@@ -96,17 +96,12 @@ min-height: 70vh;
   .social-box {
     position: absolute;
 
-    bottom: $spacing-xs;
-    right: $spacing-sm;
+    bottom: $spacing-lg;
+    right: $spacing-2xl;
     display: none;
 
     @include responsive(lg) {
       display: inline-flex;
-    }
-
-    @include responsive(md) {
-      bottom: $spacing-2xl;
-      right: $spacing-2xl;
     }
 
     gap: $spacing-sm;
@@ -115,33 +110,37 @@ min-height: 70vh;
     border-radius: 1.5rem;
     font-size: 1.25rem;
 
-    .icon {
-      transition: color 0.3s ease;
-      color: black;
-      cursor: pointer;
-      &.whatsapp:hover {
-        color: $color-success;
-        scale: 1.1;
-        transition: $transition;
-      }
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      filter: grayscale(100%) brightness(0%);
+      transition: $transition;
+    }
 
-      &.facebook:hover {
-        color: #3b82f6;
-        scale: 1.1;
-        transition: $transition;
-      }
+    a.whatsapp:hover img {
+      filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg)
+        brightness(90%) contrast(101%);
+      scale: 1.1;
+      transition: $transition;
+    }
+    a.facebook:hover img {
+      filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg)
+        brightness(95%) contrast(97%);
 
-      &.twitter:hover {
-        color: $color-secondary;
-        scale: 1.1;
-        transition: $transition;
-      }
+      scale: 1.1;
+      transition: $transition;
+    }
 
-      &.instagram:hover {
-        color: #ec4899;
-        scale: 1.1;
-        transition: $transition;
-      }
+    a.twitter:hover img {
+     
+      scale: 1.1;
+    }
+
+    a.instagram:hover img {
+      filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg)
+        brightness(90%) contrast(105%);
+      scale: 1.1;
+      transition: $transition;
     }
   }
 }

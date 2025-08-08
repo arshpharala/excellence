@@ -53,6 +53,7 @@
     overflow: hidden;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    width: 100%;
   }
 
   .swiper-slide img {
@@ -64,7 +65,7 @@
   }
 
   .swiper-slide:hover img {
-    transform: scale(1.10);
+    transform: scale(1.1);
   }
   .linkedin-icon {
     position: absolute;
@@ -77,31 +78,22 @@
     @include grid-center;
     transition: background-color 0.3s ease, transform 0.3s ease;
 
-    .icon-border {
-      border: 2px solid $color-secondary;
-      border-radius: 4px;
-      padding: 0 0.2rem;
-      transition: border-color 0.3s ease;
-
-      i {
-        color: $color-secondary;
-        font-size: 0.9rem;
-        transition: color 0.3s ease;
-      }
+    img.social-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 0;
+      filter: brightness(0) saturate(100%);
+      transition: filter 0.3s ease;
+      
     }
   }
 
   // 🔥 On .swiper-slide hover — update nested styles
-  .swiper-slide:hover .linkedin-icon {
+  .swiper-slide:hover .linkedin-icon  {
     background-color: #fb923c;
-    transform: scale(1.1);
 
-    .icon-border {
-      border-color: #ffffff;
-
-      i {
-        color: #ffffff;
-      }
+    img.social-icon {
+      filter: brightness(0) saturate(100%) invert(100%);
     }
   }
 
@@ -127,18 +119,34 @@
   }
 
   .swiper-btn {
-    padding: 0.5rem;
-    border: 2px solid #d1d5db;
-    border-radius: 9999px;
-    background: #f9fafb;
-    cursor: pointer;
-    color: $color-text-subtle;
-    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     font-size: 1.25rem;
-  }
+    background: #f9fafb;
+    color: $color-text-subtle;
+    border: 2px solid $border-default;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
-  .swiper-btn:hover {
-    background: #e5e7eb;
-    transform: scale(1.1);
+    .icon-arrow-left {
+      transform: rotate(180deg);
+    }
+
+    img.icon-arrow {
+      width: 1rem;
+      height: 1rem;
+      filter: brightness(0) saturate(0) invert(66%) sepia(0%) saturate(0%)
+        hue-rotate(181deg) brightness(92%) contrast(89%);
+      transition: filter 0.3s ease;
+    }
+
+    &:hover {
+      background-color: #e5e7eb;
+      transform: scale(1.1);
+    }
   }
 }

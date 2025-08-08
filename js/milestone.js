@@ -55,7 +55,7 @@ export default function initMilestone() {
 
     return `
       ${steps}
-      <i class="fas fa-chevron-right ${arrowClass}"></i>
+    <img src="../assets/chevron.png" class="${arrowClass}" />
       <div class="step-line"></div>
     `;
   };
@@ -114,57 +114,59 @@ export default function initMilestone() {
     });
   };
 
- const setActiveIndex = (index) => {
-  if (index === activeIndex || index < 0 || index >= milestones.length) return;
+  const setActiveIndex = (index) => {
+    if (index === activeIndex || index < 0 || index >= milestones.length)
+      return;
 
-  activeIndex = index;
-  updateStepIndicator();
-  updateMilestoneStates();
+    activeIndex = index;
+    updateStepIndicator();
+    updateMilestoneStates();
 
-  const container = document.getElementById("milestonesContainer");
-  const toggleIcon = document.getElementById("toggleIcon");
-  const toggleButton = document.getElementById("toggleButton");
+    const container = document.getElementById("milestonesContainer");
+    const toggleIcon = document.getElementById("toggleIcon");
+    const toggleButton = document.getElementById("toggleButton");
 
-  if (activeIndex >= 2 || activeIndex === 1) {
-    showAll = true;
+    if (activeIndex >= 2 || activeIndex === 1) {
+      showAll = true;
 
-    if (container) {
-      container.classList.add("expanded");
-      container.classList.remove("collapsed");
-    }
+      if (container) {
+        container.classList.add("expanded");
+        container.classList.remove("collapsed");
+      }
 
-    // Only auto-activate toggle icon and button if activeIndex >= 2
-    if (activeIndex >= 2) {
+      // Only auto-activate toggle icon and button if activeIndex >= 2
+      if (activeIndex >= 2) {
+        if (toggleIcon) {
+          toggleIcon.classList.add("active", "rotated");
+        }
+        if (toggleButton) {
+          toggleButton.classList.add("active");
+        }
+      }
+    } else {
+      showAll = false;
+
+      if (container) {
+        container.classList.remove("expanded");
+        container.classList.add("collapsed");
+      }
+
       if (toggleIcon) {
-        toggleIcon.classList.add("active", "rotated");
+        toggleIcon.classList.remove("active", "rotated");
       }
+
       if (toggleButton) {
-        toggleButton.classList.add("active");
+        toggleButton.classList.remove("active");
       }
     }
-  } else {
-    showAll = false;
 
-    if (container) {
-      container.classList.remove("expanded");
-      container.classList.add("collapsed");
+    const activeItem = document.querySelector(
+      `.milestone-item[data-index="${index}"]`
+    );
+    if (activeItem) {
+      activeItem.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-
-    if (toggleIcon) {
-      toggleIcon.classList.remove("active", "rotated");
-    }
-
-    if (toggleButton) {
-      toggleButton.classList.remove("active");
-    }
-  }
-
-  const activeItem = document.querySelector(`.milestone-item[data-index="${index}"]`);
-  if (activeItem) {
-    activeItem.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
-};
-
+  };
 
   const toggleShowAll = () => {
     showAll = !showAll;

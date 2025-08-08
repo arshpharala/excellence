@@ -80,11 +80,6 @@
   background-color: #000;
 }
 
-.step-arrow {
-  width: 16px;
-  height: 16px;
-  color: #000;
-}
 
 .step-line {
   position: absolute;
@@ -260,6 +255,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+   img.toggle-icon {
+        width: 1rem; 
+        height: 1rem;
+        filter: brightness(0) saturate(0) invert(66%) sepia(0%) saturate(0%)
+          hue-rotate(181deg) brightness(92%) contrast(89%);
+        transition: filter 0.3s ease;
+        rotate: 90deg;
+      }
 }
 
 .toggle-button:hover {
@@ -271,8 +275,9 @@
 .toggle-icon {
   width: 24px;
   height: 24px;
-  color: $color-text-muted;
   transition: $transition-slow;
+
+  
 }
 
 .toggle-icon.rotated {

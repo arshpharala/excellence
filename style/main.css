@@ -35,7 +35,7 @@
   gap: 0.25rem;
 }
 .navbar .logo-link .logo-text {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: bold;
   text-transform: capitalize;
   color: #000;
@@ -92,21 +92,18 @@
   color: #ff7f50;
   border: 1px solid #ff7f50;
 }
-.navbar .nav-controls .menu-toggle {
-  font-size: 1.5rem;
-  background: transparent;
-  border: none;
-  color: #ff7f50;
-  cursor: pointer;
+.navbar .nav-controls .menu-toggle img {
   display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
-.navbar .nav-controls .menu-toggle:hover {
-  color: #111827;
-  scale: 1.1;
-  transition: all 0.3s ease;
+.navbar .nav-controls .menu-toggle img:hover {
+  transform: scale(1.1);
 }
 @media (min-width: 64rem) {
-  .navbar .nav-controls .menu-toggle {
+  .navbar .nav-controls .menu-toggle img {
     display: none;
   }
 }
@@ -161,19 +158,22 @@
 
 /* Close Button */
 .close-btn {
-  background-color: #ef4444;
-  color: white;
-  font-size: 1.25rem;
-  padding: 0.5rem 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border: none;
   border-radius: 9999px;
   cursor: pointer;
   float: right;
   transition: all 0.3s ease;
+  background-color: #ef4444;
+  display: grid;
+  place-items: center;
+}
+.close-btn img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .close-btn:hover {
-  background-color: white;
-  color: #ef4444;
   border: 1px solid #ef4444;
   transform: scale(1.1);
 }
@@ -183,38 +183,28 @@
   justify-content: space-around;
   gap: 1rem;
 }
-.social-icons .icon {
-  color: #111827;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-  background: #e5e7eb;
-  width: 45px;
-  height: 45px;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  padding: 0.2rem;
-  border-radius: 9999px;
-}
-.social-icons .icon.whatsapp:hover {
-  color: #10b981;
-  scale: 1.1;
+.social-icons img {
+  width: 2rem;
+  height: 2rem;
+  filter: grayscale(100%) brightness(0%);
   transition: all 0.3s ease;
 }
-.social-icons .icon.facebook:hover {
-  color: #3b82f6;
-  scale: 1.1;
-  transition: all 0.3s ease;
+.social-icons a.whatsapp:hover img {
+  filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg) brightness(90%) contrast(101%);
 }
-.social-icons .icon.twitter:hover {
-  color: #111827;
-  scale: 1.1;
-  transition: all 0.3s ease;
+.social-icons a.facebook:hover img {
+  filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg) brightness(95%) contrast(97%);
 }
-.social-icons .icon.instagram:hover {
-  color: #ec4899;
-  scale: 1.1;
-  transition: all 0.3s ease;
+.social-icons a.twitter:hover {
+  border-radius: 0.5rem;
+  background-color: #111827;
+}
+.social-icons a.twitter:hover img {
+  filter: grayscale(100%) brightness(1000%);
+  padding: 0.1rem;
+}
+.social-icons a.instagram:hover img {
+  filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg) brightness(90%) contrast(105%);
 }
 
 .hero {
@@ -318,8 +308,8 @@
 }
 .hero .social-box {
   position: absolute;
-  bottom: 0.5rem;
-  right: 1rem;
+  bottom: 3rem;
+  right: 6rem;
   display: none;
   gap: 1rem;
   background-color: rgba(255, 255, 255, 0.5);
@@ -332,34 +322,27 @@
     display: inline-flex;
   }
 }
-@media (min-width: 48rem) {
-  .hero .social-box {
-    bottom: 6rem;
-    right: 6rem;
-  }
+.hero .social-box img {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: grayscale(100%) brightness(0%);
+  transition: all 0.3s ease;
 }
-.hero .social-box .icon {
-  transition: color 0.3s ease;
-  color: black;
-  cursor: pointer;
-}
-.hero .social-box .icon.whatsapp:hover {
-  color: #10b981;
+.hero .social-box a.whatsapp:hover img {
+  filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg) brightness(90%) contrast(101%);
   scale: 1.1;
   transition: all 0.3s ease;
 }
-.hero .social-box .icon.facebook:hover {
-  color: #3b82f6;
+.hero .social-box a.facebook:hover img {
+  filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg) brightness(95%) contrast(97%);
   scale: 1.1;
   transition: all 0.3s ease;
 }
-.hero .social-box .icon.twitter:hover {
-  color: #111827;
+.hero .social-box a.twitter:hover img {
   scale: 1.1;
-  transition: all 0.3s ease;
 }
-.hero .social-box .icon.instagram:hover {
-  color: #ec4899;
+.hero .social-box a.instagram:hover img {
+  filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg) brightness(90%) contrast(105%);
   scale: 1.1;
   transition: all 0.3s ease;
 }
@@ -512,22 +495,23 @@
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-link-wrap .icon-wrapper {
   background-color: #ff7f50; /* orange */
-  color: white;
-  font-weight: bold;
-  font-size: 1.5rem;
+  width: 2.7rem;
+  height: 2.7rem;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
   border-radius: 9999px;
-  width: 45px;
-  height: 45px;
-  line-height: 40px;
   text-align: center;
-  transform: rotate(45deg);
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-link-wrap:hover .icon-wrapper {
   background-color: white;
-  color: #fb923c;
-  border: 1px solid #fb923c;
+  color: #ff7f50;
+  border: 1px solid #ff7f50;
+}
+.vas-section .vas-grid .vas-right .vas-service-item .vas-link-wrap:hover .icon-wrapper img {
+  filter: invert(43%) sepia(75%) saturate(3687%) hue-rotate(7deg) brightness(95%) contrast(96%);
 }
 .vas-section .vas-grid .vas-right .vas-service-item.active {
   padding: 2.3rem 1.5rem;
@@ -640,15 +624,13 @@
 }
 .portfolio-section .icon-wrapper {
   background-color: #ff7f50; /* orange */
-  color: white;
-  font-weight: bold;
-  font-size: 1.5rem;
+  width: 2.7rem;
+  height: 2.7rem;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
   border-radius: 9999px;
-  width: 45px;
-  height: 45px;
-  line-height: 40px;
   text-align: center;
-  transform: rotate(45deg);
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -656,6 +638,9 @@
   background-color: white;
   color: #ff7f50;
   border: 1px solid #ff7f50;
+}
+.portfolio-section .read-more-group:hover .icon-wrapper img {
+  filter: invert(43%) sepia(75%) saturate(3687%) hue-rotate(7deg) brightness(95%) contrast(96%);
 }
 .portfolio-section .projects-grid {
   margin-top: 5rem;
@@ -752,18 +737,19 @@
   margin: 0;
 }
 .portfolio-section .arrow-btn {
-  color: white;
   background-color: #111827;
   transition: all 0.5s ease;
-  cursor: pointer;
-  border-radius: 9999px;
-  width: 50px;
-  height: 45px;
+  width: 2.8rem;
+  height: 2.7rem;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
   text-align: center;
+  border-radius: 9999px;
+  border: 1px solid #111827;
   cursor: pointer;
 }
 .portfolio-section .arrow-btn:hover {
-  background-color: #ff7f50;
   transform: scale(1.1);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
@@ -846,12 +832,6 @@
 
 .step-dot.active {
   background-color: #000;
-}
-
-.step-arrow {
-  width: 16px;
-  height: 16px;
-  color: #000;
 }
 
 .step-line {
@@ -1032,6 +1012,13 @@
   align-items: center;
   justify-content: center;
 }
+.toggle-button img.toggle-icon {
+  width: 1rem;
+  height: 1rem;
+  filter: brightness(0) saturate(0) invert(66%) sepia(0%) saturate(0%) hue-rotate(181deg) brightness(92%) contrast(89%);
+  transition: filter 0.3s ease;
+  rotate: 90deg;
+}
 
 .toggle-button:hover {
   transform: scale(1.1);
@@ -1042,7 +1029,6 @@
 .toggle-icon {
   width: 24px;
   height: 24px;
-  color: #6b7280;
   transition: all 0.5s ease;
 }
 
@@ -1199,6 +1185,7 @@
   overflow: hidden;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  width: 100%;
 }
 .team-section .swiper-slide img {
   width: 100%;
@@ -1222,26 +1209,18 @@
   place-items: center;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.team-section .linkedin-icon .icon-border {
-  border: 2px solid #111827;
-  border-radius: 4px;
-  padding: 0 0.2rem;
-  transition: border-color 0.3s ease;
-}
-.team-section .linkedin-icon .icon-border i {
-  color: #111827;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
+.team-section .linkedin-icon img.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0;
+  filter: brightness(0) saturate(100%);
+  transition: filter 0.3s ease;
 }
 .team-section .swiper-slide:hover .linkedin-icon {
   background-color: #fb923c;
-  transform: scale(1.1);
 }
-.team-section .swiper-slide:hover .linkedin-icon .icon-border {
-  border-color: #ffffff;
-}
-.team-section .swiper-slide:hover .linkedin-icon .icon-border i {
-  color: #ffffff;
+.team-section .swiper-slide:hover .linkedin-icon img.social-icon {
+  filter: brightness(0) saturate(100%) invert(100%);
 }
 .team-section .slide-info {
   text-align: left;
@@ -1262,17 +1241,30 @@
   margin-top: 1rem;
 }
 .team-section .swiper-btn {
-  padding: 0.5rem;
-  border: 2px solid #d1d5db;
-  border-radius: 9999px;
-  background: #f9fafb;
-  cursor: pointer;
-  color: #9ca3af;
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   font-size: 1.25rem;
+  background: #f9fafb;
+  color: #9ca3af;
+  border: 2px solid #d1d5db;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.team-section .swiper-btn .icon-arrow-left {
+  transform: rotate(180deg);
+}
+.team-section .swiper-btn img.icon-arrow {
+  width: 1rem;
+  height: 1rem;
+  filter: brightness(0) saturate(0) invert(66%) sepia(0%) saturate(0%) hue-rotate(181deg) brightness(92%) contrast(89%);
+  transition: filter 0.3s ease;
 }
 .team-section .swiper-btn:hover {
-  background: #e5e7eb;
+  background-color: #e5e7eb;
   transform: scale(1.1);
 }
 
@@ -1636,16 +1628,17 @@
   }
 }
 .testimonial-section .testimonial-container .swiper-nav {
-  position: absolute;
-  bottom: 1rem;
-  right: 2rem;
   z-index: 10;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 @media (min-width: 48rem) {
   .testimonial-section .testimonial-container .swiper-nav {
     bottom: 7rem;
+    position: absolute;
+    right: 2rem;
   }
 }
 .testimonial-section .testimonial-container .swiper-btn {
@@ -1661,6 +1654,15 @@
   border: 2px solid #d1d5db;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.testimonial-section .testimonial-container .swiper-btn .icon-arrow-left {
+  transform: rotate(180deg);
+}
+.testimonial-section .testimonial-container .swiper-btn img.icon-arrow {
+  width: 1rem;
+  height: 1rem;
+  filter: brightness(0) saturate(0) invert(66%) sepia(0%) saturate(0%) hue-rotate(181deg) brightness(92%) contrast(89%);
+  transition: filter 0.3s ease;
 }
 .testimonial-section .testimonial-container .swiper-btn:hover {
   background-color: #e5e7eb;
@@ -1690,10 +1692,16 @@
   place-items: start;
   gap: 2rem;
 }
+@media (min-width: 40rem) {
+  .footer .footer-container .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (min-width: 48rem) {
   .footer .footer-container .footer-top {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-items: start;
     justify-content: space-between;
   }
 }
@@ -1707,32 +1715,36 @@
   display: flex;
   justify-content: left;
   gap: 1rem;
-  font-size: 2.3rem;
 }
-.footer .footer-container .footer-top .social-icons a {
-  color: white;
-  transition: color 0.3s ease-in;
+.footer .footer-container .footer-top .social-icons img {
+  width: 2rem;
+  height: rem;
+  filter: grayscale(100%) brightness(1000%);
+  transition: all 0.3s ease;
 }
-.footer .footer-container .footer-top .social-icons a.whatsapp:hover {
-  color: #22c55e;
+.footer .footer-container .footer-top .social-icons a.whatsapp:hover img {
+  filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg) brightness(90%) contrast(101%);
 }
-.footer .footer-container .footer-top .social-icons a.facebook:hover {
-  color: #3b82f6;
+.footer .footer-container .footer-top .social-icons a.facebook:hover img {
+  filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg) brightness(95%) contrast(97%);
 }
 .footer .footer-container .footer-top .social-icons a.twitter:hover {
-  color: #111827;
-  background: aliceblue;
-  border-radius: 999px;
+  border-radius: 0.5rem;
+  background-color: white;
 }
-.footer .footer-container .footer-top .social-icons a.instagram:hover {
-  color: #ec4899;
+.footer .footer-container .footer-top .social-icons a.twitter:hover img {
+  filter: grayscale(100%) brightness(0%);
+  padding: 0.1rem;
+}
+.footer .footer-container .footer-top .social-icons a.instagram:hover img {
+  filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg) brightness(90%) contrast(105%);
 }
 .footer .footer-container .footer-top .footer-links {
   display: grid;
   gap: 0.5rem;
   text-align: start;
 }
-@media (width >= 768px) {
+@media (min-width: 40rem) {
   .footer .footer-container .footer-top .footer-links {
     grid-template-columns: repeat(2, auto);
   }
@@ -1825,9 +1837,7 @@ button {
 .btn-link .btn-icon {
   display: flex;
   align-items: center;
-  transform: rotate(45deg);
   font-size: 1rem;
-  color: black;
   background-color: #f5f5dc;
   border-radius: 9999px;
   width: 2.7rem;
@@ -1838,6 +1848,9 @@ button {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+.btn-link .btn-icon img {
+  filter: brightness(0) saturate(100%);
+}
 .btn-link:hover .btn-text {
   background-color: white;
   color: #ff7f50;
@@ -1845,7 +1858,7 @@ button {
 }
 .btn-link:hover .btn-icon {
   background-color: rgb(41.0074626866, 236.4925373134, 171.7164179104);
-  transform: rotate(45deg) scale(1.1);
+  transform: scale(1.1);
   border-color: #10b981;
 }
 

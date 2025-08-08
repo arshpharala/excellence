@@ -38,7 +38,7 @@
     gap: 0.25rem;
 
     .logo-text {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       @include text-bold;
       text-transform: capitalize;
       color: #000;
@@ -98,18 +98,15 @@
       }
     }
 
-    .menu-toggle {
-      font-size: 1.5rem;
-      background: transparent;
-      border: none;
-      color: $color-primary;
-      cursor: pointer;
+    .menu-toggle img {
       display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, color 0.3s ease;
 
       &:hover {
-        color: $color-secondary;
-        scale: 1.1;
-        transition: $transition;
+        transform: scale(1.1);
       }
 
       @include responsive(lg) {
@@ -176,63 +173,61 @@
 
 /* Close Button */
 .close-btn {
-  background-color: $color-error;
-  color: white;
-  font-size: 1.25rem;
-  padding: 0.5rem 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border: none;
   border-radius: 9999px;
   cursor: pointer;
   float: right;
   transition: $transition;
+  background-color: $color-error;
+  @include grid-center;
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 
   &:hover {
-    background-color: white;
-    color: $color-error;
     border: 1px solid $color-error;
     transform: scale(1.1);
   }
 }
 
-//mobe screen
+//mobile screen
 .social-icons {
   display: flex;
   justify-content: space-around;
   gap: 1rem;
-
-  .icon {
-    color: $color-secondary;
-    font-size: 1.5rem;
+  img {
+    width: 2rem;
+    height: 2rem;
+    filter: grayscale(100%) brightness(0%);
     transition: $transition;
-    background: $bg-gray-lighter;
-    width: 45px;
-    height: 45px;
-    @include grid-center;
-    cursor: pointer;
-    padding: 0.2rem;
-    border-radius: 9999px;
-    &.whatsapp:hover {
-      color: $color-success;
-      scale: 1.1;
-      transition: $transition;
-    }
+  }
 
-    &.facebook:hover {
-      color: #3b82f6;
-      scale: 1.1;
-      transition: $transition;
-    }
+  a.whatsapp:hover img {
+    filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg)
+      brightness(90%) contrast(101%);
+  }
 
-    &.twitter:hover {
-      color: $color-secondary;
-      scale: 1.1;
-      transition: $transition;
-    }
+  a.facebook:hover img {
+    filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg)
+      brightness(95%) contrast(97%);
+  }
 
-    &.instagram:hover {
-      color: #ec4899;
-      scale: 1.1;
-      transition: $transition;
+  a.twitter:hover {
+    border-radius: 0.5rem;
+
+    img {
+      filter: grayscale(100%) brightness(1000%);
+      padding: 0.1rem;
     }
+    background-color: $color-secondary;
+  }
+
+  a.instagram:hover img {
+    filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg)
+      brightness(90%) contrast(105%);
   }
 }
