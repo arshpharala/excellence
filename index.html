@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Company</title>
+    <title>Excellence Code</title>
 
     <!-- Font Awesome CDN -->
     <link
@@ -37,15 +37,53 @@
     <nav class="navbar">
       <div class="navbar-container">
         <a href="/" class="logo-link">
-          <span class="logo-text">your company logo</span>
+          <img
+            src="./assets/logo.png"
+            alt="Company Logo"
+            style="
+              filter: invert(100%) brightness(100%) contrast(100%)
+                hue-rotate(180deg) saturate(0%);
+              scale: 1.3;
+            "
+          />
         </a>
 
         <ul class="nav-links">
-          <li><a href="#hero">home</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#service">services</a></li>
-          <li><a href="#portfolio">portfolio</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown">
+            <span
+              class="dropbtn"
+              aria-expanded="false"
+              aria-controls="servicesSubmenu"
+              id="servicesBtn"
+              >Services</span
+            >
+            <ul class="dropdown-content">
+              <li>
+                <a href="#website-design-and-development"
+                  >Website Design and Development</a
+                >
+              </li>
+              <li><a href="#creative-design">Creative Design Services</a></li>
+              <li>
+                <a href="#digital-marketing"
+                  >Digital Marketing and Social Media Management</a
+                >
+              </li>
+              <li>
+                <a href="#events-organising"
+                  >Events and Conferences Organising</a
+                >
+              </li>
+              <li>
+                <a href="#analytics">Analytics and Performance Optimization</a>
+              </li>
+              <li><a href="#email-hosting">Email & Hosting Services</a></li>
+            </ul>
+          </li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
 
         <div class="nav-controls">
@@ -68,16 +106,103 @@
         <img src="./assets/close.png" alt="Close Icon" class="close-icon" />
       </button>
 
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#service">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul class="nav-menu">
+        <li>
+          <a href="#hero">
+            <img
+              src="./assets/menuIcon/home.png"
+              alt="Home Icon"
+              class="menu-icon"
+            />
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#about">
+            <img
+              src="./assets/menuIcon/about.png"
+              alt="About Icon"
+              class="menu-icon"
+            />
+            About
+          </a>
+        </li>
+        <li class="accordion-item">
+          <span
+            class="dropbtn"
+            aria-expanded="false"
+            aria-controls="servicesSubmenu"
+            id="servicesBtn"
+          >
+            <div class="menu-down">
+              <img
+                src="./assets/menuIcon/service.png"
+                alt="Services Icon"
+                class="menu-icon"
+              />
+              Services
+            </div>
+            <img
+              src="./assets/menuIcon/down.png"
+              alt="dropdown Icon"
+              class="menu-icon dropdown-arrow"
+            />
+          </span>
+          <ul
+            class="dropdown-menu-content"
+            id="servicesSubmenu"
+            role="region"
+            aria-labelledby="servicesBtn"
+            hidden
+          >
+            <li>
+              <a href="#website-design">Website Design and Development</a>
+            </li>
+            <li><a href="#creative-design">Creative Design Services</a></li>
+            <li>
+              <a href="#digital-marketing"
+                >Digital Marketing and Social Media Management</a
+              >
+            </li>
+            <li>
+              <a href="#events-organising">Events and Conferences Organising</a>
+            </li>
+            <li>
+              <a href="#analytics">Analytics and Performance Optimization</a>
+            </li>
+            <li><a href="#email-hosting">Email & Hosting Services</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#portfolio">
+            <img
+              src="./assets/menuIcon/portfolio.png"
+              alt="Portfolio Icon"
+              class="menu-icon"
+            />
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a href="#contact">
+            <img
+              src="./assets/menuIcon/contact.png"
+              alt="Contact Icon"
+              class="menu-icon"
+            />
+            Contact
+          </a>
+        </li>
       </ul>
 
       <hr />
+      <!-- Consultation Button -->
+      <button class="consultation-btn">
+        <a href="#" class="consult-btn">Get a Free Consultation</a>
+      </button>
 
+      <!-- Social Icons -->
       <div
         class="social-icons"
         role="navigation"
@@ -124,15 +249,20 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
+      <img src="./assets/Layer.png" alt="layer image" class="img-layer" />
+
+      <!-- if you want to use a video background, then change the font color to white -->
+      <!-- <video autoplay muted loop playsinline>
+        <source src="assets/video/video.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video> -->
+
       <div class="hero-container">
         <div class="hero-grid">
           <!-- left -->
           <div data-aos="fade-up" class="hero-text">
             <h1>driving growth with innovative marketing strategies</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <p>Your Journey to Growth Starts Here</p>
             <!-- Button -->
             <div data-aos="fade-up" class="button-wrapper">
               <a href="#" class="btn-link">
@@ -152,54 +282,57 @@
             <!-- optional illustration/image -->
           </div>
         </div>
-      </div>
-
-      <!-- Social Icon Box -->
-      <div class="social-box" role="navigation" aria-label="Social media links">
-        <a
-          href="https://wa.me/your-number"
-          class="icon whatsapp"
-          aria-label="WhatsApp"
-          target="_blank"
-          rel="noopener noreferrer"
+        <!-- Social Icon Box -->
+        <div
+          class="social-box"
+          role="navigation"
+          aria-label="Social media links"
         >
-          <img src="./assets/socialIcon/whatsapp.png" alt="WhatsApp icon" />
-        </a>
-        <a
-          href="https://facebook.com/yourprofile"
-          class="icon facebook"
-          aria-label="Facebook"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./assets/socialIcon/facebook.png" alt="Facebook icon" />
-        </a>
-        <a
-          href="https://twitter.com/yourprofile"
-          class="icon twitter"
-          aria-label="Twitter"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./assets/socialIcon/x.png" alt="Twitter icon" />
-        </a>
-        <a
-          href="https://instagram.com/yourprofile"
-          class="icon instagram"
-          aria-label="Instagram"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./assets/socialIcon/instagram.png" alt="Instagram icon" />
-        </a>
+          <a
+            href="https://wa.me/your-number"
+            class="icon whatsapp"
+            aria-label="WhatsApp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./assets/socialIcon/whatsapp.png" alt="WhatsApp icon" />
+          </a>
+          <a
+            href="https://facebook.com/yourprofile"
+            class="icon facebook"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./assets/socialIcon/facebook.png" alt="Facebook icon" />
+          </a>
+          <a
+            href="https://twitter.com/yourprofile"
+            class="icon twitter"
+            aria-label="Twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./assets/socialIcon/x.png" alt="Twitter icon" />
+          </a>
+          <a
+            href="https://instagram.com/yourprofile"
+            class="icon instagram"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./assets/socialIcon/instagram.png" alt="Instagram icon" />
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- //services section -->
-    <section id="service" class="vas-section">
+    <section id="about" class="vas-section">
       <p data-aos="fade-up" class="vas-heading">
         We exist to redefine marketing by combining creativity, strategy, and
-        technology to build brands that stand out and succeed.
+        technology to build brands that stand out and succeed
       </p>
 
       <div class="vas-grid">
@@ -401,12 +534,13 @@
 
     <!-- contact section  -->
     <section id="contact" class="contact-container">
-      <h1 data-aos="fade-up" class="contact-title">Let's work together</h1>
+      <h1 data-aos="fade-up" class="contact-title">Let's work together!</h1>
 
       <div class="success-message" id="successMessage">
         <p>Thank you! Your message has been sent successfully.</p>
       </div>
 
+      <!-- contact form  -->
       <form data-aos="fade-up" class="contact-form" id="contactForm">
         <div class="form-group">
           <input
@@ -442,10 +576,23 @@
             <label class="select-label"> Choose Services </label>
             <div class="select-container">
               <select name="option" required class="custom-select">
-                <option value="">Creative Design Services</option>
-                <option value="inquiry">General Inquiry</option>
-                <option value="support">Support</option>
-                <option value="feedback">Feedback</option>
+                <option value="" disabled selected>Select a service</option>
+                <option value="website-design">
+                  Website Design and Development
+                </option>
+                <option value="creative-design">
+                  Creative Design Services
+                </option>
+                <option value="digital-marketing">
+                  Digital Marketing and Social Media Management
+                </option>
+                <option value="events-organising">
+                  Events and Conferences Organising
+                </option>
+                <option value="analytics">
+                  Analytics and Performance Optimization
+                </option>
+                <option value="email-hosting">Email & Hosting Services</option>
               </select>
               <i class="fas fa-chevron-down select-icon"></i>
             </div>
@@ -476,13 +623,84 @@
         </div>
       </form>
 
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.500892717052!2d55.25751967598935!3d25.186325332139916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f694c700e12f9%3A0x190ce8d857467f06!2sThe%20Exchange%20Tower!5e0!3m2!1sen!2sae!4v1752832595748!5m2!1sen!2sae"
-          class="map-iframe"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+      <!-- contact info  -->
+      <div class="contact-content">
+        <div class="contact-info" data-aos="fade-up">
+          <p>
+            If you prefer to reach us through other channels, please feel free
+            to do so:
+          </p>
+          <table class="contact-table">
+            <tbody>
+              <tr>
+                <td class="icon-cell">
+                  <img src="./assets/contactIcon/mobile.png" alt="Phone icon" />
+                </td>
+                <td class="label-cell"><strong>Phone:</strong></td>
+                <td class="value-cell">+971552440610</td>
+              </tr>
+
+              <tr>
+                <td class="icon-cell">
+                  <img src="./assets/contactIcon/gmail.png" alt="Email icon" />
+                </td>
+                <td class="label-cell"><strong>Email:</strong></td>
+                <td class="value-cell">info@excellencecode.com</td>
+              </tr>
+
+              <tr>
+                <td class="icon-cell">
+                  <img
+                    src="./assets/contactIcon/location-pin.png"
+                    alt="Location icon"
+                  />
+                </td>
+                <td class="label-cell"><strong>Address:</strong></td>
+                <td class="value-cell">
+                  706, Sobha Ivory 2, Alama&apos;al Street, Business Bay, Dubai,
+                  UAE
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr />
+
+          <p class="social-text">Follow us on social media</p>
+
+          <div class="social-media" aria-label="Social media links">
+            <a
+              href="https://facebook.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <img
+                src="./assets/contactIcon/facebook.png"
+                alt="Facebook icon"
+              />
+            </a>
+            <a
+              href="https://instagram.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <img
+                src="./assets/contactIcon/instagram.png"
+                alt="Instagram icon"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.500892717052!2d55.25751967598935!3d25.186325332139916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f694c700e12f9%3A0x190ce8d857467f06!2sThe%20Exchange%20Tower!5e0!3m2!1sen!2sae!4v1752832595748!5m2!1sen!2sae"
+            class="map-iframe"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
     </section>
 
@@ -492,7 +710,7 @@
         <div class="footer-top">
           <!-- Logo -->
           <a href="/" class="footer-logo">
-            <span>your company logo</span>
+            <img src="./assets/logo.png" alt="Company Logo" />
           </a>
 
           <!-- Social Icons -->
@@ -508,10 +726,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                src="./assets/socialIcon/whatsapp.png"
-                alt="WhatsApp icon"
-              />
+              <img src="./assets/socialIcon/whatsapp.png" alt="WhatsApp icon" />
             </a>
             <a
               href="https://facebook.com/yourprofile"
@@ -520,10 +735,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                src="./assets/socialIcon/facebook.png"
-                alt="Facebook icon"
-              />
+              <img src="./assets/socialIcon/facebook.png" alt="Facebook icon" />
             </a>
             <a
               href="https://twitter.com/yourprofile"
@@ -551,17 +763,47 @@
           <!-- Nav Links -->
           <ul class="footer-links">
             <li><a href="#hero">home</a></li>
-            <li><a href="#about-me">about</a></li>
-            <li><a href="#service">services</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#about">service</a></li>
             <li><a href="#contact">contact</a></li>
           </ul>
+
+          <!-- Newsletter Signup -->
+          <div class="newsletter">
+            <h4>Stay Updated with Our Latest Insights</h4>
+            <form action="#" method="post" class="newsletter-form">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
         </div>
 
-        <!-- Copyright -->
-        <p class="footer-copy">
-          © <span id="currentYear"></span> <a href="#home">Company</a>. All
-          Rights Reserved.
-        </p>
+        <hr class="footer-divider" />
+
+        <div class="footer-bottom">
+          <div class="footer-hidden"></div>
+          <!-- Copyright -->
+          <p class="footer-copy">
+            © <span id="currentYear"></span>
+            <a href="#home">Excellence Code</a>. All Rights Reserved.
+          </p>
+          <!-- Legal Links -->
+
+          <div class="footer-legal">
+            <ul class="legal-links">
+              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a href="/terms-and-conditions.html">Terms & Conditions</a>
+              </li>
+              <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
 

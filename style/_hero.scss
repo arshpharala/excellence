@@ -5,7 +5,31 @@
   position: relative;
   padding-top: 5rem;
 
-  background: url("../assets/Layer.png") center/cover no-repeat;
+  .img-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -9999;
+  }
+
+  // background-color: rgba(0, 0, 0, 0.5); if you want to use a video background, then add this line
+
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+    opacity: 0.7;
+  }
+
+  // background: url("../assets/Layer.png") center/cover no-repeat;
   @include grid-center;
   min-height: 70vh;
 
@@ -16,7 +40,9 @@
   @include responsive(lg) {
     background-position: right;
   }
+
   .hero-container {
+    position: relative;
     width: 90vw;
 
     @include responsive(lg) {
@@ -80,67 +106,55 @@
           }
         }
       }
+    }
+    .social-box {
+      position: absolute;
 
-      .hero-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: none;
-        @include responsive(lg) {
-          display: block;
-        }
+      bottom: $spacing-xs;
+      right: 0;
+      display: none;
+
+      @include responsive(lg) {
+        display: inline-flex;
       }
-    }
-  }
 
-  .social-box {
-    position: absolute;
+      gap: $spacing-sm;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: $spacing-xs $spacing-sm;
+      border-radius: 1.5rem;
+      font-size: 1.25rem;
 
-    bottom: $spacing-lg;
-    right: $spacing-2xl;
-    display: none;
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+        filter: grayscale(100%) brightness(0%);
+        transition: $transition;
+      }
 
-    @include responsive(lg) {
-      display: inline-flex;
-    }
+      a.whatsapp:hover img {
+        filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg)
+          brightness(90%) contrast(101%);
+        scale: 1.1;
+        transition: $transition;
+      }
 
-    gap: $spacing-sm;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: $spacing-xs $spacing-sm;
-    border-radius: 1.5rem;
-    font-size: 1.25rem;
+      a.facebook:hover img {
+        filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg)
+          brightness(95%) contrast(97%);
+        scale: 1.1;
+        transition: $transition;
+      }
 
-    img {
-      width: 1.5rem;
-      height: 1.5rem;
-      filter: grayscale(100%) brightness(0%);
-      transition: $transition;
-    }
+      a.twitter:hover img {
+        scale: 1.1;
+      }
 
-    a.whatsapp:hover img {
-      filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg)
-        brightness(90%) contrast(101%);
-      scale: 1.1;
-      transition: $transition;
-    }
-    a.facebook:hover img {
-      filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg)
-        brightness(95%) contrast(97%);
-
-      scale: 1.1;
-      transition: $transition;
-    }
-
-    a.twitter:hover img {
-     
-      scale: 1.1;
-    }
-
-    a.instagram:hover img {
-      filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg)
-        brightness(90%) contrast(105%);
-      scale: 1.1;
-      transition: $transition;
+      a.instagram:hover img {
+        filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg)
+          brightness(90%) contrast(105%);
+        scale: 1.1;
+        transition: $transition;
+      }
     }
   }
 }

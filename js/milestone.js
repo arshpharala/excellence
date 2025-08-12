@@ -4,33 +4,88 @@ export default function initMilestone() {
       year: "2012",
       title: "Founding Year",
       subtitle: "Creative Design & Website Development",
+      icon: "assets/object/paintbrush.png",
       description:
         "The agency was founded with a focus on creative design and website development, helping businesses establish their online presence with stunning visuals and user-friendly websites.",
-      icon: "assets/object/object.png",
     },
     {
       year: "2014",
       title: "Expanding Services",
       subtitle: "Events Management & Exhibition Stand Execution",
+      icon: "assets/object/circus-tent.png",
       description:
         "We expanded our offerings to include events management and exhibition stand execution, providing end-to-end solutions for brands to showcase their products and services at trade shows and events.",
-      icon: "assets/object/object2.png",
     },
     {
       year: "2016",
       title: "Digital Marketing",
       subtitle: "SEO & SMO",
+      icon: "assets/object/chart.png",
       description:
         "Recognizing the growing importance of digital presence, we added SEO (Search Engine Optimization) and SMO (Social Media Optimization) to our services.",
-      icon: "assets/object/object3.png",
+      details: [
+        {
+          title: "On-Page SEO",
+          description:
+            "We optimized website content, meta tags, headers, and internal linking structures to improve search engine rankings and user experience.",
+        },
+        {
+          title: "Off-Page SEO",
+          description:
+            "We implemented strategies like backlink building, guest blogging, and social signals to boost domain authority and drive organic traffic.",
+        },
+        {
+          title: "SMO (Social Media Optimization)",
+          description:
+            "We helped clients enhance their social media presence by optimizing profiles, creating engaging content, and increasing follower engagement.",
+        },
+      ],
     },
     {
-      year: "2019",
-      title: "Tech Expansion",
-      subtitle: "Mobile App Development & Cloud Solutions",
+      year: "2018",
+      title: "Customized Gifts & Trophies",
+      icon: "assets/object/trophy.png",
       description:
-        "To keep up with modern trends, we introduced mobile application development and cloud-based solutions, empowering businesses with scalable, cross-platform digital tools.",
-      icon: "assets/object/object3.png",
+        "To enhance brand visibility and client relationships, we introduced customized gifts and trophies, offering unique, branded merchandise for corporate events and client appreciation.",
+    },
+    {
+      year: "2020",
+      title: "Digital Advertising",
+      subtitle: "Social Media, Google Ads & YouTube",
+      icon: "assets/object/money-bag.png",
+      description:
+        "In 2020, we expanded our digital advertising services to include social media buying, Google Ads, and YouTube channel management, offering clients a complete suite of tools to maximize their reach and ROI.",
+      details: [
+        {
+          title: "Social Media Buying",
+          description:
+            "We ran highly targeted ad campaigns on platforms like Facebook, Instagram, and LinkedIn, ensuring brands reached their ideal audiences with precision and drove meaningful engagement.",
+        },
+        {
+          title: "Google Ads",
+          description:
+            "We leveraged search, display, and video campaigns on Google Ads to drive traffic, generate leads, and boost conversions, helping clients dominate search engine results.",
+        },
+        {
+          title: "YouTube Channel Management",
+          description:
+            "We helped brands create and optimize YouTube channels, producing engaging video content and running targeted ad campaigns to increase views, subscribers, and brand awareness.",
+        },
+      ],
+    },
+    {
+      year: "2022",
+      title: "Full-Service Marketing Agency",
+      icon: "assets/object/globe.png",
+      description:
+        "By 2022, we evolved into a full-service marketing agency, offering a comprehensive suite of services, from creative design and digital marketing to events management and social media buying.",
+    },
+    {
+      year: "2024",
+      title: "AI-Driven Marketing Solutions",
+      icon: "assets/object/robot.png",
+      description:
+        "Embracing the future, we integrated AI-driven marketing solutions into our offerings, using advanced analytics and automation to deliver smarter, more effective campaigns for our clients.",
     },
   ];
 
@@ -55,44 +110,55 @@ export default function initMilestone() {
 
     return `
       ${steps}
-    <img src="./assets/chevron.png" class="${arrowClass}" />
+    <img src="../assets/chevron.png" class="${arrowClass}" />
       <div class="step-line"></div>
     `;
   };
 
   const generateMilestones = () => {
     return milestones
-      .map(
-        (milestone, index) => `
+      .map((m, i) => {
+        // Render details list if present
+        const detailsHTML = m.details
+          ? `<ul class="milestone-details">
+            ${m.details
+              .map(
+                (d) => `<li><strong>${d.title}:</strong> ${d.description}</li>`
+              )
+              .join("")}
+           </ul>`
+          : "";
+
+        return `
         <div 
-          class="milestone-item ${index === activeIndex ? "active" : ""}" 
-          data-index="${index}" 
+          class="milestone-item ${i === activeIndex ? "active" : ""}" 
+          data-index="${i}" 
           tabindex="0" 
           role="button" 
-          aria-pressed="${index === activeIndex}"
+          aria-pressed="${i === activeIndex}"
         >
           <div class="milestone-left">
             <div class="milestone-header">
-              <img 
-                src="${milestone.icon}" 
-                alt="${milestone.title} icon" 
-                class="milestone-icon"
-                onerror="this.style.display='none'"
-              >
-              <p class="milestone-year">${milestone.year}</p>
+              <img src="${m.icon}" alt="${
+          m.title
+        } icon" class="milestone-icon" onerror="this.style.display='none'" />
+              <p class="milestone-year">${m.year}</p>
             </div>
             <div class="milestone-titles">
-              <p class="milestone-title">${milestone.title}</p>
-              <h4 class="milestone-subtitle">${milestone.subtitle}</h4>
+              <p class="milestone-title">${m.title}</p>
+              <h4 class="milestone-subtitle">${m.subtitle || ""}</h4>
             </div>
           </div>
-
           <div class="milestone-right">
-            <p class="milestone-description">${milestone.description}</p>
+            <p class="milestone-description">${m.description.replace(
+              /\n/g,
+              "<br>"
+            )}</p>
+            ${detailsHTML}
           </div>
         </div>
-      `
-      )
+      `;
+      })
       .join("");
   };
 

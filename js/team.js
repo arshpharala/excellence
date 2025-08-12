@@ -16,7 +16,7 @@ export default function initTeam() {
       <div class="swiper-slide">
        <div class="team-card">
         <div class="image-container">
-          <img src="assets/image.png" alt="${member.name} class="team "  />
+          <img src="assets/image.png" data-aos="flip-right" alt="${member.name} class="team "  />
           <a href="${member.linkedin}" target="_blank" class="linkedin-icon">
           <span class="icon-border"> 
           <img src="./assets/socialIcon/linkedin.png" alt="LinkedIn Icon" class="social-icon" />

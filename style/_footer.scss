@@ -3,43 +3,50 @@
 
 .footer {
   background-color: #000;
-  padding: 2.5rem 0;
-  color: white;
+  padding: 3rem 0 2rem;
+  color: #fff;
+  font-family: "Inter", sans-serif;
 
   .footer-container {
-    margin: 2rem auto 0;
-    position: relative;
+    margin: 0 auto;
     padding: 1rem;
     width: 90vw;
+    position: relative;
 
     @include responsive(lg) {
       width: 83.46vw;
       max-width: 1366px;
     }
 
+    /* ==============================
+       TOP SECTION (GRID)
+    ============================== */
     .footer-top {
       display: grid;
       grid-template-columns: 1fr;
-      place-items: start;
+      gap: 2rem;
+      align-items: start;
+
       @include responsive(sm) {
         grid-template-columns: repeat(2, 1fr);
       }
+
       @include responsive(md) {
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include responsive(lg) {
+        grid-template-columns: repeat(4, 1fr);
       }
 
-      gap: 2rem;
-
-      .footer-logo span {
-        font-size: 1.125rem;
-        @include text-semibold;
-        text-transform: capitalize;
-        color: white;
+      .footer-logo img {
+        width: 6rem;
+        height: auto;
+        object-fit: contain;
       }
 
+      /* ==============================
+         SOCIAL ICONS
+      ============================== */
       .social-icons {
         display: flex;
         justify-content: left;
@@ -47,9 +54,13 @@
 
         img {
           width: 2rem;
-          height: rem;
+          height: 2rem;
           filter: grayscale(100%) brightness(1000%);
-          transition: $transition;
+          transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        a:hover img {
+          transform: scale(1.15);
         }
 
         a.whatsapp:hover img {
@@ -63,13 +74,13 @@
         }
 
         a.twitter:hover {
+          background-color: #fff;
           border-radius: 0.5rem;
+          padding: 0.1rem;
 
           img {
             filter: grayscale(100%) brightness(0%);
-            padding: 0.1rem;
           }
-          background-color: white;
         }
 
         a.instagram:hover img {
@@ -78,45 +89,189 @@
         }
       }
 
+      /* ==============================
+         FOOTER LINKS
+      ============================== */
       .footer-links {
         display: grid;
         gap: 0.5rem;
-        text-align: start;
-
-        @include responsive(sm) {
-          grid-template-columns: repeat(2, auto);
-        }
+        grid-template-columns: repeat(2, auto);
 
         li {
           list-style: none;
+          position: relative;
 
-          a {
-            color: white;
+          a,
+          .dropbtn {
+            color: #fff;
             font-size: 1rem;
+            cursor: pointer;
             text-transform: capitalize;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
 
             &:hover {
-              text-decoration: underline;
-              transform: scale(1.05);
               color: orange;
-              text-decoration: none;
+              transform: translateX(4px);
+            }
+          }
+
+     
+        }     .dropdown-content {
+            display: none;
+            position: absolute;
+           
+            background-color: #f7f7f7;
+            box-shadow: $shadow-lg;
+            width: 650px;
+            max-width: 650px;
+            padding: 0.75rem;
+            border-radius: 6px;
+            z-index: 1000;
+            list-style: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            color: $color-text-base;
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+
+            a {
+              border-radius: 4px;
+              width: 100%;
+              color: $color-secondary;
+              transition: color 0.3s ease, background-color 0.3s ease;
+              &:hover,
+              &:focus {
+                color: $color-primary;
+                background-color: rgba(0, 123, 255, 0.1);
+                outline: none;
+              }
+            }
+          }
+
+        // Show dropdown on hover/focus with smooth animation
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          opacity: 1;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+      }
+
+      /* ==============================
+         NEWSLETTER
+      ============================== */
+      .newsletter {
+        h4 {
+          font-size: 1rem;
+          font-weight: normal;
+        }
+
+        .newsletter-form {
+          display: flex;
+          flex-wrap: nowrap;
+          border-radius: 4px;
+          overflow: hidden;
+
+          input[type="email"] {
+            flex: 1;
+            padding: 0.6rem;
+            font-size: 0.9rem;
+            border: none;
+            outline: none;
+          }
+
+          button {
+            background-color: $color-primary;
+            color: #fff;
+            padding: 0.6rem 1rem;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #e68900;
             }
           }
         }
       }
     }
 
-    .footer-copy {
-      text-align: center;
-      font-size: 0.9rem;
-      color: white; // gray-500
-      margin-top: 2.5rem;
+    /* ==============================
+       DIVIDER
+    ============================== */
+    .footer-divider {
+      margin: 2rem 0;
+      border: none;
+      border-top: 1px solid $border-default;
+    }
 
-      a {
-        color: inherit;
-        text-decoration: none;
+    /* ==============================
+       LEGAL LINKS
+    ============================== */
+    .footer-bottom {
+      display: flex;
+      flex-direction: column-reverse;
+      row-gap: 1rem;
+      align-items: left;
+
+      @include responsive(md) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include responsive(xl) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-hidden {
+        display: none;
+
+        @include responsive(xl) {
+          display: block;
+        }
+      }
+      .footer-legal {
+        @include responsive(md) {
+          display: grid;
+          place-items: end;
+        }
+
+        .legal-links {
+          display: flex;
+
+          gap: 1rem;
+          list-style: none;
+
+          li a {
+            color: #ccc;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+
+      .footer-copy {
+        font-size: 0.85rem;
+        color: #ccc;
+        padding: 0;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $color-primary;
+          }
+        }
       }
     }
   }

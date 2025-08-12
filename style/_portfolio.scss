@@ -115,10 +115,10 @@
   .projects-grid {
     margin-top: 5rem;
     @include grid-center;
-    gap: 1.5rem;
+    gap: 2.2rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
 
-    @include responsive(md) {
+    @include responsive(sm) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -135,7 +135,7 @@
     cursor: pointer;
     width: 100%;
     @include responsive(md) {
-      max-width: 320px;
+      max-width: 715px;
     }
     transition: box-shadow 0.5s ease;
     display: flex;
@@ -154,12 +154,13 @@
 
   .project-image {
     width: 100%;
+
     object-fit: cover;
     transition: transform 0.5s ease;
     border-radius: 2rem;
 
     @include responsive(lg) {
-      height: 24rem;
+      max-height: 432px;
     }
   }
 

@@ -22,7 +22,7 @@ export default function initProjects() {
     projectsGrid.innerHTML = projects
       .map(
         (project, index) => `
-      <div class="project-card" data-aos="fade-up" data-index="${index}">
+      <div class="project-card" data-aos="flip-right" data-index="${index}">
         <div class="image-wrapper">
           <img src="${project.image}" alt="${project.title}" class="project-image" />
         </div>
