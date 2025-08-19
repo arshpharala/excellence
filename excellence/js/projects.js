@@ -2,19 +2,19 @@ export default function initProjects() {
   const projects = [
     {
       title: "Branding",
-      image: "assets/portfolio/Portfolio1.png",
+      image: "assets/portfolio/portfolio1.png",
     },
     {
       title: "Product Design",
-      image: "assets/portfolio/Portfolio2.png",
+      image: "assets/portfolio/portfolio2.png",
     },
     {
       title: "Logo Design",
-      image: "assets/portfolio/Portfolio3.png",
+      image: "assets/portfolio/portfolio3.png",
     },
      {
       title: "Logo Design",
-      image: "assets/portfolio/Portfolio3.png",
+      image: "assets/portfolio/portfolio3.png",
     },
     
   ];
