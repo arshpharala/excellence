@@ -1,0 +1,219 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.vas-section {
+  margin: auto;
+  padding: 3.5rem 0;
+  display: grid;
+  width: 90vw;
+
+  @include responsive(lg) {
+        width: 80.77vw;
+      max-width: 1413px;
+  }
+
+  // Header Section
+  .about-header {
+    display: grid;
+    place-items: start;
+    gap: 1rem;
+    margin-top: 4rem;
+
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+  }
+
+  .right-side {
+    display: grid;
+    place-items: end;
+    width: 100%;
+  }
+
+  .title {
+    @include text-semibold;
+    line-height: 0.9;
+    font-size: $spacing-xl;
+    font-family: $font-bebas;
+    text-transform: uppercase;
+
+    @include responsive(lg) {
+      font-size: $spacing-3xl;
+    }
+  }
+
+  .description {
+    display: grid;
+    place-items: start;
+    text-align: justify;
+    text-justify: inter-word;
+    @include text-bold;
+
+    @include responsive(md) {
+      max-width: 485px;
+    }
+
+
+      font-size: 0.9rem;
+      color: $color-text-base;
+      line-height: 1.2;
+  
+  }
+
+  .vas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: $spacing-md;
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    margin: $spacing-xl 0;
+
+    .vas-left {
+      width: 100%;
+
+      .about_image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .vas-right {
+      .vas-section-list {
+        padding: 3rem;
+      }
+
+      .vas-service-item {
+        list-style: none;
+        transition: $transition-slow;
+        padding-left: 1.5rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        border-bottom: 1px solid $border-default;
+        background-color: #fff;
+        padding: 0.5rem;
+
+        .vas-service-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .vas-service-title {
+            font-size: 1rem;
+            @include text-bold;
+            color: $color-secondary;
+            margin-bottom: 0.3rem;
+
+            @include responsive(lg) {
+              font-size: 1.2rem;
+            }
+          }
+
+          .toggle-btn {
+            background: none;
+            border: none;
+            padding: 0.3rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
+            .accordion-icon {
+              width: 1rem;
+              height: 1rem;
+              object-fit: contain;
+              transition: transform 0.3s ease;
+            }
+          }
+        }
+
+        .vas-service-content {
+          overflow: hidden;
+          max-height: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          transition: $transition-slow;
+
+          p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: $color-secondary;
+            margin-bottom: 1.4rem;
+            @include text-medium;
+          }
+
+          .vas-link-wrap {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 1rem;
+
+            .read-more-btn {
+              background-color: $color-primary;
+              color: white;
+              padding: 10px 35px;
+              border: 2px solid $color-primary;
+              border-radius: 9999px;
+              text-transform: capitalize;
+              @include text-semibold;
+              font-size: 0.8rem;
+              text-decoration: none;
+              transition: all 0.3s ease;
+              cursor: pointer;
+
+              @include responsive(lg) {
+                font-size: 1rem;
+              }
+
+              &:hover {
+                background-color: $white;
+                color: $color-primary;
+              }
+            }
+
+            .icon-wrapper {
+              background-color: $color-primary;
+              width: 2.7rem;
+              height: 2.7rem;
+              @include grid-center;
+              font-size: 1rem;
+              border-radius: 9999px;
+              cursor: pointer;
+              transition: background-color 0.3s ease, color 0.3s ease;
+
+              img {
+                transition: filter 0.3s ease;
+              }
+            }
+
+            &:hover .icon-wrapper {
+              background-color: white;
+              color: $color-primary;
+              border: 2px solid $color-primary;
+
+              img {
+                @include gold-filter;
+              }
+            }
+          }
+        }
+
+        &.active .vas-service-content {
+          transition: $transition-slow;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          max-height: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excellence Code</title>
+
+    <!-- favicon  -->
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- swiper  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- aos animate  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <!-- scroll top button  -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+      <img src="./assets/arrow.png" alt="scroll button" class="scroll-btn" />
+    </button>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" class="logo-link">
+          <img src="./assets/logo-black.png" alt="Company Logo" />
+          <span class="logo_text"
+            >Excellence <br />
+            Code</span
+          >
+        </a>
+
+        <div class="nav-controls">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Works</a></li>
+            <li><a href="#code">code</a></li>
+
+            <li class="dropdown">
+              <span
+                class="dropbtn"
+                aria-expanded="false"
+                aria-controls="servicesSubmenu"
+                id="servicesBtn"
+                >Services</span
+              >
+              <ul class="dropdown-content">
+                <li>
+                  <a href="#website-design-and-development"
+                    >Website Design and Development</a
+                  >
+                </li>
+                <li><a href="#creative-design">Creative Design Services</a></li>
+                <li>
+                  <a href="#digital-marketing"
+                    >Digital Marketing and Social Media Management</a
+                  >
+                </li>
+                <li>
+                  <a href="#events-organising"
+                    >Events and Conferences Organising</a
+                  >
+                </li>
+                <li>
+                  <a href="#analytics"
+                    >Analytics and Performance Optimization</a
+                  >
+                </li>
+                <li><a href="#email-hosting">Email & Hosting Services</a></li>
+              </ul>
+            </li>
+            <li><a href="#process">process</a></li>
+          </ul>
+
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <img src="./assets/bars.png" alt="meanu icon" class="icon-menu" />
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+      role="dialog"
+      aria-label="Mobile navigation"
+    >
+      <button class="close-btn" id="closeMenu" aria-label="Close menu">
+        <img src="./assets/close.png" alt="Close Icon" class="close-icon" />
+      </button>
+
+      <ul class="nav-menu">
+        <li>
+          <a href="#hero">
+            <img
+              src="./assets/menuIcon/home.png"
+              alt="Home Icon"
+              class="menu-icon"
+            />
+            home
+          </a>
+        </li>
+        <li>
+          <a href="#about">
+            <img
+              src="./assets/menuIcon/about.png"
+              alt="About Icon"
+              class="menu-icon"
+            />
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#work">
+            <img
+              src="./assets/menuIcon/work.png"
+              alt="work Icon"
+              class="menu-icon"
+            />
+            work
+          </a>
+        </li>
+        <li>
+          <a href="#code">
+            <img
+              src="./assets/menuIcon/code.png"
+              alt="code Icon"
+              class="menu-icon"
+            />
+            code
+          </a>
+        </li>
+        <li class="accordion-item">
+          <span
+            class="dropbtn"
+            aria-expanded="false"
+            aria-controls="servicesSubmenu"
+            id="servicesBtn"
+          >
+            <div class="menu-down">
+              <img
+                src="./assets/menuIcon/service.png"
+                alt="Services Icon"
+                class="menu-icon"
+              />
+              Services
+            </div>
+            <img
+              src="./assets/menuIcon/down.png"
+              alt="dropdown Icon"
+              class="menu-icon dropdown-arrow"
+            />
+          </span>
+          <ul
+            class="dropdown-menu-content"
+            id="servicesSubmenu"
+            role="region"
+            aria-labelledby="servicesBtn"
+            hidden
+          >
+            <li>
+              <a href="#website-design">Website Design and Development</a>
+            </li>
+            <li><a href="#creative-design">Creative Design Services</a></li>
+            <li>
+              <a href="#digital-marketing"
+                >Digital Marketing and Social Media Management</a
+              >
+            </li>
+            <li>
+              <a href="#events-organising">Events and Conferences Organising</a>
+            </li>
+            <li>
+              <a href="#analytics">Analytics and Performance Optimization</a>
+            </li>
+            <li><a href="#email-hosting">Email & Hosting Services</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#process">
+            <img
+              src="./assets/menuIcon/process.png"
+              alt="process Icon"
+              class="menu-icon"
+            />
+            process
+          </a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <!-- Social Icons -->
+      <div
+        class="social-icons"
+        role="navigation"
+        aria-label="Social media links"
+      >
+        <a
+          href="https://wa.me/your-number"
+          class="icon whatsapp"
+          aria-label="WhatsApp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./assets/socialIcon/whatsapp.png" alt="WhatsApp icon" />
+        </a>
+        <a
+          href="https://facebook.com/yourprofile"
+          class="icon facebook"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./assets/socialIcon/facebook.png" alt="Facebook icon" />
+        </a>
+        <a
+          href="https://twitter.com/yourprofile"
+          class="icon twitter"
+          aria-label="Twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./assets/socialIcon/x.png" alt="Twitter icon" />
+        </a>
+        <a
+          href="https://instagram.com/yourprofile"
+          class="icon instagram"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./assets/socialIcon/instagram.png" alt="Instagram icon" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <!-- <img src="./assets/Layer.png" alt="layer image" class="img-layer" /> -->
+
+      <div class="hero-container">
+        <!-- Header -->
+        <div class="hero-header">
+          <div class="hero-left">
+            <div class="description" data-aos="zoom-in">
+              <p>
+                We offer web development and web design internet
+                advertising-commerce consulting and search engine marketing.
+              </p>
+              <div class="read-more-group">
+                <a
+                  href="#"
+                  class="read-more-btn"
+                  data-aos="flip-up"
+                  data-aos-delay="200"
+                >
+                  Discover More services
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="hero-title" data-aos="slide-right">
+            EMPOWERING <br />
+            BRANDS <span>SINCE 2012</span>
+          </h2>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-box box-1" data-aos="fade-up"></div>
+          <div class="hero-box box-2" data-aos="zoom-in">
+            <h4>info@excellencecode.com</h4>
+          </div>
+          <div class="hero-box box-3" data-aos="flip-down"></div>
+          <div class="hero-box box-4" data-aos="zoom-out"></div>
+          <div class="hero-box box-5" data-aos="fade-down"></div>
+          <div class="hero-box box-6" data-aos="fade-zoom-in"></div>
+          <div class="hero-box box-7" data-aos="zoom-in"></div>
+          <div class="hero-box box-8" data-aos="flip-up"></div>
+          <div class="hero-box box-9" data-aos="fade-up"></div>
+          <div class="hero-box box-10" data-aos="zoom-out"></div>
+          <div class="hero-box box-11" data-aos="fade-up">
+            <div class="content-box" data-aos="zoom-in">
+              <h5>
+                Helping Visionary business thrive through impactful branding,
+                digital innovation, and strategic since 2012.
+              </h5>
+              <a
+                href="#"
+                class="arrow-btn"
+                aria-label="Learn more about our excellence"
+                data-aos="flip-down"
+              >
+                <img
+                  src="./assets/arrow45.png"
+                  alt="arrow-btn"
+                  class="icon-wrapper"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-box box-12" data-aos="fade-down"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- why us  -->
+    <section id="whychooseus" class="why-choose-us">
+      <div class="why-us-container">
+        <!-- Header -->
+        <div class="whychooseus-header">
+          <!-- Title -->
+          <h2 class="title" data-aos="zoom-in-up">
+            why <br />
+            choose us
+          </h2>
+
+          <div class="right-side">
+            <div class="description">
+              <!-- Heading -->
+              <h1 data-aos="flip-left" data-aos-delay="100">our mission</h1>
+
+              <!-- Paragraph -->
+              <p data-aos="slide-right" data-aos-delay="200">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+                delectus harum laudantium, libero vitae molestias ullam ipsum
+                voluptatem repellat modi quisquam iste.
+              </p>
+
+              <!-- Button -->
+              <div class="read-more-group">
+                <a
+                  href="#"
+                  class="read-more-btn"
+                  data-aos="zoom-out"
+                  data-aos-delay="300"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <div
+            class="feature-card card-experience"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h3>Over 13 Years of Experience</h3>
+            <div class="arrow-btn-wrapper">
+              <a
+                href="#"
+                class="arrow-btn"
+                aria-label="Learn more about our experience"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <img
+                  src="./assets/arrow45.png"
+                  alt="arrow-btn"
+                  class="icon-wrapper"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="span-col feature-card"
+            data-aos="zoom-out"
+            data-aos-delay="300"
+          >
+            <div
+              class="empty-card"
+              data-aos="fade-zoom-in"
+              data-aos-delay="400"
+            ></div>
+            <div class="feature-image" data-aos="flip-up" data-aos-delay="500">
+              <img src="./assets/choose.png" alt="Abstract 3D metallic rings" />
+            </div>
+          </div>
+
+          <div
+            class="feature-card card-solution"
+            data-aos="flip-down"
+            data-aos-delay="600"
+          >
+            <h3>Tailored Client Centric Solution</h3>
+            <div class="arrow-btn-wrapper">
+              <a
+                href="#"
+                class="arrow-btn"
+                aria-label="Learn more about our solutions"
+                data-aos="zoom-in"
+                data-aos-delay="700"
+              >
+                <img
+                  src="./assets/arrow45.png"
+                  alt="arrow-btn"
+                  class="icon-wrapper"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="feature-card card-excellence"
+            data-aos="fade-down"
+            data-aos-delay="800"
+          >
+            <h3>Creative & Technical Excellence</h3>
+            <div class="arrow-btn-wrapper">
+              <a
+                href="#"
+                class="arrow-btn"
+                aria-label="Learn more about our excellence"
+                data-aos="zoom-out"
+                data-aos-delay="900"
+              >
+                <img
+                  src="./assets/arrow45.png"
+                  alt="arrow-btn"
+                  class="icon-wrapper"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="feature-card card-execution"
+            data-aos="fade-up"
+            data-aos-delay="1000"
+          >
+            <h3>End-to-End Project Execution</h3>
+            <div class="arrow-btn-wrapper">
+              <a
+                href="#"
+                class="arrow-btn"
+                aria-label="Learn more about our execution"
+                data-aos="flip-up"
+                data-aos-delay="1100"
+              >
+                <img
+                  src="./assets/arrow45.png"
+                  alt="arrow-btn"
+                  class="icon-wrapper"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="read-btn" data-aos="zoom-in" data-aos-delay="1200">
+            <a href="#" class="read-more-btn">Learn more</a>
+          </div>
+
+          <div
+            class="feature-card card-record"
+            data-aos="flip-down"
+            data-aos-delay="1300"
+          >
+            <h3>Proven Track Record</h3>
+            <div class="arrow-btn-wrapper">
+              <a
+                href="#"
+                class="arrow-btn"
+                aria-label="Learn more about our track record"
+                data-aos="fade-zoom-in"
+                data-aos-delay="1400"
+              >
+                <img
+                  src="./assets/arrow45.png"
+                  alt="arrow-btn"
+                  class="icon-wrapper"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- //about section -->
+    <section id="about" class="vas-section">
+      <div class="about-header">
+        <!-- Title -->
+        <h2 class="title" data-aos="flip-left">
+          development <br />
+          services
+        </h2>
+
+        <div class="right-side">
+          <!-- Description -->
+          <p class="description" data-aos="slide-up" data-aos-delay="200">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+            delectus harum laudantium, libero vitae molestias ullam <br /><br />
+            ipsum voluptatem repellat modi quisquam iste, cum laboriosam quod
+            ducimus! Eligendi repellendus natus doloremque.
+          </p>
+        </div>
+      </div>
+
+      <div class="vas-grid">
+        <!-- LEFT: Key Values Image -->
+        <div class="vas-left" data-aos="zoom-in" data-aos-delay="300">
+          <img src="./assets/about.jpg" alt="layer 2" class="about_image" />
+        </div>
+
+        <!-- RIGHT: Services List -->
+        <div class="vas-right" data-aos="flip-up" data-aos-delay="400">
+          <ul
+            class="vas-service-list"
+            id="serviceList"
+            data-aos="flip-down"
+            data-aos-delay="500"
+          >
+            <!-- Injected by JS -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- work section -->
+    <section id="work" class="portfolio-section">
+      <!-- Header -->
+      <div class="portfolio-header">
+        <!-- Title -->
+        <h2 class="title" data-aos="flip-up">
+          CORE SERVICES <br />
+          SNAPSHOT
+        </h2>
+
+        <div class="right-side">
+          <!-- Description -->
+          <div class="description" data-aos="slide-left" data-aos-delay="200">
+            <p data-aos="zoom-in" data-aos-delay="300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+              delectus harum laudantium, libero vitae molestias ullam ipsum
+              voluptatem repellat modi quisquam iste, cum laboriosam quod
+              ducimus! Eligendi repellendus natus doloremque.
+            </p>
+
+            <!-- Button -->
+            <div class="read-more-group">
+              <a
+                href="#"
+                class="read-more-btn"
+                data-aos="flip-right"
+                data-aos-delay="400"
+              >
+                Discover More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- work Grid -->
+      <div class="portfolio-container">
+        <div class="swiper portfolio-swiper">
+          <div
+            class="swiper-wrapper"
+            id="portfolioSwiperWrapper"
+            data-aos="slide-up"
+            data-aos-delay="500"
+          >
+            <!-- Slides injected via JS -->
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="swiper-nav">
+          <button id="WorkPrevBtn" class="swiper-btn" data-aos="zoom-in-left">
+            <img
+              src="./assets/arrow.png"
+              alt="Previous"
+              class="icon-arrow icon-arrow"
+            />
+          </button>
+          <button id="WorkNextBtn" class="swiper-btn" data-aos="zoom-in-right">
+            <img src="./assets/arrow.png" alt="Next" class="icon-arrow-right" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- code section  -->
+    <section id="code" class="code-section">
+      <!-- Header -->
+      <h1 class="title" data-aos="flip-left" data-aos-delay="500">
+        Our code speaks <br />
+        success
+      </h1>
+
+      <!-- codes Grid -->
+      <div
+        class="code-grid"
+        id="codeGrid"
+        data-aos="slide-up"
+        data-aos-delay="500"
+      >
+        <!-- codes will be injected by JS -->
+      </div>
+    </section>
+
+    <!-- testimonial section -->
+    <section id="testimonial" class="testimonial-section">
+      <div class="testimonial-header">
+        <div class="testimonial-left">
+          <!-- Heading -->
+          <h2 data-aos="flip-right" class="main-heading" data-aos-delay="500">
+            What valuable <br />
+            Client Say
+          </h2>
+        </div>
+      </div>
+
+      <div class="testimonial-container">
+        <div class="swiper testimonial-swiper">
+          <!-- Swiper wrapper -->
+          <div
+            class="swiper-wrapper"
+            id="testimonialSwiperWrapper"
+            data-aos="slide-left"
+            data-aos-delay="500"
+          >
+            <!-- Slides injected via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section  -->
+    <section id="process" class="contact-container">
+      <!-- Info Section -->
+      <div class="info-section" data-aos="flip-left">
+        <h1 class="contact-title" data-aos="slide-up" data-aos-delay="400">
+          Let's Build Your Vision Together
+        </h1>
+        <p class="contact-subtitle" data-aos="zoom-in" data-aos-delay="500">
+          Share your ideas — we'll make them real with precision and passion.
+        </p>
+      </div>
+
+      <!-- Form Section -->
+      <div class="form-section" data-aos="flip-right" data-aos-delay="400">
+        <div class="form-wrapper" data-aos="slide-left" data-aos-delay="500">
+          <form action="#" method="POST" class="contact__form" novalidate>
+            <div class="contact__group" data-aos="zoom-in-up">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="contact__input"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div
+              class="contact__group"
+              data-aos="zoom-in-down"
+              data-aos-delay="100"
+            >
+              <label for="email">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="contact__input"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div
+              class="contact__group"
+              data-aos="slide-right"
+              data-aos-delay="200"
+            >
+              <label for="number">Your Phone</label>
+              <input
+                type="tel"
+                id="number"
+                name="number"
+                class="contact__input"
+                placeholder="Enter your phone"
+                pattern="[0-9]{7,15}"
+              />
+            </div>
+
+            <div
+              class="contact__group"
+              data-aos="slide-left"
+              data-aos-delay="300"
+            >
+              <label for="company">Company</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                class="contact__input"
+                placeholder="Enter your company name"
+              />
+            </div>
+
+            <!-- Message spans 2 columns -->
+            <div
+              class="contact__group contact__group--full"
+              data-aos="flip-up"
+              data-aos-delay="400"
+            >
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                class="contact__textarea"
+                placeholder="Type Your Message..."
+              ></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <div class="contact__group" data-aos="zoom-in" data-aos-delay="500">
+              <button type="submit" class="contact__submit-btn">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="brand-cta">
+      <!-- Title -->
+      <h2 class="brand-cta__title" data-aos="flip-left" data-aos-delay="400">
+        DRIVEN BY CODE, DESIGNED <br />
+        FOR BRANDS
+      </h2>
+
+      <div class="brand-cta__content">
+        <!-- Paragraph -->
+        <p class="brand-cta__text" data-aos="slide-up" data-aos-delay="500">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
+          officiis expedita repellendus laudantium dolore commodi aspernatur
+          amet.
+        </p>
+
+        <!-- Button -->
+        <button
+          class="brand-cta__button"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
+          Discover More services
+        </button>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+          <div class="newsletter-container">
+            <div
+              class="newsletter-text"
+              data-aos="flip-left"
+              data-aos-delay="500"
+            >
+              <h2>SUBSCRIBE TO OUR NEWSLETTER!</h2>
+              <p>Get notified about news, webinars, & more</p>
+            </div>
+            <form
+              data-aos="slide-right"
+              class="newsletter-form"
+              action="#"
+              method="post"
+              data-aos-delay="400"
+            >
+              <div class="input-wrapper">
+                <span class="icon">
+                  <img src="./assets/contactIcon/email.png" alt="Email icon" />
+                </span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your email address"
+                  required
+                />
+              </div>
+              <button type="submit" data-aos="zoom-in">Subscribe</button>
+            </form>
+          </div>
+        </section>
+
+        <div class="footer-top">
+          <!-- Company Info -->
+          <div class="footer-company" data-aos="flip-up">
+            <a href="/" class="footer-company__logo">
+              <img src="./assets/logo-black.png" alt="Company Logo" />
+              <span class="logo_text">Excellence<br />Code</span>
+            </a>
+            <div
+              class="footer-company__about"
+              data-aos="slide-left"
+              data-aos-delay="500"
+            >
+              <h2 class="footer-company__title">About Us</h2>
+              <p class="footer-company__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Obcaecati veniam necessitatibus libero quam rerum unde nisi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Footer Links -->
+          <div class="footer-section">
+            <h3
+              class="footer-section__title"
+              data-aos="flip-right"
+              data-aos-delay="500"
+            >
+              Services
+            </h3>
+            <ul class="footer-links">
+              <ul class="nav-links" data-aos="slide-up" data-aos-delay="500">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Works</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#about">Service</a></li>
+                <li><a href="#process">Process</a></li>
+              </ul>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3
+              class="footer-section__title"
+              data-aos="slide-right"
+              data-aos-delay="500"
+            >
+              Contact Us
+            </h3>
+            <ul class="footer-links contact-info">
+              <li data-aos="zoom-in">
+                <a href="tel:+971552440610">
+                  <img src="./assets/contactIcon/mobile.png" alt="Phone icon" />
+                  <span>+971-552440610</span>
+                </a>
+              </li>
+              <li data-aos="zoom-in">
+                <a href="mailto:info@excellencecode.com">
+                  <img src="./assets/contactIcon/email.png" alt="Email icon" />
+                  <span>info@excellencecode.com</span>
+                </a>
+              </li>
+              <li data-aos="zoom-in">
+                <a
+                  href="https://goo.gl/maps/your-location"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="./assets/contactIcon/location-pin.png"
+                    alt="Location icon"
+                  />
+                  <span
+                    >706, Sobha Ivory 2, Alama'al Street, Business Bay, Dubai,
+                    UAE</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="footer-section" data-aos-delay="500">
+            <h3 class="footer-section__title" data-aos="flip-left">
+              Follow Us
+            </h3>
+            <ul class="footer-social">
+              <li data-aos="slide-up">
+                <a
+                  href="https://wa.me/your-number"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    class="social-icon"
+                    src="./assets/socialIcon/whatsapp.png"
+                    alt="WhatsApp"
+                  />
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+              <li data-aos="slide-up">
+                <a
+                  href="https://facebook.com/yourprofile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    class="social-icon"
+                    src="./assets/socialIcon/facebook.png"
+                    alt="Facebook"
+                  />
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li data-aos="slide-up">
+                <a
+                  href="https://twitter.com/yourprofile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    class="social-icon"
+                    src="./assets/socialIcon/x.png"
+                    alt="Twitter"
+                  />
+                  <span>Twitter</span>
+                </a>
+              </li>
+              <li data-aos="slide-up">
+                <a
+                  href="https://instagram.com/yourprofile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    class="social-icon"
+                    src="./assets/socialIcon/instagram.png"
+                    alt="Instagram"
+                  />
+                  <span>Instagram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-container">
+        <div class="footer-bottom">
+          <!-- Legal Links -->
+
+          <div class="footer-legal">
+            <ul class="legal-links">
+              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a href="/terms-and-conditions.html">Terms & Conditions</a>
+              </li>
+              <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+            </ul>
+          </div>
+          <!-- Copyright -->
+          <p class="footer-copy">
+            © <span id="currentYear"></span>
+            <a href="#home">Excellence Code</a>. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </body>
+</html>

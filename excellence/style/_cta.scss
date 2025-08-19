@@ -1,0 +1,72 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.brand-cta {
+  width: 90vw;
+  margin: auto;
+  text-align: center;
+  padding: 4rem 0;
+
+  @include responsive(lg) {
+    width: 80.77vw;
+    max-width: 1413px;
+  }
+
+  &__title {
+    @include text-semibold;
+    line-height: 0.9;
+    font-size: $spacing-xl;
+    text-align: left;
+
+    font-family: $font-bebas;
+    @include responsive(lg) {
+      font-size: $spacing-3xl;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+    margin: $spacing-md 0 8rem;
+    @include responsive(md) {
+    flex-direction: row;
+
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    color: $color-secondary;
+    line-height: 1.2;
+    text-align: left;
+    max-width: auto;
+    @include responsive(md) {
+      font-size: $spacing-sm;
+      max-width: 385px;
+    }
+  }
+
+  &__button {
+    background-color: $color-primary;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 9999px;
+    text-transform: capitalize;
+    @include text-semibold;
+    font-size: 0.8rem;
+    border: 2px solid $color-primary;
+    @include responsive(lg) {
+      font-size: 1rem;
+    }
+    text-decoration: none;
+    transition: $transition-slow;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $white;
+      color: $color-primary;
+    }
+  }
+}

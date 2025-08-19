@@ -1,0 +1,99 @@
+@use "index" as *;
+
+/* Import font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  z-index: 9999;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0;
+  border: none;
+  @include grid-center;
+  background: rgba($color-text-muted, 0.5);
+  cursor: pointer;
+  box-shadow: $shadow-lg;
+  transition: $transition-slow;
+  &:hover {
+    background-color: $color-primary;
+    transform: scale(1.2);
+  }
+}
+
+.scroll-top-btn .scroll-btn {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  rotate: 90deg;
+  @include white-filter;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.scroll-top-btn.show {
+  @include responsive(sm) {
+    opacity: 1;
+    animation: bounceIn 0.6s ease forwards;
+  }
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(50px) scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px) scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5px) scale(0.95);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

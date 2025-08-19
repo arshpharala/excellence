@@ -1,0 +1,100 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+// team section
+.code-section {
+  margin: 0 auto;
+  text-align: center;
+  padding: 3.5rem 0;
+
+  width: 90vw;
+
+  @include responsive(lg) {
+    width: 80.77vw;
+    max-width: 1413px;
+  }
+
+  .title {
+    @include text-semibold;
+    margin-top: 4rem;
+
+    line-height: 0.9;
+    font-size: $spacing-xl;
+    font-family: $font-bebas;
+    text-align: left;
+    @include responsive(lg) {
+      font-size: $spacing-3xl;
+    }
+  }
+
+  .code-grid {
+    display: grid;
+    place-items: start;
+    margin: $spacing-lg 0;
+    gap: $spacing-md;
+    min-height: 255px;
+
+    grid-template-columns:  1fr;
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+     @include responsive(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .card {
+    text-align: center;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-gray-light;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      @include black-filter;
+      transition: filter 0.3s ease;
+    }
+
+    .extra-image {
+      max-width: 200px;
+      max-height: 0;
+      opacity: 0;
+      object-fit: cover;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+      margin: 10px auto;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+    }
+
+    &.active {
+      background-color: $color-primary;
+      color: $white;
+
+      .icon {
+        @include white-filter;
+      }
+
+      .extra-image {
+        max-height: 110px; // or your desired height
+        opacity: 1;
+      }
+    }
+
+    .card-title {
+      font-size: $spacing-sm;
+      @include text-bold;
+      text-align: left;
+
+      @include responsive(md) {
+      font-size: $spacing-md;
+
+    }
+    }
+  }
+}
