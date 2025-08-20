@@ -4,14 +4,7 @@
 .hero {
   position: relative;
   padding-top: 5rem;
-
-  // background: url("../assets/Layer.png") center/cover no-repeat;
   @include grid-center;
-  min-height: 70vh;
-
-  @include responsive(md) {
-    min-height: 728px;
-  }
 
   @include responsive(lg) {
     background-position: right;
@@ -71,15 +64,16 @@
       .read-more-btn {
         background-color: $white;
         color: $color-secondary;
-        padding: 12px 35px;
+
+        padding: 10px 35px;
         border-radius: 9999px;
         text-transform: capitalize;
         @include text-bold;
-        font-size: 0.75rem;
+        font-size: 0.8rem;
         @include responsive(md) {
           font-size: 1.3rem;
         }
-        border: 2px solid rgba($light-gold, 0.7);
+        border: 2px solid rgba($light-gold, 0.8);
         text-decoration: none;
         transition: all 0.3s ease;
         cursor: pointer;
@@ -129,50 +123,14 @@
       .hero-box {
         background-color: transparent;
         height: 200px;
-        transition: all 0.3s ease;
         border: 4px solid $white;
         opacity: 0;
-        transform: scale(0) rotate(0deg) translate(0, 0);
-        animation: reconstruct 1.5s ease-out forwards;
+        transform: scale(0) rotate(0deg);
+        transition: $transition-slow;
 
         @include responsive(md) {
           height: 250px;
         }
-      }
-
-      // stagger delay for "cracker" effect
-      .hero-box:nth-child(1) {
-        animation-delay: 0.1s;
-      }
-      .hero-box:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      .hero-box:nth-child(3) {
-        animation-delay: 0.3s;
-      }
-      .hero-box:nth-child(4) {
-        animation-delay: 0.4s;
-      }
-      .hero-box:nth-child(5) {
-        animation-delay: 0.5s;
-      }
-      .hero-box:nth-child(6) {
-        animation-delay: 0.6s;
-      }
-      .hero-box:nth-child(7) {
-        animation-delay: 0.7s;
-      }
-      .hero-box:nth-child(8) {
-        animation-delay: 0.8s;
-      }
-      .hero-box:nth-child(9) {
-        animation-delay: 0.9s;
-      }
-      .hero-box:nth-child(10) {
-        animation-delay: 1s;
-      }
-      .hero-box:nth-child(11) {
-        animation-delay: 1.1s;
       }
 
       // White boxes
@@ -199,13 +157,13 @@
       .box-2 {
         h4 {
           @include responsive(xl) {
-          font-size: 1.3rem;
-        }
-        @include responsive(md) {
-          font-size: $spacing-sm;
-          padding: 0.1rem;
-        }
-        font-size: $spacing-xm;
+            font-size: 1.4rem;
+          }
+          @include responsive(md) {
+            font-size: 1.2rem;
+            padding: 0.1rem;
+          }
+          font-size: $spacing-xm;
           color: $color-primary;
           font-weight: 200;
         }

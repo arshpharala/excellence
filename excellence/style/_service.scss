@@ -167,7 +167,7 @@
               @include text-semibold;
               font-size: 0.8rem;
               text-decoration: none;
-              transition: all 0.3s ease;
+              transition: $transition-slow;
               cursor: pointer;
 
               @include responsive(lg) {

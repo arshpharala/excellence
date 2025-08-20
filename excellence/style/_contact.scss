@@ -44,8 +44,12 @@
     .contact-title {
       font-family: $font-bebas;
       line-height: 1.3;
+      text-align: left;
       font-size: $spacing-md;
       @include responsive(lg) {
+        font-size: $spacing-lg;
+      }
+      @include responsive(xl) {
         font-size: $spacing-xl;
       }
       @include text-semibold;
@@ -55,7 +59,7 @@
     .contact-subtitle {
       font-size: $spacing-sm;
       @include text-semibold;
-      color: $color-secondary;
+      color: $color-text-base;
       margin-top: 0.5rem;
     }
   }
@@ -121,7 +125,8 @@
 
   .contact__submit-btn {
     width: 100%;
-    padding: 0.9rem 1.5rem;
+    padding: 10px 35px;
+    min-height: 49.59px;
     font-size: 1rem;
     @include text-semibold;
     color: $white;
@@ -129,7 +134,7 @@
     border: 2px solid $color-primary;
     border-radius: 9999px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: $transition-slow;
 
     &:hover {
       background-color: $white;

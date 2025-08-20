@@ -8,7 +8,12 @@
     $color-tertiary 0%,
     lighten($color-tertiary, 5%) 100%
   );
-  background: conic-gradient(at left top, rgb(124, 45, 18), rgb(254, 243, 199), rgb(124, 45, 18));
+  background: conic-gradient(
+    at left top,
+    rgb(124, 45, 18),
+    rgb(254, 243, 199),
+    rgb(124, 45, 18)
+  );
 
   padding: $spacing-lg $spacing-sm;
   border-radius: $border-radius;
@@ -63,6 +68,7 @@
 
         input {
           width: 100%;
+          min-height: 49.59px;
           padding: 0.75rem 1rem 0.75rem 2.5rem;
           border: 1px solid $border-default;
           border-bottom-left-radius: $border-radius;
@@ -95,8 +101,8 @@
       button {
         background-color: $color-primary;
         color: $white;
-        padding: 0.75rem 1rem 0.75rem 2.5rem;
-
+        padding: 0.75rem 1rem;
+        min-height: 49.59px;
         border-bottom-right-radius: $border-radius;
         border-top-right-radius: $border-radius;
         @include text-semibold;
@@ -106,7 +112,7 @@
         transition: $transition;
 
         &:hover {
-          background-color:rgba( $color-primary, 0.7);
+          background-color: rgba($color-primary, 0.7);
         }
       }
     }
@@ -137,7 +143,6 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 3rem;
-  
 
       @include responsive(sm) {
         grid-template-columns: repeat(2, 1fr);
@@ -146,7 +151,7 @@
         grid-template-columns: repeat(3, 1fr);
       }
       @include responsive(lg) {
-            justify-items: center;
+        justify-items: center;
         grid-template-columns: repeat(4, 1fr);
       }
 
@@ -241,19 +246,18 @@
               font-size: 0.95rem;
               text-decoration: none;
               transition: color 0.3s ease, transform 0.3s ease;
-              position: relative; 
-           @include text-bold;
+              position: relative;
+              @include text-bold;
 
               // Hover state
               &:hover {
                 color: $color-primary;
                 transform: translateX(3px);
-                img{
+                img {
                   @include gold-filter;
                 }
               }
 
-            
               &::after {
                 content: "";
                 position: absolute;
