@@ -47,49 +47,49 @@
         </a>
 
         <div class="nav-controls">
-          <ul class="nav-links">
+          <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
             <li><a href="#work">Works</a></li>
-            <li><a href="#code">code</a></li>
+            <li><a href="#code">Code</a></li>
 
             <li class="dropdown">
-              <span
+              <button
                 class="dropbtn"
                 aria-expanded="false"
                 aria-controls="servicesSubmenu"
                 id="servicesBtn"
-                >Services</span
               >
-              <ul class="dropdown-content">
+                Services
+                <img
+                  src="./assets/down-arrow.png"
+                  alt="dropdown Icon"
+                  class="dropdown-arrow"
+                />
+              </button>
+              <ul class="dropdown-content" id="servicesSubmenu">
                 <li>
                   <a href="#website-design-and-development"
-                    >Website Design and Development</a
+                    >Website Design & Development</a
                   >
                 </li>
                 <li><a href="#creative-design">Creative Design Services</a></li>
                 <li>
                   <a href="#digital-marketing"
-                    >Digital Marketing and Social Media Management</a
+                    >Digital Marketing & Social Media</a
                   >
                 </li>
-                <li>
-                  <a href="#events-organising"
-                    >Events and Conferences Organising</a
-                  >
-                </li>
-                <li>
-                  <a href="#analytics"
-                    >Analytics and Performance Optimization</a
-                  >
-                </li>
+                <li><a href="#events-organising">Events & Conferences</a></li>
+                <li><a href="#analytics">Analytics & Optimization</a></li>
                 <li><a href="#email-hosting">Email & Hosting Services</a></li>
               </ul>
             </li>
-            <li><a href="#process">process</a></li>
+
+            <li><a href="#process">Process</a></li>
           </ul>
 
+          <!-- Mobile menu button -->
           <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-            <img src="./assets/bars.png" alt="meanu icon" class="icon-menu" />
+            <img src="./assets/bars.png" alt="menu icon" class="icon-menu" />
           </button>
         </div>
       </div>
@@ -341,7 +341,7 @@
               <h1 data-aos="flip-left" data-aos-delay="100">our mission</h1>
 
               <!-- Paragraph -->
-              <p data-aos="slide-left" data-aos-delay="200">
+              <p data-aos="zoom-in-left" data-aos-delay="200">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
                 delectus harum laudantium, libero vitae molestias ullam ipsum
                 voluptatem repellat modi quisquam iste.
@@ -426,7 +426,7 @@
 
           <div
             class="feature-card card-excellence"
-            data-aos="fade-down"
+            data-aos="slide-up"
             data-aos-delay="800"
           >
             <h3>Creative & Technical Excellence</h3>
@@ -471,7 +471,7 @@
           </div>
 
           <div class="read-btn" data-aos="zoom-in" data-aos-delay="1200">
-            <a href="#" class="read-more-btn">Learn more</a>
+            <a href="#" class="learn-more-btn">Learn more</a>
           </div>
 
           <div
@@ -581,8 +581,6 @@
           <div
             class="swiper-wrapper"
             id="portfolioSwiperWrapper"
-            data-aos="slide-up"
-            data-aos-delay="500"
           >
             <!-- Slides injected via JS -->
           </div>
@@ -590,15 +588,15 @@
 
         <!-- Navigation Buttons -->
         <div class="swiper-nav">
-          <button id="WorkPrevBtn" class="swiper-btn" data-aos="zoom-in-left">
+          <button id="WorkPrevBtn" class="swiper-btn" data-aos="zoom-in-right">
+            <img src="./assets/arrow.png" alt="Previous" class="icon-arrow" />
+          </button>
+          <button id="WorkNextBtn" class="swiper-btn" data-aos="zoom-in-left">
             <img
               src="./assets/arrow.png"
-              alt="Previous"
-              class="icon-arrow icon-arrow"
+              alt="Next"
+              class="icon-arrow icon-arrow-right"
             />
-          </button>
-          <button id="WorkNextBtn" class="swiper-btn" data-aos="zoom-in-right">
-            <img src="./assets/arrow.png" alt="Next" class="icon-arrow-right" />
           </button>
         </div>
       </div>
@@ -641,11 +639,24 @@
           <div
             class="swiper-wrapper"
             id="testimonialSwiperWrapper"
-            data-aos="slide-left"
-            data-aos-delay="500"
+            
           >
             <!-- Slides injected via JS -->
           </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="swiper-nav">
+          <button id="PrevBtn" class="swiper-btn" data-aos="zoom-in-right">
+            <img src="./assets/arrow.png" alt="Previous" class="icon-arrow" />
+          </button>
+          <button id="NextBtn" class="swiper-btn" data-aos="zoom-in-left">
+            <img
+              src="./assets/arrow.png"
+              alt="Next"
+              class="icon-arrow icon-arrow-right"
+            />
+          </button>
         </div>
       </div>
     </section>
@@ -678,11 +689,7 @@
               />
             </div>
 
-            <div
-              class="contact__group"
-              data-aos="zoom-in-down"
-              data-aos-delay="100"
-            >
+            <div class="contact__group" data-aos="zoom-in-down">
               <label for="email">Your Email</label>
               <input
                 type="email"
@@ -694,11 +701,7 @@
               />
             </div>
 
-            <div
-              class="contact__group"
-              data-aos="slide-right"
-              data-aos-delay="200"
-            >
+            <div class="contact__group" data-aos="zoom-in">
               <label for="number">Your Phone</label>
               <input
                 type="tel"
@@ -710,11 +713,7 @@
               />
             </div>
 
-            <div
-              class="contact__group"
-              data-aos="slide-left"
-              data-aos-delay="300"
-            >
+            <div class="contact__group" data-aos="zoom-in">
               <label for="company">Company</label>
               <input
                 type="text"
@@ -726,11 +725,7 @@
             </div>
 
             <!-- Message spans 2 columns -->
-            <div
-              class="contact__group contact__group--full"
-              data-aos="flip-up"
-              data-aos-delay="400"
-            >
+            <div class="contact__group contact__group--full" data-aos="flip-up">
               <label for="message">Message</label>
               <textarea
                 id="message"
@@ -741,7 +736,7 @@
             </div>
 
             <!-- Submit button -->
-            <div class="contact__group" data-aos="zoom-in" data-aos-delay="500">
+            <div class="contact__group" data-aos="zoom-in">
               <button type="submit" class="contact__submit-btn">
                 Send Message
               </button>
@@ -759,22 +754,16 @@
         FOR BRANDS
       </h2>
 
-      <div class="brand-cta__content">
+      <div class="brand-cta__content" data-aos="fade-up" data-aos-delay="200">
         <!-- Paragraph -->
-        <p class="brand-cta__text" data-aos="slide-up" data-aos-delay="500">
+        <p class="brand-cta__text">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
           officiis expedita repellendus laudantium dolore commodi aspernatur
           amet.
         </p>
 
         <!-- Button -->
-        <button
-          class="brand-cta__button"
-          data-aos="zoom-in"
-          data-aos-delay="400"
-        >
-          Discover More services
-        </button>
+        <button class="brand-cta__button">Discover More services</button>
       </div>
     </section>
 
@@ -797,15 +786,17 @@
               class="newsletter-form"
               action="#"
               method="post"
-              data-aos-delay="400"
+              data-aos-delay="200"
             >
               <div class="input-wrapper">
-                <span class="icon">
+                <!-- <span class="icon">
                   <img src="./assets/contactIcon/email.png" alt="Email icon" />
-                </span>
+                </span> -->
                 <input
                   type="email"
                   name="email"
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
                   placeholder="Your email address"
                   required
                 />
@@ -822,11 +813,7 @@
               <img src="./assets/logo-black.png" alt="Company Logo" />
               <span class="logo_text">Excellence<br />Code</span>
             </a>
-            <div
-              class="footer-company__about"
-              data-aos="slide-right"
-              data-aos-delay="500"
-            >
+            <div class="footer-company__about" data-aos="zoom-in">
               <h2 class="footer-company__title">About Us</h2>
               <p class="footer-company__text">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -836,7 +823,7 @@
           </div>
 
           <!-- Footer Links -->
-          <div class="footer-section">
+          <div class="footer-section" id="footer">
             <h3
               class="footer-section__title"
               data-aos="flip-right"
@@ -858,25 +845,25 @@
           <div class="footer-section">
             <h3
               class="footer-section__title"
-              data-aos="slide-right"
+              data-aos="zoom-in"
               data-aos-delay="500"
             >
               Contact Us
             </h3>
-            <ul class="footer-links contact-info">
-              <li data-aos="zoom-in">
+            <ul data-aos="zoom-in" class="footer-links contact-info">
+              <li>
                 <a href="tel:+971552440610">
                   <img src="./assets/contactIcon/mobile.png" alt="Phone icon" />
                   <span>+971-552440610</span>
                 </a>
               </li>
-              <li data-aos="zoom-in">
+              <li>
                 <a href="mailto:info@excellencecode.com">
                   <img src="./assets/contactIcon/email.png" alt="Email icon" />
                   <span>info@excellencecode.com</span>
                 </a>
               </li>
-              <li data-aos="zoom-in">
+              <li>
                 <a
                   href="https://goo.gl/maps/your-location"
                   target="_blank"
@@ -900,8 +887,8 @@
             <h3 class="footer-section__title" data-aos="flip-left">
               Follow Us
             </h3>
-            <ul class="footer-social">
-              <li data-aos="slide-up">
+            <ul class="footer-social" data-aos="fade-up">
+              <li>
                 <a
                   href="https://wa.me/your-number"
                   target="_blank"
@@ -915,7 +902,7 @@
                   <span>WhatsApp</span>
                 </a>
               </li>
-              <li data-aos="slide-up">
+              <li>
                 <a
                   href="https://facebook.com/yourprofile"
                   target="_blank"
@@ -929,7 +916,7 @@
                   <span>Facebook</span>
                 </a>
               </li>
-              <li data-aos="slide-up">
+              <li>
                 <a
                   href="https://twitter.com/yourprofile"
                   target="_blank"
@@ -943,7 +930,7 @@
                   <span>Twitter</span>
                 </a>
               </li>
-              <li data-aos="slide-up">
+              <li>
                 <a
                   href="https://instagram.com/yourprofile"
                   target="_blank"

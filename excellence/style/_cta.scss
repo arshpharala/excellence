@@ -39,7 +39,7 @@
 
   &__text {
     color: $color-secondary;
-    line-height: 1.2;
+    line-height: 1.5;
     text-align: left;
     max-width: auto;
     @include responsive(md) {
@@ -52,7 +52,7 @@
     background-color: $color-primary;
     color: white;
     padding: 10px 35px;
-min-height: 49.59px;
+min-height: 50px;
     border-radius: 9999px;
     text-transform: capitalize;
     @include text-semibold;

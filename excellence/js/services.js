@@ -25,6 +25,7 @@ export default function initServices() {
       paragraph:
         "We offer reliable website and email hosting solutions with high uptime, fast speeds, and strong security, along with scalable options to grow with your business.",
     },
+    
   ];
 
   const serviceList = document.getElementById("serviceList");

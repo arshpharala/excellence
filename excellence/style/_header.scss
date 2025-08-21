@@ -25,155 +25,169 @@
     @include flex-center;
     justify-content: space-between;
     height: 5.5rem;
-  }
 
-  .logo-link {
-    @include flex-center;
-    gap: 0.5rem;
-    transition: $transition-slow;
+    .logo-link {
+      @include flex-center;
+      gap: 0.5rem;
+      transition: $transition-slow;
 
-    img {
-      width: 2.5rem;
-      height: 2.5rem;
-      object-fit: contain;
-    }
-    .logo_text {
-      @include text-semibold;
-      font-size: 1.3rem;
-      color: $color-secondary;
-      text-transform: capitalize;
-      font-family: serif;
-      text-align: center;
-      line-height: 1;
-    }
-    &:hover {
-      transform: scale(1.1);
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: contain;
+      }
       .logo_text {
-        color: $color-primary;
+        @include text-semibold;
+        font-size: 1.3rem;
+        color: $color-secondary;
+        text-transform: capitalize;
+        font-family: serif;
+        text-align: center;
+        line-height: 1;
+      }
+      &:hover {
+        transform: scale(1.1);
+        .logo_text {
+          color: $color-primary;
+        }
       }
     }
-  }
 
-  .nav-links {
-    display: none;
-    list-style: none;
-    position: relative;
-
-    @include responsive(lg) {
-      display: flex;
-      gap: 2rem;
-    }
-
-    li {
+    .nav-links {
+      display: none;
+      list-style: none;
       position: relative;
 
-      a,
-      .dropbtn {
-        text-transform: uppercase;
-        font-size: 0.95rem;
-        cursor: pointer;
-        color: $color-secondary;
-        transition: color 0.3s ease;
-        padding: 0.25rem 0.5rem;
-        display: inline-block;
-        font-weight: 600;
-        text-decoration: none;
+      @include responsive(lg) {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      li {
         position: relative;
 
-        &:hover,
-        &:focus {
-          color: $color-primary;
-          outline: none;
-        }
+        a,
+        .dropbtn {
+          text-transform: uppercase;
+          font-size: 0.95rem;
+          font-weight: 600;
+          cursor: pointer;
+          color: $color-secondary;
+          transition: color 0.3s ease;
+          padding: 0.25rem 0.5rem;
+          text-decoration: none;
+          background: none;
+          border: none;
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
 
-        // Gradient underline
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          right: 100%;
-          bottom: -3px;
-          height: 2px;
-          background: $color-primary;
-          transition: right 0.35s ease;
-        }
+          &:hover,
+          &:focus {
+            color: $color-primary;
+            outline: none;
+          }
 
-        &:hover::after {
-          right: 0;
+          .dropdown-arrow {
+            width: 20px; 
+            height: 20px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            @include gold-filter;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: -3px;
+            height: 2px;
+            background: $color-primary;
+            transition: right 0.35s ease;
+          }
+
+          &:hover::after {
+            right: 0;
+          }
         }
+      }
+
+      // Dropdown menu
+      .dropdown-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        position: absolute;
+        top: 100%;
+        left: -250%;
+        background: #fff;
+        box-shadow: $shadow-lg;
+        list-style: none;
+        width: 600px;
+        max-width: 90vw;
+        padding: 1rem;
+        border-radius: 6px;
+        z-index: 1000;
+
+        opacity: 0;
+        transform: translateY(10px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+
+        @include responsive(xl){
+        left: -200%;
+        }
+        a {
+          border-radius: 4px;
+          padding: 0.5rem;
+          font-size: 0.8rem;
+          width: 100%;
+          transition: background-color 0.3s ease, color 0.3s ease;
+
+          &:hover,
+          &:focus {
+            background: rgba($color-primary, 0.08);
+            color: $color-primary;
+          }
+        }
+      }
+
+      // Dropdown hover/focus
+      .dropdown:hover .dropdown-content,
+      .dropdown:focus-within .dropdown-content {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
       }
     }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: -15rem;
-      background-color: #f7f7f7;
-      box-shadow: $shadow-lg;
-      width: 650px;
-      max-width: 650px;
-      padding: $spacing-xm;
-      border-radius: 6px;
-      z-index: 1000;
-      list-style: none;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      color: $color-text-base;
-      opacity: 0;
-      transform: translateY(10px);
-      pointer-events: none;
+    .nav-controls {
+      @include flex-center;
+      gap: 1rem;
 
-      a {
-        border-radius: 4px;
-        transition: color 0.3s ease, background-color 0.3s ease;
-        padding: 0.5rem;
-        width: 100%;
+      .menu-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
 
-        &:hover,
-        &:focus {
-          background-color: rgba(0, 123, 255, 0.1);
-          outline: none;
+        img.icon-menu {
+          width: 1.5rem;
+          height: 1.5rem;
+          transition: transform 0.3s ease;
+          @include gold-filter;
         }
-      }
-    }
 
-    // Show dropdown on hover/focus with smooth animation
-    .dropdown:hover .dropdown-content,
-    .dropdown:focus-within .dropdown-content {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-  }
+        &:hover img.icon-menu,
+        &:focus img.icon-menu {
+          transform: scale(1.1);
+        }
 
-  .nav-controls {
-    @include flex-center;
-    gap: 1rem;
-
-    .menu-toggle {
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-
-      img.icon-menu {
-        display: block;
-        width: 1.5rem;
-        height: 1.5rem;
-        transition: transform 0.3s ease;
-        @include gold-filter;
-      }
-
-      &:hover img.icon-menu,
-      &:focus img.icon-menu {
-        transform: scale(1.1);
-        outline: none;
-      }
-
-      @include responsive(lg) {
-        display: none;
+        @include responsive(lg) {
+          display: none;
+        }
       }
     }
   }

@@ -3,7 +3,7 @@
 
 .portfolio-section {
   margin: 0 auto;
-  padding: 3.5rem 0;
+  padding: 3.5rem 0 0;
 
   width: 90vw;
 
@@ -70,7 +70,7 @@
     background-color: $color-primary;
     color: white;
     padding: 10px 35px;
-
+    min-height: 50px;
     border-radius: 9999px;
     text-transform: capitalize;
     @include text-semibold;
@@ -111,6 +111,7 @@
     position: relative;
     margin-top: $spacing-2xl;
 
+
     /* Individual project card */
     .project-card {
       overflow: hidden;
@@ -126,22 +127,19 @@
     .image-wrapper {
       overflow: hidden;
       border-radius: 2rem;
+      height: 470px;
     }
 
     .project-image {
       width: 100%;
 
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: $transition-slow;
       border-radius: 2rem;
-      object-fit: cover;
-
-      max-height: 470px;
-      height: 470px;
-    }
-
-    .project-card:hover .project-image {
-      transform: scale(1.1);
+      height: 100%;
+      &:hover {
+        scale: 1.1;
+      }
     }
 
     .project-details {
@@ -172,8 +170,9 @@
     }
     .arrow-btn {
       background-color: transparent;
-      transition: $transition-slow;
       width: 2.8rem;
+      transition: transform 0.5s ease-in-out;
+
       height: 2.7rem;
       @include grid-center;
       font-size: 1rem;
@@ -190,7 +189,7 @@
     }
   }
   .swiper-nav {
-    margin-top: $spacing-sm;
+    margin-top: $spacing-xs;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,7 +222,7 @@
       width: 1rem;
       height: 1rem;
       @include black-filter;
-      transition: $transition-slow;
+      transition: transform 0.5s ease-in-out;
     }
 
     &:hover {
