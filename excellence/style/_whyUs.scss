@@ -4,10 +4,10 @@
 // Why Choose Us Section
 .why-choose-us {
   background-color: $bg-gray-lighter;
-  padding: $spacing-xl 0;
+  padding: $spacing-md 0;
 
   .why-us-container {
-    margin: 4rem auto;
+    margin: 3.5rem auto;
     width: 90vw;
 
     @include responsive(lg) {
@@ -20,7 +20,6 @@
       display: grid;
       place-items: start;
       gap: 1rem;
-      margin: 4rem 0;
 
       @include responsive(md) {
         grid-template-columns: repeat(2, 1fr);
@@ -50,9 +49,7 @@
         width: 100%;
 
         .description {
-          text-align: justify;
-          text-justify: inter-word;
-          @include text-medium;
+          @include text-semibold;
 
           @include responsive(md) {
             max-width: 485px;
@@ -64,7 +61,8 @@
 
           p {
             font-size: $spacing-sm;
-            color: $color-text-base;
+                color: $color-text-subtle;
+
             margin-bottom: 16px;
             line-height: 1.5;
           }
@@ -79,7 +77,8 @@
         .read-more-btn {
           background-color: transparent;
           color: $color-secondary;
-          padding: 10px 35px;
+          padding: 0 35px;
+          @include grid-center;
           min-height: 50px;
           border-radius: 9999px;
           text-transform: capitalize;
@@ -120,6 +119,16 @@
       @include responsive(xl) {
         grid-template-columns: repeat(4, 1fr);
       }
+
+      .read-btn {
+        order: 999; // default comes before last
+      }
+
+      @include responsive(sm) {
+        .read-btn {
+          order: 0; // restore normal flow on tablet/desktop
+        }
+      }
     }
 
     .feature-card {
@@ -127,8 +136,9 @@
       padding: $spacing-md;
       border-radius: $border-radius;
       max-height: 488px;
-      height: 220px;
+      height: 150px;
       display: flex;
+      justify-content: space-between;
       gap: 0.75rem;
       box-shadow: $shadow-lg;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -149,6 +159,9 @@
         @include text-bold;
 
         @include responsive(md) {
+          font-size: 1rem;
+        }
+         @include responsive(lg) {
           font-size: 1.3rem;
         }
       }
@@ -208,18 +221,19 @@
         background-color: $color-primary;
         border: 2px solid $color-primary;
         color: $white;
-        padding: 14.5px 35px;
+        padding: 0 35px;
+        min-height: 50px;
+        @include grid-center;
         border-radius: 9999px;
         text-transform: capitalize;
-        @include text-semibold;
-        font-size: 0.8rem;
-
         transition: $transition-slow;
         cursor: pointer;
 
-        @include responsive(lg) {
-          font-size: 1rem;
+        @include responsive(sm) {
+          display: inline-flex;
         }
+
+        font-size: 1rem;
 
         &:hover {
           background-color: $white;

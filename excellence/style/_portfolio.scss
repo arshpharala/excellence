@@ -3,7 +3,7 @@
 
 .portfolio-section {
   margin: 0 auto;
-  padding: 3.5rem 0 0;
+  padding: 3rem 0  0;
 
   width: 90vw;
 
@@ -17,7 +17,6 @@
     display: grid;
     place-items: start;
     gap: 1rem;
-    margin-top: 4rem;
 
     @include responsive(md) {
       grid-template-columns: repeat(2, 1fr);
@@ -45,16 +44,14 @@
   .description {
     display: grid;
     place-items: start;
-    text-align: justify;
-    text-justify: inter-word;
-    @include text-medium;
+    @include text-semibold;
     @include responsive(md) {
-      max-width: 495px;
+      max-width: 485px;
     }
     p {
-      font-size: 1rem;
+      font-size: $spacing-sm;
+            color: $color-text-subtle;
 
-      color: $color-text-base; /* text-color */
       margin-bottom: 16px;
       line-height: 1.5;
     }
@@ -69,7 +66,8 @@
   .read-more-btn {
     background-color: $color-primary;
     color: white;
-    padding: 10px 35px;
+    padding: 0 35px;
+    @include grid-center;
     min-height: 50px;
     border-radius: 9999px;
     text-transform: capitalize;
@@ -109,13 +107,13 @@
 
   .portfolio-container {
     position: relative;
-    margin-top: $spacing-2xl;
-
+    margin-top: $spacing-xl;
 
     /* Individual project card */
     .project-card {
       overflow: hidden;
       width: 100%;
+      padding-bottom: 2rem;
       @include responsive(md) {
         max-width: 715px;
       }
@@ -171,7 +169,7 @@
     .arrow-btn {
       background-color: transparent;
       width: 2.8rem;
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.3s ease-in-out;
 
       height: 2.7rem;
       @include grid-center;
@@ -187,51 +185,52 @@
         @include gold-filter;
       }
     }
-  }
-  .swiper-nav {
-    margin-top: $spacing-xs;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
 
-    @include responsive(md) {
-      justify-content: end;
-    }
-  }
+    .swiper-nav {
+      margin-top: $spacing-xs;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
 
-  .swiper-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 1.25rem;
-    background: transparent;
-    color: $color-text-subtle;
-    border: 2px solid rgba($light-gold, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    .icon-arrow-right {
-      transform: rotate(180deg);
+      @include responsive(md) {
+        justify-content: end;
+      }
     }
 
-    img.icon-arrow {
-      width: 1rem;
-      height: 1rem;
-      @include black-filter;
-      transition: transform 0.5s ease-in-out;
-    }
+    .swiper-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      background: transparent;
+      color: $color-text-subtle;
+      border: 2px solid rgba($light-gold, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
 
-    &:hover {
-      background-color: $color-primary;
-      transform: scale(1.1);
-      border: 2px solid $color-primary;
+      .icon-arrow-right {
+        transform: rotate(180deg);
+      }
 
-      .icon-arrow {
-        @include white-filter;
+      img.icon-arrow {
+        width: 1rem;
+        height: 1rem;
+        @include black-filter;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      &:hover {
+        background-color: $color-primary;
+        transform: scale(1.1);
+        border: 2px solid $color-primary;
+
+        .icon-arrow {
+          @include white-filter;
+        }
       }
     }
   }

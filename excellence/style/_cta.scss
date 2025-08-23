@@ -5,7 +5,7 @@
   width: 90vw;
   margin: auto;
   text-align: center;
-  padding: 4rem 0;
+  padding: 3rem 0;
 
   @include responsive(lg) {
     width: 80.77vw;
@@ -27,23 +27,25 @@
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: start;
     gap: 2rem;
     margin: $spacing-md 0 8rem;
     @include responsive(md) {
       flex-direction: row;
-
       justify-content: space-between;
     }
   }
 
   &__text {
-    color: $color-secondary;
+       color: $color-text-subtle;
+
+
     line-height: 1.5;
     text-align: left;
-    max-width: auto;
+    @include text-semibold;
+    font-size: $spacing-sm;
+
     @include responsive(md) {
-      font-size: $spacing-sm;
       max-width: 385px;
     }
   }
@@ -51,8 +53,9 @@
   &__button {
     background-color: $color-primary;
     color: white;
-    padding: 10px 35px;
-min-height: 50px;
+    padding: 0 35px;
+    @include grid-center;
+    min-height: 50px;
     border-radius: 9999px;
     text-transform: capitalize;
     @include text-semibold;

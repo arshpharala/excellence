@@ -1,12 +1,9 @@
 @use "mixins" as *;
 @use "variables" as *;
 
-// team section
 .code-section {
-  margin: 0 auto;
-  text-align: center;
-  padding: 3.5rem 0;
-
+  margin: 4rem auto ;
+  padding: 3rem 0 0;
   width: 90vw;
 
   @include responsive(lg) {
@@ -14,87 +11,116 @@
     max-width: 1413px;
   }
 
-  .title {
-    @include text-semibold;
-    margin-top: 4rem;
+  .code-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
-    line-height: 0.9;
-    font-size: $spacing-xl;
-    font-family: $font-bebas;
-    text-align: left;
     @include responsive(lg) {
-      font-size: $spacing-3xl;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  .code-info {
+    flex: 1;
+
+
+    .title {
+      @include text-semibold;
+      font-size: $spacing-xl;
+      font-family: $font-bebas;
+      line-height: 0.9;
+
+      @include responsive(lg) {
+        font-size: $spacing-3xl;
+      }
+    }
+
+    .desc {
+      margin: 1rem 0 1.5rem;
+      color: $color-text-subtle;
+      line-height: 1.5;
+      font-size: 1rem;
+      @include text-semibold;
+    }
+
+    .learn-more-btn {
+      background-color: $color-primary;
+      border: 2px solid $color-primary;
+      color: $white;
+      padding: 0 35px;
+      min-height: 50px;
+      @include grid-center;
+      border-radius: 9999px;
+      text-transform: capitalize;
+      transition: $transition-slow;
+      cursor: pointer;
+
+      @include responsive(sm) {
+        display: inline-flex;
+      }
+
+      font-size: 1rem;
+
+      &:hover {
+        background-color: $white;
+        color: $color-primary;
+      }
     }
   }
 
   .code-grid {
+    flex: 1;
     display: grid;
-    place-items: start;
-    margin: $spacing-lg 0;
     gap: $spacing-md;
-    min-height: 255px;
+    grid-template-columns: 1fr;
 
-    grid-template-columns:  1fr;
     @include responsive(md) {
       grid-template-columns: repeat(2, 1fr);
     }
-     @include responsive(lg) {
-      grid-template-columns: repeat(4, 1fr);
-    }
   }
+
   .card {
-    text-align: center;
-    padding: $spacing-sm $spacing-md;
+    padding: 1.5rem;
     border-radius: $border-radius;
+    background: $bg-gray-light;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    transition: background 0.3s, color 0.3s;
     cursor: pointer;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: $bg-gray-light;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: left;
 
     .icon {
       width: 40px;
       height: 40px;
+      margin-bottom: 1rem;
       object-fit: contain;
       @include black-filter;
-      transition: filter 0.3s ease;
     }
 
-    .extra-image {
-      max-width: 200px;
-      max-height: 0;
-      opacity: 0;
-      object-fit: cover;
-      border-top-left-radius: $border-radius;
-      border-bottom-left-radius: $border-radius;
-      margin: 10px auto;
-      transition: max-height 0.5s ease, opacity 0.5s ease;
+    .card-title {
+      @include text-bold;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content {
+      font-size: 0.95rem;
+      color: $color-text-subtle;
+      line-height: 1.5;
     }
 
     &.active {
-      background-color: $color-primary;
+      background: $color-primary;
       color: $white;
 
       .icon {
         @include white-filter;
       }
-
-      .extra-image {
-        max-height: 110px; // or your desired height
-        opacity: 1;
+      .card-content {
+        color: $white;
       }
-    }
-
-    .card-title {
-      font-size: $spacing-sm;
-      @include text-bold;
-      text-align: left;
-
-      @include responsive(md) {
-      font-size: $spacing-md;
-
-    }
     }
   }
 }

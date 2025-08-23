@@ -101,11 +101,13 @@
       button {
         background-color: $color-primary;
         color: $white;
-        padding: 0.75rem 1rem;
+        padding: 0 1rem;
         min-height: 50px;
+        @include grid-center;
         border-bottom-right-radius: $border-radius;
         border-top-right-radius: $border-radius;
         @include text-semibold;
+        border: 0;
         font-size: 1rem;
 
         cursor: pointer;
@@ -139,7 +141,7 @@
     }
 
     .footer-top {
-      padding: 5rem 0;
+      padding: 5rem 0 0;
       display: grid;
       grid-template-columns: 1fr;
       gap: 3rem;
@@ -231,7 +233,7 @@
         .footer-social {
           display: flex;
           flex-direction: column;
-          gap: 0.75rem;
+          gap: 0.65rem;
 
           li {
             list-style: none;
@@ -242,7 +244,11 @@
               gap: 0.4rem;
               color: $color-secondary;
               text-transform: capitalize;
+              font-size: 0.80rem;
+              @include responsive(sm){
               font-size: 0.95rem;
+
+              }
               text-decoration: none;
               transition: color 0.3s ease, transform 0.3s ease;
               position: relative;

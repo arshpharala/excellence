@@ -2,46 +2,45 @@ export default function initCode() {
   const cards = [
     {
       iconImage: "./assets/object/creative.png",
-      image: null,
       title: "Creative",
+      content:
+        "Innovative ideas leveraging modern technologies to craft solutions that inspire and engage.",
     },
     {
       iconImage: "./assets/object/outstanding.png",
-      image: "./assets/code.png",
       title: "Outstanding",
+      content:
+        "Delivering high-quality code with precision, ensuring reliability and excellence every time.",
     },
     {
       iconImage: "./assets/object/dynamic.png",
-      image: null,
       title: "Dynamic",
+      content:
+        "Adaptable and future-ready, capable of evolving with new trends and solving challenges quickly.",
     },
     {
       iconImage: "./assets/object/effective.png",
-      image: null,
       title: "Effective",
+      content:
+        "Focused on impactful results—creating solutions that save time, cost, and maximize efficiency.",
     },
   ];
 
   const container = document.getElementById("codeGrid");
 
-  // Generate HTML
   container.innerHTML = cards
     .map(
       (card, index) => `
-      <div class="card ${index === 0 ? "active" : ""}" data-index="${index}" >
+      <div class="card ${index === 0 ? "active" : ""}" data-index="${index}">
         <img src="${card.iconImage}" alt="${card.title} Icon" class="icon" />
-        
-           <img src="./assets/code.png" alt="${
-             card.title
-           } Image" class="extra-image" />
-        
         <h3 class="card-title">${card.title}</h3>
+        <p class="card-content">${card.content}</p>
       </div>
     `
     )
     .join("");
 
-  // Add click event to toggle active card
+  // Toggle active card
   const allCards = container.querySelectorAll(".card");
   allCards.forEach((card) => {
     card.addEventListener("click", () => {
