@@ -43,7 +43,7 @@
 
       p {
         font-size: 0.75rem;
-        color: rgba($color-text-base, 0.6);
+        color: $color-text-base;
       }
 
       @include responsive(md) {
@@ -145,16 +145,17 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 3rem;
+      place-items: start;
 
       @include responsive(sm) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1.5fr 1fr;
       }
       @include responsive(md) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1.5fr 1fr;
       }
-      @include responsive(lg) {
+      @include responsive(xl) {
         justify-items: center;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1.5fr 1fr 1fr;
       }
 
       /* ==============================
@@ -162,19 +163,16 @@
   ============================== */
       .footer-company {
         display: grid;
-        gap: 1.5rem;
+        gap: 1rem;
 
         &__logo {
-          @include flex-center;
-          gap: $spacing-sm;
+          gap: $spacing-xs;
+          display: inline-flex;
+          align-items: start;
           transition: $transition-slow;
 
           &:hover {
             transform: scale(1.01);
-
-            .logo_text {
-              color: $color-primary;
-            }
           }
 
           img {
@@ -185,29 +183,56 @@
 
           .logo_text {
             @include text-bold;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+
+            @include responsive(md) {
+              font-size: $spacing-md;
+
+            }
             line-height: 1.2;
-            text-align: center;
-            color: $color-secondary;
+            text-align: left;
+            color: $color-primary;
             text-transform: capitalize;
-            font-family: serif;
           }
         }
 
-        &__title {
-          font-size: $spacing-sm;
-          @include text-bold;
-          margin-bottom: 0.5rem;
-
-          @include responsive(md) {
-            font-size: $spacing-md;
-          }
-        }
 
         &__text {
-          font-size: 0.85rem;
+          font-size: $spacing-sm;
           line-height: 1.5;
           color: $color-text-subtle;
+        }
+
+        .footer-social {
+          display: flex;
+          margin-top: 0.5rem;
+          gap: $spacing-md;
+
+          li {
+            list-style: none;
+
+            a {
+              // Hover state
+              &:hover {
+                color: $color-primary;
+                transform: scale(1.1);
+                img {
+                  @include gold-filter;
+                }
+              }
+
+              img {
+                width: 1.5rem;
+                height: 1.5rem;
+                object-fit: contain;
+                transition: transform 0.3s ease;
+              }
+
+              .social-icon {
+                @include black-filter;
+              }
+            }
+          }
         }
       }
 
@@ -220,17 +245,17 @@
         gap: 0.5rem;
 
         &__title {
-          font-size: $spacing-sm;
           @include text-bold;
           color: $color-primary;
+          font-size: 1.5rem;
 
-          @include responsive(md) {
-            font-size: $spacing-md;
-          }
+            @include responsive(md) {
+              font-size: $spacing-md;
+
+            }
         }
 
-        .footer-links,
-        .footer-social {
+        .footer-links {
           display: flex;
           flex-direction: column;
           gap: 0.65rem;
@@ -309,9 +334,10 @@
       margin: 0 auto;
       width: 90vw;
       @include responsive(lg) {
-        width: 83.46vw;
-        max-width: 1366px;
+        width: 80.77vw;
+        max-width: 1413px;
       }
+
       padding: $spacing-md 0;
       display: flex;
       flex-direction: column;

@@ -83,8 +83,7 @@
           align-items: center;
           gap: 0.25rem;
 
-          &:hover,
-          &:focus {
+          &:hover {
             color: $color-primary;
             outline: none;
           }
@@ -154,11 +153,14 @@
         }
       }
 
+      .dropdown:hover .dropbtn {
+        color: $color-primary;
+      }
+
       // Dropdown hover/focus
-      .dropdown:hover .dropdown-content,
-      .dropdown:focus-within .dropdown-content {
+      .dropdown:hover .dropdown-content {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(4px);
         pointer-events: auto;
       }
     }
@@ -373,14 +375,13 @@
 
       .social-container {
         padding: 0.5rem;
-        .social-content{
-         @include text-bold;
+        .social-content {
+          @include text-bold;
           text-transform: capitalize;
           font-size: $spacing-sm;
           color: $color-primary;
           padding-left: 0.5rem;
           border-bottom: 1px solid rgba($border-default, 0.4);
-
         }
         .social-icons {
           margin-top: 1rem;

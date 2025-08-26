@@ -67,32 +67,55 @@ export default function initServices() {
       })
       .join("");
 
-    // Accordion animation logic
-    document
-      .querySelectorAll(".vas-service-header .toggle-btn")
-      .forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          const item = btn.closest(".vas-service-item");
-          const index = parseInt(item.getAttribute("data-index"));
-          toggleAccordion(index);
-        });
-      });
+    setupAccordion();
+  }
 
-    // Animate expansion/collapse
-    document.querySelectorAll(".vas-service-item").forEach((item) => {
+  function setupAccordion() {
+    document.querySelectorAll(".vas-service-item").forEach((item, index) => {
+      const btn = item.querySelector(".toggle-btn");
       const content = item.querySelector(".vas-service-content");
+
+      // Initial state
       if (item.classList.contains("active")) {
         content.style.maxHeight = content.scrollHeight + "px";
       } else {
         content.style.maxHeight = 0;
       }
+
+      // Button click handler
+      btn.addEventListener("click", () =>
+        toggleAccordion(index, item, content, btn)
+      );
     });
   }
 
-  function toggleAccordion(index) {
-    activeIndex = activeIndex === index ? null : index;
-    renderAccordion();
+  function toggleAccordion(index, item, content, btn) {
+    const isActive = item.classList.contains("active");
+
+    // Collapse all first
+    document.querySelectorAll(".vas-service-item").forEach((el) => {
+      const c = el.querySelector(".vas-service-content");
+      const b = el.querySelector(".toggle-btn");
+      el.classList.remove("active");
+      c.style.maxHeight = null;
+      c.setAttribute("aria-hidden", "true");
+      b.setAttribute("aria-expanded", "false");
+      b.querySelector("img").src = "./assets/plus.png";
+      b.querySelector("img").alt = "Expand";
+    });
+
+    // Expand clicked one if it wasn’t active
+    if (!isActive) {
+      item.classList.add("active");
+      content.style.maxHeight = content.scrollHeight + "px"; 
+      content.setAttribute("aria-hidden", "false");
+      btn.setAttribute("aria-expanded", "true");
+      btn.querySelector("img").src = "./assets/minus.png";
+      btn.querySelector("img").alt = "Collapse";
+      activeIndex = index;
+    } else {
+      activeIndex = null;
+    }
   }
 
   renderAccordion();

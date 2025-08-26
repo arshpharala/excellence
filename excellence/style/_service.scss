@@ -132,11 +132,12 @@
         }
 
         .vas-service-content {
-          overflow: hidden;
+          overflow: visible;
           max-height: 0;
-          padding-top: 0;
-          padding-bottom: 0;
-          transition: $transition-slow;
+          padding: 0;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
 
           p {
             font-size: $spacing-sm;
@@ -144,11 +145,11 @@
             line-height: 1.5;
             color: $color-text-subtle;
 
-            margin-bottom: 1.4rem;
             @include text-medium;
           }
 
           .vas-link-wrap {
+            margin: 1rem 0;
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -204,9 +205,8 @@
         }
 
         &.active .vas-service-content {
-          transition: $transition-slow;
-          padding: 1rem 0;
-          max-height: auto;
+          opacity: 1;
+          visibility: visible;
         }
       }
     }
