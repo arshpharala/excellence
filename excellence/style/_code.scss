@@ -2,8 +2,8 @@
 @use "variables" as *;
 
 .code-section {
-  margin: 4rem auto ;
-  padding: 3rem 0 0;
+  margin: 0 auto ;
+  padding: 7rem 0 4rem;
   width: 90vw;
 
   @include responsive(lg) {
@@ -52,7 +52,9 @@
       color: $white;
       padding: 0 35px;
       min-height: 50px;
-      @include grid-center;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
       border-radius: 9999px;
       text-transform: capitalize;
       transition: $transition-slow;
@@ -87,7 +89,7 @@
     border-radius: $border-radius;
     background: $bg-gray-light;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
     cursor: pointer;
     text-align: left;
 
@@ -114,6 +116,7 @@
     &.active {
       background: $color-primary;
       color: $white;
+      box-shadow: $shadow-xl;
 
       .icon {
         @include white-filter;

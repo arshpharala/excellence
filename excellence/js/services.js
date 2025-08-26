@@ -25,7 +25,6 @@ export default function initServices() {
       paragraph:
         "We offer reliable website and email hosting solutions with high uptime, fast speeds, and strong security, along with scalable options to grow with your business.",
     },
-    
   ];
 
   const serviceList = document.getElementById("serviceList");
@@ -37,12 +36,18 @@ export default function initServices() {
       .map((service, index) => {
         const isActive = index === activeIndex;
         return `
-          <li class="vas-service-item ${isActive ? "active" : ""}" data-index="${index}">
+          <li class="vas-service-item ${
+            isActive ? "active" : ""
+          }" data-index="${index}">
             <div class="vas-service-header">
               <h5 class="vas-service-title">${service.title}</h5>
-              <button class="toggle-btn" aria-label="${isActive ? "Collapse" : "Expand"} Service">
+              <button class="toggle-btn" aria-label="${
+                isActive ? "Collapse" : "Expand"
+              } Service">
                 <img 
-                  src="${isActive ? "./assets/minus.png" : "./assets/plus.png"}" 
+                  src="${
+                    isActive ? "./assets/minus.png" : "./assets/plus.png"
+                  }" 
                   alt="${isActive ? "Collapse" : "Expand"}" 
                   class="accordion-icon"
                 />
@@ -63,21 +68,16 @@ export default function initServices() {
       .join("");
 
     // Accordion animation logic
-    document.querySelectorAll(".vas-service-header .toggle-btn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const item = btn.closest(".vas-service-item");
-        const index = parseInt(item.getAttribute("data-index"));
-        toggleAccordion(index);
+    document
+      .querySelectorAll(".vas-service-header .toggle-btn")
+      .forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const item = btn.closest(".vas-service-item");
+          const index = parseInt(item.getAttribute("data-index"));
+          toggleAccordion(index);
+        });
       });
-    });
-
-    document.querySelectorAll(".vas-service-item").forEach((item) => {
-      item.addEventListener("click", () => {
-        const index = parseInt(item.getAttribute("data-index"));
-        toggleAccordion(index);
-      });
-    });
 
     // Animate expansion/collapse
     document.querySelectorAll(".vas-service-item").forEach((item) => {

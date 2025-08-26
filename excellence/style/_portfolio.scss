@@ -3,7 +3,7 @@
 
 .portfolio-section {
   margin: 0 auto;
-  padding: 3rem 0  0;
+  padding: 2.5rem 0 0;
 
   width: 90vw;
 
@@ -50,7 +50,7 @@
     }
     p {
       font-size: $spacing-sm;
-            color: $color-text-subtle;
+      color: $color-text-subtle;
 
       margin-bottom: 16px;
       line-height: 1.5;
@@ -210,10 +210,10 @@
       color: $color-text-subtle;
       border: 2px solid rgba($light-gold, 0.5);
       cursor: pointer;
-      transition: all 0.3s ease;
 
       .icon-arrow-right {
         transform: rotate(180deg);
+        transition: transform 0.5s ease-in-out;
       }
 
       img.icon-arrow {

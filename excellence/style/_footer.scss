@@ -43,7 +43,7 @@
 
       p {
         font-size: 0.75rem;
-        color: $color-text-muted;
+        color: rgba($color-text-base, 0.6);
       }
 
       @include responsive(md) {
@@ -244,10 +244,9 @@
               gap: 0.4rem;
               color: $color-secondary;
               text-transform: capitalize;
-              font-size: 0.80rem;
-              @include responsive(sm){
-              font-size: 0.95rem;
-
+              font-size: 0.8rem;
+              @include responsive(sm) {
+                font-size: 0.95rem;
               }
               text-decoration: none;
               transition: color 0.3s ease, transform 0.3s ease;

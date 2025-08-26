@@ -194,209 +194,220 @@
 
 /* Mobile Menu */
 
-.mobile-menu {
+.menu-model {
   position: fixed;
-  top: 0;
-  right: -100%;
-  width: 80%;
-  max-width: 320px;
-  height: 100%;
-  background-color: #ffffff;
-  opacity: 0.98;
-  transition: $transition-slow;
-  z-index: 9990;
-  padding: 1.5rem;
-  box-shadow: $shadow-lg;
-  overflow-y: auto;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
 
   &.active {
-    right: 0;
+    opacity: 1;
+    visibility: visible;
+
+    .mobile-menu {
+      transform: translateX(0); // slide in
+    }
   }
 
-  ul {
-    list-style: none;
-    padding: 2rem 0 1rem;
-    margin-top: 2rem;
+  .mobile-menu {
+    position: relative;
+    float: right;
+    width: 80%;
+    max-width: 320px;
+    height: 100%;
+    background: $white;
+    box-shadow: $shadow-lg;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
 
-    li {
-      margin-bottom: 1rem;
+    .menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: $shadow-lg;
+      height: 5.5rem;
+      padding: 1.5rem;
 
-      a,
-      span {
-        display: flex;
-        align-items: center;
+      .logo-link img {
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: contain;
+      }
 
-        gap: 0.5rem;
-        padding: $spacing-xm 1rem;
+      .close-btn {
+        @include grid-center;
+        width: 2rem;
+        height: 2rem;
+        background: $color-primary;
         border-radius: 6px;
-        font-size: $spacing-xm;
-        color: $color-secondary;
-        text-transform: uppercase;
-        @include text-semibold;
+        border: none;
         cursor: pointer;
-        text-decoration: none;
-        transition: $transition-slow;
+        transition: $transition;
+
+        img {
+          width: 0.9rem;
+          height: 0.9rem;
+        }
 
         &:hover,
         &:focus {
-          background-color: $color-primary;
-          color: #ffffff;
+          transform: scale(1.1);
+          box-shadow: $shadow-lg;
           outline: none;
-          .menu-icon {
-            @include white-filter;
+        }
+      }
+    }
+
+    .menu-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 98%;
+
+      padding-top: 5.5rem;
+      padding-bottom: 1.5rem;
+      margin-top: -5.5rem;
+      .nav-menu {
+        list-style: none;
+        padding: 0.5rem;
+
+        li {
+          margin-bottom: 1rem;
+          img {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+          a,
+          .dropbtn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            padding: $spacing-xm 1rem;
+            font-size: $spacing-xm;
+            color: $color-secondary;
+            text-transform: uppercase;
+            border-bottom: 1px solid $border-default;
+            border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: $transition-slow;
+
+            &:hover,
+            &:focus {
+              background: $color-primary;
+              color: #fff;
+              .menu-icon {
+                @include white-filter;
+              }
+            }
+          }
+
+          .dropbtn {
+            justify-content: space-between;
+          }
+
+          .menu-down {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+          }
+        }
+
+        .dropdown-menu-content {
+          display: none;
+          background: $bg-gray-light;
+          border-radius: 6px;
+          padding: 0.5rem 0 0.5rem 1.5rem;
+
+          li a {
+            font-size: 0.8rem;
+            padding: 0.5rem 0;
+            color: $color-secondary;
+            transition: $transition;
+            text-transform: capitalize;
+            border-radius: 0;
+
+            &:hover,
+            &:focus {
+              background: rgba(0, 123, 255, 0.1);
+              color: $color-primary;
+            }
+          }
+        }
+
+        .accordion-item.open {
+          background: $color-primary;
+          border-radius: 6px;
+
+          .dropdown-menu-content {
+            display: block;
+          }
+
+          .dropdown-arrow {
+            transform: rotate(180deg);
+            transition: $transition-slow;
+          }
+
+          .dropbtn {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border: 0;
+          }
+
+          .menu-down {
+            color: $white;
+            .service-icon {
+              @include white-filter;
+            }
+          }
+        }
+      }
+
+      .social-container {
+        padding: 0.5rem;
+        .social-content{
+         @include text-bold;
+          text-transform: capitalize;
+          font-size: $spacing-sm;
+          color: $color-primary;
+          padding-left: 0.5rem;
+          border-bottom: 1px solid rgba($border-default, 0.4);
+
+        }
+        .social-icons {
+          margin-top: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          a {
+            border: 1px solid rgba($border-default, 0.4);
+            box-shadow: $shadow-lg;
+            border-radius: 6px;
+            img {
+              padding: 0.5rem;
+              width: 2.5rem;
+              height: 2.5rem;
+              @include grid-center;
+              transition: $transition;
+              @include black-filter;
+            }
+
+            &:hover {
+              @include gold-filter;
+              scale: 1.1;
+            }
           }
         }
       }
     }
-  }
-
-  .menu-icon {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-  }
-
-  .menu-down {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
-
-  .dropdown-menu-content {
-    display: none;
-    background-color: $bg-gray-light;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-
-    padding-left: 1.55rem;
-
-    li {
-      margin-bottom: 0.5rem;
-    list-style-type: circle;   
-
-
-      a {
-        font-size: 0.8rem;
-        color: $color-secondary;
-        padding: 0.5rem 0;
-        transition: $transition;
-        text-transform: capitalize;
-
-        &:hover,
-        &:focus {
-          background-color: rgba(0, 123, 255, 0.1);
-          color: $color-primary;
-          outline: none;
-        }
-      }
-
-    }
-  
-  }
-
-  .dropdown-menu-content[hidden] {
-    display: none;
-  }
-
-  .accordion-item.open > .dropdown-menu-content {
-    display: block;
-  }
-
-  .accordion-item .dropdown-arrow {
-    transition: transform 0.3s ease;
-  }
-
-  .accordion-item.open .menu-down {
-    color: $white;
-    .menu-icon {
-      @include white-filter;
-    }
-  }
-
-  .accordion-item.open {
-    background-color: $color-primary;
-    color: $color-primary;
-    border-radius: 6px;
-  }
-
-  .accordion-item.open .dropdown-arrow {
-    transform: rotate(180deg);
-    transition: $transition-slow;
-  }
-
-  .dropbtn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .dropbtn:hover .service-icon {
-    @include white-filter;
-  }
-}
-
-/* Close Button */
-.close-btn {
-  width: 2rem;
-  height: 2rem;
-  border: none;
-  border-radius: 9999px;
-  cursor: pointer;
-  float: right;
-  transition: $transition;
-  background-color: $color-error;
-  @include grid-center;
-
-  img {
-    width: 0.9rem;
-    height: 0.9rem;
-  }
-
-  &:hover,
-  &:focus {
-    border: 1px solid $color-error;
-    transform: scale(1.1);
-    outline: none;
-  }
-}
-
-// Social icons - no change, looks good
-.social-icons {
-  display: flex;
-  margin-top: 1rem;
-  justify-content: space-around;
-  gap: 1rem;
-
-  img {
-    width: 1.5rem;
-    height: 1.5rem;
-    filter: grayscale(100%) brightness(0%);
-    transition: $transition;
-  }
-
-  a.whatsapp:hover img {
-    filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg)
-      brightness(90%) contrast(101%);
-  }
-
-  a.facebook:hover img {
-    filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg)
-      brightness(95%) contrast(97%);
-  }
-
-  a.twitter:hover {
-    border-radius: 0.5rem;
-
-    img {
-      filter: grayscale(100%) brightness(1000%);
-      padding: 0.1rem;
-    }
-    background-color: $color-secondary;
-  }
-
-  a.instagram:hover img {
-    filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg)
-      brightness(90%) contrast(105%);
   }
 }

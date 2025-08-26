@@ -21,8 +21,11 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../assets/form-layer.png") left / cover no-repeat;
-    filter: blur(8px);
+    background: url("../assets/form-layer.png") center / cover no-repeat;
+    @include responsive(md){
+      background-position: left;
+    }
+    filter: blur(7px);
     z-index: 0;
   }
 
@@ -72,7 +75,8 @@
       .contact-subtitle {
         font-size: $spacing-sm;
         @include text-semibold;
-        color: $color-text-base;
+        color: rgba($color-text-base, 0.6);
+
         margin-top: 0.5rem;
       }
     }
