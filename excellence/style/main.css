@@ -187,7 +187,7 @@
   inset: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 999;
+  z-index: 99999;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(6px);
   opacity: 0;
@@ -310,7 +310,12 @@
   border-bottom: 1px solid #d1d5db;
   text-transform: capitalize;
   border-radius: 0;
-  padding-left: 2.5rem;
+  padding-left: 1.5rem;
+}
+.menu-model .mobile-menu .menu-content .nav-menu .dropdown-menu-content li a .arrow-logo {
+  width: 12px;
+  height: 12px;
+  rotate: 270deg;
 }
 .menu-model .mobile-menu .menu-content .nav-menu .dropdown-menu-content li a:hover, .menu-model .mobile-menu .menu-content .nav-menu .dropdown-menu-content li a:focus {
   background: rgba(0, 123, 255, 0.1);
@@ -3073,12 +3078,18 @@ button {
 .mylivechat_collapsed {
   position: fixed;
   right: -5.3rem;
-  bottom: 20rem;
+  bottom: 10rem;
   rotate: 270deg;
   background-color: #d4af37 !important;
   color: #ffffff !important;
   font-family: "Poppins", sans-serif !important;
   min-width: 200px !important;
+  z-index: 99;
+}
+@media (min-width: 48rem) {
+  .mylivechat_collapsed {
+    bottom: 20rem;
+  }
 }
 
 iframe[src*=poweredby] {

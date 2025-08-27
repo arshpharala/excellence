@@ -147,23 +147,21 @@ $input-bg-color: #fff;
   }
 }
 
-
 // Collapsed “Leave a message” banner
 .mylivechat_collapsed {
   position: fixed;
-    right: -5.3rem;
-@include responsive(md){
-     bottom: 20rem;
-}
+  right: -5.3rem;
+  @include responsive(md) {
+    bottom: 20rem;
+  }
   bottom: 10rem;
   rotate: 270deg;
   background-color: $color-primary !important;
   color: $white !important;
   font-family: $font-main !important;
   min-width: 200px !important;
- z-index: 99;
+  z-index: 99;
 }
-
 
 iframe[src*="poweredby"] {
   display: none !important;
@@ -179,7 +177,6 @@ iframe[src*="poweredby"] {
 .mylivechat_prechat_box,
 .mylivechat_offline_box {
   @include chat-input;
-  
 }
 
 // Textareas (Message Fields)
