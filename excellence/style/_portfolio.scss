@@ -164,6 +164,7 @@
       .project_number {
         color: $color-primary;
         @include text-bold;
+        margin-right: 4px;
       }
     }
     .arrow-btn {
@@ -181,6 +182,7 @@
       &:hover {
         transform: scale(1.1);
         box-shadow: $shadow-xl;
+    transform: rotate(45deg);
         border: 2px solid $color-primary;
         @include gold-filter;
       }

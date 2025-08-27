@@ -7,14 +7,15 @@
   padding: 3.5rem 0;
 
   @include responsive(lg) {
+    border-radius: $border-radius;
+    width: 80.77vw;
+    max-width: 1413px;
     padding: 3.5rem;
+
   }
   margin: $spacing-xl auto;
 
-  @include responsive(lg) {
-    width: 80.77vw;
-    max-width: 1413px;
-  }
+
 
   // Blurred background overlay
   &::before {

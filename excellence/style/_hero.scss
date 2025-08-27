@@ -157,8 +157,8 @@
         }
         padding: 0.1rem;
         h4 {
-          @include responsive(xl) {
-            font-size: $spacing-sm;
+          @include responsive(lg) {
+            font-size: 1.25rem;
           }
 
           text-align: center;
@@ -169,7 +169,7 @@
       }
       .box-11 {
         @include responsive(xl) {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
           padding: $spacing-sm;
 
         }

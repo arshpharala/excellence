@@ -32,7 +32,6 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-
 a {
   text-decoration: none;
 }
@@ -51,7 +50,7 @@ button {
 .scroll-top-btn {
   position: fixed;
   right: 30px;
-  bottom: 30px;
+  bottom: 40px;
   width: 50px;
   z-index: 99;
   height: 50px;
@@ -91,6 +90,121 @@ button {
   pointer-events: auto;
 }
 
+// Variables
+$text-dark: #333;
+$text-light: #aaa;
+$font-main: "Poppins", sans-serif;
+
+$input-padding: 0.6rem 1rem;
+$input-border-radius: 6px;
+$input-font-size: 14px;
+$input-border-color: #ccc;
+$input-focus-border-color: $color-primary;
+$input-bg-color: #fff;
+
+// ✨ Mixins
+.mylivechat_closebtn {
+  display: none;
+}
+
+@mixin chat-input {
+  width: 100% !important;
+  font-family: $font-main !important;
+  font-size: $input-font-size !important;
+  color: $text-dark !important;
+  background-color: $input-bg-color !important;
+  padding: $input-padding !important;
+  border: 1px solid $input-border-color !important;
+  border-radius: $input-border-radius !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  transition: border-color 0.3s ease;
+
+  &::placeholder {
+    color: $text-light !important;
+  }
+
+  &:focus {
+    border-color: $input-focus-border-color !important;
+  }
+}
+
+@mixin chat-button {
+  background-color: $color-primary !important;
+  color: $white !important;
+  font-family: $font-main !important;
+  font-size: $input-font-size !important;
+  border: none !important;
+  border-radius: $input-border-radius !important;
+  padding: 10px 20px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease !important;
+
+  &:hover {
+    background-color: $white !important;
+    border: 1px solid $color-primary !important;
+    color: $color-primary !important;
+  }
+}
+
+
+// Collapsed “Leave a message” banner
+.mylivechat_collapsed {
+  position: fixed;
+    right: -5.3rem;
+@include responsive(md){
+     bottom: 20rem;
+}
+  bottom: 10rem;
+  rotate: 270deg;
+  background-color: $color-primary !important;
+  color: $white !important;
+  font-family: $font-main !important;
+  min-width: 200px !important;
+ z-index: 99;
+}
+
+
+iframe[src*="poweredby"] {
+  display: none !important;
+}
+
+// Expanded chat header
+.mylivechat_expanded_title {
+  background-color: $color-primary !important;
+  font-family: $font-main !important;
+}
+
+// Input Fields (Online & Offline)
+.mylivechat_prechat_box,
+.mylivechat_offline_box {
+  @include chat-input;
+  
+}
+
+// Textareas (Message Fields)
+.mylivechat_prechat_question_box,
+.mylivechat_offline_question_box,
+.mylivechat_survey_comment_box {
+  @include chat-input;
+  resize: none !important;
+  min-height: 100px;
+}
+
+// Survey Comment Box
+.mylivechat_survey_comment_box {
+  min-height: 80px !important;
+}
+
+// Buttons
+.mylivechat_prechat_submit_button,         // "Start Chat" (online)
+.mylivechat_offline_submit_button,         // "Send" (offline)
+.mylivechat_survey_submit_button {
+  // Survey Submit
+  @include chat-button;
+}
+
+//scroll top animation
 @keyframes bounceIn {
   0% {
     transform: translateY(50px) scale(0.5);

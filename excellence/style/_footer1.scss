@@ -51,7 +51,6 @@
         color: $color-text-base;
       }
     }
-
     .newsletter-form {
       flex: 1 1 300px;
       display: flex;
@@ -71,7 +70,9 @@
           font-size: 1rem;
           outline: none;
 
-          border-color: $color-primary;
+          &:focus {
+            border-color: $color-primary;
+          }
         }
 
         .icon {
@@ -114,14 +115,13 @@
   }
 }
 
-.footer
- {
+.footer1 {
   cursor: crosshair;
   margin-top: 4rem;
-  background-color: #003566;
-  // background-color: #001d3d;
-
+  background-color: $white;
+  border-top: 2px solid $border-default;
   color: $color-secondary;
+  font-family: "Inter", sans-serif;
 
   .footer-container {
     margin: 0 auto;
@@ -137,7 +137,6 @@
 
     .footer-top {
       padding: 5rem 0 0;
-      margin-bottom: 2rem;
       display: grid;
       grid-template-columns: 1fr;
       gap: 3rem;
@@ -146,103 +145,64 @@
         grid-template-columns: repeat(2, 1fr);
       }
       @include responsive(md) {
-        justify-items: left;
-
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
       @include responsive(lg) {
         justify-items: center;
-
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      @include responsive(xl) {
         grid-template-columns: repeat(4, 1fr);
       }
 
       /* ==============================
      COMPANY INFO
   ============================== */
-
       .footer-company {
         display: grid;
-        gap: 1rem;
+        gap: 1.5rem;
 
         &__logo {
-          gap: $spacing-xs;
-          display: inline-flex;
-          align-items: start;
+          @include flex-center;
+          gap: $spacing-sm;
           transition: $transition-slow;
 
           &:hover {
             transform: scale(1.01);
+
+            .logo_text {
+              color: $color-primary;
+            }
           }
 
           img {
             width: 4rem;
             height: 4rem;
-
             object-fit: contain;
           }
 
           .logo_text {
             @include text-bold;
-            font-size: 1.5rem;
-
-            @include responsive(md) {
-              font-size: $spacing-md;
-            }
+            font-size: 1.4rem;
             line-height: 1.2;
-            text-align: left;
-            color: $color-primary;
+            text-align: center;
+            color: $color-secondary;
             text-transform: capitalize;
+            font-family: serif;
+          }
+        }
+
+        &__title {
+          font-size: $spacing-sm;
+          @include text-bold;
+          margin-bottom: 0.5rem;
+
+          @include responsive(md) {
+            font-size: $spacing-md;
           }
         }
 
         &__text {
-          font-size: $spacing-sm;
+          font-size: 0.85rem;
           line-height: 1.5;
-          // color: $color-text-subtle;
-          color: $bg-light;
-        }
-
-        .footer-social {
-          display: flex;
-          @include responsive(xl) {
-            gap: $spacing-md;
-          }
-          gap: $spacing-xs;
-
-          li {
-            list-style: none;
-
-            a {
-              // Hover state
-              &:hover {
-                color: $color-primary;
-                transform: scale(1.1);
-                img {
-                  @include white-filter;
-                }
-              }
-              padding: 0.5rem;
-              background: $color-primary;
-              @include grid-center;
-              border-radius: 999px;
-              transition: transform 0.3s ease;
-
-              img {
-                width: 1.5rem;
-                height: 1.5rem;
-                object-fit: contain;
-              }
-
-              .social-icon {
-                // @include black-filter;
-                @include white-filter;
-              }
-            }
-          }
+          color: $color-text-subtle;
         }
       }
 
@@ -255,13 +215,17 @@
         gap: 0.5rem;
 
         &__title {
+          font-size: $spacing-sm;
           @include text-bold;
           color: $color-primary;
-          font-size: 1.25rem;
-          text-transform: capitalize;
+
+          @include responsive(md) {
+            font-size: $spacing-md;
+          }
         }
 
-        .footer-links {
+        .footer-links,
+        .footer-social {
           display: flex;
           flex-direction: column;
           gap: 0.65rem;
@@ -272,36 +236,27 @@
             a {
               display: inline-flex;
               align-items: center;
-              gap: 0.5rem;
-
-              color: $bg-light;
+              gap: 0.4rem;
+              color: $color-secondary;
               text-transform: capitalize;
               font-size: 0.8rem;
-              text-decoration: none;
-              position: relative;
-              transition: color 0.3s ease, transform 0.3s ease;
-
-              @include text-medium;
-
               @include responsive(sm) {
-                font-size: 0.85rem;
+                font-size: 0.95rem;
               }
+              text-decoration: none;
+              transition: color 0.3s ease, transform 0.3s ease;
+              position: relative;
+              @include text-bold;
 
               // Hover state
               &:hover {
                 color: $color-primary;
                 transform: translateX(3px);
-
                 img {
                   @include gold-filter;
                 }
-
-                &::after {
-                  right: 0;
-                }
               }
 
-              // Underline animation
               &::after {
                 content: "";
                 position: absolute;
@@ -313,9 +268,8 @@
                 transition: right 0.35s ease;
               }
 
-              .arrow-logo {
-                width: 16px;
-                rotate: 270deg;
+              &:hover::after {
+                right: 0;
               }
 
               img {
@@ -323,7 +277,10 @@
                 height: 1.5rem;
                 object-fit: contain;
                 transition: transform 0.3s ease;
-                @include gold-filter; // if you want it by default
+              }
+
+              .social-icon {
+                @include black-filter;
               }
 
               span {
@@ -331,49 +288,6 @@
               }
             }
           }
-        }
-
-        .opening-hours {
-          margin-top: 1rem;
-          @include responsive(lg) {
-            margin-top: 0rem;
-          }
-          @include responsive(xl) {
-            margin-top: 1rem;
-          }
-          .footer-subtitle {
-            @include text-bold;
-            color: $color-primary;
-            font-size: 1.25rem;
-            text-transform: capitalize;
-          }
-
-          li {
-            color: $bg-light;
-            font-size: 0.8rem;
-            @include text-medium;
-            @include responsive(sm) {
-              font-size: 0.95rem;
-            }
-            span {
-              color: #fff;
-            }
-          }
-        }
-      }
-
-      .info {
-        width: 100%;
-        @include responsive(lg) {
-          grid-column: span 3;
-          display: flex;
-          flex-direction: row;
-          align-items: start;
-          justify-content: space-between;
-        }
-        @include responsive(xl) {
-          grid-column: span 1;
-          flex-direction: column;
         }
       }
     }
@@ -384,22 +298,19 @@
   }
 
   .footer-bottom-container {
-    background-color: transparent;
-    border-top: 1px solid $border-default;
+    background-color: $color-secondary;
 
     .footer-bottom {
       margin: 0 auto;
       width: 90vw;
-      @include responsive(lg) {
+       @include responsive(lg) {
         width: 80.77vw;
         max-width: 1413px;
       }
-
-      padding: $spacing-sm 0;
+      padding: $spacing-md 0;
       display: flex;
       flex-direction: column;
       row-gap: 1rem;
-
       align-items: left;
 
       @include responsive(md) {
@@ -449,13 +360,11 @@
       .footer-copy {
         font-size: 0.85rem;
         color: $bg-light;
-
         padding: 0;
 
         a {
           color: inherit;
           text-decoration: none;
-          @include text-bold;
           transition: color 0.3s ease;
 
           &:hover {

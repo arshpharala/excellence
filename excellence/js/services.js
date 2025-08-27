@@ -72,7 +72,7 @@ export default function initServices() {
 
   function setupAccordion() {
     document.querySelectorAll(".vas-service-item").forEach((item, index) => {
-      const btn = item.querySelector(".toggle-btn");
+      const btn = item.querySelector(".vas-service-header");
       const content = item.querySelector(".vas-service-content");
 
       // Initial state
@@ -107,7 +107,7 @@ export default function initServices() {
     // Expand clicked one if it wasn’t active
     if (!isActive) {
       item.classList.add("active");
-      content.style.maxHeight = content.scrollHeight + "px"; 
+      content.style.maxHeight = content.scrollHeight + "px";
       content.setAttribute("aria-hidden", "false");
       btn.setAttribute("aria-expanded", "true");
       btn.querySelector("img").src = "./assets/minus.png";

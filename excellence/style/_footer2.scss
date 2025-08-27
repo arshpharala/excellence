@@ -3,6 +3,7 @@
 
 /* Newsletter Section */
 .newsletter-section {
+
   background: conic-gradient(
     at left top,
     rgb(124, 45, 18),
@@ -26,7 +27,7 @@
     width: 100%;
     gap: $spacing-md;
 
-    .newsletter-text {
+   .newsletter-text {
       flex: 1 1 300px;
 
       h1 {
@@ -114,14 +115,13 @@
   }
 }
 
-.footer
- {
+.footer2 {
   cursor: crosshair;
   margin-top: 4rem;
-  background-color: #003566;
-  // background-color: #001d3d;
-
+  background-color: #001d3d;
+  border-top: 2px solid $border-default;
   color: $color-secondary;
+  font-family: "Inter", sans-serif;
 
   .footer-container {
     margin: 0 auto;
@@ -137,33 +137,25 @@
 
     .footer-top {
       padding: 5rem 0 0;
-      margin-bottom: 2rem;
       display: grid;
       grid-template-columns: 1fr;
       gap: 3rem;
+      place-items: start;
 
       @include responsive(sm) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1.5fr 1fr;
       }
       @include responsive(md) {
-        justify-items: left;
-
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1.5fr 1fr;
       }
-      @include responsive(lg) {
-        justify-items: center;
-
-        grid-template-columns: repeat(3, 1fr);
-      }
-
       @include responsive(xl) {
-        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        grid-template-columns: 1.5fr 1fr 1fr;
       }
 
       /* ==============================
      COMPANY INFO
   ============================== */
-
       .footer-company {
         display: grid;
         gap: 1rem;
@@ -181,7 +173,6 @@
           img {
             width: 4rem;
             height: 4rem;
-
             object-fit: contain;
           }
 
@@ -208,10 +199,8 @@
 
         .footer-social {
           display: flex;
-          @include responsive(xl) {
-            gap: $spacing-md;
-          }
-          gap: $spacing-xs;
+          margin-top: 0.5rem;
+          gap: $spacing-md;
 
           li {
             list-style: none;
@@ -222,19 +211,15 @@
                 color: $color-primary;
                 transform: scale(1.1);
                 img {
-                  @include white-filter;
+                  @include gold-filter;
                 }
               }
-              padding: 0.5rem;
-              background: $color-primary;
-              @include grid-center;
-              border-radius: 999px;
-              transition: transform 0.3s ease;
 
               img {
                 width: 1.5rem;
                 height: 1.5rem;
                 object-fit: contain;
+                transition: transform 0.3s ease;
               }
 
               .social-icon {
@@ -257,8 +242,11 @@
         &__title {
           @include text-bold;
           color: $color-primary;
-          font-size: 1.25rem;
-          text-transform: capitalize;
+          font-size: 1.5rem;
+
+          @include responsive(md) {
+            font-size: $spacing-md;
+          }
         }
 
         .footer-links {
@@ -272,36 +260,27 @@
             a {
               display: inline-flex;
               align-items: center;
-              gap: 0.5rem;
-
+              gap: 0.4rem;
               color: $bg-light;
               text-transform: capitalize;
               font-size: 0.8rem;
-              text-decoration: none;
-              position: relative;
-              transition: color 0.3s ease, transform 0.3s ease;
-
-              @include text-medium;
-
               @include responsive(sm) {
-                font-size: 0.85rem;
+                font-size: 0.95rem;
               }
+              text-decoration: none;
+              transition: color 0.3s ease, transform 0.3s ease;
+              position: relative;
+              @include text-medium;
 
               // Hover state
               &:hover {
                 color: $color-primary;
                 transform: translateX(3px);
-
                 img {
                   @include gold-filter;
                 }
-
-                &::after {
-                  right: 0;
-                }
               }
 
-              // Underline animation
               &::after {
                 content: "";
                 position: absolute;
@@ -313,9 +292,8 @@
                 transition: right 0.35s ease;
               }
 
-              .arrow-logo {
-                width: 16px;
-                rotate: 270deg;
+              &:hover::after {
+                right: 0;
               }
 
               img {
@@ -323,7 +301,7 @@
                 height: 1.5rem;
                 object-fit: contain;
                 transition: transform 0.3s ease;
-                @include gold-filter; // if you want it by default
+                @include white-filter;
               }
 
               span {
@@ -331,49 +309,6 @@
               }
             }
           }
-        }
-
-        .opening-hours {
-          margin-top: 1rem;
-          @include responsive(lg) {
-            margin-top: 0rem;
-          }
-          @include responsive(xl) {
-            margin-top: 1rem;
-          }
-          .footer-subtitle {
-            @include text-bold;
-            color: $color-primary;
-            font-size: 1.25rem;
-            text-transform: capitalize;
-          }
-
-          li {
-            color: $bg-light;
-            font-size: 0.8rem;
-            @include text-medium;
-            @include responsive(sm) {
-              font-size: 0.95rem;
-            }
-            span {
-              color: #fff;
-            }
-          }
-        }
-      }
-
-      .info {
-        width: 100%;
-        @include responsive(lg) {
-          grid-column: span 3;
-          display: flex;
-          flex-direction: row;
-          align-items: start;
-          justify-content: space-between;
-        }
-        @include responsive(xl) {
-          grid-column: span 1;
-          flex-direction: column;
         }
       }
     }
@@ -395,7 +330,7 @@
         max-width: 1413px;
       }
 
-      padding: $spacing-sm 0;
+      padding: $spacing-md 0;
       display: flex;
       flex-direction: column;
       row-gap: 1rem;
@@ -455,7 +390,6 @@
         a {
           color: inherit;
           text-decoration: none;
-          @include text-bold;
           transition: color 0.3s ease;
 
           &:hover {
