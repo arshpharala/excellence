@@ -1,0 +1,155 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.code-section {
+  margin: 0 auto;
+  padding: 7rem 0 4rem;
+  width: 90vw;
+
+  @include responsive(xl) {
+    width: 80.77vw;
+    max-width: 1413px;
+  }
+
+  .code-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include responsive(lg) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  .code-info {
+    flex: 1;
+
+    .title {
+      @include text-semibold;
+      font-size: $spacing-xl;
+      font-family: $font-bebas;
+      line-height: 0.9;
+
+      @include responsive(lg) {
+        font-size: $spacing-3xl;
+      }
+    }
+
+    .desc {
+      margin: $spacing-sm 0 1.5rem;
+      color: $color-text-subtle;
+      line-height: 1.5;
+      font-size: 1rem;
+      @include text-semibold;
+    }
+
+    .learn-more-btn {
+      background-color: $color-primary;
+      border: 2px solid $color-primary;
+      color: $white;
+      padding: 0 35px;
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      text-transform: capitalize;
+      transition: $transition-slow;
+  cursor: url("/assets/hand-cursor.png"), auto !important;
+
+
+      @include responsive(sm) {
+        display: inline-flex;
+      }
+
+      font-size: 1rem;
+
+      &:hover {
+        background-color: $white;
+        color: $color-primary;
+      }
+    }
+  }
+
+  .code-grid {
+    flex: 1;
+    display: grid;
+    gap: $spacing-md;
+    grid-template-columns: 1fr;
+
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .card {
+    --border-angle: 0deg;
+
+    padding: 1.5rem;
+    border-radius: $border-radius;
+    border: 2px solid transparent;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: url("/assets/hand-cursor.png"), auto !important;
+
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      background: linear-gradient($bg-gray-light, $bg-gray-light) padding-box,
+        conic-gradient(
+            from var(--border-angle),
+            #fff 0deg,
+            $color-primary 72deg,
+            #fff 144deg,
+            #ffd60a 216deg,
+            $color-primary 288deg,
+            #fff 360deg
+          )
+          border-box;
+
+      transform: scale(1.05);
+      box-shadow: $shadow-xl;
+      animation: border-rotate 3s linear infinite;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 1rem;
+      object-fit: contain;
+      @include black-filter;
+    }
+
+    .card-title {
+      @include text-bold;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content {
+      font-size: 0.95rem;
+      color: $color-text-subtle;
+      line-height: 1.5;
+    }
+
+    &.active {
+      background: $color-primary;
+      color: $white;
+      box-shadow: $shadow-xl;
+
+      .icon {
+        @include white-filter;
+      }
+
+      .card-content {
+        color: $white;
+      }
+    }
+  }
+}
+

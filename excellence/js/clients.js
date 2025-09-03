@@ -73,13 +73,79 @@ export default function initClients() {
     ...getResponsiveConfig(),
     loop: true,
     centeredSlides: false,
-    grabCursor: true,
     autoHeight: false,
+    grabCursor: false,
     effect: "slide",
     speed: 600,
     navigation: {
       nextEl: "#NextBtn",
       prevEl: "#PrevBtn",
     },
+  });
+
+  // --- Custom Cursor ---
+  const cursor1 = document.createElement("div");
+  cursor1.classList.add("custom-cursor1");
+  document.body.appendChild(cursor1);
+
+  Object.assign(cursor1.style, {
+    position: "fixed",
+    width: "100px",
+    height: "100px",
+    background: "url('/assets/slide.png') no-repeat center center",
+    backgroundSize: "cover",
+    pointerEvents: "none",
+    transform: "translate(-50%, -50%)",
+    zIndex: "9999",
+    transition: "top 0.15s ease, left 0.15s ease, transform 0.3s ease",
+    display: "none",
+  });
+
+  // Track mouse
+  document.addEventListener("mousemove", (e) => {
+    cursor1.style.top = `${e.clientY}px`;
+    cursor1.style.left = `${e.clientX}px`;
+  });
+
+  if (slidesContainer) {
+    slidesContainer.style.cursor = 'url("/assets/hand-cursor.png"), auto';
+
+    // Scale cursor1 on drag using Swiper events
+    window.myClientsSwiper.on("touchStart", () => {
+      cursor1.style.transform = "translate(-50%, -50%) scale(0)";
+      slidesContainer.style.cursor = 'url("/assets/hold-cursor.png"), auto';
+    });
+    window.myClientsSwiper.on("touchEnd", () => {
+      cursor1.style.transform = "translate(-50%, -50%) scale(1)";
+      slidesContainer.style.cursor = 'url("/assets/hand-cursor.png"), auto';
+    });
+  }
+
+  const arrowBtns = document.querySelectorAll(".swiper-nav");
+  arrowBtns.forEach((btn) => {
+    btn.addEventListener(
+      "mouseenter",
+      () => (
+        (cursor1.style.display = "none"),
+        (slidesContainer.style.cursor = 'url("/assets/cursor.png"), auto')
+      )
+    );
+    btn.addEventListener(
+      "mouseleave",
+      () => (
+        (cursor1.style.display = "block"),
+        (slidesContainer.style.cursor = 'url("/assets/hand-cursor.png"), auto')
+      )
+    );
+  });
+
+  // Optional: Show cursor1 only on project cards
+  const clientCards = document.querySelectorAll(".testimonial-container");
+  clientCards.forEach((card) => {
+    card.addEventListener(
+      "mouseenter",
+      () => (cursor1.style.display = "block")
+    );
+    card.addEventListener("mouseleave", () => (cursor1.style.display = "none"));
   });
 }

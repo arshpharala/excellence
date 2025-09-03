@@ -27,6 +27,7 @@ export default function initCode() {
   ];
 
   const container = document.getElementById("codeGrid");
+  if (!container) return;
 
   container.innerHTML = cards
     .map(

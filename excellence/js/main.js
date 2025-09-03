@@ -4,6 +4,9 @@ import initClients from "./clients.js";
 import initServices from "./services.js";
 import initCode from "./code.js";
 import initHero from "./hero.js";
+import initTimeline from "./timeline.js";
+import initChooseUs from "./chooseUs.js";
+import initTeams from "./team.js";
 
 import initScrollTop from "./scrollTopBtn.js";
 
@@ -13,29 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
     easing: "ease-in-out",
     once: true,
   });
-
-  // const observer = new IntersectionObserver(
-  //   (entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.intersectionRatio >= 0.4) {
-  //         entry.target.classList.add("aos-animate");
-  //       }
-  //     });
-  //   },
-  //   { threshold: [0.4] }
-  // );
-
-  // ["#process", "#footer"].forEach((section) => {
-  //   document.querySelectorAll(`${section} [data-aos]`).forEach((el) => {
-  //     el.classList.remove("aos-animate"); 
-  //     observer.observe(el);
-  //   });
-  // });
+  initChooseUs();
+  initNavbar();
   initHero();
   initScrollTop();
-  initNavbar();
   initProjects();
   initClients();
   initCode();
   initServices();
+  initTimeline();
+  initTeams();
 });

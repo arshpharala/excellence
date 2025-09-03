@@ -5,13 +5,16 @@
   align-items: center;
 }
 
+
+
+
 @mixin button-style {
   // background-color: $bg-color;
   color: $color-secondary;
   padding: $spacing-sm $spacing-md;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
+  cursor: url("/assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 
   &:hover {
@@ -70,7 +73,7 @@
   } @else if $breakpoint == lg {
     $size: 64rem; // 1024px
   } @else if $breakpoint == xl {
-    $size: 80rem; // 1280px
+    $size: 80.1rem; // 1280px
   } @else if $breakpoint == 2xl {
     $size: 96rem; // 1536px
   }

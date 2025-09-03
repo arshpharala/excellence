@@ -1,0 +1,241 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.section-digital {
+  padding: $spacing-xl 0;
+  width: 90vw;
+  margin: auto;
+  transition: $transition;
+  @include responsive(xl) {
+    width: 80.77vw;
+    max-width: 1413px;
+  }
+
+  &__header {
+    margin-bottom: $spacing-xl;
+
+    .section-digital__title {
+      font-family: $font-bebas;
+      color: $color-secondary;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: $spacing-sm;
+
+      @include responsive(lg) {
+        font-size: 2.8rem;
+      }
+
+      @include responsive(md) {
+        font-size: 2.2rem;
+      }
+
+      font-size: 1.8rem;
+    }
+    .section-digital__subtitle {
+      line-height: 1.5;
+      color: $text-light;
+
+      @include responsive(md) {
+        font-size: 1.1rem;
+      }
+
+      font-size: 1rem;
+    }
+  }
+
+  &__core {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+
+    @include responsive(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include responsive(md) {
+      gap: $spacing-md;
+    }
+
+    .digital-card {
+      background: $white;
+      padding: $spacing-sm;
+      border-radius: $border-radius;
+      box-shadow: $shadow-light;
+      border: 2px solid transparent;
+      transition: $transition-slow;
+        cursor: url("/assets/hand-cursor.png"), auto !important;
+
+
+      &:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: $shadow-xl;
+        background: linear-gradient($bg-gray-light, $bg-gray-light) padding-box,
+          conic-gradient(
+              from var(--border-angle),
+              #fff 0deg,
+              $color-primary 72deg,
+              #fff 144deg,
+              #ffd60a 216deg,
+              $color-primary 288deg,
+              #fff 360deg
+            )
+            border-box;
+        animation: border-rotate 4s linear infinite;
+      }
+
+      &__title {
+        font-family: $font-bebas;
+        color: $color-primary;
+        margin-bottom: $spacing-sm;
+        letter-spacing: 0.5px;
+        @include responsive(md) {
+          font-size: 1.5rem;
+        }
+
+        font-size: 1.3rem;
+      }
+
+      &__text {
+        color: $color-text-base;
+        line-height: 1.5;
+        margin-bottom: $spacing-sm;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        strong {
+          color: $dark-gold;
+          font-weight: 600;
+        }
+
+        @include responsive(md) {
+          font-size: 0.95rem;
+        }
+
+        font-size: 0.9rem;
+      }
+
+      &__list {
+        list-style: disc;
+        margin-left: $spacing-lg;
+        color: $color-text-base;
+
+        li {
+          margin-bottom: 0.35rem;
+          font-size: 1rem;
+
+          @include responsive(md) {
+            font-size: 0.95rem;
+          }
+          @include responsive(sm) {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__services {
+    margin-top: $spacing-xl;
+
+    .services-ui__title {
+      font-family: $font-bebas;
+      color: $color-secondary;
+      margin-bottom: $spacing-md;
+      letter-spacing: 0.5px;
+
+      @include responsive(md) {
+        font-size: 1.7rem;
+      }
+
+      font-size: 1.5rem;
+    }
+
+    .services-ui__list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: $spacing-sm;
+      list-style: none;
+      padding: 0;
+      margin-bottom: 4rem;
+
+      @include responsive(sm) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include responsive(sm) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include responsive(lg) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .services-ui__item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        padding: $spacing-xm;
+        position: relative;
+        color: $color-text-base;
+        @include text-semibold;
+        border-radius: $border-radius;
+        transition: $transition-slow;
+        border: 2px solid transparent;
+
+        &:hover {
+          transform: translateX(4px);
+          background: linear-gradient($light-gold, $light-gold) padding-box,
+            conic-gradient(
+                from var(--border-angle),
+                #fff 0deg,
+                $color-primary 72deg,
+                #fff 144deg,
+                #ffd60a 216deg,
+                $color-primary 288deg,
+                #fff 360deg
+              )
+              border-box;
+          box-shadow: $shadow-xl;
+          animation: border-rotate 3s linear infinite;
+        }
+
+        .services-ui__icon {
+          width: 1rem;
+          height: 1rem;
+          object-fit: contain;
+          transform: rotate(270deg);
+          transition: transform 0.3s ease;
+          @include gold-filter;
+        }
+        @include responsive(md) {
+          .services-ui__icon {
+            font-size: 0.95rem;
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// Animation
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-rotate {
+  from {
+    --border-angle: 0deg;
+  }
+  to {
+    --border-angle: 360deg;
+  }
+}

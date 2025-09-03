@@ -1,6 +1,9 @@
 export default function initHero() {
-  const heroSection = document.querySelector("#hero-boxes");
+   const heroSection = document.querySelector("#hero-boxes");
+  if (!heroSection) return;
+
   const heroBoxes = document.querySelectorAll(".hero-box");
+  if (!heroBoxes.length) return;
 
   // remove initial animation
   heroBoxes.forEach((box) => {

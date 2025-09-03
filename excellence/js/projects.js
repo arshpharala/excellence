@@ -35,31 +35,101 @@ export default function initProjects() {
       .join("");
   }
 
-  // Swiper config
+  // Responsive slides configuration
   const getResponsiveConfig = () => ({
     slidesPerView: 1,
     spaceBetween: 20,
     breakpoints: {
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 25,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
+      768: { slidesPerView: 2, spaceBetween: 25 },
+      1024: { slidesPerView: 3, spaceBetween: 30 },
     },
   });
 
   window.myProjectsSwiper = new Swiper(".portfolio-swiper", {
     ...getResponsiveConfig(),
     loop: true,
-    grabCursor: true,
     effect: "slide",
+    grabCursor: false,
     speed: 600,
     navigation: {
       nextEl: "#WorkNextBtn",
       prevEl: "#WorkPrevBtn",
     },
+  });
+
+  // --- Custom Cursor ---
+  const cursor = document.createElement("div");
+  cursor.classList.add("custom-cursor");
+  document.body.appendChild(cursor);
+
+  Object.assign(cursor.style, {
+    position: "fixed",
+    width: "100px",
+    height: "100px",
+    background: "url('/assets/slide.png') no-repeat center center",
+    backgroundSize: "cover",
+    pointerEvents: "none",
+    transform: "translate(-50%, -50%)",
+    zIndex: "9999",
+    transition: "top 0.15s ease, left 0.15s ease, transform 0.3s ease",
+    display: "none",
+  });
+
+  // Track mouse
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+  });
+
+  if (slidesContainer) {
+    slidesContainer.style.cursor = 'url("/assets/hand-cursor.png"), auto';
+
+    // Scale cursor on drag/swipe
+    window.myProjectsSwiper.on("touchStart", () => {
+      cursor.style.setProperty("transform", "translate(-50%, -50%) scale(0)");
+      slidesContainer.style.cursor = 'url("/assets/hold-cursor.png"), auto';
+    });
+    window.myProjectsSwiper.on("touchEnd", () => {
+      cursor.style.setProperty("transform", "translate(-50%, -50%) scale(1)");
+      slidesContainer.style.cursor = 'url("/assets/hand-cursor.png"), auto';
+    });
+
+    // Hover inside project details
+    const projectDetails = slidesContainer.querySelectorAll(".project-details");
+    projectDetails.forEach((detail) => {
+      detail.addEventListener("mouseenter", () => {
+        cursor.style.display = "none";
+        slidesContainer.style.cursor = 'url("/assets/cursor.png"), auto';
+      });
+      detail.addEventListener("mouseleave", () => {
+        cursor.style.display = "block";
+        slidesContainer.style.cursor = 'url("/assets/hand-cursor.png"), auto';
+      });
+    });
+  }
+
+  const arrowBtns = document.querySelectorAll(".swiper-nav1");
+  arrowBtns.forEach((btn) => {
+    btn.addEventListener(
+      "mouseenter",
+      () => (
+        (cursor.style.display = "none"),
+        (slidesContainer.style.cursor = 'url("/assets/cursor.png"), auto')
+      )
+    );
+    btn.addEventListener(
+      "mouseleave",
+      () => (
+        (cursor.style.display = "block"),
+        (slidesContainer.style.cursor = 'url("/assets/hand-cursor.png"), auto')
+      )
+    );
+  });
+
+  // Optional: Show cursor only on project cards
+  const projectCards = document.querySelectorAll(".portfolio-container");
+  projectCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => (cursor.style.display = "block"));
+    card.addEventListener("mouseleave", () => (cursor.style.display = "none"));
   });
 }
