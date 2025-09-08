@@ -19,45 +19,40 @@ document.addEventListener("DOMContentLoaded", () => {
     once: true,
   });
 
-  // Base URL for hosted site
-  const baseURL = "/preview/8ebf6a79c1a4e9bc12fa7e/excellence/";
+  // Preview base path (used only on hosting)
+  const previewBase = "/preview/8ebf6a79c1a4e9bc12fa7e/excellence/";
 
-  // Function to fix relative URLs
-  const fixUrl = (url) => {
-    if (!url.startsWith("http") && !url.startsWith("data:")) {
-      return `${baseURL}${url}`;
+  // Detect if running on localhost or not
+  const isLocalhost =
+    location.hostname === "localhost" || location.hostname === "127.0.0.1";
+
+  document.querySelectorAll("a").forEach((link) => {
+    const href = link.getAttribute("href");
+
+    // Skip invalid or external links
+    if (
+      !href ||
+      href.startsWith("http") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("tel:") ||
+      href.startsWith("javascript:")
+    ) {
+      return;
     }
-    return url;
-  };
 
-  // Function to fix background images for an element
-  const fixBackground = (el) => {
-    const bg = getComputedStyle(el).backgroundImage;
-    if (bg && bg !== "none") {
-      const urls = bg.match(/url\(["']?(.*?)["']?\)/g);
-      if (urls) {
-        const fixedUrls = urls.map((u) => {
-          const path = u.replace(/url\(["']?(.*?)["']?\)/, "$1");
-          return `url('${fixUrl(path)}')`;
-        });
-        el.style.backgroundImage = fixedUrls.join(", ");
+    // On hosting → prepend previewBase
+    if (!isLocalhost) {
+      if (href.startsWith("/")) {
+        // e.g. href="/" → /preview/.../
+        link.setAttribute("href", previewBase + href.substring(1));
+      } else if (href.startsWith("#")) {
+        // keep in-page anchors inside preview folder
+        link.setAttribute("href", previewBase + href);
+      } else {
+        // e.g. href="about.html" → /preview/.../about.html
+        link.setAttribute("href", previewBase + href);
       }
     }
-  };
-
-  // Function to fix cursors for an element
-  const fixCursor = (el) => {
-    const cursor = getComputedStyle(el).cursor;
-    if (cursor && cursor.startsWith("url(")) {
-      const url = cursor.match(/url\(["']?(.*?)["']?\)/)[1];
-      el.style.cursor = `url('${fixUrl(url)}'), auto`;
-    }
-  };
-
-  // Select all elements including <a> tags
-  document.querySelectorAll("*").forEach((el) => {
-    fixBackground(el);
-    fixCursor(el);
   });
 
   initChooseUs();
