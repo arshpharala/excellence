@@ -149,7 +149,7 @@
               </a>
             </li>
             <li>
-              <a href="#about">
+              <a href="/about.html">
                 <img
                   src="./assets/menuIcon/about.png"
                   alt="About Icon"
@@ -358,11 +358,11 @@
             creative, strategic, and technology-driven solutions for businesses
             across industries.
           </p>
-          <a href="contact.html" class="btn"
+          <a href="#about" class="btn"
             ><span>Get Started </span>
             <span>
               <img
-                src="/assets/arrow.png"
+                src="./assets/arrow.png"
                 alt="left-arrow"
                 class="arrow"
               /> </span
@@ -372,9 +372,9 @@
 
       <div class="about-page__container">
         <!-- About Us -->
-        <section class="about">
+        <section class="about" id="about">
           <div class="about__container">
-            <div class="about__image-wrapper" data-aos="fade-left">
+            <div class="about__image-wrapper" data-aos="fade-right">
               <img
                 src="./assets/about.jpg"
                 alt="About Excellence Code Marketing"
@@ -382,7 +382,7 @@
                 class="about__image"
               />
             </div>
-            <div class="about__content" data-aos="fade-right">
+            <div class="about__content" data-aos="fade-left">
               <h3 class="about__title">13 years of experience</h3>
               <p class="about__subtitle">
                 Our journey of innovation and trust, securing your tomorrow.
@@ -513,8 +513,9 @@
 
         <!-- Stats -->
         <section class="stats" data-aos="fade-up">
-          <h2>Our Achievements</h2>
-          <div class="stats__grid">
+          <h2 data-aos="zoom-out-right">Our Achievements</h2>
+
+          <div class="stats__grid" data-aos="zoom-in-up">
             <div class="stat">
               <img
                 src="/assets/achievement/time.gif"
@@ -556,7 +557,7 @@
 
         <!-- Timeline -->
         <section class="timeline">
-          <h2>Our Journey</h2>
+          <h2 data-aos="zoom-out-right">Our Journey</h2>
 
           <!-- 2012 -->
           <div
@@ -773,16 +774,17 @@
         <!-- Team -->
         <section class="team">
           <div class="team__header">
-            <h2>Meet the Team</h2>
-            <a class="btn" href="/team.html">see more </a>
+            <h2 data-aos="zoom-in-right">Meet the Team</h2>
+            <span data-aos="zoom-in-left">
+              <a class="btn" href="/team.html">see more </a>
+            </span>
           </div>
-
-          <div class="team__grid" id="teamGrid"></div>
+          <div class="team__grid" id="teamGrid" data-aos="zoom-in-up"></div>
         </section>
       </div>
     </section>
 
-    <!-- cta  -->
+    <!-- CTA Section -->
     <section class="cta" data-aos="fade-up">
       <div class="cta__content">
         <h2 class="cta__title">Let’s Build Something Great Together</h2>
@@ -790,11 +792,11 @@
           Contact us today to unlock your brand&apos;s full potential with our
           expertise.
         </p>
-        <a href="contact.html" class="btn"> call us now </a>
+        <a href="#contact" class="btn about_btn">Call Us Now</a>
       </div>
     </section>
 
-    <!-- testimonial section  -->
+    <!-- Testimonial Section -->
     <section id="testimonial" class="testimonial">
       <div
         class="testimonial__content"
@@ -818,7 +820,7 @@
           data-aos-delay="100"
         >
           <div class="swiper-wrapper" id="testimonialSwiperWrapper">
-            <!-- Slides injected via JS -->
+            {{-- Slides injected via JS --}}
           </div>
         </div>
       </div>
@@ -940,7 +942,7 @@
             </h3>
             <ul class="footer-links" data-aos="zoom-in-up">
               <li>
-                <a href="#about">
+                <a href="/about.html">
                   <img
                     src="./assets/down-arrow.png"
                     alt="arrow logo"
@@ -970,7 +972,7 @@
                 </a>
               </li>
               <li>
-                <a href="#about">
+                <a href="#service">
                   <img
                     src="./assets/down-arrow.png"
                     alt="arrow logo"
@@ -1137,7 +1139,7 @@
               <li>
                 <a href="/terms-and-conditions.html">Terms & Conditions</a>
               </li>
-              <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+              <li><a href="./careers.html">Careers</a></li>
             </ul>
           </div>
           <!-- Copyright -->

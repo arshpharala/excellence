@@ -39,7 +39,6 @@
       font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 0.75rem;
-      border-bottom: 2px solid $color-primary;
       padding-bottom: 0.25rem;
 
       @include responsive(md) {
@@ -65,7 +64,7 @@
   // Complaints Procedure Section
   .complaints-procedure {
     background-color: rgba($color-primary, 0.1);
-    border: 1px solid lighten($color-primary, 30%);
+    border: 1px solid $color-primary;
     padding: $spacing-md;
     border-radius: $border-radius;
   }
@@ -109,7 +108,7 @@
     transition: color 0.3s ease;
 
     &:hover {
-      color: darken($color-primary, 10%);
+      color:$color-primary;
       text-decoration: underline;
     }
   }

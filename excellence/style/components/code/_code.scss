@@ -57,7 +57,7 @@
       border-radius: 9999px;
       text-transform: capitalize;
       transition: $transition-slow;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 
 
       @include responsive(sm) {
@@ -93,7 +93,7 @@
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-      cursor: url("/assets/hand-cursor.png"), auto !important;
+      cursor: url("../../../assets/hand-cursor.png"), auto !important;
 
     text-align: left;
     position: relative;

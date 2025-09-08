@@ -14,7 +14,7 @@
   padding: $spacing-sm $spacing-md;
   border: none;
   border-radius: 4px;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 
   &:hover {

@@ -8,9 +8,8 @@ export default function initHero() {
   // remove initial animation
   heroBoxes.forEach((box) => {
     box.style.opacity = "0";
-    box.style.transform = "scale(0) rotate(0deg)";
     box.style.animation = "none";
-  });
+  }); 
 
   // intersection observer
   const observer = new IntersectionObserver(
@@ -22,8 +21,7 @@ export default function initHero() {
             box.style.animationDelay = `${index * 0.1}s`;
           });
 
-          // if you want it only once
-          observer.unobserve(heroSection);
+         observer.unobserve(heroSection); // only animate once
         }
       });
     },

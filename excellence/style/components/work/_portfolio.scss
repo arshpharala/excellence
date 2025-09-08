@@ -79,7 +79,7 @@
     }
     text-decoration: none;
     transition: $transition-slow;
-    cursor: url("/assets/hand-cursor.png"), auto !important;
+    cursor: url("../../../assets/hand-cursor.png"), auto !important;
   }
 
   .read-more-btn:hover {
@@ -95,7 +95,7 @@
     font-size: 1rem;
     border-radius: 9999px;
     text-align: center;
-    cursor: url("/assets/hand-cursor.png"), auto !important;
+    cursor: url("../../../assets/hand-cursor.png"), auto !important;
 
     transition: background-color 0.3s ease, color 0.3s ease;
   }
@@ -181,7 +181,7 @@
       text-align: center;
       border-radius: 9999px;
       @include black-filter;
-      cursor: url("/assets/hand-cursor.png"), auto !important;
+      cursor: url("../../../assets/hand-cursor.png"), auto !important;
 
       &:hover {
         transform: scale(1.1);
@@ -215,7 +215,7 @@
       background: transparent;
       color: $color-text-subtle;
       border: 2px solid rgba($light-gold, 0.5);
-      cursor: url("/assets/hand-cursor.png"), auto !important;
+      cursor: url("../../../assets/hand-cursor.png"), auto !important;
 
       .icon-arrow-right {
         transform: rotate(180deg);

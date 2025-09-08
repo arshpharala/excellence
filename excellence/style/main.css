@@ -73,7 +73,7 @@
   text-transform: uppercase;
   font-size: 0.95rem;
   font-weight: 600;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   color: #000814;
   transition: color 0.3s ease;
   padding: 0.25rem 0.5rem;
@@ -164,7 +164,7 @@
 .navbar .navbar-container .nav-controls .menu-toggle {
   background: none;
   border: none;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .navbar .navbar-container .nav-controls .menu-toggle img.icon-menu {
   width: 1.5rem;
@@ -234,7 +234,7 @@
   background: #d4af37;
   border-radius: 6px;
   border: none;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 }
 .menu-model .mobile-menu .menu-header .close-btn img {
@@ -276,7 +276,7 @@
   border-bottom: 1px solid #d1d5db;
   border-radius: 6px;
   text-decoration: none;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: all 0.5s ease;
 }
 .menu-model .mobile-menu .menu-content .nav-menu li a:hover, .menu-model .mobile-menu .menu-content .nav-menu li a:focus,
@@ -454,7 +454,7 @@
   text-transform: uppercase;
   font-size: 0.95rem;
   font-weight: 600;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   color: #ffffff;
   transition: color 0.3s ease;
   padding: 0.25rem 0.5rem;
@@ -546,7 +546,7 @@
 .navbar1 .navbar-container .nav-controls .menu-toggle {
   background: none;
   border: none;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .navbar1 .navbar-container .nav-controls .menu-toggle img.icon-menu {
   width: 1.5rem;
@@ -616,7 +616,7 @@
   background: #d4af37;
   border-radius: 6px;
   border: none;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 }
 .menu-model .mobile-menu .menu-header .close-btn img {
@@ -658,7 +658,7 @@
   border-bottom: 1px solid #d1d5db;
   border-radius: 6px;
   text-decoration: none;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: all 0.5s ease;
 }
 .menu-model .mobile-menu .menu-content .nav-menu li a:hover, .menu-model .mobile-menu .menu-content .nav-menu li a:focus,
@@ -841,7 +841,7 @@
   border: 2px solid rgba(244, 231, 177, 0.8);
   text-decoration: none;
   transition: all 0.3s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 48rem) {
   .hero .hero-container .hero-header .read-more-btn {
@@ -1030,7 +1030,10 @@
 .about-page .hero {
   text-align: center;
   padding: 6rem 2rem;
-  background: linear-gradient(to bottom, #d4af37, transparent);
+  background: linear-gradient(to bottom, transparent 0%, #fff 100%, #fff 100%), url("../../../assets/bg-4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #ffffff;
   position: relative;
 }
@@ -1064,7 +1067,7 @@
   font-size: 1rem;
   font-weight: bold;
   border-radius: 1rem;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: all 0.5s ease;
   color: #d4af37;
   text-transform: capitalize;
@@ -1534,7 +1537,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 0;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .about-page .why-us .choose-us-section-content .choose-us-list .choose-us-item .choose-us-header .choose-us-title {
   font-size: 1rem;
@@ -1550,7 +1553,7 @@
   background: none;
   border: none;
   padding: 0.3rem;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1631,7 +1634,7 @@
 }
 .about-page .team .team__member {
   perspective: 1000px;
-  cursor: url("/assets/hand-cursor.png"), auto;
+  cursor: url("../../../assets/hand-cursor.png"), auto;
   overflow: hidden;
   height: 400px;
   position: relative;
@@ -1777,7 +1780,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/banner/banner1.jpg") left/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/banner/banner1.jpg") left/cover no-repeat;
   filter: blur(2px);
   z-index: -1;
   border-radius: 1rem;
@@ -1854,7 +1857,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/banner/banner2.jpg") left/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/banner/banner2.jpg") left/cover no-repeat;
   filter: blur(2px);
   z-index: -1;
 }
@@ -1889,7 +1892,7 @@
   font-size: 1rem;
   font-weight: bold;
   border-radius: 1rem;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: all 0.5s ease;
   color: #ffffff;
   text-transform: capitalize;
@@ -2042,7 +2045,7 @@
   background: transparent;
   color: #6b7280;
   border: 2px solid rgba(244, 231, 177, 0.5);
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .testimonial .testimonial-container .swiper-btn .icon-arrow-right {
   transform: rotate(180deg);
@@ -2181,7 +2184,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 0;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-header .vas-service-title {
   font-size: 1rem;
@@ -2197,7 +2200,7 @@
   background: none;
   border: none;
   padding: 0.3rem;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2247,7 +2250,7 @@
   font-size: 0.8rem;
   text-decoration: none;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 64rem) {
   .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content .vas-link-wrap .read-more-btn {
@@ -2266,7 +2269,7 @@
   place-items: center;
   font-size: 1rem;
   border-radius: 9999px;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content .vas-link-wrap:hover .icon-wrapper {
@@ -2355,7 +2358,7 @@
   border: 2px solid #d4af37;
   text-decoration: none;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 64rem) {
   .portfolio-section .read-more-btn {
@@ -2375,7 +2378,7 @@
   font-size: 1rem;
   border-radius: 9999px;
   text-align: center;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .portfolio-section .read-more-group:hover .icon-wrapper {
@@ -2454,7 +2457,7 @@
   text-align: center;
   border-radius: 9999px;
   filter: brightness(0) saturate(100%) invert(7%) sepia(31%) saturate(1125%) hue-rotate(182deg) brightness(95%) contrast(94%);
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .portfolio-section .portfolio-container .arrow-btn:hover {
   transform: scale(1.1);
@@ -2486,7 +2489,7 @@
   background: transparent;
   color: #6b7280;
   border: 2px solid rgba(244, 231, 177, 0.5);
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .portfolio-section .portfolio-container .swiper-btn .icon-arrow-right {
   transform: rotate(180deg);
@@ -2505,6 +2508,115 @@
 }
 .portfolio-section .portfolio-container .swiper-btn:hover .icon-arrow {
   filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
+}
+
+.section-work {
+  padding: 4rem 0;
+  width: 90vw;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  margin-bottom: 8rem;
+}
+@media (min-width: 80.1rem) {
+  .section-work {
+    width: 80.77vw;
+    max-width: 1413px;
+  }
+}
+.section-work__header {
+  margin-bottom: 3rem;
+}
+.section-work__header .section-work__title {
+  font-family: "Bebas Neue", sans-serif;
+  color: #000814;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+@media (min-width: 64rem) {
+  .section-work__header .section-work__title {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 48rem) {
+  .section-work__header .section-work__title {
+    font-size: 2.2rem;
+  }
+}
+.section-work__header .section-work__intro {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media (min-width: 48rem) {
+  .section-work__header .section-work__intro {
+    font-size: 1.1rem;
+  }
+}
+.section-work #filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.section-work #filter-buttons .filter-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #000814;
+  color: #ffffff;
+  font-family: "Bebas Neue", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.section-work #filter-buttons .filter-btn.active, .section-work #filter-buttons .filter-btn:hover {
+  background-color: #d4af37;
+  transform: scale(1.05);
+}
+.section-work #project-page-container {
+  width: 100%;
+  position: relative;
+}
+.section-work .grid-item {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+.section-work .grid-item.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-work img {
+  width: 100%;
+  display: block;
+  border-radius: 1rem;
+}
+@media (min-width: 40rem) {
+  .section-work .grid-item {
+    width: 48%;
+  }
+}
+@media (min-width: 48rem) {
+  .section-work .grid-item {
+    width: 31%;
+  }
+}
+@media (min-width: 64rem) {
+  .section-work .grid-item {
+    width: 23%;
+  }
+}
+@media (min-width: 80.1rem) {
+  .section-work .grid-item {
+    width: 19%;
+  }
 }
 
 .why-choose-us {
@@ -2589,7 +2701,7 @@
   border: 2px solid rgba(0, 8, 20, 0.2);
   text-decoration: none;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 64rem) {
   .why-choose-us .why-us-container .whychooseus-header .right-side .read-more-btn {
@@ -2640,7 +2752,7 @@
   gap: 0.75rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   border: 2px solid transparent;
 }
 .why-choose-us .why-us-container .feature-card:hover {
@@ -2753,7 +2865,7 @@
   border-radius: 9999px;
   text-transform: capitalize;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   font-size: 1rem;
 }
 @media (min-width: 40rem) {
@@ -2881,7 +2993,7 @@
   border-radius: 9999px;
   text-transform: capitalize;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   font-size: 1rem;
 }
 @media (min-width: 40rem) {
@@ -2911,7 +3023,7 @@
   border: 2px solid transparent;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   text-align: left;
   position: relative;
   overflow: hidden;
@@ -3125,7 +3237,7 @@
   border: 2px solid #d4af37;
   text-decoration: none;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 64rem) {
   .brand-cta__button {
@@ -3284,7 +3396,6 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  border-bottom: 2px solid #d4af37;
   padding-bottom: 0.25rem;
 }
 @media (min-width: 48rem) {
@@ -3310,7 +3421,7 @@
 }
 .terms-conditions .complaints-procedure {
   background-color: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgb(239.0740740741, 225.3703703704, 180.9259259259);
+  border: 1px solid #d4af37;
   padding: 2rem;
   border-radius: 1rem;
 }
@@ -3347,7 +3458,7 @@
   transition: color 0.3s ease;
 }
 .terms-conditions a:hover {
-  color: rgb(177.7777777778, 144.8888888889, 38.2222222222);
+  color: #d4af37;
   text-decoration: underline;
 }
 
@@ -3423,6 +3534,322 @@
 }
 .privacy-policy__list li {
   margin-bottom: 0.5rem;
+}
+
+.career-page {
+  color: #000814;
+  margin-bottom: 12rem;
+  /* Hero Section */
+}
+.career-page .career-hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom, transparent 0%, #fff 100%, #fff 100%), url("../../../assets/bg-4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+.career-page .career-hero__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.career-page .career-hero__content h1 {
+  font-family: "Bebas Neue", sans-serif;
+  color: #fafafa;
+  letter-spacing: 0.8px;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+.career-page .career-hero__content p {
+  margin: 1rem 0 2rem;
+  color: #ffffff;
+  line-height: 1.6;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+.career-page .career-hero__content .cta-btn {
+  color: #000814;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  color: #d4af37;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 1rem;
+}
+.career-page .career-hero__content .cta-btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+.career-page .career-hero__content .cta-btn .arrow {
+  width: 16px;
+  height: 16px;
+  rotate: 180deg;
+  display: grid;
+  place-items: center;
+  filter: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(3049%) hue-rotate(325deg) brightness(87%) contrast(88%);
+  object-fit: contain;
+}
+.career-page .career-hero__content .cta-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.career-page .career-hero__content .cta-btn:hover .arrow {
+  animation: arrow-btn 0.6s ease-in-out infinite;
+}
+.career-page__container {
+  width: 90vw;
+  margin: 0 auto;
+  /* Benefits Section */
+  /* Job Listings */
+  /* Application Form */
+}
+@media (min-width: 80.1rem) {
+  .career-page__container {
+    width: 80.77vw;
+    max-width: 1413px;
+  }
+}
+.career-page__container .career-benefits {
+  margin: 6rem auto;
+}
+.career-page__container .career-benefits__title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: #000814;
+  letter-spacing: 0.8px;
+  margin-bottom: 2rem;
+}
+.career-page__container .career-benefits__title span {
+  color: #d4af37;
+}
+.career-page__container .career-benefits__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 40rem) {
+  .career-page__container .career-benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 48rem) {
+  .career-page__container .career-benefits__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 64rem) {
+  .career-page__container .career-benefits__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.career-page__container .career-benefits__card {
+  background: #fafafa;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: url("../../../assets/bg-3.svg") top/cover no-repeat;
+}
+.career-page__container .career-benefits__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.career-page__container .career-benefits__card img {
+  width: 100px !important;
+  height: 100px !important;
+}
+.career-page__container .career-benefits__card__subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000814;
+}
+.career-page__container .career-benefits__card__text {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+.career-page__container .career-jobs {
+  margin: 6rem auto;
+}
+.career-page__container .career-jobs h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: #000814;
+  letter-spacing: 0.8px;
+  margin-bottom: 2rem;
+}
+.career-page__container .career-jobs h2 span {
+  color: #d4af37;
+}
+.career-page__container .career-jobs__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.career-page__container .career-jobs__card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+.career-page__container .career-jobs__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.career-page__container .career-jobs__card__title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000814;
+}
+.career-page__container .career-jobs__card .job-meta {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+.career-page__container .career-jobs__card p {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+.career-page__container .career-jobs__card .apply-btn {
+  color: #000814;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
+  transition: all 0.3s ease;
+  background: #d4af37;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+}
+.career-page__container .career-jobs__card .apply-btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+.career-page__container .career-jobs__card .apply-btn:hover {
+  background: rgb(177.7777777778, 144.8888888889, 38.2222222222);
+  transform: translateY(-2px);
+}
+@media (max-width: 600px) {
+  .career-page__container .career-jobs__list {
+    grid-template-columns: 1fr;
+  }
+}
+.career-page__container .career-application {
+  margin: 6rem auto;
+  text-align: center;
+}
+.career-page__container .career-application h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: #000814;
+}
+.career-page__container .career-application h2 span {
+  color: #d4af37;
+}
+.career-page__container .career-application form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding: 2rem;
+  border-radius: 12px;
+}
+@media (min-width: 48rem) {
+  .career-page__container .career-application form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .career-page__container .career-application form textarea {
+    grid-column: span 2;
+  }
+  .career-page__container .career-application form button {
+    grid-column: span 2;
+    justify-self: center;
+    width: auto;
+  }
+}
+.career-page__container .career-application form input,
+.career-page__container .career-application form select,
+.career-page__container .career-application form textarea {
+  padding: 1rem 1.2rem;
+  border: 1px solid #d1d5db;
+  border-radius: 1rem;
+  font-size: 1rem;
+  width: 100%;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: #6b7280;
+}
+.career-page__container .career-application form input:focus,
+.career-page__container .career-application form select:focus,
+.career-page__container .career-application form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.1);
+  border-color: #d4af37;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+.career-page__container .career-application form input::placeholder,
+.career-page__container .career-application form select::placeholder,
+.career-page__container .career-application form textarea::placeholder {
+  color: #6b7280;
+}
+.career-page__container .career-application form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.career-page__container .career-application form select,
+.career-page__container .career-application form input[type=file] {
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+}
+.career-page__container .career-application form select::-webkit-file-upload-button,
+.career-page__container .career-application form input[type=file]::-webkit-file-upload-button {
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+}
+.career-page__container .career-application form select::file-selector-button,
+.career-page__container .career-application form input[type=file]::file-selector-button {
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+}
+.career-page__container .career-application form button {
+  padding: 0 35px;
+  display: grid;
+  place-items: center;
+  min-height: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #d4af37;
+  border: 2px solid #d4af37;
+  border-radius: 1rem;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  transition: all 0.5s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.career-page__container .career-application form button:hover {
+  background-color: #ffffff;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  transform: translateY(-1px);
+}
+.career-page__container .career-application form button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+.career-page__container .career-application form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .contact-section {
@@ -3579,7 +4006,7 @@
   background-color: #d4af37;
   border: 2px solid #d4af37;
   border-radius: 1rem;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: all 0.5s ease;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
@@ -3745,7 +4172,7 @@
   background: transparent;
   color: #6b7280;
   border: 2px solid rgba(244, 231, 177, 0.5);
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .testimonial-section .testimonial-container .swiper-btn .icon-arrow-right {
   transform: rotate(180deg);
@@ -3768,13 +4195,23 @@
 
 /* Newsletter Section */
 .newsletter-section {
-  background: conic-gradient(at left top, rgb(124, 45, 18), rgb(254, 243, 199), rgb(124, 45, 18));
+  position: relative;
+  z-index: 1;
   padding: 3rem 1rem;
   border-radius: 1rem;
   margin-top: -10rem;
   display: flex;
   justify-content: center;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.newsletter-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(at left top, rgba(124, 45, 18, 0.7), rgba(254, 243, 199, 0.7), rgba(124, 45, 18, 0.7)), url("../../../assets/newsletter.png") left/cover no-repeat;
+  filter: blur(1px);
+  z-index: -1;
+  border-radius: 1rem;
 }
 .newsletter-section .newsletter-container {
   display: flex;
@@ -3846,7 +4283,7 @@
   height: 1rem;
 }
 .newsletter-section .newsletter-container .newsletter-form button {
-  background-color: #d4af37;
+  background-color: rgba(244, 231, 177, 0.3);
   color: #ffffff;
   padding: 0 1rem;
   min-height: 50px;
@@ -3857,11 +4294,11 @@
   font-weight: 500;
   border: 0;
   font-size: 1rem;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 }
 .newsletter-section .newsletter-container .newsletter-form button:hover {
-  background-color: rgba(212, 175, 55, 0.7);
+  background-color: rgba(244, 231, 177, 0.7);
 }
 
 .footer {
@@ -4280,7 +4717,7 @@
   font-weight: 500;
   border: 0;
   font-size: 1rem;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 }
 .newsletter-section .newsletter-container .newsletter-form button:hover {
@@ -4628,7 +5065,7 @@
   font-weight: 500;
   border: 0;
   font-size: 1rem;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 }
 .newsletter-section .newsletter-container .newsletter-form button:hover {
@@ -4958,7 +5395,7 @@
   height: 400px;
   border-radius: 1rem;
   perspective: 1000px;
-  cursor: url("/assets/hand-cursor.png"), auto;
+  cursor: url("../../../assets/hand-cursor.png"), auto;
   overflow: hidden;
 }
 .section-team .team__member .flip-card-inner {
@@ -5469,7 +5906,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .digital-presence__core .core-offering:hover {
   transform: translateY(-6px) scale(1.02);
@@ -5645,7 +6082,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .section-digital__core .digital-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -5854,7 +6291,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .section-marketing__core .marketing-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -5986,7 +6423,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .section-events__core .event-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -6118,7 +6555,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .section-analytics__core .analytics-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -6250,7 +6687,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../../../assets/hand-cursor.png"), auto !important;
 }
 .section-email-hosting__core .email-hosting-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -6330,7 +6767,7 @@ body {
   color: #111;
   line-height: 1.6;
   font-size: 16px;
-  cursor: url("/assets/cursor.png"), auto !important;
+  cursor: url("../assets/cursor.png"), auto !important;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -6348,11 +6785,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 a {
   text-decoration: none;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
 }
 
 label {
-  cursor: url("/assets/cursor.png"), auto !important;
+  cursor: url("../assets/cursor.png"), auto !important;
 }
 
 img {
@@ -6362,9 +6799,9 @@ img {
 button {
   border: none;
   outline: none;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
   background: none;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
 }
 
 .scroll-top-btn {
@@ -6381,7 +6818,7 @@ button {
   display: grid;
   place-items: center;
   background: rgba(156, 163, 175, 0.5);
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transition: all 0.5s ease;
 }
@@ -6425,7 +6862,7 @@ button {
   font-family: "Poppins", sans-serif !important;
   min-width: 200px !important;
   z-index: 99;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 48rem) {
   .mylivechat_collapsed {
@@ -6507,7 +6944,7 @@ iframe[src*=poweredby] {
   border: none !important;
   border-radius: 6px !important;
   padding: 10px 20px !important;
-  cursor: url("/assets/hand-cursor.png"), auto !important;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease !important;
 }
 .mylivechat_prechat_submit_button:hover,
