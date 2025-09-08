@@ -16,7 +16,7 @@
                 rgba(254, 243, 199, 0.7),
                 rgba(124, 45, 18, 0.7)
             ),
-            url("../../../assets/newsletter.png") left/cover no-repeat;
+            url("./assets/newsletter.png") left/cover no-repeat;
         filter: blur(1px);
         z-index: -1;
         border-radius: $border-radius;
@@ -115,7 +115,7 @@
                 border: 0;
                 font-size: 1rem;
 
-                cursor: url("../../../assets/hand-cursor.png"), auto !important;
+                cursor: url("./assets/hand-cursor.png"), auto !important;
 
                 transition: $transition;
 

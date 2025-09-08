@@ -17,7 +17,7 @@ body {
   color: #111;
   line-height: 1.6;
   font-size: 16px;
-  cursor: url("../assets/cursor.png"), auto !important;
+  cursor: url("./assets/cursor.png"), auto !important;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -35,11 +35,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
 a {
   text-decoration: none;
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 
 label {
-  cursor: url("../assets/cursor.png"), auto !important;
+  cursor: url("./assets/cursor.png"), auto !important;
 }
 
 img {
@@ -49,10 +49,10 @@ img {
 button {
   border: none;
   outline: none;
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 
   background: none;
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 
 .scroll-top-btn {
@@ -69,7 +69,7 @@ button {
 
   @include grid-center;
   background: rgba($color-text-muted, 0.5);
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 
   box-shadow: $shadow-lg;
   transition: $transition-slow;
@@ -146,7 +146,7 @@ $input-bg-color: #fff;
   border: none !important;
   border-radius: $input-border-radius !important;
   padding: 10px 20px !important;
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease !important;
 
@@ -171,7 +171,7 @@ $input-bg-color: #fff;
   font-family: $font-main !important;
   min-width: 200px !important;
   z-index: 99;
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 
 iframe[src*="poweredby"] {

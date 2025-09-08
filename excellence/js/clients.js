@@ -33,14 +33,14 @@ export default function initClients() {
         (client) => `
         <div class="swiper-slide hover">
           <div class="testimonial-card">
-                <img src="../assets/colon.png" alt="colon Icon" class="colon-icon" />
+                <img src="./assets/colon.png" alt="colon Icon" class="colon-icon" />
           
           <p class="testimonial-desc" >"${client.paragraph}"</p>
             <hr class="testimonial-divider" />
                          <div class="testimonial-author" >
        
                         <div class="author-avatar">
-                <img src="../assets/client.png" alt="colon Icon" class="client-icon" />
+                <img src="./assets/client.png" alt="colon Icon" class="client-icon" />
                         </div>
                         <div class="author-info">
                             <h4>${client.title}</h4>
@@ -92,7 +92,7 @@ export default function initClients() {
     position: "fixed",
     width: "100px",
     height: "100px",
-    background: "url('../assets/slide.png') no-repeat center center",
+    background: "url('./assets/slide.png') no-repeat center center",
     backgroundSize: "cover",
     pointerEvents: "none",
     transform: "translate(-50%, -50%)",
@@ -108,16 +108,16 @@ export default function initClients() {
   });
 
   if (slidesContainer) {
-    slidesContainer.style.cursor = 'url("../assets/hand-cursor.png"), auto';
+    slidesContainer.style.cursor = 'url("./assets/hand-cursor.png"), auto';
 
     // Scale cursor1 on drag using Swiper events
     window.myClientsSwiper.on("touchStart", () => {
       cursor1.style.transform = "translate(-50%, -50%) scale(0)";
-      slidesContainer.style.cursor = 'url("../assets/hold-cursor.png"), auto';
+      slidesContainer.style.cursor = 'url("./assets/hold-cursor.png"), auto';
     });
     window.myClientsSwiper.on("touchEnd", () => {
       cursor1.style.transform = "translate(-50%, -50%) scale(1)";
-      slidesContainer.style.cursor = 'url("../assets/hand-cursor.png"), auto';
+      slidesContainer.style.cursor = 'url("./assets/hand-cursor.png"), auto';
     });
   }
 
@@ -127,14 +127,14 @@ export default function initClients() {
       "mouseenter",
       () => (
         (cursor1.style.display = "none"),
-        (slidesContainer.style.cursor = 'url("../assets/cursor.png"), auto')
+        (slidesContainer.style.cursor = 'url("./assets/cursor.png"), auto')
       )
     );
     btn.addEventListener(
       "mouseleave",
       () => (
         (cursor1.style.display = "block"),
-        (slidesContainer.style.cursor = 'url("../assets/hand-cursor.png"), auto')
+        (slidesContainer.style.cursor = 'url("./assets/hand-cursor.png"), auto')
       )
     );
   });

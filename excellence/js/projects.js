@@ -5,9 +5,9 @@ export default function initProjects() {
     { title: "Branding", image: "./assets/portfolio/portfolio1.png" },
     { title: "Product Design", image: "./assets/portfolio/portfolio2.png" },
     { title: "Logo Design", image: "./assets/portfolio/portfolio3.png" },
-    { title: "UI/UX Design", image: null },
-    { title: "Branding", image: null },
-    { title: "Logo Design", image: "./assets/portfolio/portfolio3.png" },
+    { title: "UI/UX Design",image: "./assets/portfolio/portfolio5.jpg" },
+    { title: "Branding",image: "./assets/portfolio/portfolio6.jpg" },
+    { title: "Logo Design", image: "./assets/portfolio/portfolio7.jpg" },
   ];
 
   const slidesContainer = document.getElementById("portfolioSwiperWrapper");

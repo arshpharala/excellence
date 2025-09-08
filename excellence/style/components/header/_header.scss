@@ -72,7 +72,7 @@
           text-transform: uppercase;
           font-size: 0.95rem;
           font-weight: 600;
-            cursor: url("../../../assets/hand-cursor.png"), auto !important;
+            cursor: url("./assets/hand-cursor.png"), auto !important;
 
           color: $color-secondary;
           transition: color 0.3s ease;
@@ -173,7 +173,7 @@
       .menu-toggle {
         background: none;
         border: none;
-          cursor: url("../../../assets/hand-cursor.png"), auto !important;
+          cursor: url("./assets/hand-cursor.png"), auto !important;
 
 
         img.icon-menu {
@@ -252,7 +252,7 @@
         background: $color-primary;
         border-radius: 6px;
         border: none;
-          cursor: url("../../../assets/hand-cursor.png"), auto !important;
+          cursor: url("./assets/hand-cursor.png"), auto !important;
 
         transition: $transition;
 
@@ -301,7 +301,7 @@
             border-bottom: 1px solid $border-default;
             border-radius: 6px;
             text-decoration: none;
-              cursor: url("../../../assets/hand-cursor.png"), auto !important;
+              cursor: url("./assets/hand-cursor.png"), auto !important;
 
             transition: $transition-slow;
 

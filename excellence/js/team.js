@@ -105,10 +105,10 @@ function generateTeamCards(members) {
             <p><strong>Fun Fact:</strong> ${member.funFact}</p>
             <p><strong>About:</strong> ${member.bio}</p>
             <ul class="social-links">
-              <li><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="/assets/socialIcon/linkedin.png"  loading="lazy"  alt="${member.name}'s LinkedIn" /></a></li>
-              <li><a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="/assets/socialIcon/facebook.png"  loading="lazy"  alt="${member.name}'s Facebook" /></a></li>
-              <li><a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="/assets/socialIcon/x.png"  loading="lazy"  alt="${member.name}'s Twitter" /></a></li>
-              <li><a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="/assets/socialIcon/instagram.png"  loading="lazy"  alt="${member.name}'s Instagram" /></a></li>
+              <li><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="./assets/socialIcon/linkedin.png"  loading="lazy"  alt="${member.name}'s LinkedIn" /></a></li>
+              <li><a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="./assets/socialIcon/facebook.png"  loading="lazy"  alt="${member.name}'s Facebook" /></a></li>
+              <li><a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="./assets/socialIcon/x.png"  loading="lazy"  alt="${member.name}'s Twitter" /></a></li>
+              <li><a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><img class="social-icon" src="./assets/socialIcon/instagram.png"  loading="lazy"  alt="${member.name}'s Instagram" /></a></li>
             </ul>
           </div>
         </div>

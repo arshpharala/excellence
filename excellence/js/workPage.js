@@ -1,24 +1,24 @@
 export default function initProjectPage() {
-    const defaultImage = "../assets/portfolio/portfolio1.png";
+    const defaultImage = "./assets/portfolio/portfolio1.png";
 
     const projects = [
-        { title: "Branding", image: "../assets/portfolio/portfolio1.png" },
+        { title: "Branding", image: "./assets/portfolio/portfolio1.png" },
         {
             title: "Product Design",
             image: "../assets/portfolio/portfolio2.png",
         },
-        { title: "Logo Design", image: "../assets/portfolio/portfolio3.png" },
-        { title: "Branding", image: "../assets/portfolio/portfolio5.jpg" },
-        { title: "Logo Design", image: "../assets/portfolio/portfolio6.jpg" },
-        { title: "Branding", image: "../assets/portfolio/portfolio7.jpg" },
+        { title: "Logo Design", image: "./assets/portfolio/portfolio3.png" },
+        { title: "Branding", image: "./assets/portfolio/portfolio5.jpg" },
+        { title: "Logo Design", image: "./assets/portfolio/portfolio6.jpg" },
+        { title: "Branding", image: "./assets/portfolio/portfolio7.jpg" },
         {
             title: "Product Design",
-            image: "../assets/portfolio/portfolio2.png",
+            image: "./assets/portfolio/portfolio2.png",
         },
-        { title: "Logo Design", image: "../assets/portfolio/portfolio3.png" },
-        { title: "UI/UX Design", image: "../assets/portfolio/portfolio6.jpg" },
-        { title: "Branding", image: "../assets/portfolio/portfolio7.jpg" },
-        { title: "Logo Design", image: "../assets/portfolio/portfolio6.jpg" },
+        { title: "Logo Design", image: "./assets/portfolio/portfolio3.png" },
+        { title: "UI/UX Design", image: "./assets/portfolio/portfolio6.jpg" },
+        { title: "Branding", image: "./assets/portfolio/portfolio7.jpg" },
+        { title: "Logo Design", image: "./assets/portfolio/portfolio6.jpg" },
     ];
 
     const filterContainer = document.getElementById("filter-buttons");
