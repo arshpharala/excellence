@@ -73,7 +73,7 @@
   text-transform: uppercase;
   font-size: 0.95rem;
   font-weight: 600;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   color: #000814;
   transition: color 0.3s ease;
   padding: 0.25rem 0.5rem;
@@ -164,7 +164,7 @@
 .navbar .navbar-container .nav-controls .menu-toggle {
   background: none;
   border: none;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .navbar .navbar-container .nav-controls .menu-toggle img.icon-menu {
   width: 1.5rem;
@@ -234,7 +234,7 @@
   background: #d4af37;
   border-radius: 6px;
   border: none;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 }
 .menu-model .mobile-menu .menu-header .close-btn img {
@@ -276,7 +276,7 @@
   border-bottom: 1px solid #d1d5db;
   border-radius: 6px;
   text-decoration: none;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: all 0.5s ease;
 }
 .menu-model .mobile-menu .menu-content .nav-menu li a:hover, .menu-model .mobile-menu .menu-content .nav-menu li a:focus,
@@ -454,7 +454,7 @@
   text-transform: uppercase;
   font-size: 0.95rem;
   font-weight: 600;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   color: #ffffff;
   transition: color 0.3s ease;
   padding: 0.25rem 0.5rem;
@@ -546,7 +546,7 @@
 .navbar1 .navbar-container .nav-controls .menu-toggle {
   background: none;
   border: none;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .navbar1 .navbar-container .nav-controls .menu-toggle img.icon-menu {
   width: 1.5rem;
@@ -616,7 +616,7 @@
   background: #d4af37;
   border-radius: 6px;
   border: none;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 }
 .menu-model .mobile-menu .menu-header .close-btn img {
@@ -658,7 +658,7 @@
   border-bottom: 1px solid #d1d5db;
   border-radius: 6px;
   text-decoration: none;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: all 0.5s ease;
 }
 .menu-model .mobile-menu .menu-content .nav-menu li a:hover, .menu-model .mobile-menu .menu-content .nav-menu li a:focus,
@@ -841,7 +841,7 @@
   border: 2px solid rgba(244, 231, 177, 0.8);
   text-decoration: none;
   transition: all 0.3s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 48rem) {
   .hero .hero-container .hero-header .read-more-btn {
@@ -877,7 +877,7 @@
   }
 }
 .hero .hero-container .hero-grid {
-  background: url("../assets/hero.jpg") center/cover no-repeat;
+  background: url("./assets/hero.jpg") center/cover no-repeat;
   margin-bottom: 7rem;
   display: grid;
   background-color: transparent;
@@ -1030,7 +1030,7 @@
 .about-page .hero {
   text-align: center;
   padding: 6rem 2rem;
-  background: linear-gradient(to bottom, transparent 0%, #fff 100%, #fff 100%), url("../../../assets/bg-4.jpg");
+  background: linear-gradient(to bottom, transparent 0%, #fff 100%, #fff 100%), url("./assets/bg-4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1067,7 +1067,7 @@
   font-size: 1rem;
   font-weight: bold;
   border-radius: 1rem;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: all 0.5s ease;
   color: #d4af37;
   text-transform: capitalize;
@@ -1537,7 +1537,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 0;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .about-page .why-us .choose-us-section-content .choose-us-list .choose-us-item .choose-us-header .choose-us-title {
   font-size: 1rem;
@@ -1553,7 +1553,7 @@
   background: none;
   border: none;
   padding: 0.3rem;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1634,7 +1634,7 @@
 }
 .about-page .team .team__member {
   perspective: 1000px;
-  cursor: url("../../../assets/hand-cursor.png"), auto;
+  cursor: url("./assets/hand-cursor.png"), auto;
   overflow: hidden;
   height: 400px;
   position: relative;
@@ -1705,7 +1705,7 @@
   padding: 1.5rem;
   box-sizing: border-box;
   text-align: left;
-  background: url("../../../assets/bg-pattern.svg") center/cover no-repeat;
+  background: url("./assets/bg-pattern.svg") center/cover no-repeat;
 }
 .about-page .team .flip-card-back h3 {
   font-size: 1.5rem;
@@ -1780,7 +1780,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/banner/banner1.jpg") left/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/banner/banner1.jpg") left/cover no-repeat;
   filter: blur(2px);
   z-index: -1;
   border-radius: 1rem;
@@ -1857,7 +1857,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/banner/banner2.jpg") left/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/banner/banner2.jpg") left/cover no-repeat;
   filter: blur(2px);
   z-index: -1;
 }
@@ -1892,7 +1892,7 @@
   font-size: 1rem;
   font-weight: bold;
   border-radius: 1rem;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: all 0.5s ease;
   color: #ffffff;
   text-transform: capitalize;
@@ -2045,7 +2045,7 @@
   background: transparent;
   color: #6b7280;
   border: 2px solid rgba(244, 231, 177, 0.5);
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .testimonial .testimonial-container .swiper-btn .icon-arrow-right {
   transform: rotate(180deg);
@@ -2184,7 +2184,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 0;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-header .vas-service-title {
   font-size: 1rem;
@@ -2200,7 +2200,7 @@
   background: none;
   border: none;
   padding: 0.3rem;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2250,7 +2250,7 @@
   font-size: 0.8rem;
   text-decoration: none;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 64rem) {
   .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content .vas-link-wrap .read-more-btn {
@@ -2269,7 +2269,7 @@
   place-items: center;
   font-size: 1rem;
   border-radius: 9999px;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content .vas-link-wrap:hover .icon-wrapper {
@@ -2358,7 +2358,7 @@
   border: 2px solid #d4af37;
   text-decoration: none;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 64rem) {
   .portfolio-section .read-more-btn {
@@ -2378,7 +2378,7 @@
   font-size: 1rem;
   border-radius: 9999px;
   text-align: center;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .portfolio-section .read-more-group:hover .icon-wrapper {
@@ -2457,7 +2457,7 @@
   text-align: center;
   border-radius: 9999px;
   filter: brightness(0) saturate(100%) invert(7%) sepia(31%) saturate(1125%) hue-rotate(182deg) brightness(95%) contrast(94%);
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .portfolio-section .portfolio-container .arrow-btn:hover {
   transform: scale(1.1);
@@ -2489,7 +2489,7 @@
   background: transparent;
   color: #6b7280;
   border: 2px solid rgba(244, 231, 177, 0.5);
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .portfolio-section .portfolio-container .swiper-btn .icon-arrow-right {
   transform: rotate(180deg);
@@ -2701,7 +2701,7 @@
   border: 2px solid rgba(0, 8, 20, 0.2);
   text-decoration: none;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 64rem) {
   .why-choose-us .why-us-container .whychooseus-header .right-side .read-more-btn {
@@ -2752,7 +2752,7 @@
   gap: 0.75rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   border: 2px solid transparent;
 }
 .why-choose-us .why-us-container .feature-card:hover {
@@ -2865,7 +2865,7 @@
   border-radius: 9999px;
   text-transform: capitalize;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   font-size: 1rem;
 }
 @media (min-width: 40rem) {
@@ -2993,7 +2993,7 @@
   border-radius: 9999px;
   text-transform: capitalize;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   font-size: 1rem;
 }
 @media (min-width: 40rem) {
@@ -3023,7 +3023,7 @@
   border: 2px solid transparent;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   text-align: left;
   position: relative;
   overflow: hidden;
@@ -3237,7 +3237,7 @@
   border: 2px solid #d4af37;
   text-decoration: none;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 64rem) {
   .brand-cta__button {
@@ -3544,7 +3544,7 @@
 .career-page .career-hero {
   text-align: center;
   padding: 6rem 2rem;
-  background: linear-gradient(to bottom, transparent 0%, #fff 100%, #fff 100%), url("../../../assets/bg-4.jpg");
+  background: linear-gradient(to bottom, transparent 0%, #fff 100%, #fff 100%), url("./assets/bg-4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3653,9 +3653,9 @@
   text-align: center;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: url("../../../assets/bg-3.svg") top/cover no-repeat;
+  background: url("./assets/bg-3.svg") top/cover no-repeat;
 }
 .career-page__container .career-benefits__card:hover {
   transform: translateY(-6px);
@@ -3812,15 +3812,15 @@
 }
 .career-page__container .career-application form select,
 .career-page__container .career-application form input[type=file] {
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .career-page__container .career-application form select::-webkit-file-upload-button,
 .career-page__container .career-application form input[type=file]::-webkit-file-upload-button {
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .career-page__container .career-application form select::file-selector-button,
 .career-page__container .career-application form input[type=file]::file-selector-button {
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .career-page__container .career-application form button {
   padding: 0 35px;
@@ -3833,7 +3833,7 @@
   background-color: #d4af37;
   border: 2px solid #d4af37;
   border-radius: 1rem;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: all 0.5s ease;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
@@ -3877,7 +3877,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../assets/form-layer.png") center/cover no-repeat;
+  background: url("./assets/form-layer.png") center/cover no-repeat;
   filter: blur(7px);
   z-index: 0;
 }
@@ -4006,7 +4006,7 @@
   background-color: #d4af37;
   border: 2px solid #d4af37;
   border-radius: 1rem;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: all 0.5s ease;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
@@ -4172,7 +4172,7 @@
   background: transparent;
   color: #6b7280;
   border: 2px solid rgba(244, 231, 177, 0.5);
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .testimonial-section .testimonial-container .swiper-btn .icon-arrow-right {
   transform: rotate(180deg);
@@ -4208,7 +4208,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: conic-gradient(at left top, rgba(124, 45, 18, 0.7), rgba(254, 243, 199, 0.7), rgba(124, 45, 18, 0.7)), url("../../../assets/newsletter.png") left/cover no-repeat;
+  background: conic-gradient(at left top, rgba(124, 45, 18, 0.7), rgba(254, 243, 199, 0.7), rgba(124, 45, 18, 0.7)), url("./assets/newsletter.png") left/cover no-repeat;
   filter: blur(1px);
   z-index: -1;
   border-radius: 1rem;
@@ -4294,7 +4294,7 @@
   font-weight: 500;
   border: 0;
   font-size: 1rem;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 }
 .newsletter-section .newsletter-container .newsletter-form button:hover {
@@ -4717,7 +4717,7 @@
   font-weight: 500;
   border: 0;
   font-size: 1rem;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 }
 .newsletter-section .newsletter-container .newsletter-form button:hover {
@@ -5065,7 +5065,7 @@
   font-weight: 500;
   border: 0;
   font-size: 1rem;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: all 0.3s ease;
 }
 .newsletter-section .newsletter-container .newsletter-form button:hover {
@@ -5395,7 +5395,7 @@
   height: 400px;
   border-radius: 1rem;
   perspective: 1000px;
-  cursor: url("../../../assets/hand-cursor.png"), auto;
+  cursor: url("./assets/hand-cursor.png"), auto;
   overflow: hidden;
 }
 .section-team .team__member .flip-card-inner {
@@ -5455,7 +5455,7 @@
   font-size: 0.8rem;
 }
 .section-team .team__member .flip-card-back {
-  background: url("../../../assets/bg-pattern.svg") center/cover no-repeat;
+  background: url("./assets/bg-pattern.svg") center/cover no-repeat;
   transform: rotateY(180deg);
   padding: 1.5rem;
   box-sizing: border-box;
@@ -5510,7 +5510,7 @@
   position: relative;
   min-height: 45vh;
   width: 100%;
-  background: url(../../../assets/banner/banner1.jpg) center/cover no-repeat;
+  background: url(./assets/banner/banner1.jpg) center/cover no-repeat;
   overflow: hidden;
 }
 .banner__section::before {
@@ -5556,7 +5556,7 @@
   position: relative;
   min-height: 45vh;
   width: 100%;
-  background: url(../../../assets/banner/banner2.jpg) center/cover no-repeat;
+  background: url(./assets/banner/banner2.jpg) center/cover no-repeat;
   overflow: hidden;
 }
 .banner2__section::before {
@@ -5602,7 +5602,7 @@
   position: relative;
   min-height: 45vh;
   width: 100%;
-  background: url(../../../assets/banner/banner3.jpg) center/cover no-repeat;
+  background: url(./assets/banner/banner3.jpg) center/cover no-repeat;
   overflow: hidden;
 }
 .banner3__section::before {
@@ -5648,7 +5648,7 @@
   position: relative;
   min-height: 45vh;
   width: 100%;
-  background: url(../../../assets/banner/banner4.jpg) center/cover no-repeat;
+  background: url(./assets/banner/banner4.jpg) center/cover no-repeat;
   overflow: hidden;
 }
 .banner4__section::before {
@@ -5694,7 +5694,7 @@
   position: relative;
   min-height: 45vh;
   width: 100%;
-  background: url(../../../assets/banner/banner5.jpg) center/cover no-repeat;
+  background: url(./assets/banner/banner5.jpg) center/cover no-repeat;
   overflow: hidden;
 }
 .banner5__section::before {
@@ -5740,7 +5740,7 @@
   position: relative;
   min-height: 45vh;
   width: 100%;
-  background: url(../../../assets/banner/banner6.jpg) top/cover no-repeat;
+  background: url(./assets/banner/banner6.jpg) top/cover no-repeat;
   overflow: hidden;
 }
 .banner6__section::before {
@@ -5786,7 +5786,7 @@
   position: relative;
   min-height: 45vh;
   width: 100%;
-  background: url(../../../assets/banner/banner7.jpg) center/cover no-repeat;
+  background: url(./assets/banner/banner7.jpg) center/cover no-repeat;
   overflow: hidden;
 }
 .banner7__section::before {
@@ -5906,7 +5906,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .digital-presence__core .core-offering:hover {
   transform: translateY(-6px) scale(1.02);
@@ -6082,7 +6082,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .section-digital__core .digital-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -6291,7 +6291,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .section-marketing__core .marketing-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -6423,7 +6423,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .section-events__core .event-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -6555,7 +6555,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .section-analytics__core .analytics-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -6687,7 +6687,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  cursor: url("../../../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 .section-email-hosting__core .email-hosting-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -6767,7 +6767,7 @@ body {
   color: #111;
   line-height: 1.6;
   font-size: 16px;
-  cursor: url("../assets/cursor.png"), auto !important;
+  cursor: url("./assets/cursor.png"), auto !important;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -6785,11 +6785,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 a {
   text-decoration: none;
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 
 label {
-  cursor: url("../assets/cursor.png"), auto !important;
+  cursor: url("./assets/cursor.png"), auto !important;
 }
 
 img {
@@ -6799,9 +6799,9 @@ img {
 button {
   border: none;
   outline: none;
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   background: none;
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 
 .scroll-top-btn {
@@ -6818,7 +6818,7 @@ button {
   display: grid;
   place-items: center;
   background: rgba(156, 163, 175, 0.5);
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transition: all 0.5s ease;
 }
@@ -6862,7 +6862,7 @@ button {
   font-family: "Poppins", sans-serif !important;
   min-width: 200px !important;
   z-index: 99;
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
 }
 @media (min-width: 48rem) {
   .mylivechat_collapsed {
@@ -6944,7 +6944,7 @@ iframe[src*=poweredby] {
   border: none !important;
   border-radius: 6px !important;
   padding: 10px 20px !important;
-  cursor: url("../assets/hand-cursor.png"), auto !important;
+  cursor: url("./assets/hand-cursor.png"), auto !important;
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease !important;
 }
 .mylivechat_prechat_submit_button:hover,
