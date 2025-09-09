@@ -1,4 +1,7 @@
 export default function initServices() {
+  const baseURL =
+    "https://excellencecode.ae/preview/8ebf6a79c1a4e9bc12fa7e/excellence";
+
   const services = [
     {
       title: "Website Design and Development",
@@ -61,12 +64,13 @@ export default function initServices() {
             <div class="vas-service-content">
               <p class="vas-service-paragraph">${service.paragraph}</p>
               <div class="vas-link-wrap">
-                <a href="/services/${
-                  service.slug
-                }.html" class="more-btn"><span class="learn-more-btn">Learn More</span>
-                <span class="icon-wrapper">
-                  <img src="./assets/arrow45.png" alt="Arrow Icon" />
-                </span>
+                <a href="${baseURL}/services/${
+          service.slug
+        }.html" class="more-btn">
+                  <span class="learn-more-btn">Learn More</span>
+                  <span class="icon-wrapper">
+                    <img src="./assets/arrow45.png" alt="Arrow Icon" />
+                  </span>
                 </a>
               </div>
             </div>

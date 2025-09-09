@@ -11,7 +11,7 @@
     padding: 6rem 2rem;
     // background: linear-gradient(to bottom, $color-primary, transparent);
     background: linear-gradient(to bottom, transparent 0%, #fff 100%, #fff 100%),
-      url("../../../assets/bg-4.jpg");
+      url("../assets/bg-4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -113,7 +113,7 @@
         box-shadow: $shadow-md;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        background: url("../../../assets/bg-3.svg") top/cover no-repeat;
+        background: url("../assets/bg-3.svg") top/cover no-repeat;
 
         &:hover {
           transform: translateY(-6px);
@@ -280,12 +280,12 @@
 
         select,
         input[type="file"] {
-          cursor: url("../../../assets/hand-cursor.png"), auto !important;
+          cursor: url("../assets/hand-cursor.png"), auto !important;
           &::-webkit-file-upload-button {
-            cursor: url("../../../assets/hand-cursor.png"), auto !important;
+            cursor: url("../assets/hand-cursor.png"), auto !important;
           }
           &::file-selector-button {
-            cursor: url("../../../assets/hand-cursor.png"), auto !important;
+            cursor: url("../assets/hand-cursor.png"), auto !important;
           }
         }
 

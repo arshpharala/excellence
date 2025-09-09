@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Preview base path (used only on hosting)
   const previewBase = "/preview/8ebf6a79c1a4e9bc12fa7e/excellence/";
 
-  // Detect if running on localhost or not
+  // Detect if running on localhost
   const isLocalhost =
-    location.hostname === "localhost" || location.hostname === "127.0.0.1";
+    location.hostname === "localhosts" || location.hostname === "127.0.0.1s";
 
   document.querySelectorAll("a").forEach((link) => {
     const href = link.getAttribute("href");
@@ -42,16 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // On hosting → prepend previewBase
     if (!isLocalhost) {
+      let newHref;
       if (href.startsWith("/")) {
-        // e.g. href="/" → /preview/.../
-        link.setAttribute("href", previewBase + href.substring(1));
+        // /about → /preview/.../about
+        newHref = previewBase + href.substring(1);
       } else if (href.startsWith("#")) {
-        // keep in-page anchors inside preview folder
-        link.setAttribute("href", previewBase + href);
+        // #code → /preview/.../#code
+        newHref = previewBase + href;
       } else {
-        // e.g. href="about.html" → /preview/.../about.html
-        link.setAttribute("href", previewBase + href);
+        // about.html → /preview/.../about.html
+        newHref = previewBase + href;
       }
+
+      link.setAttribute("href", newHref);
     }
   });
 

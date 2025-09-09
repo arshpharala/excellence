@@ -35,7 +35,7 @@
                 #fff 100%,
                 #fff 100%
             ),
-            url("../../../assets/bg-4.jpg");
+            url("../assets/bg-4.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -727,7 +727,7 @@
             padding: 1.5rem;
             box-sizing: border-box;
             text-align: left;
-            background: url("../../../assets/bg-pattern.svg") center/cover
+            background: url("../assets/bg-pattern.svg") center/cover
                 no-repeat;
         }
 
@@ -815,7 +815,7 @@
                         rgba(0, 0, 0, 0.5),
                         rgba(0, 0, 0, 0.5)
                     ),
-                    url("../../../assets/banner/banner1.jpg") left/cover no-repeat;
+                    url("../assets/banner/banner1.jpg") left/cover no-repeat;
                 filter: blur(2px);
                 z-index: -1;
                 border-radius: $border-radius;
@@ -897,7 +897,7 @@
         position: absolute;
         inset: 0;
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url("../../../assets/banner/banner2.jpg") left/cover no-repeat;
+            url("../assets/banner/banner2.jpg") left/cover no-repeat;
         filter: blur(2px);
         z-index: -1;
     }
@@ -1109,7 +1109,6 @@
             background: transparent;
             color: $color-text-subtle;
             border: 2px solid rgba($light-gold, 0.5);
-            cursor: url("./assets/hand-cursor.png"), auto !important;
 
             .icon-arrow-right {
                 transform: rotate(180deg);
