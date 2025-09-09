@@ -97,8 +97,7 @@
           align-items: center;
           justify-content: space-between;
           padding: $spacing-xm 0;
-            cursor: url("./assets/hand-cursor.png"), auto !important;
-
+          cursor: url("../../../assets/hand-cursor.png"), auto !important;
 
           .vas-service-title {
             font-size: 1rem;
@@ -114,7 +113,7 @@
             background: none;
             border: none;
             padding: 0.3rem;
-              cursor: url("./assets/hand-cursor.png"), auto !important;
+            cursor: url("../../../assets/hand-cursor.png"), auto !important;
 
             display: flex;
             align-items: center;
@@ -157,7 +156,13 @@
             align-items: center;
             gap: 8px;
 
-            .read-more-btn {
+            .more-btn{
+              display: flex;
+              align-items: center;
+              gap: 0.1rem;
+            }
+
+            .learn-more-btn {
               background-color: $color-primary;
               color: white;
               padding: 0 35px;
@@ -172,15 +177,13 @@
               font-size: 0.8rem;
               text-decoration: none;
               transition: $transition-slow;
-                cursor: url("./assets/hand-cursor.png"), auto !important;
-
 
               @include responsive(lg) {
                 font-size: 1rem;
               }
             }
 
-            &:hover .read-more-btn {
+            &:hover .learn-more-btn {
               background-color: $white;
               color: $color-primary;
             }
@@ -192,7 +195,6 @@
               @include grid-center;
               font-size: 1rem;
               border-radius: 9999px;
-                cursor: url("./assets/hand-cursor.png"), auto !important;
 
               transition: background-color 0.3s ease, color 0.3s ease;
             }

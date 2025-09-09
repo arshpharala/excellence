@@ -2,339 +2,326 @@
 @use "../../variables" as *;
 
 .career-page {
-    color: $color-secondary;
-    margin-bottom: 12rem;
+  color: $color-secondary;
+  margin-bottom: 12rem;
 
-    /* Hero Section */
-    .career-hero {
-        text-align: center;
-        padding: 6rem 2rem;
-        // background: linear-gradient(to bottom, $color-primary, transparent);
-          background: linear-gradient(
-                to bottom,
-                transparent 0%,
-                #fff 100%,
-                #fff 100%
-            ),
-            url("./assets/bg-4.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+  /* Hero Section */
+  .career-hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    // background: linear-gradient(to bottom, $color-primary, transparent);
+    background: linear-gradient(to bottom, transparent 0%, #fff 100%, #fff 100%),
+      url("../../../assets/bg-4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $white;
+
+    &__content {
+      max-width: 900px;
+      margin: 0 auto;
+
+      h1 {
+        font-family: $font-bebas;
+        color: $bg-light;
+        letter-spacing: 0.8px;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+      }
+
+      p {
+        margin: 1rem 0 2rem;
         color: $white;
+        line-height: 1.6;
+        font-size: clamp(1rem, 1.8vw, 1.2rem);
+      }
 
-        &__content {
-            max-width: 900px;
-            margin: 0 auto;
+      .cta-btn {
+        @include button-style;
+        background: $white;
+        color: $color-primary;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: $border-radius;
 
-            h1 {
-                font-family: $font-bebas;
-                color: $bg-light;
-                letter-spacing: 0.8px;
-                font-size: clamp(1.8rem, 4vw, 2.8rem);
-            }
-
-            p {
-                margin: 1rem 0 2rem;
-                color: $white;
-                line-height: 1.6;
-                font-size: clamp(1rem, 1.8vw, 1.2rem);
-            }
-
-            .cta-btn {
-                @include button-style;
-                background: $white;
-                color: $color-primary;
-                display: inline-flex;
-                align-items: center;
-                gap: 0.5rem;
-                border-radius: $border-radius;
-
-                .arrow {
-                    width: 16px;
-                    height: 16px;
-                    rotate: 180deg;
-                    @include grid-center;
-                    @include gold-filter;
-                    object-fit: contain;
-                }
-
-                &:hover {
-                    transform: scale(1.03);
-                    box-shadow: $shadow-xl;
-
-                    .arrow {
-                        animation: arrow-btn 0.6s ease-in-out infinite;
-                    }
-                }
-            }
+        .arrow {
+          width: 16px;
+          height: 16px;
+          rotate: 180deg;
+          @include grid-center;
+          @include gold-filter;
+          object-fit: contain;
         }
+
+        &:hover {
+          transform: scale(1.03);
+          box-shadow: $shadow-xl;
+
+          .arrow {
+            animation: arrow-btn 0.6s ease-in-out infinite;
+          }
+        }
+      }
+    }
+  }
+
+  &__container {
+    width: 90vw;
+    margin: 0 auto;
+    @include responsive(xl) {
+      width: 80.77vw;
+      max-width: 1413px;
     }
 
-    &__container {
-        width: 90vw;
-        margin: 0 auto;
-        @include responsive(xl) {
-            width: 80.77vw;
-            max-width: 1413px;
+    /* Benefits Section */
+    .career-benefits {
+      margin: 6rem auto;
+
+      &__title {
+        font-family: $font-bebas;
+        font-size: clamp(1.8rem, 3vw, 2.8rem);
+        color: $color-secondary;
+        letter-spacing: 0.8px;
+        margin-bottom: 2rem;
+
+        span {
+          color: $color-primary;
+        }
+      }
+
+      &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include responsive(sm) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @include responsive(md) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @include responsive(lg) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        gap: 2rem;
+      }
+
+      &__card {
+        background: $bg-light;
+        padding: 2rem;
+        border-radius: $border-radius;
+        text-align: center;
+        box-shadow: $shadow-md;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: url("../../../assets/bg-3.svg") top/cover no-repeat;
+
+        &:hover {
+          transform: translateY(-6px);
+          box-shadow: $shadow-xl;
         }
 
-        /* Benefits Section */
-        .career-benefits {
-            margin: 6rem auto;
-
-            &__title {
-                font-family: $font-bebas;
-                font-size: clamp(1.8rem, 3vw, 2.8rem);
-                color: $color-secondary;
-                letter-spacing: 0.8px;
-                margin-bottom: 2rem;
-
-                span {
-                    color: $color-primary;
-                }
-            }
-
-            &__grid {
-                display: grid;
-                grid-template-columns: 1fr;
-
-                @include responsive(sm) {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-                @include responsive(md) {
-                    grid-template-columns: repeat(3, 1fr);
-                }
-                @include responsive(lg) {
-                    grid-template-columns: repeat(4, 1fr);
-                }
-                gap: 2rem;
-            }
-
-            &__card {
-                background: $bg-light;
-                padding: 2rem;
-                border-radius: $border-radius;
-                text-align: center;
-                box-shadow: $shadow-md;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                cursor: url("./assets/hand-cursor.png"), auto !important;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                background: url("./assets/bg-3.svg") top/cover no-repeat;
-
-                &:hover {
-                    transform: translateY(-6px);
-                    box-shadow: $shadow-xl;
-                }
-
-                img {
-                    width: 100px !important;
-                    height: 100px !important;
-                }
-
-                &__subtitle {
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                    margin-bottom: 0.5rem;
-                    color: $color-secondary;
-                }
-
-                &__text {
-                    font-size: 0.95rem;
-                    color: $color-text-subtle;
-                    line-height: 1.5;
-                }
-            }
+        img {
+          width: 100px !important;
+          height: 100px !important;
         }
 
-        /* Job Listings */
-        .career-jobs {
-            margin: 6rem auto;
-
-            h2 {
-                font-family: $font-bebas;
-                font-size: clamp(1.8rem, 3vw, 2.8rem);
-                color: $color-secondary;
-                letter-spacing: 0.8px;
-                margin-bottom: 2rem;
-
-                span {
-                    color: $color-primary;
-                }
-            }
-
-            &__list {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 2rem;
-            }
-
-            &__card {
-                background: $white;
-                padding: 2rem;
-                border-radius: $border-radius;
-                box-shadow: $shadow-md;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                text-align: left;
-
-                &:hover {
-                    transform: translateY(-5px);
-                    box-shadow: $shadow-xl;
-                }
-
-                &__title {
-                    font-size: 1.3rem;
-                    font-weight: 600;
-                    margin-bottom: 0.5rem;
-                    color: $color-secondary;
-                }
-
-                .job-meta {
-                    font-size: 0.9rem;
-                    color: $color-text-subtle;
-                    margin-bottom: 1rem;
-                }
-
-                p {
-                    font-size: 0.95rem;
-                    color: $color-text-base;
-                    line-height: 1.5;
-                    margin-bottom: 1.25rem;
-                }
-
-                .apply-btn {
-                    @include button-style;
-                    background: $color-primary;
-                    color: $white;
-                    border-radius: 8px;
-                    padding: 0.6rem 1.5rem;
-
-                    &:hover {
-                        background: darken($color-primary, 10%);
-                        transform: translateY(-2px);
-                    }
-                }
-            }
-
-            @media (max-width: 600px) {
-                &__list {
-                    grid-template-columns: 1fr;
-                }
-            }
+        &__subtitle {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+          color: $color-secondary;
         }
 
-        /* Application Form */
-        .career-application {
-            margin: 6rem auto;
-            text-align: center;
-
-            h2 {
-                font-family: $font-bebas;
-                font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-                color: $color-secondary;
-                 span {
-                    color: $color-primary;
-                }
-            }
-
-            form {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-                padding: 2rem;
-                border-radius: 12px;
-
-                @include responsive(md) {
-                    grid-template-columns: 1fr 1fr;
-
-                    textarea {
-                        grid-column: span 2;
-                    }
-                    button {
-                        grid-column: span 2;
-                        justify-self: center;
-                        width: auto;
-                    }
-                }
-
-                input,
-                select,
-                textarea {
-                    padding: 1rem 1.2rem;
-                    border: 1px solid $border-default;
-                    border-radius: $border-radius;
-                    font-size: 1rem;
-                    width: 100%;
-                    background-color: $bg-light;
-                    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-                    color: $color-text-subtle;
-
-
-                    &:focus {
-                        @include focus-style;
-                        border-color: $color-primary;
-                        box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
-                    }
-
-                    &::placeholder {
-                        color: $color-text-subtle;
-                    }
-                }
-
-                textarea {
-                    min-height: 140px;
-                    resize: vertical;
-                }
-
-                select,
-                input[type="file"] {
-                    cursor: url("./assets/hand-cursor.png"), auto !important;
-                    &::-webkit-file-upload-button {
-                        cursor: url("./assets/hand-cursor.png"), auto !important;
-                    }
-                    &::file-selector-button {
-                        cursor: url("./assets/hand-cursor.png"), auto !important;
-                    }
-                }
-
-            
-
-                button {
-               
-                padding: 0 35px;
-                @include grid-center;
-                min-height: 50px;
-                font-size: 1rem;
-                @include text-semibold;
-                color: $white;
-                background-color: $color-primary;
-                border: 2px solid $color-primary;
-                border-radius: $border-radius;
-
-                cursor: url("./assets/hand-cursor.png"), auto !important;
-
-                transition: $transition-slow;
-                box-shadow: $shadow-lg;
-
-                &:hover {
-                    background-color: $white;
-                    color: $color-primary;
-                    border: 2px solid $color-primary;
-                    transform: translateY(-1px);
-                }
-
-                &:active {
-                    transform: translateY(0);
-                    box-shadow: none;
-                }
-
-                &:disabled {
-                    opacity: 0.6;
-                    cursor: not-allowed;
-                }
-            }
-
-                
-            }
+        &__text {
+          font-size: 0.95rem;
+          color: $color-text-subtle;
+          line-height: 1.5;
         }
+      }
     }
+
+    /* Job Listings */
+    .career-jobs {
+      margin: 6rem auto;
+
+      h2 {
+        font-family: $font-bebas;
+        font-size: clamp(1.8rem, 3vw, 2.8rem);
+        color: $color-secondary;
+        letter-spacing: 0.8px;
+        margin-bottom: 2rem;
+
+        span {
+          color: $color-primary;
+        }
+      }
+
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      &__card {
+        background: $white;
+        padding: 2rem;
+        border-radius: $border-radius;
+        box-shadow: $shadow-md;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: left;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: $shadow-xl;
+        }
+
+        &__title {
+          font-size: 1.3rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+          color: $color-secondary;
+        }
+
+        .job-meta {
+          font-size: 0.9rem;
+          color: $color-text-subtle;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+          color: $color-text-base;
+          line-height: 1.5;
+          margin-bottom: 1.25rem;
+        }
+
+        .apply-btn {
+          @include button-style;
+          background: $color-primary;
+          color: $white;
+          border-radius: 8px;
+          padding: 0.6rem 1.5rem;
+
+          &:hover {
+            background: darken($color-primary, 10%);
+            transform: translateY(-2px);
+          }
+        }
+      }
+
+      @media (max-width: 600px) {
+        &__list {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+
+    /* Application Form */
+    .career-application {
+      margin: 6rem auto;
+      text-align: center;
+
+      h2 {
+        font-family: $font-bebas;
+        font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+        color: $color-secondary;
+        span {
+          color: $color-primary;
+        }
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding: 2rem;
+        border-radius: 12px;
+
+        @include responsive(md) {
+          grid-template-columns: 1fr 1fr;
+
+          textarea {
+            grid-column: span 2;
+          }
+          button {
+            grid-column: span 2;
+            justify-self: center;
+            width: auto;
+          }
+        }
+
+        input,
+        select,
+        textarea {
+          padding: 1rem 1.2rem;
+          border: 1px solid $border-default;
+          border-radius: $border-radius;
+          font-size: 1rem;
+          width: 100%;
+          background-color: $bg-light;
+          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+          color: $color-text-subtle;
+
+          &:focus {
+            @include focus-style;
+            border-color: $color-primary;
+            box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+          }
+
+          &::placeholder {
+            color: $color-text-subtle;
+          }
+        }
+
+        textarea {
+          min-height: 140px;
+          resize: vertical;
+        }
+
+        select,
+        input[type="file"] {
+          cursor: url("../../../assets/hand-cursor.png"), auto !important;
+          &::-webkit-file-upload-button {
+            cursor: url("../../../assets/hand-cursor.png"), auto !important;
+          }
+          &::file-selector-button {
+            cursor: url("../../../assets/hand-cursor.png"), auto !important;
+          }
+        }
+
+        button {
+          padding: 0 35px;
+          @include grid-center;
+          min-height: 50px;
+          font-size: 1rem;
+          @include text-semibold;
+          color: $white;
+          background-color: $color-primary;
+          border: 2px solid $color-primary;
+          border-radius: $border-radius;
+
+
+          transition: $transition-slow;
+          box-shadow: $shadow-lg;
+
+          &:hover {
+            background-color: $white;
+            color: $color-primary;
+            border: 2px solid $color-primary;
+            transform: translateY(-1px);
+          }
+
+          &:active {
+            transform: translateY(0);
+            box-shadow: none;
+          }
+
+          &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
 }

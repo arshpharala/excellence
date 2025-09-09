@@ -16,7 +16,7 @@
                 rgba(254, 243, 199, 0.7),
                 rgba(124, 45, 18, 0.7)
             ),
-            url("./assets/newsletter.png") left/cover no-repeat;
+            url("../../../assets/newsletter.png") left/cover no-repeat;
         filter: blur(1px);
         z-index: -1;
         border-radius: $border-radius;
@@ -103,7 +103,7 @@
                 }
             }
 
-            button {
+            .newsletter-btn {
                 background-color: rgba($light-gold, 0.3);
                 color: $white;
                 padding: 0 1rem;
@@ -114,11 +114,8 @@
                 @include text-semibold;
                 border: 0;
                 font-size: 1rem;
-
-                cursor: url("./assets/hand-cursor.png"), auto !important;
-
                 transition: $transition;
-
+                cursor: url("../../../assets/hand-cursor.png"), auto !important;
                 &:hover {
                     background-color: rgba($light-gold, 0.7);
                 }

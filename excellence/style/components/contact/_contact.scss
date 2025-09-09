@@ -25,7 +25,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url("./assets/form-layer.png") center / cover no-repeat;
+    background: url("../../../assets/form-layer.png") center / cover no-repeat;
     @include responsive(md) {
       background-position: left;
     }
@@ -155,7 +155,6 @@
         border: 2px solid $color-primary;
         border-radius: $border-radius;
 
-          cursor: url("./assets/hand-cursor.png"), auto !important;
 
         transition: $transition-slow;
         box-shadow: $shadow-lg;

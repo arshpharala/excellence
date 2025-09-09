@@ -71,7 +71,7 @@ export default function initProjects() {
     position: "fixed",
     width: "100px",
     height: "100px",
-    background: "url('../assets/slide.png') no-repeat center center",
+    background: "url('./assets/slide.png') no-repeat center center",
     backgroundSize: "cover",
     pointerEvents: "none",
     transform: "translate(-50%, -50%)",
@@ -86,7 +86,7 @@ export default function initProjects() {
   });
 
   if (slidesContainer) {
-    slidesContainer.style.cursor = 'url("../assets/hand-cursor.png"), auto';
+    slidesContainer.style.cursor = 'url("./assets/hand-cursor.png"), auto';
 
     window.myProjectsSwiper.on("touchStart", () => {
       cursor.style.transform = "translate(-50%, -50%) scale(0)";
@@ -95,17 +95,17 @@ export default function initProjects() {
 
     window.myProjectsSwiper.on("touchEnd", () => {
       cursor.style.transform = "translate(-50%, -50%) scale(1)";
-      slidesContainer.style.cursor = 'url("../assets/hand-cursor.png"), auto';
+      slidesContainer.style.cursor = 'url("./assets/hand-cursor.png"), auto';
     });
 
     slidesContainer.querySelectorAll(".project-details").forEach((detail) => {
       detail.addEventListener("mouseenter", () => {
         cursor.style.display = "none";
-        slidesContainer.style.cursor = 'url("../assets/cursor.png"), auto';
+        slidesContainer.style.cursor = 'url("./assets/cursor.png"), auto';
       });
       detail.addEventListener("mouseleave", () => {
         cursor.style.display = "block";
-        slidesContainer.style.cursor = 'url("../assets/hand-cursor.png"), auto';
+        slidesContainer.style.cursor = 'url("./assets/hand-cursor.png"), auto';
       });
     });
   }
@@ -113,11 +113,11 @@ export default function initProjects() {
   document.querySelectorAll(".swiper-nav1").forEach((btn) => {
     btn.addEventListener("mouseenter", () => {
       cursor.style.display = "none";
-      slidesContainer.style.cursor = 'url("../assets/cursor.png"), auto';
+      slidesContainer.style.cursor = 'url("./assets/cursor.png"), auto';
     });
     btn.addEventListener("mouseleave", () => {
       cursor.style.display = "block";
-      slidesContainer.style.cursor = 'url("../assets/hand-cursor.png"), auto';
+      slidesContainer.style.cursor = 'url("./assets/hand-cursor.png"), auto';
     });
   });
 

@@ -61,10 +61,13 @@ export default function initServices() {
             <div class="vas-service-content">
               <p class="vas-service-paragraph">${service.paragraph}</p>
               <div class="vas-link-wrap">
-                <a href="/services/${service.slug}.html" class="read-more-btn">Learn More</a>
+                <a href="/services/${
+                  service.slug
+                }.html" class="more-btn"><span class="learn-more-btn">Learn More</span>
                 <span class="icon-wrapper">
                   <img src="./assets/arrow45.png" alt="Arrow Icon" />
                 </span>
+                </a>
               </div>
             </div>
           </li>
