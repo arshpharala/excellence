@@ -1,0 +1,351 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+// Why Choose Us Section
+.why-choose-us {
+  background-color: $bg-gray-lighter;
+  background: url("../assets/bg-2.svg") no-repeat center/cover;
+  padding: $spacing-md 0;
+
+  .why-us-container {
+    margin: 3.5rem auto;
+    width: 90vw;
+
+    @include responsive(xl) {
+      width: 80.77vw;
+      max-width: 1413px;
+    }
+
+    // Header Section
+    .whychooseus-header {
+      display: grid;
+      place-items: start;
+      gap: 1rem;
+
+      @include responsive(md) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-size: $spacing-sm;
+        @include text-bold;
+      }
+
+      .title {
+        @include text-semibold;
+        line-height: 0.9;
+        font-size: $spacing-xl;
+        font-family: $font-bebas;
+
+        @include responsive(xl) {
+          font-size: $spacing-3xl;
+        }
+      }
+
+      .right-side {
+        display: grid;
+        place-items: end;
+        width: 100%;
+
+        .description {
+          @include text-semibold;
+
+          @include responsive(md) {
+            max-width: 485px;
+          }
+
+          h1 {
+            font-size: 1.3rem;
+          }
+
+          p {
+            font-size: $spacing-sm;
+            color: $color-text-subtle;
+
+            margin-bottom: 16px;
+            line-height: 1.5;
+          }
+        }
+
+        .read-more-group {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .read-more-btn {
+          background-color: transparent;
+          color: $color-secondary;
+          padding: 0 35px;
+          @include grid-center;
+          min-height: 50px;
+          border-radius: 9999px;
+          text-transform: capitalize;
+          @include text-semibold;
+          font-size: 0.8rem;
+          border: 2px solid rgba($color-secondary, 0.2);
+          text-decoration: none;
+          transition: $transition-slow;
+
+
+          @include responsive(lg) {
+            font-size: 1rem;
+          }
+
+          &:hover {
+            background-color: $white;
+            color: $color-primary;
+            border: 2px solid $color-primary;
+          }
+        }
+      }
+    }
+
+    // Feature Cards Grid
+    .feature-grid {
+      display: grid;
+      gap: $spacing-xs;
+      margin-top: 3rem;
+
+      grid-template-columns: 1fr;
+      @include responsive(sm) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include responsive(lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include responsive(xl) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .read-btn {
+        order: 999; // default comes before last
+      }
+
+      @include responsive(xl) {
+        .read-btn {
+          order: 0; // restore normal flow on tablet/desktop
+        }
+      }
+    }
+
+    .feature-card {
+      background-color: $white;
+      padding: $spacing-md;
+      border-radius: $border-radius;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.75rem;
+      box-shadow: $shadow-lg;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+      border: 2px solid transparent;
+
+      &:hover {
+        background: linear-gradient($bg-gray-light, $bg-gray-light) padding-box,
+          conic-gradient(
+              from var(--border-angle),
+              #fff 0deg,
+              $color-primary 72deg,
+              #fff 144deg,
+              #ffd60a 216deg,
+              $color-primary 288deg,
+              #fff 360deg
+            )
+            border-box;
+        box-shadow: $shadow-xl;
+        animation: border-rotate 3s linear infinite;
+      }
+
+      @include responsive(lg) {
+        min-height: 290px;
+      }
+      @include responsive(xl) {
+        min-height: 488px;
+      }
+
+      &:hover {
+        box-shadow: $shadow-xl;
+      }
+
+      h3 {
+        font-size: 0.9rem;
+        line-height: 1.2;
+        @include text-bold;
+
+        @include responsive(md) {
+          font-size: 1rem;
+        }
+        @include responsive(lg) {
+          font-size: 1.3rem;
+        }
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 0.7rem;
+        margin-top: 0.5rem;
+        text-align: justify;
+        color: $color-text-subtle;
+        @include responsive(md) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .span-col {
+      width: 100%;
+      background: transparent;
+      box-shadow: none;
+      display: none;
+      border: none;
+      cursor: url("../assets/cursor.png"), auto !important;
+
+      &:hover {
+        box-shadow: none;
+        background: transparent;
+        cursor: auto;
+      }
+      grid-template-columns: 1fr;
+      padding: 0;
+      @include responsive(md) {
+        display: grid;
+      }
+      @include responsive(xl) {
+        grid-column: span 2;
+        grid-template-columns: 1fr 1.5fr;
+      }
+
+      .empty-card {
+        display: none;
+        @include responsive(xl) {
+          display: block;
+        }
+      }
+
+      .feature-image {
+        max-height: 488px;
+        width: 100%;
+        border-radius: $border-radius;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    // Read More Button (Bottom)
+    .read-btn {
+      text-align: center;
+      width: 100%;
+      margin: 0.75rem 0;
+
+      @include responsive(md) {
+        margin-top: 2.5rem;
+      }
+
+      .learn-more-btn {
+        background-color: $color-primary;
+        border: 2px solid $color-primary;
+        color: $white;
+        padding: 0 35px;
+        min-height: 50px;
+        @include grid-center;
+        border-radius: 9999px;
+        text-transform: capitalize;
+        transition: $transition-slow;
+
+
+        @include responsive(sm) {
+          display: inline-flex;
+        }
+
+        font-size: 1rem;
+
+        &:hover {
+          background-color: $white;
+          color: $color-primary;
+        }
+      }
+    }
+
+    .arrow-btn-wrapper {
+      display: grid;
+      place-items: end;
+    }
+
+    .arrow-btn {
+      width: 3rem;
+      height: 3rem;
+      padding: 1rem;
+      border-radius: 999px;
+      @include grid-center;
+      background-color: rgba($light-gold, 0.5);
+      transition: $transition-slow;
+
+      &:hover {
+        scale: 1.1;
+        rotate: 45deg;
+        background-color: rgba($light-gold, 0.8);
+      }
+
+      // Icon inside
+      .icon-wrapper {
+        width: 100%;
+        height: 100%;
+        @include gold-filter;
+        object-fit: contain;
+        transition: transform 0.4s ease;
+
+        .arrow-btn:hover & {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+}
+
+// Keyframes
+@keyframes riseUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.9;
+    box-shadow: 0 0 20px rgba($light-gold, 0.6), 0 0 40px rgba($light-gold, 0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 40px rgba($light-gold, 0.9), 0 0 80px rgba($light-gold, 0.5);
+  }
+}
+
+@keyframes zoomFloat {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

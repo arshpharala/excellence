@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excellence Code</title>
+
+    <!-- favicon  -->
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- swiper  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- aos animate  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <!-- scroll top button  -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+      <img src="./assets/arrow.png" alt="scroll button" class="scroll-btn" />
+    </button>
+
+    <!-- Navbar -->
+    <nav class="navbar1">
+      <div class="navbar-container">
+        <a href="/" class="logo-link">
+          <img src="./assets/logo-black.png" alt="Company Logo" />
+          <span class="logo_text"
+            >Excellence <br />
+            Code</span
+          >
+        </a>
+
+        <div class="nav-controls">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="#work">Works</a></li>
+            <li><a href="#code">Code</a></li>
+
+            <li class="dropdown">
+              <button
+                class="dropbtn"
+                aria-expanded="false"
+                aria-controls="servicesSubmenu"
+                id="servicesBtn"
+              >
+                Services
+                <img
+                  src="./assets/down-arrow.png"
+                  alt="dropdown Icon"
+                  class="dropdown-arrow"
+                />
+              </button>
+              <ul class="dropdown-content" id="servicesSubmenu">
+                <li>
+                  <a href="./services/website-design-and-development.html"
+                    >Website Design & Development</a
+                  >
+                </li>
+                <li>
+                  <a href="./services/creative-design-service.html"
+                    >Creative Design Services</a
+                  >
+                </li>
+                <li>
+                  <a href="./services/digital-marketing.html"
+                    >Digital Marketing & Social Media</a
+                  >
+                </li>
+                <li>
+                  <a href="./services/events-organising.html"
+                    >Events & Conferences</a
+                  >
+                </li>
+                <li>
+                  <a href="./services/analytics.html"
+                    >Analytics & Optimization</a
+                  >
+                </li>
+                <li>
+                  <a href="./services/email-hosting.html"
+                    >Email & Hosting Services</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="./process.html">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <!-- Mobile menu button -->
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <img src="./assets/bars.png" alt="menu icon" class="icon-menu" />
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      class="menu-model"
+      id="mobileMenu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile Navigation"
+    >
+      <nav class="mobile-menu" aria-label="Mobile menu">
+        <!-- Header -->
+        <div class="menu-header">
+          <a href="/" class="logo-link" aria-label="Homepage">
+            <img src="./assets/logo-black.png" alt="Company Logo" />
+          </a>
+          <button class="close-btn" id="closeMenu" aria-label="Close menu">
+            <img
+              src="./assets/close.png"
+              alt="Close Menu Icon"
+              class="close-icon"
+            />
+          </button>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="menu-content">
+          <ul class="nav-menu">
+            <li>
+              <a href="#hero">
+                <img
+                  src="./assets/menuIcon/home.png"
+                  alt="Home Icon"
+                  class="menu-icon"
+                />
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/about.html">
+                <img
+                  src="./assets/menuIcon/about.png"
+                  alt="About Icon"
+                  class="menu-icon"
+                />
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#work">
+                <img
+                  src="./assets/menuIcon/work.png"
+                  alt="Work Icon"
+                  class="menu-icon"
+                />
+                Work
+              </a>
+            </li>
+            <li>
+              <a href="#code">
+                <img
+                  src="./assets/menuIcon/code.png"
+                  alt="Code Icon"
+                  class="menu-icon"
+                />
+                Code
+              </a>
+            </li>
+
+            <!-- Accordion -->
+            <li class="accordion-item">
+              <button
+                class="dropbtn"
+                aria-expanded="false"
+                aria-controls="servicesSubmenu"
+                id="servicesBtn"
+              >
+                <span class="menu-down">
+                  <img
+                    src="./assets/menuIcon/service.png"
+                    alt="Services Icon"
+                    class="menu-icon service-icon"
+                  />
+                  Services
+                </span>
+                <img
+                  src="./assets/menuIcon/down.png"
+                  alt="Dropdown Arrow Icon"
+                  class="menu-icon dropdown-arrow"
+                />
+              </button>
+
+              <ul class="dropdown-menu-content" id="servicesSubmenu" hidden>
+                <li>
+                  <a href="./services/website-design-and-development.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Website Design & Development
+                  </a>
+                </li>
+                <li>
+                  <a href="./services/creative-design-service.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Creative Design Services
+                  </a>
+                </li>
+                <li>
+                  <a href="./services/digital-marketing.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Digital Marketing & Social Media
+                  </a>
+                </li>
+                <li>
+                  <a href="./services/events-organising.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Events & Conferences
+                  </a>
+                </li>
+                <li>
+                  <a href="./services/analytics.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Analytics & Optimization
+                  </a>
+                </li>
+                <li>
+                  <a href="./services/email-hosting.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Email & Hosting Services
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./process.html">
+                <img
+                  src="./assets/menuIcon/process.png"
+                  alt="Process Icon"
+                  class="menu-icon"
+                />
+                Process
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <img
+                  src="./assets/menuIcon/contact.png"
+                  alt="Contact Icon"
+                  class="menu-icon"
+                />
+                Contact
+              </a>
+            </li>
+          </ul>
+
+          <!-- Social Icons -->
+          <div class="social-container">
+            <h1 class="social-content">follow us</h1>
+            <div
+              class="social-icons"
+              role="navigation"
+              aria-label="Social media"
+            >
+              <a
+                href="https://wa.me/your-number"
+                class="whatsapp"
+                aria-label="WhatsApp"
+              >
+                <img
+                  src="./assets/socialIcon/whatsapp.png"
+                  alt="WhatsApp Icon"
+                />
+              </a>
+              <a
+                href="https://facebook.com/yourprofile"
+                class="facebook"
+                aria-label="Facebook"
+              >
+                <img
+                  src="./assets/socialIcon/facebook.png"
+                  alt="Facebook Icon"
+                />
+              </a>
+              <a
+                href="https://twitter.com/yourprofile"
+                class="twitter"
+                aria-label="Twitter"
+              >
+                <img src="./assets/socialIcon/x.png" alt="Twitter (X) Icon" />
+              </a>
+              <a
+                href="https://instagram.com/yourprofile"
+                class="instagram"
+                aria-label="Instagram"
+              >
+                <img
+                  src="./assets/socialIcon/instagram.png"
+                  alt="Instagram Icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Banner Section -->
+    <div class="banner3__section">
+      <div class="banner3__container">
+        <h1 class="banner3__text">About Us</h1>
+      </div>
+    </div>
+
+    <!-- about page  -->
+    <section class="about-page">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero__content" data-aos="fade-up">
+          <h1>Who We Are ?</h1>
+          <p>
+            Excellence Code Marketing Services LLC is a premier full-service
+            marketing agency with over 13 years of experience in delivering
+            creative, strategic, and technology-driven solutions for businesses
+            across industries.
+          </p>
+          <a href="#about" class="btn"
+            ><span>Get Started </span>
+            <span>
+              <img
+                src="./assets/arrow.png"
+                alt="left-arrow"
+                class="arrow"
+              /> </span
+          ></a>
+        </div>
+      </section>
+
+      <div class="about-page__container">
+        <!-- About Us -->
+        <section class="about" id="about">
+          <div class="about__container">
+            <div class="about__image-wrapper" data-aos="fade-right">
+              <img
+                src="./assets/about.jpg"
+                alt="About Excellence Code Marketing"
+                loading="lazy"
+                class="about__image"
+              />
+            </div>
+            <div class="about__content" data-aos="fade-left">
+              <h3 class="about__title">13 years of experience</h3>
+              <p class="about__subtitle">
+                Our journey of innovation and trust, securing your tomorrow.
+              </p>
+              <div class="about__description">
+                <p>
+                  Established in 2012,
+                  <strong>Excellence Code Marketing Services LLC</strong> has
+                  grown into a leading provider of comprehensive media solutions
+                  for both private and public sectors. With over 13 years of
+                  experience, we have built a strong reputation for
+                  <strong
+                    >excellence, innovation, and successful partnerships</strong
+                  >
+                  across diverse industries.
+                </p>
+
+                <h4 class="about__key_offer">Key Offerings:</h4>
+                <ul class="about__offerings">
+                  <li class="offer-item">
+                    <img
+                      src="./assets/serviceIcon/branding.png"
+                      alt="Branding Icon"
+                      class="offer-icon"
+                    />
+                    <span>Branding & Identity Development</span>
+                  </li>
+                  <li class="offer-item">
+                    <img
+                      src="./assets/serviceIcon/social-media.png"
+                      alt="Digital Marketing Icon"
+                      class="offer-icon"
+                    />
+                    <span>Digital Marketing & Social Media Management</span>
+                  </li>
+                  <li class="offer-item">
+                    <img
+                      src="./assets/serviceIcon/content-creator.png"
+                      alt="Content Creation Icon"
+                      class="offer-icon"
+                    />
+                    <span>Content Creation & Storytelling</span>
+                  </li>
+                  <li class="offer-item">
+                    <img
+                      src="./assets/serviceIcon/ads.png"
+                      alt="Advertising Icon"
+                      class="offer-icon"
+                    />
+                    <span>Integrated Advertising Campaigns</span>
+                  </li>
+                  <li class="offer-item">
+                    <img
+                      src="./assets/serviceIcon/analytics.png"
+                      alt="Analytics Icon"
+                      class="offer-icon"
+                    />
+                    <span>Analytics & Performance Optimization</span>
+                  </li>
+                  <li class="offer-item">
+                    <img
+                      src="./assets/serviceIcon/laptop.png"
+                      alt="Website Design Icon"
+                      class="offer-icon"
+                    />
+                    <span>Website Design & Development</span>
+                  </li>
+                  <li class="offer-item">
+                    <img
+                      src="./assets/serviceIcon/email-hosting.png"
+                      alt="Hosting Icon"
+                      class="offer-icon"
+                    />
+                    <span>Website & Email Hosting Services</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mission / Vision -->
+        <section class="mvv">
+          <h2>our Mission & Vision</h2>
+          <div class="mvv__grid">
+            <article class="mvv__card" data-aos="fade-up">
+              <div class="mvv__content">
+                <img
+                  src="./assets/object/mission.png"
+                  alt="Mission Icon"
+                  class="mvv__icon"
+                />
+                <div class="mvv__text">
+                  <h3>Mission</h3>
+                  <p>
+                    Our mission is to empower businesses to achieve their full
+                    potential by delivering innovative and customized marketing
+                    solutions. We combine creativity, strategy, and technology
+                    to craft campaigns that drive measurable results, enhance
+                    brand visibility, and foster meaningful engagement with
+                    target audiences.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="mvv__card" data-aos="fade-up" data-aos-delay="100">
+              <div class="mvv__content">
+                <img
+                  src="./assets/object/vision.png"
+                  alt="Vision Icon"
+                  class="mvv__icon"
+                />
+                <div class="mvv__text">
+                  <h3>Vision</h3>
+                  <p>
+                    Our vision is to become a globally recognized marketing
+                    partner known for innovation, reliability, and impactful
+                    strategies. We aim to shape the future of marketing by
+                    helping brands stand out, build lasting connections, and
+                    achieve sustainable growth in an ever-evolving digital
+                    landscape.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats" data-aos="fade-up">
+          <h2 data-aos="zoom-out-right">Our Achievements</h2>
+
+          <div class="stats__grid" data-aos="zoom-in-up">
+            <div class="stat">
+              <img
+                src="./assets/achievement/time.gif"
+                alt="Experience Icon"
+                class="stat__icon"
+              />
+              <span class="stat__value">13+</span>
+              <p class="stat__label">Years of Experience</p>
+            </div>
+            <div class="stat">
+              <img
+                src="./assets/achievement/project.gif"
+                alt="Projects Icon"
+                class="stat__icon"
+              />
+              <span class="stat__value">500+</span>
+              <p class="stat__label">Projects Completed</p>
+            </div>
+            <div class="stat">
+              <img
+                src="./assets/achievement/client.gif"
+                alt="Clients Icon"
+                class="stat__icon"
+              />
+              <span class="stat__value">200+</span>
+              <p class="stat__label">Happy Clients</p>
+            </div>
+            <div class="stat">
+              <img
+                src="./assets/achievement/award.gif"
+                alt="Awards Icon"
+                class="stat__icon"
+              />
+              <span class="stat__value">15+</span>
+              <p class="stat__label">Industry Awards</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- timeline  -->
+        <section class="timeline">
+          <h2 data-aos="zoom-out-right">Our Journey</h2>
+
+          <!-- 2012 -->
+          <div
+            class="timeline__event animated fadeInUp delay-3s timeline__event--type1"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="timeline__event__icon">
+              <img
+                class="timeline__event__img"
+                src="./assets/timeline/Paintbrush.png"
+                alt="Creative Design Icon"
+              />
+            </div>
+            <div class="timeline__event__date">2012</div>
+            <div class="timeline__event__content">
+              <div class="timeline__event__title">
+                Founded with Creative Design
+              </div>
+              <div class="timeline__event__description">
+                <p>
+                  The agency was founded with a focus on creative design and
+                  website development, helping businesses establish their online
+                  presence with stunning visuals and user-friendly websites.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2014 -->
+          <div
+            class="timeline__event animated fadeInUp delay-2s timeline__event--type2"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="timeline__event__icon">
+              <img
+                class="timeline__event__img"
+                src="./assets/timeline/circus-tent.png"
+                alt="Events Icon"
+              />
+            </div>
+            <div class="timeline__event__date">2014</div>
+            <div class="timeline__event__content">
+              <div class="timeline__event__title">
+                Expanded to Events Management
+              </div>
+              <div class="timeline__event__description">
+                <p>
+                  We expanded our offerings to include events management and
+                  exhibition stand execution, providing end-to-end solutions for
+                  brands to showcase their products and services at trade shows
+                  and events.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2016 -->
+          <div
+            class="timeline__event animated fadeInUp delay-1s timeline__event--type3"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="timeline__event__icon">
+              <img
+                class="timeline__event__img"
+                src="./assets/timeline/chart.png"
+                alt="SEO Icon"
+              />
+            </div>
+            <div class="timeline__event__date">2016</div>
+            <div class="timeline__event__content">
+              <div class="timeline__event__title">
+                SEO & Social Media Optimization
+              </div>
+              <div class="timeline__event__description">
+                <p>
+                  Recognizing the growing importance of digital presence, we
+                  added SEO (Search Engine Optimization) and SMO (Social Media
+                  Optimization) to our services, helping clients enhance their
+                  online visibility and engagement.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2018 -->
+          <div
+            class="timeline__event animated fadeInUp timeline__event--type1"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="timeline__event__icon">
+              <img
+                class="timeline__event__img"
+                src="./assets/timeline/trophy.png"
+                alt="Gifts Icon"
+              />
+            </div>
+            <div class="timeline__event__date">2018</div>
+            <div class="timeline__event__content">
+              <div class="timeline__event__title">
+                Customized Gifts & Trophies
+              </div>
+              <div class="timeline__event__description">
+                <p>
+                  To enhance brand visibility and client relationships, we
+                  introduced customized gifts and trophies, offering unique,
+                  branded merchandise for corporate events and client
+                  appreciation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2020 -->
+          <div
+            class="timeline__event animated fadeInUp delay-2s timeline__event--type2"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="timeline__event__icon">
+              <img
+                class="timeline__event__img"
+                src="./assets/timeline/money-bag.png"
+                alt="Ads Icon"
+              />
+            </div>
+            <div class="timeline__event__date">2020</div>
+            <div class="timeline__event__content">
+              <div class="timeline__event__title">
+                Digital Advertising Services
+              </div>
+              <div class="timeline__event__description">
+                <p>
+                  In 2020, we expanded our digital advertising services to
+                  include social media buying, Google Ads, and YouTube channel
+                  management, offering clients a complete suite of tools to
+                  maximize their reach and ROI.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div
+            class="timeline__event animated fadeInUp delay-1s timeline__event--type3"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="timeline__event__icon">
+              <img
+                class="timeline__event__img"
+                src="./assets/timeline/globe.png"
+                alt="Agency Icon"
+              />
+            </div>
+            <div class="timeline__event__date">2022</div>
+            <div class="timeline__event__content">
+              <div class="timeline__event__title">
+                Full-Service Marketing Agency
+              </div>
+              <div class="timeline__event__description">
+                <p>
+                  By 2022, we evolved into a full-service marketing agency,
+                  offering a comprehensive suite of services, from creative
+                  design and digital marketing to events management and social
+                  media buying.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div
+            class="timeline__event animated fadeInUp timeline__event--type1"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="timeline__event__icon">
+              <img
+                class="timeline__event__img"
+                src="./assets/timeline/robot.png"
+                alt="AI Marketing Icon"
+              />
+            </div>
+            <div class="timeline__event__date">2024</div>
+            <div class="timeline__event__content">
+              <div class="timeline__event__title">AI-Driven Marketing</div>
+              <div class="timeline__event__description">
+                <p>
+                  Embracing the future, we integrated AI-driven marketing
+                  solutions into our offerings, using advanced analytics and
+                  automation to deliver smarter, more effective campaigns for
+                  our clients.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        Why Choose Us
+        <section class="why-us" data-aos="fade-up">
+          <h2>Why Choose Us</h2>
+
+          <div
+            class="choose-us-section"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            LEFT: Image
+            <div class="choose-us-image-wrapper" data-aos="zoom-in-up">
+              <img
+                src="./assets/about.jpg"
+                alt="About Excellence Code Marketing"
+                class="choose-us-image"
+                loading="lazy"
+              />
+            </div>
+
+            RIGHT: Accordion List
+            <div class="choose-us-content" data-aos="zoom-in-up">
+              <ul class="choose-us-list" id="chooseUsList">
+                Accordion items injected by JS
+              </ul>
+            </div>
+          </div>
+        </section> -->
+
+        <!-- Team -->
+        <section class="team">
+          <div class="team__header">
+            <h2 data-aos="zoom-in-right">Meet the Team</h2>
+            <span data-aos="zoom-in-left">
+              <a class="btn" href="./team.html">see more </a>
+            </span>
+          </div>
+          <div class="team__grid" id="teamGrid" data-aos="zoom-in-up"></div>
+        </section>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" data-aos="fade-up">
+      <div class="cta__content">
+        <h2 class="cta__title">Let’s Build Something Great Together</h2>
+        <p class="cta__subtitle">
+          Contact us today to unlock your brand&apos;s full potential with our
+          expertise.
+        </p>
+        <a href="#contact" class="btn about_btn">Call Us Now</a>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonial" class="testimonial">
+      <div
+        class="testimonial__content"
+        data-aos="zoom-in-up"
+        data-aos-delay="500"
+      >
+        <h2 class="testimonial__title">
+          Here's our happy <br />
+          client review
+        </h2>
+        <p class="testimonial__subtitle">
+          Hear from our satisfied clients and their experiences working with us.
+        </p>
+      </div>
+
+      <!-- Swiper Container -->
+      <div class="testimonial-container">
+        <div
+          class="swiper testimonial-swiper"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="swiper-wrapper" id="testimonialSwiperWrapper">
+            {{-- Slides injected via JS --}}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+          <div class="newsletter-container">
+            <div class="newsletter-text" data-aos="flip-left">
+              <h1>SUBSCRIBE TO OUR NEWSLETTER!</h1>
+              <p>Get notified about news, webinars, & more</p>
+            </div>
+            <form
+              data-aos="slide-left"
+              class="newsletter-form"
+              action="#"
+              method="post"
+            >
+              <div class="input-wrapper">
+                <!-- <span class="icon">
+                  <img src="./assets/contactIcon/email.png" alt="Email icon" />
+                </span> -->
+                <input
+                  type="email"
+                  name="email"
+                  data-aos="zoom-in"
+                  placeholder="Your email address"
+                  required
+                />
+              </div>
+              <button type="submit" class="newsletter-btn"  data-aos="zoom-in">Subscribe</button>
+            </form>
+          </div>
+        </section>
+
+        <div class="footer-top">
+          <!-- Company Info -->
+          <div class="footer-company">
+            <div data-aos="flip-right" class="company-brand">
+              <a href="/" class="footer-company__logo">
+                <img src="./assets/logo-black.png" alt="Company Logo" />
+                <span class="logo_text"
+                  >Excellence <br />
+                  Code</span
+                >
+              </a>
+            </div>
+            <p class="footer-company__text" data-aos="zoom-in-up">
+              We deliver custom software, web, and mobile solutions that are
+              efficient, scalable, and tailored to help your business grow.
+            </p>
+
+            <!-- Social Media -->
+            <div class="footer-section">
+              <ul class="footer-social" data-aos="zoom-in-up">
+                <li>
+                  <a
+                    href="https://wa.me/your-number"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="social-icon"
+                      src="./assets/socialIcon/whatsapp.png"
+                      alt="WhatsApp"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://facebook.com/yourprofile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="social-icon"
+                      src="./assets/socialIcon/facebook.png"
+                      alt="Facebook"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/yourprofile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="social-icon"
+                      src="./assets/socialIcon/x.png"
+                      alt="Twitter"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/yourprofile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="social-icon"
+                      src="./assets/socialIcon/instagram.png"
+                      alt="Instagram"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Footer Links -->
+          <div class="footer-section" id="footer">
+            <h3 class="footer-section__title" data-aos="flip-right">
+              Quick Links
+            </h3>
+            <ul class="footer-links" data-aos="zoom-in-up">
+              <li>
+                <a href="/about.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#work">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Works
+                </a>
+              </li>
+              <li>
+                <a href="#code">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Code
+                </a>
+              </li>
+              <li>
+                <a href="#service">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Service
+                </a>
+              </li>
+              <li>
+                <a href="./process.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Process
+                </a>
+              </li>
+              <li>
+                <a href="#contact">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 🔔 Services Section -->
+          <div class="footer-section">
+            <h3 class="footer-section__title" data-aos="flip-right">
+              Services
+            </h3>
+            <ul class="footer-links" data-aos="zoom-in-up">
+              <li>
+                <a href="./services/website-design-and-development.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Website Design & Development
+                </a>
+              </li>
+              <li>
+                <a href="./services/creative-design-service.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Creative Design Services
+                </a>
+              </li>
+              <li>
+                <a href="./services/digital-marketing.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Digital Marketing & Social Media
+                </a>
+              </li>
+              <li>
+                <a href="./services/events-organising.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Events & Conferences
+                </a>
+              </li>
+              <li>
+                <a href="./services/analytics.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Analytics & Optimization
+                </a>
+              </li>
+              <li>
+                <a href="./services/email-hosting.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Email & Hosting Services
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 🔔 contact Section -->
+          <div class="footer-section info">
+            <div class="footer-section">
+              <h3 class="footer-section__title" data-aos="flip-right">
+                Information
+              </h3>
+
+              <ul data-aos="zoom-in-up" class="footer-links contact-info">
+                <li>
+                  <a href="tel:+971552440610">
+                    <img
+                      src="./assets/contactIcon/mobile.png"
+                      alt="Phone icon"
+                    />
+                    <span>+971-552440610</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info@excellencecode.com">
+                    <img
+                      src="./assets/contactIcon/email.png"
+                      alt="Email icon"
+                    />
+                    <span>info@excellencecode.com</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://goo.gl/maps/your-location"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/contactIcon/location-pin.png"
+                      alt="Location icon"
+                    />
+                    <span>
+                      706, Sobha Ivory 2, Alama'al Street, Business Bay, Dubai,
+                      UAE
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- 🔔 Opening Hours -->
+            <div class="opening-hours" data-aos="zoom-in-up">
+              <h4 class="footer-subtitle">Opening Hours</h4>
+              <ul class="footer-links">
+                <li><span>Monday – Saturday:</span> 8:30 AM – 5:00 PM</li>
+                <li><span>Sunday:</span> Closed</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-container">
+        <div class="footer-bottom">
+          <!-- Legal Links -->
+
+          <div class="footer-legal">
+            <ul class="legal-links">
+              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a href="/terms-and-conditions.html">Terms & Conditions</a>
+              </li>
+              <li><a href="./careers.html">Careers</a></li>
+            </ul>
+          </div>
+          <!-- Copyright -->
+          <p class="footer-copy">
+            © <span id="currentYear"></span> <a href="/">Excellence Code</a>.
+            All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- MyLiveChat Integration -->
+    <script type="text/javascript">
+      function add_chatinline() {
+        var hccid = 41780128;
+        var nt = document.createElement("script");
+        nt.async = true;
+        nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid;
+        var ct = document.getElementsByTagName("script")[0];
+        ct.parentNode.insertBefore(nt, ct);
+      }
+      add_chatinline();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.section-values {
+  padding: $spacing-xl 0;
+  width: 90vw;
+  margin: 0 auto;
+  transition: $transition;
+
+  @include responsive(xl) {
+    width: 80.77vw;
+    max-width: 1413px;
+  }
+  &__header {
+    margin-bottom: $spacing-lg;
+
+    .section-values__title {
+      font-family: $font-bebas;
+      color: $color-secondary;
+
+      text-transform: uppercase;
+      margin-bottom: $spacing-sm;
+      letter-spacing: 0.8px;
+      @include responsive(lg) {
+        font-size: 2.8rem;
+      }
+
+      @include responsive(md) {
+        font-size: 2.2rem;
+      }
+
+      font-size: 1.8rem;
+    }
+
+    .section-values__intro {
+      color: $text-light;
+      font-size: 1rem;
+      line-height: 1.5;
+
+      @include responsive(md) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: $spacing-md;
+    grid-template-columns: 1fr;
+    margin-top: $spacing-lg;
+    margin-bottom: 4rem;
+
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-lg;
+    }
+  }
+
+  .value-card {
+    background: $white;
+    padding: $spacing-sm;
+    border-radius: $border-radius;
+    box-shadow: $shadow-light;
+    border: 1px solid transparent;
+    transition: $transition-slow;
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    min-height: 160px;
+
+    &__image {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      @include gold-filter;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: $shadow-xl;
+      background: linear-gradient($bg-gray-light, $bg-gray-light) padding-box,
+        conic-gradient(
+            from var(--border-angle),
+            #fff 0deg,
+            $color-primary 72deg,
+            #fff 144deg,
+            #ffd60a 216deg,
+            $color-primary 288deg,
+            #fff 360deg
+          )
+          border-box;
+      animation: border-rotate 4s linear infinite;
+    }
+
+    &__title {
+      font-family: $font-bebas;
+      color: $color-primary;
+      margin-bottom: $spacing-sm;
+      letter-spacing: 0.5px;
+      @include responsive(md) {
+        font-size: 1.5rem;
+      }
+
+      font-size: 1.3rem;
+    }
+
+    &__body {
+      color: $color-text-base;
+      line-height: 1.5;
+      margin-bottom: $spacing-sm;
+      @include responsive(md) {
+        font-size: 0.95rem;
+      }
+
+      font-size: 0.9rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

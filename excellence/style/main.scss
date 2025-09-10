@@ -1,0 +1,248 @@
+@use "index" as *;
+
+/* Import font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+  font-size: 16px;
+  cursor: url("../assets/cursor.png"), auto !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
+}
+
+label {
+  cursor: url("../assets/cursor.png"), auto !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
+
+  background: none;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+  width: 50px;
+  z-index: 99;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  border: none;
+
+  @include grid-center;
+  background: rgba($color-text-muted, 0.5);
+  cursor: url("../assets/hand-cursor.png"), auto !important;
+
+  box-shadow: $shadow-lg;
+  transition: $transition-slow;
+  &:hover {
+    background-color: $color-primary;
+    transform: scale(1.2);
+  }
+}
+
+.scroll-top-btn .scroll-btn {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  rotate: 90deg;
+  @include white-filter;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.scroll-top-btn.show {
+  @include responsive(sm) {
+    opacity: 1;
+    visibility: visible;
+
+    animation: bounceIn 0.6s ease forwards;
+  }
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+// Variables
+$text-dark: #333;
+$text-light: #aaa;
+$font-main: "Poppins", sans-serif;
+
+$input-padding: 0.6rem 1rem;
+$input-border-radius: 6px;
+$input-font-size: 14px;
+$input-border-color: #ccc;
+$input-focus-border-color: $color-primary;
+$input-bg-color: #fff;
+
+// ✨ Mixins
+.mylivechat_closebtn {
+  display: none;
+}
+
+@mixin chat-input {
+  width: 100% !important;
+  font-family: $font-main !important;
+  font-size: $input-font-size !important;
+  color: $text-dark !important;
+  background-color: $input-bg-color !important;
+  padding: $input-padding !important;
+  border: 1px solid $input-border-color !important;
+  border-radius: $input-border-radius !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  transition: border-color 0.3s ease;
+
+  &::placeholder {
+    color: $text-light !important;
+  }
+
+  &:focus {
+    border-color: $input-focus-border-color !important;
+  }
+}
+
+@mixin chat-button {
+  background-color: $color-primary !important;
+  color: $white !important;
+  font-family: $font-main !important;
+  font-size: $input-font-size !important;
+  border: none !important;
+  border-radius: $input-border-radius !important;
+  padding: 10px 20px !important;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
+
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease !important;
+
+  &:hover {
+    background-color: $white !important;
+    border: 1px solid $color-primary !important;
+    color: $color-primary !important;
+  }
+}
+
+// Collapsed “Leave a message” banner
+.mylivechat_collapsed {
+  position: fixed;
+  right: -5.3rem;
+  @include responsive(md) {
+    bottom: 20rem;
+  }
+  bottom: 10rem;
+  rotate: 270deg;
+  background-color: $color-primary !important;
+  color: $white !important;
+  font-family: $font-main !important;
+  min-width: 200px !important;
+  z-index: 99;
+  cursor: url("../assets/hand-cursor.png"), auto !important;
+}
+
+iframe[src*="poweredby"] {
+  display: none !important;
+}
+
+// Expanded chat header
+.mylivechat_expanded_title {
+  background-color: $color-primary !important;
+  font-family: $font-main !important;
+}
+
+// Input Fields (Online & Offline)
+.mylivechat_prechat_box,
+.mylivechat_offline_box {
+  @include chat-input;
+}
+
+// Textareas (Message Fields)
+.mylivechat_prechat_question_box,
+.mylivechat_offline_question_box,
+.mylivechat_survey_comment_box {
+  @include chat-input;
+  resize: none !important;
+  min-height: 100px;
+}
+
+// Survey Comment Box
+.mylivechat_survey_comment_box {
+  min-height: 80px !important;
+}
+
+// Buttons
+.mylivechat_prechat_submit_button,         // "Start Chat" (online)
+.mylivechat_offline_submit_button,         // "Send" (offline)
+.mylivechat_survey_submit_button {
+  // Survey Submit
+  @include chat-button;
+}
+
+//scroll top animation
+@keyframes bounceIn {
+  0% {
+    transform: translateY(50px) scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px) scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5px) scale(0.95);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+// CSS Property Definition for Animation
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-rotate {
+  from {
+    --border-angle: 0deg;
+  }
+  to {
+    --border-angle: 360deg;
+  }
+}

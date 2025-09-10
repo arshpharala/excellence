@@ -1,0 +1,115 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.terms-conditions {
+  padding: $spacing-xl 0;
+  width: 90vw;
+  margin: 0 auto;
+  color: $color-secondary;
+  font-family: $font-sans;
+  transition: $transition;
+
+  @include responsive(xl) {
+    width: 80.77vw;
+    max-width: 1413px;
+  }
+
+
+  .terms-header {
+    margin-bottom: $spacing-lg;
+
+    .terms-intro {
+      color: $text-light;
+      font-size: 1.05rem;
+      line-height: 1.6;
+
+      @include responsive(md) {
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  // Sections inside Terms
+  .terms-section {
+    margin-bottom: $spacing-lg;
+
+    &__title {
+      font-family: $font-bebas;
+      color: $color-primary;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.25rem;
+
+      @include responsive(md) {
+        font-size: 1.8rem;
+      }
+      @include responsive(lg) {
+        font-size: 2rem;
+      }
+    }
+
+    .terms-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: $color-secondary;
+      margin-bottom: $spacing-md;
+
+      @include responsive(md) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  // Complaints Procedure Section
+  .complaints-procedure {
+    background-color: rgba($color-primary, 0.1);
+    border: 1px solid $color-primary;
+    padding: $spacing-md;
+    border-radius: $border-radius;
+  }
+
+  // Individual complaint steps
+  .complaint-step {
+    margin-bottom: $spacing-md;
+
+    &__title {
+      font-family: $font-bebas;
+      color: $color-secondary;
+      font-size: 1.3rem;
+      margin-bottom: $spacing-xs;
+
+      @include responsive(md) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .complaint-address {
+      font-style: normal;
+      line-height: 1.4;
+      margin-bottom: $spacing-sm;
+      color: $color-secondary;
+    }
+
+    .complaint-email {
+      color: $color-primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // General links styling inside terms section
+  a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color:$color-primary;
+      text-decoration: underline;
+    }
+  }
+}

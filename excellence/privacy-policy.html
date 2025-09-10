@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excellence Code</title>
+
+    <!-- favicon  -->
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- swiper  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- aos animate  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <!-- scroll top button  -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+      <img src="./assets/arrow.png" alt="scroll button" class="scroll-btn" />
+    </button>
+
+    <!-- Navbar -->
+    <nav class="navbar1">
+      <div class="navbar-container">
+        <a href="/" class="logo-link">
+          <img src="./assets/logo-black.png" alt="Company Logo" />
+          <span class="logo_text"
+            >Excellence <br />
+            Code</span
+          >
+        </a>
+
+        <div class="nav-controls">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="#work">Works</a></li>
+            <li><a href="#code">Code</a></li>
+
+            <li class="dropdown">
+              <button
+                class="dropbtn"
+                aria-expanded="false"
+                aria-controls="servicesSubmenu"
+                id="servicesBtn"
+              >
+                Services
+                <img
+                  src="./assets/down-arrow.png"
+                  alt="dropdown Icon"
+                  class="dropdown-arrow"
+                />
+              </button>
+              <ul class="dropdown-content" id="servicesSubmenu">
+                <li>
+                  <a href="./services/website-design-and-development.html"
+                    >Website Design & Development</a
+                  >
+                </li>
+                <li>
+                  <a href="./services/creative-design-service.html"
+                    >Creative Design Services</a
+                  >
+                </li>
+                <li>
+                  <a href="./services/digital-marketing.html"
+                    >Digital Marketing & Social Media</a
+                  >
+                </li>
+                <li>
+                  <a href="./services/events-organising.html"
+                    >Events & Conferences</a
+                  >
+                </li>
+                <li>
+                  <a href="./services/analytics.html"
+                    >Analytics & Optimization</a
+                  >
+                </li>
+                <li>
+                  <a href="./services/email-hosting.html"
+                    >Email & Hosting Services</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="./process.html">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <!-- Mobile menu button -->
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <img src="./assets/bars.png" alt="menu icon" class="icon-menu" />
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      class="menu-model"
+      id="mobileMenu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile Navigation"
+    >
+      <nav class="mobile-menu" aria-label="Mobile menu">
+        <!-- Header -->
+        <div class="menu-header">
+          <a href="/" class="logo-link" aria-label="Homepage">
+            <img src="./assets/logo-black.png" alt="Company Logo" />
+          </a>
+          <button class="close-btn" id="closeMenu" aria-label="Close menu">
+            <img
+              src="./assets/close.png"
+              alt="Close Menu Icon"
+              class="close-icon"
+            />
+          </button>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="menu-content">
+          <ul class="nav-menu">
+            <li>
+              <a href="#hero">
+                <img
+                  src="./assets/menuIcon/home.png"
+                  alt="Home Icon"
+                  class="menu-icon"
+                />
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/about.html">
+                <img
+                  src="./assets/menuIcon/about.png"
+                  alt="About Icon"
+                  class="menu-icon"
+                />
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#work">
+                <img
+                  src="./assets/menuIcon/work.png"
+                  alt="Work Icon"
+                  class="menu-icon"
+                />
+                Work
+              </a>
+            </li>
+            <li>
+              <a href="#code">
+                <img
+                  src="./assets/menuIcon/code.png"
+                  alt="Code Icon"
+                  class="menu-icon"
+                />
+                Code
+              </a>
+            </li>
+
+            <!-- Accordion -->
+            <li class="accordion-item">
+              <button
+                class="dropbtn"
+                aria-expanded="false"
+                aria-controls="servicesSubmenu"
+                id="servicesBtn"
+              >
+                <span class="menu-down">
+                  <img
+                    src="./assets/menuIcon/service.png"
+                    alt="Services Icon"
+                    class="menu-icon service-icon"
+                  />
+                  Services
+                </span>
+                <img
+                  src="./assets/menuIcon/down.png"
+                  alt="Dropdown Arrow Icon"
+                  class="menu-icon dropdown-arrow"
+                />
+              </button>
+
+              <ul class="dropdown-menu-content" id="servicesSubmenu" hidden>
+                <li>
+                  <a href="./services/website-design-and-development.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Website Design & Development
+                  </a>
+                </li>
+                <li>
+                  <a href="./services/creative-design-service.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Creative Design Services
+                  </a>
+                </li>
+                <li>
+                  <a href="./services/digital-marketing.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Digital Marketing & Social Media
+                  </a>
+                </li>
+                <li>
+                  <a href="./services/events-organising.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Events & Conferences
+                  </a>
+                </li>
+                <li>
+                  <a href="./services/analytics.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Analytics & Optimization
+                  </a>
+                </li>
+                <li>
+                  <a href="./services/email-hosting.html">
+                    <img
+                      src="./assets/down-arrow.png"
+                      alt="arrow logo"
+                      class="arrow-logo"
+                    />
+                    Email & Hosting Services
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./process.html">
+                <img
+                  src="./assets/menuIcon/process.png"
+                  alt="Process Icon"
+                  class="menu-icon"
+                />
+                Process
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <img
+                  src="./assets/menuIcon/contact.png"
+                  alt="Contact Icon"
+                  class="menu-icon"
+                />
+                Contact
+              </a>
+            </li>
+          </ul>
+
+          <!-- Social Icons -->
+          <div class="social-container">
+            <h1 class="social-content">follow us</h1>
+            <div
+              class="social-icons"
+              role="navigation"
+              aria-label="Social media"
+            >
+              <a
+                href="https://wa.me/your-number"
+                class="whatsapp"
+                aria-label="WhatsApp"
+              >
+                <img
+                  src="./assets/socialIcon/whatsapp.png"
+                  alt="WhatsApp Icon"
+                />
+              </a>
+              <a
+                href="https://facebook.com/yourprofile"
+                class="facebook"
+                aria-label="Facebook"
+              >
+                <img
+                  src="./assets/socialIcon/facebook.png"
+                  alt="Facebook Icon"
+                />
+              </a>
+              <a
+                href="https://twitter.com/yourprofile"
+                class="twitter"
+                aria-label="Twitter"
+              >
+                <img src="./assets/socialIcon/x.png" alt="Twitter (X) Icon" />
+              </a>
+              <a
+                href="https://instagram.com/yourprofile"
+                class="instagram"
+                aria-label="Instagram"
+              >
+                <img
+                  src="./assets/socialIcon/instagram.png"
+                  alt="Instagram Icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Banner Section -->
+    <div class="banner3__section">
+      <div class="banner3__container">
+        <h1 class="banner3__text">Our privacy policy</h1>
+      </div>
+    </div>
+
+    <section class="privacy-policy">
+      <header class="privacy-policy__header">
+        <p class="privacy-policy__intro">
+          We will keep your details securely and not send you any unsolicited
+          mail in any format.
+        </p>
+      </header>
+
+      <div class="privacy-policy__content">
+        <p>
+          We are committed to protecting your privacy. We will only use the
+          information that we collect about you lawfully (in accordance with the
+          Data Protection Act 1998). We collect information about you for 2
+          reasons: firstly, to process your order and second, to provide you
+          with the best possible service.
+        </p>
+
+        <h3 class="privacy-policy__subtitle">
+          The type of information we will collect about you includes:
+        </h3>
+        <ul class="privacy-policy__list">
+          <li>Your name</li>
+          <li>Address</li>
+          <li>Phone number</li>
+          <li>Email address</li>
+          <li>Any other contact details</li>
+        </ul>
+
+        <p>
+          We will never collect sensitive information (e.g. your racial origin
+          or sexual preferences). The information we hold will be accurate and
+          up to date. You can check the information that we hold about you by
+          emailing us. If you find any inaccuracies we will delete or correct it
+          promptly.
+        </p>
+
+        <p>
+          The personal information which we hold will be held securely in
+          accordance with our internal security policy and the law.
+        </p>
+
+        <p>
+          If we intend to transfer your information outside the EEA (European
+          Economic Area) we will always obtain your consent first.
+        </p>
+
+        <h3 class="privacy-policy__subtitle">Cookies</h3>
+        <p>
+          Cookies are very small files in plain text that are sent to and stored
+          on your computer, tablet or smart phone whenever you visit a website.
+          Cookies allow a website to recognise you, and so deliver benefits such
+          as more tailored content or remember your preferences. As you may have
+          heard, recent legislation requires all websites to gain visitors
+          consent to use cookies. As a result, we advise that we do use cookie
+          and by viewing our website we assume you accept the use of cookies.
+        </p>
+
+        <p>
+          At Excellence Code Advertising, we use cookies on our main website to
+          achieve a number of things; in particular:
+        </p>
+
+        <ul class="privacy-policy__list">
+          <li>
+            To allow us to record users' preferences to improve future website
+            visit experiences, by reducing the amount of keystrokes or clicks to
+            get to the pages you are after
+          </li>
+          <li>
+            To allow us to understand which pages on our website are most
+            popular, using Google Analytics.
+          </li>
+        </ul>
+
+        <p>
+          Excellence Code Advertising will never pass any of the data gathered
+          through cookies to third parties, except for those we believe as
+          trusted third parties such as but not limited to Google Analytics.
+        </p>
+
+        <p>
+          You can manage cookies using the settings in the browsers of most
+          computers, tablets and smartphones which are usually set up to accept
+          cookies by default as they are harmless text files if used correctly.
+          If you wish to adjust them, can do this through your browser settings.
+        </p>
+
+        <h3 class="privacy-policy__subtitle">Payments</h3>
+        <p>
+          When you order domains or services through Excellence Code
+          Advertising, you will be given the option to pay by either cheque or
+          cash.
+        </p>
+
+        <h4 class="privacy-policy__small-title">Cheques:</h4>
+        <p>
+          We accept cheques (drawn in UAE Only) for non-cardholders. We will
+          need approximately 5 working days to process cheque payments before
+          registering domains, or setting up other Internet services.
+        </p>
+
+        <p>
+          If you have any questions/comments about privacy, please
+          <a href="mailto:support@excellencecode.ae">contact us</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+          <div class="newsletter-container">
+            <div class="newsletter-text" data-aos="flip-left">
+              <h1>SUBSCRIBE TO OUR NEWSLETTER!</h1>
+              <p>Get notified about news, webinars, & more</p>
+            </div>
+            <form
+              data-aos="slide-left"
+              class="newsletter-form"
+              action="#"
+              method="post"
+            >
+              <div class="input-wrapper">
+                <!-- <span class="icon">
+                  <img src="./assets/contactIcon/email.png" alt="Email icon" />
+                </span> -->
+                <input
+                  type="email"
+                  name="email"
+                  data-aos="zoom-in"
+                  placeholder="Your email address"
+                  required
+                />
+              </div>
+              <button type="submit" class="newsletter-btn" data-aos="zoom-in">Subscribe</button>
+            </form>
+          </div>
+        </section>
+
+        <div class="footer-top">
+          <!-- Company Info -->
+          <div class="footer-company">
+            <div data-aos="flip-right" class="company-brand">
+              <a href="/" class="footer-company__logo">
+                <img src="./assets/logo-black.png" alt="Company Logo" />
+                <span class="logo_text"
+                  >Excellence <br />
+                  Code</span
+                >
+              </a>
+            </div>
+            <p class="footer-company__text" data-aos="zoom-in-up">
+              We deliver custom software, web, and mobile solutions that are
+              efficient, scalable, and tailored to help your business grow.
+            </p>
+
+            <!-- Social Media -->
+            <div class="footer-section">
+              <ul class="footer-social" data-aos="zoom-in-up">
+                <li>
+                  <a
+                    href="https://wa.me/your-number"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="social-icon"
+                      src="./assets/socialIcon/whatsapp.png"
+                      alt="WhatsApp"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://facebook.com/yourprofile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="social-icon"
+                      src="./assets/socialIcon/facebook.png"
+                      alt="Facebook"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/yourprofile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="social-icon"
+                      src="./assets/socialIcon/x.png"
+                      alt="Twitter"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/yourprofile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      class="social-icon"
+                      src="./assets/socialIcon/instagram.png"
+                      alt="Instagram"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Footer Links -->
+          <div class="footer-section" id="footer">
+            <h3 class="footer-section__title" data-aos="flip-right">
+              Quick Links
+            </h3>
+            <ul class="footer-links" data-aos="zoom-in-up">
+              <li>
+                <a href="/about.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#work">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Works
+                </a>
+              </li>
+              <li>
+                <a href="#code">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Code
+                </a>
+              </li>
+              <li>
+                <a href="#service">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Service
+                </a>
+              </li>
+              <li>
+                <a href="./process.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Process
+                </a>
+              </li>
+              <li>
+                <a href="#contact">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 🔔 Services Section -->
+          <div class="footer-section">
+            <h3 class="footer-section__title" data-aos="flip-right">
+              Services
+            </h3>
+            <ul class="footer-links" data-aos="zoom-in-up">
+              <li>
+                <a href="./services/website-design-and-development.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Website Design & Development
+                </a>
+              </li>
+              <li>
+                <a href="./services/creative-design-service.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Creative Design Services
+                </a>
+              </li>
+              <li>
+                <a href="./services/digital-marketing.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Digital Marketing & Social Media
+                </a>
+              </li>
+              <li>
+                <a href="./services/events-organising.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Events & Conferences
+                </a>
+              </li>
+              <li>
+                <a href="./services/analytics.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Analytics & Optimization
+                </a>
+              </li>
+              <li>
+                <a href="./services/email-hosting.html">
+                  <img
+                    src="./assets/down-arrow.png"
+                    alt="arrow logo"
+                    class="arrow-logo"
+                  />
+                  Email & Hosting Services
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 🔔 contact Section -->
+          <div class="footer-section info">
+            <div class="footer-section">
+              <h3 class="footer-section__title" data-aos="flip-right">
+                Information
+              </h3>
+
+              <ul data-aos="zoom-in-up" class="footer-links contact-info">
+                <li>
+                  <a href="tel:+971552440610">
+                    <img
+                      src="./assets/contactIcon/mobile.png"
+                      alt="Phone icon"
+                    />
+                    <span>+971-552440610</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info@excellencecode.com">
+                    <img
+                      src="./assets/contactIcon/email.png"
+                      alt="Email icon"
+                    />
+                    <span>info@excellencecode.com</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://goo.gl/maps/your-location"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/contactIcon/location-pin.png"
+                      alt="Location icon"
+                    />
+                    <span>
+                      706, Sobha Ivory 2, Alama'al Street, Business Bay, Dubai,
+                      UAE
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- 🔔 Opening Hours -->
+            <div class="opening-hours" data-aos="zoom-in-up">
+              <h4 class="footer-subtitle">Opening Hours</h4>
+              <ul class="footer-links">
+                <li><span>Monday – Saturday:</span> 8:30 AM – 5:00 PM</li>
+                <li><span>Sunday:</span> Closed</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-container">
+        <div class="footer-bottom">
+          <!-- Legal Links -->
+
+          <div class="footer-legal">
+            <ul class="legal-links">
+              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+              <li>
+                <a href="/terms-and-conditions.html">Terms & Conditions</a>
+              </li>
+              <li><a href="/careers.html">Careers</a></li>
+            </ul>
+          </div>
+          <!-- Copyright -->
+          <p class="footer-copy">
+            © <span id="currentYear"></span> <a href="/">Excellence Code</a>.
+            All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- MyLiveChat Integration -->
+    <script type="text/javascript">
+      function add_chatinline() {
+        var hccid = 41780128;
+        var nt = document.createElement("script");
+        nt.async = true;
+        nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid;
+        var ct = document.getElementsByTagName("script")[0];
+        ct.parentNode.insertBefore(nt, ct);
+      }
+      add_chatinline();
+    </script>
+  </body>
+</html>
