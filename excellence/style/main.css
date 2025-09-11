@@ -2040,8 +2040,9 @@
   }
 }
 .vas-section .description {
-  display: grid;
-  place-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
   font-weight: 500;
   font-size: 1rem;
   color: #6b7280;

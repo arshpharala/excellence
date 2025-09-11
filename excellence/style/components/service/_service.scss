@@ -44,8 +44,10 @@
   }
 
   .description {
-    display: grid;
-    place-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
     @include text-semibold;
 
     @include responsive(md) {
