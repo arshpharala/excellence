@@ -517,9 +517,8 @@
   border-color: #ff7f50;
 }
 .hero .hero-container .hero-grid .hero-text .button-wrapper .btn-link:hover .btn-icon {
-  background-color: rgb(41.0074626866, 236.4925373134, 171.7164179104);
+  background-color: #ff7f50;
   transform: scale(1.1);
-  border-color: #10b981;
 }
 .hero .hero-container .social-box {
   position: absolute;
