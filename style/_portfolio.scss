@@ -130,7 +130,9 @@
   /* Individual project card */
   .project-card {
     background-color: white;
-    border-radius: 16px 16px 0 0;
+    // border-radius: 16px 16px 0 0;
+    border-radius: 2rem;
+
     overflow: hidden;
     cursor: pointer;
     width: 100%;
@@ -140,8 +142,7 @@
     transition: box-shadow 0.5s ease;
     display: flex;
     flex-direction: column;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+   
   }
 
   .project-card:hover {
@@ -150,14 +151,16 @@
 
   .image-wrapper {
     overflow: hidden;
+    border-radius: 2rem;
+    
   }
 
   .project-image {
     width: 100%;
+    border-radius: 2rem;
 
     object-fit: cover;
     transition: transform 0.5s ease;
-    border-radius: 2rem;
 
     @include responsive(lg) {
       max-height: 432px;
@@ -166,8 +169,8 @@
 
   .project-card:hover .project-image {
     transform: scale(1.1);
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    // border-bottom-right-radius: 0;
+    // border-bottom-left-radius: 0;
   }
 
   .project-details {

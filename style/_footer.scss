@@ -1,9 +1,124 @@
 @use "mixins" as *;
 @use "variables" as *;
 
+// /* Newsletter Section */
+// .newsletter-section {
+//   background: linear-gradient(
+//     90deg,
+//     $color-tertiary 0%,
+//     lighten($color-tertiary, 5%) 100%
+//   );
+//   background: conic-gradient(
+//     at center top,
+//    rgb(21, 128, 61),$color-success, rgb(21, 128, 61)
+//   );
+
+//   padding: $spacing-lg $spacing-sm;
+//   border-radius: $border-radius;
+//   margin-top: -10rem;
+//   display: flex;
+//   justify-content: center;
+//   box-shadow: $shadow-lg;
+
+//   .newsletter-container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     align-items: center;
+//     max-width: 1200px;
+//     width: 100%;
+//     gap: $spacing-md;
+
+//     .newsletter-text {
+//       flex: 1 1 300px;
+
+//       h2 {
+//         font-size: 1.6rem;
+//         @include text-bold;
+//         margin-bottom: $spacing-xs;
+//         color: white;
+//       }
+
+//       p {
+//         font-size: 0.75rem;
+//         color: $bg-gray-lighter;
+//       }
+
+//       @include responsive(md) {
+//         h2 {
+//           font-size: 2rem;
+//         }
+
+//         p {
+//           font-size: 1rem;
+//         }
+//       }
+//     }
+
+//     .newsletter-form {
+//       flex: 1 1 300px;
+//       display: flex;
+//       align-items: center;
+
+//       .input-wrapper {
+//         position: relative;
+//         flex: 1;
+
+//         input {
+//           width: 100%;
+//           padding: 0.75rem 1rem 0.75rem 2.5rem;
+//           border: 1px solid $border-default;
+//           border-bottom-left-radius: $border-radius;
+//           border-top-left-radius: $border-radius;
+//           font-size: 1rem;
+//           outline: none;
+
+//           &:focus {
+//             border-color: $color-primary;
+//           }
+//         }
+
+//         .icon {
+//           position: absolute;
+//           top: 50%;
+//           left: 0.75rem;
+//           transform: translateY(-50%);
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+
+//           img {
+//             width: 1rem;
+//             height: 1rem;
+//           }
+//         }
+//       }
+
+//       button {
+//         background-color: $color-primary;
+//         color: white;
+//         padding: 0.75rem 1rem 0.75rem 2.5rem;
+
+//         border-bottom-right-radius: $border-radius;
+//         border-top-right-radius: $border-radius;
+//         @include text-semibold;
+//         font-size: 1rem;
+
+//         cursor: pointer;
+//         transition: $transition;
+
+//         &:hover {
+//           background-color: darken($color-primary, 10%);
+//         }
+//       }
+//     }
+//   }
+// }
+
 .footer {
+  // margin-top: 4rem;
   background-color: #000;
-  padding: 3rem 0 2rem;
+  padding: 0 2rem 3rem 2rem;
   color: #fff;
   font-family: "Inter", sans-serif;
 
@@ -22,20 +137,17 @@
        TOP SECTION (GRID)
     ============================== */
     .footer-top {
-      display: grid;
-      grid-template-columns: 1fr;
+      padding-top: 3rem;
+      display: flex;
+      flex-wrap: wrap;
       gap: 2rem;
+      flex-direction: column;
       align-items: start;
 
       @include responsive(sm) {
-        grid-template-columns: repeat(2, 1fr);
-      }
+        flex-direction: row;
 
-      @include responsive(md) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      @include responsive(lg) {
-        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
       }
 
       .footer-logo img {
@@ -94,7 +206,8 @@
       ============================== */
       .footer-links {
         display: grid;
-        gap: 0.5rem;
+        column-gap: 4.5rem;
+        row-gap: 0.5rem;
         grid-template-columns: repeat(2, auto);
 
         li {
@@ -115,39 +228,38 @@
               transform: translateX(4px);
             }
           }
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
 
-     
-        }     .dropdown-content {
-            display: none;
-            position: absolute;
-           
-            background-color: #f7f7f7;
-            box-shadow: $shadow-lg;
-            width: 650px;
-            max-width: 650px;
-            padding: 0.75rem;
-            border-radius: 6px;
-            z-index: 1000;
-            list-style: none;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            color: $color-text-base;
-            opacity: 0;
-            transform: translateY(10px);
-            pointer-events: none;
+          background-color: #f7f7f7;
+          box-shadow: $shadow-lg;
+          width: 650px;
+          max-width: 650px;
+          padding: 0.75rem;
+          border-radius: 6px;
+          z-index: 1000;
+          list-style: none;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+          color: $color-text-base;
+          opacity: 0;
+          transform: translateY(10px);
+          pointer-events: none;
 
-            a {
-              border-radius: 4px;
-              width: 100%;
-              color: $color-secondary;
-              transition: color 0.3s ease, background-color 0.3s ease;
-              &:hover,
-              &:focus {
-                color: $color-primary;
-                background-color: rgba(0, 123, 255, 0.1);
-                outline: none;
-              }
+          a {
+            border-radius: 4px;
+            width: 100%;
+            color: $color-secondary;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            &:hover,
+            &:focus {
+              color: $color-primary;
+              background-color: rgba(0, 123, 255, 0.1);
+              outline: none;
             }
           }
+        }
 
         // Show dropdown on hover/focus with smooth animation
         .dropdown:hover .dropdown-content,
@@ -216,15 +328,16 @@
       display: flex;
       flex-direction: column-reverse;
       row-gap: 1rem;
-      align-items: left;
+      align-items: center;
+      margin-top: 85px;
 
-      @include responsive(md) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-      @include responsive(xl) {
-        grid-template-columns: repeat(3, 1fr);
-      }
+      // @include responsive(md) {
+      //   display: grid;
+      //   grid-template-columns: repeat(2, 1fr);
+      // }
+      // @include responsive(xl) {
+      //   grid-template-columns: repeat(3, 1fr);
+      // }
 
       .footer-hidden {
         display: none;

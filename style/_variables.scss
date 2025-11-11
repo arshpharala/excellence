@@ -14,15 +14,8 @@ $bg-gray-light: #f3f4f6;
 $bg-gray-lighter: #e5e7eb;
 $bg-success-dark: #207211;
 
-$bg-success-dark-light: lighten($bg-success-dark, 15%);
-$bg-success-dark-dark: darken($bg-success-dark, 10%);
 
-$bg-success-gradient: linear-gradient(
-  135deg,
-  $bg-success-dark-light,
-  $bg-success-dark,
-  $bg-success-dark-dark
-);
+$bg-success-gradient:linear-gradient(135deg, rgb(50.6870229008, 180.572519084, 26.927480916), #207211, rgb(19.5419847328, 69.6183206107, 10.3816793893));
 
 $border-default: #d1d5db;
 

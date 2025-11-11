@@ -2,402 +2,412 @@
 @use "variables" as *;
 
 .navbar {
-  position: fixed;
-  top: 2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-inline: 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid $border-default;
-  border-radius: 2rem;
-  z-index: 50;
-  color: $color-secondary;
-  transition: $transition-slow;
-  width: auto;
+    position: fixed;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-inline: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid $border-default;
+    border-radius: 2rem;
+    z-index: 50;
+    color: $color-secondary;
+    transition: $transition-slow;
+    width: auto;
 
-  &.scrolled {
-    background-color: white;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    top: 0;
-    border-radius: 0;
-    width: 100vw;
-  }
-
-  .navbar-container {
-    width: 90vw;
-    margin-inline: auto;
-    @include responsive(lg) {
-      max-width: 1366px;
-    }
-    @include flex-center;
-    justify-content: space-between;
-    height: 5rem;
-    padding-inline: 1.25rem;
-  }
-
-  .logo-link {
-    @include flex-center;
-    gap: 0.25rem;
-
-    img {
-      width: 2.5rem;
-      height: 2.5rem;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-    }
-    &:hover img {
-      transform: scale(1.1);
-    }
-  }
-
-  .nav-links {
-    display: none;
-    list-style: none;
-    position: relative;
-
-    @include responsive(lg) {
-      display: flex;
-      gap: 2rem;
+    &.scrolled {
+        background-color: white;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        top: 0;
+        border-radius: 0;
+        width: 100vw;
     }
 
-    li {
-      position: relative;
-
-      a,
-      .dropbtn {
-        text-transform: capitalize;
-        font-size: 1rem;
-        cursor: pointer;
-        color: $color-secondary;
-        transition: color 0.3s ease;
-        padding: 0.25rem 0.5rem;
-        display: inline-block;
-
-        &:hover,
-        &:focus {
-          color: $color-primary;
-          outline: none;
+    .navbar-container {
+        width: 90vw;
+        margin-inline: auto;
+        @include responsive(lg) {
+            max-width: 1366px;
         }
-      }
+        @include flex-center;
+        justify-content: space-between;
+        height: 5rem;
+        padding-inline: 1.25rem;
     }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: -100%;
-      background-color: #f7f7f7;
-      box-shadow: $shadow-lg;
-      width: 650px;
-      max-width: 650px;
-      padding: 0.75rem;
-      border-radius: 6px;
-      z-index: 1000;
-      list-style: none;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      color: $color-text-base;
-      opacity: 0;
-      transform: translateY(10px);
-      pointer-events: none;
+    .logo-link {
+        @include flex-center;
+        gap: 0.5rem;
+        transition: $transition-slow;
 
-      a {
-        border-radius: 4px;
-        transition: color 0.3s ease, background-color 0.3s ease;
-        padding: 0.5rem;
-        width: 100%;
-
-        &:hover,
-        &:focus {
-          background-color: rgba(0, 123, 255, 0.1);
-          outline: none;
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
+            object-fit: contain;
+             filter: invert(100%) brightness(100%) contrast(100%)
+                hue-rotate(180deg) saturate(0%);
+              scale: 1.3;
         }
-      }
+        .logo_text {
+            @include text-bold;
+            font-size: 1rem;
+            color: $color-secondary;
+            text-transform: capitalize;
+            font-family: serif;
+
+        }
+        &:hover {
+            .logo_text {
+                color: $color-primary;
+            }
+        }
     }
 
-    // Show dropdown on hover/focus with smooth animation
-    .dropdown:hover .dropdown-content,
-    .dropdown:focus-within .dropdown-content {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-  }
-
-  .nav-controls {
-    @include flex-center;
-    gap: 1rem;
-
-    .consult-btn {
-      display: none;
-
-      @include responsive(lg) {
-        display: inline-block;
-      }
-
-      background: $color-primary;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 9999px;
-      text-decoration: none;
-      transition: $transition;
-      border: 1px solid transparent;
-      @include text-bold;
-
-      &:hover,
-      &:focus {
-        background: white;
-        color: $color-primary;
-        border: 1px solid $color-primary;
-        outline: none;
-      }
-    }
-
-    .menu-toggle {
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-
-      img.icon-menu {
-        display: block;
-        width: 1.5rem;
-        height: 1.5rem;
-        transition: transform 0.3s ease;
-      }
-
-      &:hover img.icon-menu,
-      &:focus img.icon-menu {
-        transform: scale(1.1);
-        outline: none;
-      }
-
-      @include responsive(lg) {
+    .nav-links {
         display: none;
-      }
+        list-style: none;
+        position: relative;
+
+        @include responsive(lg) {
+            display: flex;
+            gap: 2rem;
+        }
+
+        li {
+            position: relative;
+
+            a,
+            .dropbtn {
+                text-transform: capitalize;
+                font-size: 1rem;
+                cursor: pointer;
+                color: $color-secondary;
+                transition: color 0.3s ease;
+                padding: 0.25rem 0.5rem;
+                display: inline-block;
+
+                &:hover,
+                &:focus {
+                    color: $color-primary;
+                    outline: none;
+                }
+            }
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: -100%;
+            background-color: #f7f7f7;
+            box-shadow: $shadow-lg;
+            width: 650px;
+            max-width: 650px;
+            padding: 0.75rem;
+            border-radius: 6px;
+            z-index: 1000;
+            list-style: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            color: $color-text-base;
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+
+            a {
+                border-radius: 4px;
+                transition: color 0.3s ease, background-color 0.3s ease;
+                padding: 0.5rem;
+                width: 100%;
+
+                &:hover,
+                &:focus {
+                    background-color: rgba(0, 123, 255, 0.1);
+                    outline: none;
+                }
+            }
+        }
+
+        // Show dropdown on hover/focus with smooth animation
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
     }
-  }
+
+    .nav-controls {
+        @include flex-center;
+        gap: 1rem;
+
+        .consult-btn {
+            display: none;
+
+            @include responsive(lg) {
+                display: inline-block;
+            }
+
+            background: $color-primary;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: $transition;
+            border: 1px solid transparent;
+            @include text-bold;
+
+            &:hover,
+            &:focus {
+                background: white;
+                color: $color-primary;
+                border: 1px solid $color-primary;
+                outline: none;
+            }
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+
+            img.icon-menu {
+                display: block;
+                width: 1.5rem;
+                height: 1.5rem;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover img.icon-menu,
+            &:focus img.icon-menu {
+                transform: scale(1.1);
+                outline: none;
+            }
+
+            @include responsive(lg) {
+                display: none;
+            }
+        }
+    }
 }
 
 /* Mobile Menu */
 .mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 80%;
-  max-width: 320px;
-  height: 100%;
-  background-color: #ffffff;
-  opacity: 0.98;
-  transition: $transition-slow;
-  z-index: 9990;
-  padding: 1.5rem;
-  box-shadow: $shadow-lg;
-  overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.98;
+    transition: $transition-slow;
+    z-index: 9990;
+    padding: 1.5rem;
+    box-shadow: $shadow-lg;
+    overflow-y: auto;
 
-  &.active {
-    right: 0;
-  }
+    &.active {
+        right: 0;
+    }
 
-  ul {
-    list-style: none;
-    padding: 2rem 0 1rem;
-    margin-top: 2rem;
+    ul {
+        list-style: none;
+        padding: 2rem 0 1rem;
+        margin-top: 2rem;
 
-    li {
-      margin-bottom: 1rem;
+        li {
+            margin-bottom: 1rem;
 
-      a,
-      span {
+            a,
+            span {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.75rem 1rem;
+                border-radius: 6px;
+                font-size: 1rem;
+                color: $color-secondary;
+                text-transform: capitalize;
+                @include text-semibold;
+                cursor: pointer;
+                text-decoration: none;
+                transition: $transition-slow;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-primary;
+                    color: #ffffff;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .menu-icon {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+    .menu-down {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .dropdown-menu-content {
+        display: none;
+        background-color: $bg-gray-light;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+
+        padding-left: 1.25rem;
+
+        li {
+            margin-bottom: 0.5rem;
+            list-style: disc;
+
+            a {
+                font-size: 0.8rem;
+                color: $color-secondary;
+                padding: 0.5rem 0;
+                padding-left: 0.3rem;
+                transition: $transition;
+
+                &:hover,
+                &:focus {
+                    background-color: rgba(0, 123, 255, 0.1);
+                    color: $color-primary;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu-content[hidden] {
+        display: none;
+    }
+
+    .accordion-item.open > .dropdown-menu-content {
+        display: block;
+    }
+
+    .accordion-item .dropdown-arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .accordion-item.open {
+        background-color: $color-primary;
+        color: $color-primary;
+        border-radius: 6px;
+    }
+
+    .accordion-item.open .dropdown-arrow {
+        transform: rotate(180deg);
+        transition: $transition-slow;
+    }
+
+    .dropbtn {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        padding: 0.75rem 1rem;
-        border-radius: 6px;
-        font-size: 1rem;
-        color: $color-secondary;
-        text-transform: capitalize;
-        @include text-semibold;
-        cursor: pointer;
-        text-decoration: none;
-        transition: $transition-slow;
-
-        &:hover,
-        &:focus {
-          background-color: $color-primary;
-          color: #ffffff;
-          outline: none;
-        }
-      }
-
+        justify-content: space-between;
+        width: 100%;
     }
-  }
 
-  .menu-icon {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-  }
-
-  .menu-down {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
-
-  .dropdown-menu-content {
-    display: none;
-    background-color: $bg-gray-light;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-
-    padding-left: 1.25rem;
-
-    li {
-      margin-bottom: 0.5rem;
-      list-style: disc;
-
-      a {
-        font-size: 0.8rem;
-        color: $color-secondary;
-        padding: 0.5rem 0;
-        padding-left: 0.3rem;
-        transition: $transition;
-
-        &:hover,
-        &:focus {
-          background-color: rgba(0, 123, 255, 0.1);
-          color: $color-primary;
-          outline: none;
-        }
-      }
+    .dropbtn img.menu-icon {
+        filter: brightness(0.3) sepia(1) saturate(5) hue-rotate(-20deg);
+        transition: filter 0.3s ease;
     }
-  }
 
-  .dropdown-menu-content[hidden] {
-    display: none;
-  }
-
-  .accordion-item.open > .dropdown-menu-content {
-    display: block;
-  }
-
-  .accordion-item .dropdown-arrow {
-    transition: transform 0.3s ease;
-  }
-
-  .accordion-item.open {
-    background-color: $color-primary;
-    color: $color-primary;
-    border-radius: 6px;
-  }
-
-  .accordion-item.open .dropdown-arrow  {
-    transform: rotate(180deg);
-    transition: $transition-slow;
-   
-
-  }
-
-  .dropbtn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .dropbtn img.menu-icon {
-    filter: brightness(0.3) sepia(1) saturate(5) hue-rotate(-20deg);
-    transition: filter 0.3s ease;
-  }
-
-  .dropbtn:hover img.menu-icon,
-  .dropbtn:focus img.menu-icon {
-    filter: brightness(1) sepia(1) saturate(5) hue-rotate(-20deg);
-  }
+    .dropbtn:hover img.menu-icon,
+    .dropbtn:focus img.menu-icon {
+        filter: brightness(1) sepia(1) saturate(5) hue-rotate(-20deg);
+    }
 }
 
 .consultation-btn {
-  background: $color-primary;
-  color: white;
-  width: 100%;
-  border-radius: 6px;
-  padding: 0.75rem 1.5rem;
-  transition: $transition;
-  border: 1px solid transparent;
-  @include text-bold;
+    background: $color-primary;
+    color: white;
+    width: 100%;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    transition: $transition;
+    border: 1px solid transparent;
+    @include text-bold;
 
-  &:hover,
-  &:focus {
-    background: white;
-    color: $color-primary;
-    border: 1px solid $color-primary;
-    outline: none;
-  }
+    &:hover,
+    &:focus {
+        background: white;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        outline: none;
+    }
 }
 
 /* Close Button */
 .close-btn {
-  width: 2.5rem;
-  height: 2.5rem;
-  border: none;
-  border-radius: 9999px;
-  cursor: pointer;
-  float: right;
-  transition: $transition;
-  background-color: $color-error;
-  @include grid-center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    float: right;
+    transition: $transition;
+    background-color: $color-error;
+    @include grid-center;
 
-  img {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+    img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 
-  &:hover,
-  &:focus {
-    border: 1px solid $color-error;
-    transform: scale(1.1);
-    outline: none;
-  }
+    &:hover,
+    &:focus {
+        border: 1px solid $color-error;
+        transform: scale(1.1);
+        outline: none;
+    }
 }
 
 // Social icons - no change, looks good
 .social-icons {
-  display: flex;
-  margin-top: 1rem;
-  justify-content: space-around;
-  gap: 1rem;
-
-  img {
-    width: 1.5rem;
-    height: 1.5rem;
-    filter: grayscale(100%) brightness(0%);
-    transition: $transition;
-  }
-
-  a.whatsapp:hover img {
-    filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg)
-      brightness(90%) contrast(101%);
-  }
-
-  a.facebook:hover img {
-    filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg)
-      brightness(95%) contrast(97%);
-  }
-
-  a.twitter:hover {
-    border-radius: 0.5rem;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-around;
+    gap: 1rem;
 
     img {
-      filter: grayscale(100%) brightness(1000%);
-      padding: 0.1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        filter: grayscale(100%) brightness(0%);
+        transition: $transition;
     }
-    background-color: $color-secondary;
-  }
 
-  a.instagram:hover img {
-    filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg)
-      brightness(90%) contrast(105%);
-  }
+    a.whatsapp:hover img {
+        filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg)
+            brightness(90%) contrast(101%);
+    }
+
+    a.facebook:hover img {
+        filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg)
+            brightness(95%) contrast(97%);
+    }
+
+    a.twitter:hover {
+        border-radius: 0.5rem;
+
+        img {
+            filter: grayscale(100%) brightness(1000%);
+            padding: 0.1rem;
+        }
+        background-color: $color-secondary;
+    }
+
+    a.instagram:hover img {
+        filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg)
+            brightness(90%) contrast(105%);
+    }
 }

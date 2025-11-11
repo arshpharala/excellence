@@ -48,6 +48,7 @@
   place-items: center;
 }
 
+
 @mixin responsive($breakpoint, $type: max) {
   $size: null;
 
