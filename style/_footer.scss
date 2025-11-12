@@ -116,7 +116,6 @@
 // }
 
 .footer {
-  // margin-top: 4rem;
   background-color: #000;
   padding: 0 2rem 3rem 2rem;
   color: #fff;
@@ -128,9 +127,13 @@
     width: 90vw;
     position: relative;
 
+  margin-top: 2rem;
+
+
     @include responsive(lg) {
       width: 83.46vw;
       max-width: 1366px;
+  margin-top: 0;
     }
 
     /* ==============================

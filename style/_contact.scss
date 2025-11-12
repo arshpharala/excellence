@@ -9,13 +9,15 @@
     width: 95vw;
     background-color: white;
     border-radius: 2.5rem 2.5rem 0 0;
-        padding: 75px 33px 0 ;
+        padding: 45px 12px 0 ;
 
 
     @include responsive(lg) {
         // width: 83.46vw;
         width: 90vw;
         max-width: 1400px;
+        padding: 75px 33px 0 ;
+
     }
 }
 
@@ -256,6 +258,15 @@
 
             @include responsive(md) {
                 font-size: medium;
+            }
+
+            a{
+                color: $color-secondary;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
