@@ -4,10 +4,12 @@
   left: 50%;
   transform: translateX(-50%);
   padding-inline: 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid #d1d5db;
   border-radius: 2rem;
   z-index: 50;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* for Safari support */
   color: #111827;
   transition: all 0.5s ease;
   width: auto;
@@ -386,7 +388,6 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -10;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .hero video {
@@ -397,7 +398,6 @@
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: 0.7;
 }
 .hero {
   display: grid;
@@ -441,7 +441,7 @@
 }
 .hero .hero-container .hero-grid .hero-text h1 {
   text-transform: uppercase;
-  color: #101828;
+  color: white;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.25;
@@ -466,7 +466,7 @@
 .hero .hero-container .hero-grid .hero-text p {
   font-size: 0.9rem;
   font-weight: 400;
-  color: #364153;
+  color: #e5e7eb;
   max-width: 25rem;
   text-align: left;
   padding: 0;

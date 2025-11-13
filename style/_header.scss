@@ -7,10 +7,12 @@
   left: 50%;
   transform: translateX(-50%);
   padding-inline: 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid $border-default;
   border-radius: 2rem;
   z-index: 50;
+  backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px); /* for Safari support */
   color: $color-secondary;
   transition: $transition-slow;
   width: auto;
