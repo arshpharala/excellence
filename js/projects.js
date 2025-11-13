@@ -31,7 +31,7 @@ export default function initProjects() {
           <div class="project-footer">
             <hr class="divider" />
             <button class="arrow-btn" data-index="${index}">
-                            <img src="./assets/arrow.png" alt="Arrow Icon" />
+                            <img src="assets/arrow.png" alt="Arrow Icon" />
           </div>
           <p class="project-subtitle">${project.subtitle}</p>
         </div>

@@ -215,12 +215,13 @@
   .arrow-btn {
     background-color: $color-secondary;
     transition: $transition-slow;
-    width: 2.8rem;
+    width: 2.7rem;
     height: 2.7rem;
     @include grid-center;
     font-size: 1rem;
     text-align: center;
     border-radius: 9999px;
+    padding: 0.5rem;
     border: 1px solid $color-secondary;
     cursor: pointer;
     &:hover {

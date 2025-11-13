@@ -23,7 +23,7 @@
       .subheading {
         font-size: 0.8rem;
         @include responsive(md) {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
         }
         @include text-medium;
         color: $color-text-base;

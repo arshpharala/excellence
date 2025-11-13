@@ -18,10 +18,14 @@
 
   .heading h2 {
     @include text-semibold;
-    font-size: 1.85rem;
-    line-height: 1.2;
+    line-height: 1.1;
+    // font-size: 1.85rem;
+    // @include responsive(md) {
+    //   font-size: 2.55rem;
+    // }
+     font-size: 1.75rem;
     @include responsive(md) {
-      font-size: 2.55rem;
+      font-size: $spacing-lg;
     }
     color: #fff;
   }
