@@ -65,7 +65,7 @@ video {
 
       @include responsive(lg) {
         @include grid-center;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2.2fr 1fr;
       }
 
       .hero-text {
