@@ -12,7 +12,7 @@
   border-radius: 2rem;
   z-index: 50;
   backdrop-filter: blur(8px);
--webkit-backdrop-filter: blur(8px); /* for Safari support */
+  -webkit-backdrop-filter: blur(8px); /* for Safari support */
   color: $color-secondary;
   transition: $transition-slow;
   width: auto;
@@ -30,6 +30,8 @@
     margin-inline: auto;
     @include responsive(lg) {
       max-width: 1366px;
+      width: 83.46vw;
+
     }
     @include flex-center;
     justify-content: space-between;
