@@ -8,8 +8,8 @@
   border-bottom: 1px solid #d1d5db;
   border-radius: 2rem;
   z-index: 50;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); /* for Safari support */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* for Safari support */
   color: #111827;
   transition: all 0.5s ease;
   width: auto;
