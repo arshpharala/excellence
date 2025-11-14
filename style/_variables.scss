@@ -1,7 +1,8 @@
 $color-primary: #ff7f50;
 $color-tertiary: #f5f5dc;
 $color-secondary: #111827;
-
+$white: #ffffff;
+$bg-light: #fafafa;
 $color-text-base: #374151;
 $color-text-muted: #6b7280;
 $color-text-subtle: #9ca3af;
@@ -36,6 +37,7 @@ $transition-slow: all 0.5s ease;
 
 // Spacing variables
 $spacing-xs: 0.5rem;
+$spacing-xm: 0.75rem;
 $spacing-sm: 1rem;
 $spacing-md: 2rem;
 $spacing-lg: 3rem;

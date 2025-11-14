@@ -38,16 +38,15 @@
     @include text-semibold;
 
     line-height: 1.25;
-   font-size: 1.5rem;
+    font-size: 1.5rem;
 
-          @include responsive(md) {
-            font-size: 2.25rem;
-          }
+    @include responsive(md) {
+      font-size: 2.25rem;
+    }
 
-          @include responsive(lg) {
-            font-size: 3rem;
-          }
-       
+    @include responsive(lg) {
+      font-size: 3rem;
+    }
   }
 
   .description {
@@ -148,7 +147,6 @@
     transition: box-shadow 0.5s ease;
     display: flex;
     flex-direction: column;
-   
   }
 
   .project-card:hover {
@@ -158,7 +156,6 @@
   .image-wrapper {
     overflow: hidden;
     border-radius: 2rem;
-    
   }
 
   .project-image {
@@ -168,9 +165,8 @@
     object-fit: cover;
     transition: transform 0.5s ease;
 
-    @include responsive(lg) {
-      max-height: 432px;
-    }
+    aspect-ratio: 1 / 1;
+    height: 432px;
   }
 
   .project-card:hover .project-image {

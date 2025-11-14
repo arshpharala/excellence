@@ -164,9 +164,9 @@
   transition: $transition;
     width: 100%;
 
-  @include responsive(lg) {
-    width: 30%;
-  }
+  // @include responsive(lg) {
+  //   width: 30%;
+  // }
   &:hover {
     .contact__submit-btn {
       background-color: white;
