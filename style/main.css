@@ -595,7 +595,7 @@
   }
 }
 .vas-section .vas-heading {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: left;
   line-height: 1.2;
@@ -635,12 +635,17 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 .vas-section .vas-grid .vas-subheading {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
   color: #111827;
 }
 @media (min-width: 48rem) {
+  .vas-section .vas-grid .vas-subheading {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 64rem) {
   .vas-section .vas-grid .vas-subheading {
     font-size: 3rem;
   }
@@ -807,9 +812,14 @@
 .portfolio-section .intro-text .title {
   font-weight: 500;
   line-height: 1.25;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 48rem) {
+  .portfolio-section .intro-text .title {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 64rem) {
   .portfolio-section .intro-text .title {
     font-size: 3rem;
   }
@@ -1049,9 +1059,14 @@
   color: #111827;
   font-weight: 400;
   line-height: 1.25;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 48rem) {
+  .header-content h2 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 64rem) {
   .header-content h2 {
     font-size: 3rem;
   }
@@ -1352,9 +1367,14 @@
 .why-choose-us .heading h2 {
   font-weight: 500;
   line-height: 1.1;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 48rem) {
+  .why-choose-us .heading h2 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 64rem) {
   .why-choose-us .heading h2 {
     font-size: 3rem;
   }
@@ -1422,9 +1442,14 @@
   }
 }
 .team-section .section-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 48rem) {
+  .team-section .section-title {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 64rem) {
   .team-section .section-title {
     font-size: 3rem;
   }
@@ -1561,9 +1586,14 @@
 }
 
 .contact-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 48rem) {
+  .contact-title {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 64rem) {
   .contact-title {
     font-size: 3rem;
   }
@@ -1705,6 +1735,12 @@
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
+  width: 100%;
+}
+@media (min-width: 64rem) {
+  .contact__submit-group {
+    width: 30%;
+  }
 }
 .contact__submit-group:hover .contact__submit-btn {
   background-color: white;
@@ -1720,7 +1756,7 @@
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
   color: white;
   background-color: #ff7f50;
   border: 1px solid transparent;
@@ -1902,9 +1938,14 @@
   color: #374151;
 }
 .testimonial-section .testimonial-header .testimonial-left .main-heading {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 48rem) {
+  .testimonial-section .testimonial-header .testimonial-left .main-heading {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 64rem) {
   .testimonial-section .testimonial-header .testimonial-left .main-heading {
     font-size: 3rem;
   }

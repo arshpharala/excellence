@@ -13,7 +13,7 @@
     max-width: 1366px;
   }
   .vas-heading {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 
     @include text-medium;
     text-align: left;
@@ -22,9 +22,11 @@
     @include responsive(md) {
       font-size: 2.25rem;
     }
+
     @include responsive(lg) {
       font-size: 3rem;
     }
+  
   }
 
   .vas-grid {
@@ -53,14 +55,19 @@
     }
 
     .vas-subheading {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       @include text-medium;
       margin-bottom: 1.5rem;
       color: $color-secondary;
 
-      @include responsive(md) {
-        font-size: 3rem;
-      }
+       @include responsive(md) {
+            font-size: 2.25rem;
+          }
+
+          @include responsive(lg) {
+            font-size: 3rem;
+          }
+        
     }
 
     .vas-values {
