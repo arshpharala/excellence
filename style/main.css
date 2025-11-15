@@ -537,7 +537,7 @@
 
 .social-box {
   position: fixed;
-  right: 1rem;
+  right: 0.75rem;
   top: 50%;
   display: none;
   z-index: 100;
@@ -545,6 +545,11 @@
 @media (min-width: 48rem) {
   .social-box {
     display: inline-flex;
+  }
+}
+@media (min-width: 64rem) {
+  .social-box {
+    right: 1rem;
   }
 }
 .social-box {
@@ -611,7 +616,7 @@
 }
 @media (min-width: 64rem) {
   .vas-section .vas-heading {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 }
 .vas-section .vas-grid {
@@ -1422,7 +1427,7 @@
 }
 .why-choose-us .feature-card .feature-title {
   color: #111827;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.1rem;
   font-size: 1.125rem;
 }
@@ -2481,38 +2486,39 @@
     font-size: 1rem;
   }
 }
-.about-page .hero {
+.about-page .info {
   text-align: center;
-  padding: 2rem;
+  padding: 4rem 2rem;
   background: linear-gradient(to bottom, transparent 0%, #fff 100%, #fff 100%), url("../assets/bg-4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
   position: relative;
+  min-height: 450px;
 }
-.about-page .hero h1 {
+.about-page .info h1 {
   color: #fafafa;
   letter-spacing: 0.8px;
   font-size: 1.5rem;
 }
 @media (min-width: 48rem) {
-  .about-page .hero h1 {
+  .about-page .info h1 {
     font-size: 2.25rem;
   }
 }
 @media (min-width: 64rem) {
-  .about-page .hero h1 {
+  .about-page .info h1 {
     font-size: 3rem;
   }
 }
-.about-page .hero p {
+.about-page .info p {
   max-width: 800px;
   margin: 1rem auto 2rem;
   color: #ffffff;
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
-.about-page .hero .btn {
+.about-page .info .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -2525,15 +2531,15 @@
   text-transform: capitalize;
   background: #ffffff;
 }
-.about-page .hero .btn:hover {
+.about-page .info .btn:hover {
   transform: scale(1.02);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   background: rgba(255, 255, 255, 0.9);
 }
-.about-page .hero .btn:hover .arrow {
+.about-page .info .btn:hover .arrow {
   animation: arrow-btn 0.6s ease-in-out infinite;
 }
-.about-page .hero .btn .arrow {
+.about-page .info .btn .arrow {
   width: 16px;
   height: 16px;
   display: grid;
@@ -2576,6 +2582,7 @@
 }
 .about-page .about__title {
   font-weight: bold;
+  color: #ff7f50;
 }
 .about-page .about__subtitle {
   font-weight: bold;

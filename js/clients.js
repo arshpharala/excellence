@@ -33,8 +33,8 @@ export default function initClients() {
         (client) => `
         <div class="swiper-slide hover">
           <div class="testimonial-card">
-          <p class="testimonial-desc" data-aos="fade-up">"${client.paragraph}"</p>
-          <div class="testimonial-footer" data-aos="fade-right" >
+          <p class="testimonial-desc" >"${client.paragraph}"</p>
+          <div class="testimonial-footer"  >
             <h3 class="testimonial-title">${client.title}</h3>
             <hr class="testimonial-divider" />
             <p class="testimonial-subtitle">${client.subtitle}</p>

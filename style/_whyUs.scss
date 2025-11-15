@@ -62,7 +62,7 @@
 
     .feature-title {
       color: $color-secondary;
-      @include text-semibold;
+      font-weight: 600;
       margin-bottom: 0.1rem;
       font-size: 1.125rem;
       @include responsive(lg) {

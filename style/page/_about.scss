@@ -26,9 +26,9 @@
   }
 
   // Hero Section
-  .hero {
+  .info {
     text-align: center;
-    padding: 2rem;
+    padding: 4rem  2rem;
     background: linear-gradient(to bottom, transparent 0%, #fff 100%, #fff 100%),
       url("../assets/bg-4.jpg");
     background-size: cover;
@@ -36,6 +36,10 @@
     background-repeat: no-repeat;
     color: $white;
     position: relative;
+
+    min-height: 450px;
+
+
 
     h1 {
       color: $bg-light;
@@ -127,6 +131,7 @@
         font-size: $spacing-sm;
       }
       @include text-bold;
+      color: $color-primary
     }
 
     &__subtitle {

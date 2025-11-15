@@ -233,7 +233,7 @@
 
 .social-box {
   position: fixed;
-  right: 1rem;
+  right: 0.75rem;
   top: 50%;
   display: none;
   z-index: 100;
@@ -241,6 +241,10 @@
   @include responsive(md) {
     display: inline-flex;
   }
+  @include responsive(lg) {
+    right: 1rem;
+  }
+
   flex-direction: column;
 
   gap: $spacing-sm;

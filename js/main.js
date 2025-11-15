@@ -11,42 +11,59 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 1000,
   });
 
+  //   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  //   anchor.addEventListener('click', function(e) {
+  //     e.preventDefault();
+  //     const target = document.querySelector(this.getAttribute('href'));
+  //     const offset = 80; // 👈 change this to scroll a little more up (e.g. 80, 120)
 
-//   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//   anchor.addEventListener('click', function(e) {
-//     e.preventDefault();
-//     const target = document.querySelector(this.getAttribute('href'));
-//     const offset = 80; // 👈 change this to scroll a little more up (e.g. 80, 120)
+  //     if (target) {
+  //       const y = target.getBoundingClientRect().top + window.scrollY - offset;
+  //       window.scrollTo({ top: y, behavior: 'smooth' });
+  //     }
+  //   });
+  // });
 
-//     if (target) {
-//       const y = target.getBoundingClientRect().top + window.scrollY - offset;
-//       window.scrollTo({ top: y, behavior: 'smooth' });
-//     }
-//   });
-// });
+  function smoothScrollWithOffset(offset = 100) {
+    document.addEventListener("click", function (e) {
+      const anchor = e.target.closest('a[href^="#"]');
+      if (!anchor) return;
 
+      const hash = anchor.getAttribute("href"); // example: "#contact"
+      if (!hash || hash === "#") return;
 
+      const targetEl = document.querySelector(hash);
 
+      if (targetEl) {
+        // ✔ Same page scroll
+        e.preventDefault();
+        const y =
+          targetEl.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      } else {
+        // ❌ ID not found → redirect to index.html
+        e.preventDefault();
+        window.location.href = `index.html${hash}`;
+      }
+    });
 
-function smoothScrollWithOffset(offset = 100) {
-  document.addEventListener("click", function(e) {
-    const anchor = e.target.closest('a[href^="#"]');
-    if (!anchor) return;
+    // ⭐ Auto-scroll after redirect
+    if (window.location.hash) {
+      const anchor = window.location.hash;
+      const targetEl = document.querySelector(anchor);
 
-    const targetId = anchor.getAttribute("href");
-    if (targetId === "#") return;
-
-    const targetEl = document.querySelector(targetId);
-    if (targetEl) {
-      e.preventDefault();
-      const y = targetEl.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+      if (targetEl) {
+        setTimeout(() => {
+          const y =
+            targetEl.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }, 300);
+      }
     }
-  });
-}
+  }
 
-// Initialize when the page loads
-smoothScrollWithOffset(80); // 👈 adjust offset if needed
+  // Initialize when the page loads
+  smoothScrollWithOffset(80); // 👈 adjust offset if needed
 
   initNavbar();
   initProjects();
