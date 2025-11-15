@@ -2842,6 +2842,7 @@
 .about-page .stats .stat__icon {
   width: 60px;
   height: 60px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(268deg) brightness(104%) contrast(103%);
 }
 
 .cta {
