@@ -69,7 +69,7 @@
       padding: 0.9rem 2rem;
       font-size: $spacing-sm;
       @include text-bold;
-      border-radius: $border-radius;
+      border-radius: 9999px;
 
       transition: $transition-slow;
       color: $color-primary;
@@ -311,7 +311,7 @@
 
     h2 {
       letter-spacing: 0.8px;
-     @include text-semibold;
+      @include text-semibold;
 
       font-size: 1.5rem;
 
@@ -466,7 +466,7 @@
     padding: 0.9rem 2rem;
     font-size: $spacing-sm;
     @include text-bold;
-    border-radius: $border-radius;
+    border-radius: 9999px;
 
     transition: $transition-slow;
     color: $white;
