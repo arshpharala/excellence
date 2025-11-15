@@ -2451,11 +2451,16 @@
   }
 }
 .banner__text {
-  font-weight: 500;
   line-height: 0.9;
-  font-size: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
-@media (min-width: 80rem) {
+@media (min-width: 48rem) {
+  .banner__text {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 64rem) {
   .banner__text {
     font-size: 3rem;
   }
@@ -2500,6 +2505,7 @@
 .about-page .info h1 {
   color: #fafafa;
   letter-spacing: 0.8px;
+  font-weight: 500;
   font-size: 1.5rem;
 }
 @media (min-width: 48rem) {
@@ -2669,19 +2675,18 @@
 }
 .about-page .mvv h2 {
   letter-spacing: 0.8px;
-}
-@media (min-width: 64rem) {
-  .about-page .mvv h2 {
-    font-size: 2.8rem;
-  }
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 @media (min-width: 48rem) {
   .about-page .mvv h2 {
-    font-size: 2.2rem;
+    font-size: 2.25rem;
   }
 }
-.about-page .mvv h2 {
-  font-size: 1.8rem;
+@media (min-width: 64rem) {
+  .about-page .mvv h2 {
+    font-size: 3rem;
+  }
 }
 .about-page .mvv__grid {
   display: grid;
@@ -2751,19 +2756,18 @@
 }
 .about-page .stats h2 {
   letter-spacing: 0.8px;
-}
-@media (min-width: 64rem) {
-  .about-page .stats h2 {
-    font-size: 2.8rem;
-  }
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 @media (min-width: 48rem) {
   .about-page .stats h2 {
-    font-size: 2.2rem;
+    font-size: 2.25rem;
   }
 }
-.about-page .stats h2 {
-  font-size: 1.8rem;
+@media (min-width: 64rem) {
+  .about-page .stats h2 {
+    font-size: 3rem;
+  }
 }
 .about-page .stats__grid {
   display: grid;

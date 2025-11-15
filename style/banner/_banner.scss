@@ -38,13 +38,18 @@
   }
 
   &__text {
-    @include text-semibold;
     line-height: 0.9;
-    font-size: $spacing-md;
+    @include text-bold;
 
-    @include responsive(xl) {
-      font-size: $spacing-lg;
-    }
+      font-size: 1.5rem;
+
+      @include responsive(md) {
+        font-size: 2.25rem;
+      }
+
+      @include responsive(lg) {
+        font-size: 3rem;
+      }
     color: white;
     text-align: left;
   }
